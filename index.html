@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Application d'apprentissage JLPT N5 - Kanji, Compteurs, Verbes">
+    <meta name="theme-color" content="#e63946">
+    <title>JLPT N5 - Apprentissage</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇯🇵</text></svg>">
+</head>
+<body>
+    <div id="app">
+        <!-- Page d'accueil -->
+        <div id="home-page" class="page active">
+            <header>
+                <h1>🇯🇵 JLPT N5</h1>
+                <p class="subtitle">Votre compagnon d'apprentissage du japonais</p>
+            </header>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-studied">0</div>
+                    <div class="stat-label">Éléments étudiés</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="success-rate">0%</div>
+                    <div class="stat-label">Taux de réussite</div>
+                </div>
+            </div>
+
+            <div class="menu-cards">
+                <div class="menu-card" onclick="app.showMode('kanji')">
+                    <div class="card-icon">漢</div>
+                    <h2>Kanji</h2>
+                    <p>105 kanji essentiels</p>
+                    <div class="card-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="kanji-progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="kanji-count">0/105</span>
+                    </div>
+                </div>
+
+                <div class="menu-card" onclick="app.showMode('counters')">
+                    <div class="card-icon">数</div>
+                    <h2>Compteurs</h2>
+                    <p>Les compteurs japonais</p>
+                    <div class="card-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="counters-progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="counters-count">0/14</span>
+                    </div>
+                </div>
+
+                <div class="menu-card" onclick="app.showMode('verbs')">
+                    <div class="card-icon">動</div>
+                    <h2>Verbes</h2>
+                    <p>Conjugaisons et pratique</p>
+                    <div class="card-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="verbs-progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="verbs-count">0/60</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="reset-button" onclick="app.resetProgress()">Réinitialiser la progression</button>
+        </div>
+
+        <!-- Page Kanji -->
+        <div id="kanji-page" class="page">
+            <header class="page-header">
+                <button class="back-button" onclick="app.showPage('home')">← Retour</button>
+                <h1>Kanji</h1>
+            </header>
+
+            <div class="mode-selector">
+                <button class="mode-btn active" onclick="app.setKanjiMode('flashcard')">Flashcards</button>
+                <button class="mode-btn" onclick="app.setKanjiMode('quiz')">Quiz</button>
+                <button class="mode-btn" onclick="app.setKanjiMode('list')">Liste</button>
+            </div>
+
+            <div id="kanji-flashcard" class="content-area">
+                <div class="flashcard" onclick="app.flipCard()">
+                    <div class="flashcard-inner" id="flashcard">
+                        <div class="flashcard-front">
+                            <div class="kanji-large" id="kanji-char">一</div>
+                            <div class="kanji-hint" id="kanji-hint">Cliquez pour révéler</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="kanji-info">
+                                <h3 id="kanji-meaning">un / one</h3>
+                                <div class="readings">
+                                    <div><strong>On:</strong> <span id="kanji-on">イチ, イツ</span></div>
+                                    <div><strong>Kun:</strong> <span id="kanji-kun">ひと</span></div>
+                                </div>
+                                <div class="examples" id="kanji-examples"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button class="control-btn" onclick="app.previousCard()">← Précédent</button>
+                    <span class="card-counter" id="card-counter">1 / 105</span>
+                    <button class="control-btn" onclick="app.nextCard()">Suivant →</button>
+                </div>
+            </div>
+
+            <div id="kanji-quiz" class="content-area" style="display: none;">
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h2 id="quiz-question">Quel est le sens de ce kanji ?</h2>
+                        <div class="kanji-large" id="quiz-kanji">日</div>
+                    </div>
+                    <div class="quiz-options" id="quiz-options"></div>
+                    <div class="quiz-feedback" id="quiz-feedback"></div>
+                    <button class="next-question-btn" id="next-question-btn" onclick="app.nextQuestion()" style="display: none;">Question suivante</button>
+                </div>
+                <div class="quiz-score">
+                    <span id="quiz-score">Score: 0/0</span>
+                </div>
+            </div>
+
+            <div id="kanji-list" class="content-area" style="display: none;">
+                <div class="category-filter">
+                    <select id="category-select" onchange="app.filterByCategory()">
+                        <option value="all">Toutes les catégories</option>
+                    </select>
+                </div>
+                <div class="kanji-grid" id="kanji-grid"></div>
+            </div>
+        </div>
+
+        <!-- Page Compteurs -->
+        <div id="counters-page" class="page">
+            <header class="page-header">
+                <button class="back-button" onclick="app.showPage('home')">← Retour</button>
+                <h1>Compteurs</h1>
+            </header>
+
+            <div class="counters-list" id="counters-list"></div>
+        </div>
+
+        <!-- Page Verbes -->
+        <div id="verbs-page" class="page">
+            <header class="page-header">
+                <button class="back-button" onclick="app.showPage('home')">← Retour</button>
+                <h1>Verbes</h1>
+            </header>
+
+            <div class="mode-selector">
+                <button class="mode-btn active" onclick="app.setVerbMode('practice')">Pratique</button>
+                <button class="mode-btn" onclick="app.setVerbMode('list')">Liste</button>
+            </div>
+
+            <div id="verb-practice" class="content-area">
+                <div class="verb-card">
+                    <div class="verb-question">
+                        <h3>Conjuguez le verbe :</h3>
+                        <div class="verb-display">
+                            <span class="verb-kanji" id="verb-kanji">飲む</span>
+                            <span class="verb-meaning" id="verb-meaning">(boire)</span>
+                        </div>
+                        <p class="conjugation-type" id="conjugation-type">Présent poli affirmatif</p>
+                    </div>
+                    <input type="text" id="verb-input" class="verb-input" placeholder="Votre réponse...">
+                    <button class="check-btn" onclick="app.checkVerbAnswer()">Vérifier</button>
+                    <div class="verb-feedback" id="verb-feedback"></div>
+                    <button class="next-verb-btn" onclick="app.nextVerb()" style="display: none;">Verbe suivant</button>
+                </div>
+            </div>
+
+            <div id="verb-list" class="content-area" style="display: none;">
+                <div class="verb-groups" id="verb-groups"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
