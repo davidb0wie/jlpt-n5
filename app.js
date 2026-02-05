@@ -737,12 +737,22 @@ const app = {
         const deltaX = endX - startX;
         const deltaY = Math.abs(endY - startY);
 
-        // Vérifier si c'est un swipe vers la gauche
-        // (deltaX négatif = swipe gauche, assez long, et pas trop vertical)
-        if (deltaX < -minDistance && deltaY < maxVerticalDistance) {
-            // Ne retourner au menu que si on n'est pas déjà sur la page d'accueil
-            if (this.state.currentPage !== 'home') {
-                this.showPage('home');
+        // Vérifier que le mouvement est assez horizontal
+        if (Math.abs(deltaX) > minDistance && deltaY < maxVerticalDistance) {
+            // Comportement spécial pour la page flashcards kanji
+            if (this.state.currentPage === 'kanji' && this.state.kanjiMode === 'flashcard') {
+                if (deltaX < 0) {
+                    // Swipe gauche → carte suivante
+                    this.nextCard();
+                } else {
+                    // Swipe droite → carte précédente
+                    this.previousCard();
+                }
+            } else {
+                // Pour toutes les autres pages : swipe gauche = retour au menu
+                if (deltaX < 0 && this.state.currentPage !== 'home') {
+                    this.showPage('home');
+                }
             }
         }
     }
