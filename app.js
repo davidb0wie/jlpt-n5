@@ -3,7 +3,8 @@ const app = {
     data: {
         kanji: null,
         counters: null,
-        verbs: null
+        verbs: null,
+        adverbs: null
     },
     state: {
         currentKanjiIndex: 0,
@@ -20,6 +21,7 @@ const app = {
         studiedKanji: new Set(),
         studiedCounters: new Set(),
         studiedVerbs: new Set(),
+        studiedAdverbs: new Set(),
         correctAnswers: 0,
         totalAttempts: 0
     },
@@ -35,15 +37,17 @@ const app = {
     // Chargement des données
     async loadData() {
         try {
-            const [kanjiResponse, countersResponse, verbsResponse] = await Promise.all([
+            const [kanjiResponse, countersResponse, verbsResponse, adverbsResponse] = await Promise.all([
                 fetch('data/kanji.json'),
                 fetch('data/counters.json'),
-                fetch('data/verbs.json')
+                fetch('data/verbs.json'),
+                fetch('data/adverbs.json')
             ]);
 
             this.data.kanji = await kanjiResponse.json();
             this.data.counters = await countersResponse.json();
             this.data.verbs = await verbsResponse.json();
+            this.data.adverbs = await adverbsResponse.json();
 
             // Créer une liste plate de tous les kanji
             this.state.allKanji = [];
@@ -69,6 +73,7 @@ const app = {
             studiedKanji: Array.from(this.progress.studiedKanji),
             studiedCounters: Array.from(this.progress.studiedCounters),
             studiedVerbs: Array.from(this.progress.studiedVerbs),
+            studiedAdverbs: Array.from(this.progress.studiedAdverbs),
             correctAnswers: this.progress.correctAnswers,
             totalAttempts: this.progress.totalAttempts
         }));
@@ -81,6 +86,7 @@ const app = {
             this.progress.studiedKanji = new Set(data.studiedKanji || []);
             this.progress.studiedCounters = new Set(data.studiedCounters || []);
             this.progress.studiedVerbs = new Set(data.studiedVerbs || []);
+            this.progress.studiedAdverbs = new Set(data.studiedAdverbs || []);
             this.progress.correctAnswers = data.correctAnswers || 0;
             this.progress.totalAttempts = data.totalAttempts || 0;
         }
@@ -92,6 +98,7 @@ const app = {
                 studiedKanji: new Set(),
                 studiedCounters: new Set(),
                 studiedVerbs: new Set(),
+                studiedAdverbs: new Set(),
                 correctAnswers: 0,
                 totalAttempts: 0
             };
@@ -118,6 +125,8 @@ const app = {
             this.displayCounters();
         } else if (mode === 'verbs') {
             this.initVerbPractice();
+        } else if (mode === 'adverbs') {
+            this.displayAdverbs();
         }
     },
 
@@ -125,7 +134,8 @@ const app = {
     updateHomeStats() {
         const totalStudied = this.progress.studiedKanji.size +
                             this.progress.studiedCounters.size +
-                            this.progress.studiedVerbs.size;
+                            this.progress.studiedVerbs.size +
+                            this.progress.studiedAdverbs.size;
 
         const successRate = this.progress.totalAttempts > 0
             ? Math.round((this.progress.correctAnswers / this.progress.totalAttempts) * 100)
@@ -141,6 +151,9 @@ const app = {
         const totalVerbs = this.data.verbs ?
             this.data.verbs.groups.reduce((sum, group) => sum + group.verbs.length, 0) : 60;
         this.updateProgress('verbs', this.progress.studiedVerbs.size, totalVerbs);
+
+        const totalAdverbs = this.data.adverbs?.adverbs.length || 50;
+        this.updateProgress('adverbs', this.progress.studiedAdverbs.size, totalAdverbs);
     },
 
     updateProgress(type, current, total) {
@@ -379,9 +392,36 @@ const app = {
         const container = document.getElementById('counters-list');
         container.innerHTML = '';
 
-        this.data.counters.counters.forEach(counter => {
+        // Créer le tableau de navigation en haut
+        const navGrid = document.createElement('div');
+        navGrid.className = 'counters-nav-grid';
+
+        this.data.counters.counters.forEach((counter, index) => {
+            const navItem = document.createElement('div');
+            navItem.className = 'counter-nav-item';
+
+            // Extraire le kanji et la lecture du nom (ex: "つ (tsu)" -> kanji="つ", reading="tsu")
+            const match = counter.name.match(/^(.+?)\s*\((.+?)\)$/);
+            const kanji = match ? match[1] : counter.kanji || counter.name;
+            const reading = match ? match[2] : '';
+
+            navItem.innerHTML = `
+                <div class="nav-kanji">${kanji}</div>
+                <div class="nav-reading">${reading}</div>
+            `;
+            navItem.onclick = () => {
+                document.getElementById(`counter-${index}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
+            navGrid.appendChild(navItem);
+        });
+
+        container.appendChild(navGrid);
+
+        // Créer les cartes détaillées
+        this.data.counters.counters.forEach((counter, index) => {
             const card = document.createElement('div');
             card.className = 'counter-card';
+            card.id = `counter-${index}`;
 
             let numbersHTML = counter.numbers.map(num => `
                 <div class="counter-number">
@@ -442,12 +482,18 @@ const app = {
         const group = this.data.verbs.groups[Math.floor(Math.random() * this.data.verbs.groups.length)];
         const verb = group.verbs[Math.floor(Math.random() * group.verbs.length)];
 
-        // Choisir une conjugaison aléatoire
+        // Choisir une conjugaison aléatoire (toutes les 10 formes)
         const conjugations = [
-            { name: 'Présent poli affirmatif', suffix: 'ます', rule: 'masu' },
-            { name: 'Présent poli négatif', suffix: 'ません', rule: 'masen' },
-            { name: 'Passé poli affirmatif', suffix: 'ました', rule: 'mashita' },
-            { name: 'Forme en て', suffix: 'て', rule: 'te' }
+            { name: 'Présent neutre', key: 'present_neutral' },
+            { name: 'Présent poli', key: 'present_polite' },
+            { name: 'Présent neutre négatif', key: 'present_neutral_negative' },
+            { name: 'Présent poli négatif', key: 'present_polite_negative' },
+            { name: 'Passé neutre', key: 'past_neutral' },
+            { name: 'Passé poli', key: 'past_polite' },
+            { name: 'Passé neutre négatif', key: 'past_neutral_negative' },
+            { name: 'Passé poli négatif', key: 'past_polite_negative' },
+            { name: 'Forme en -て', key: 'te_form' },
+            { name: 'Forme en -ている', key: 'te_iru' }
         ];
 
         const conjugation = conjugations[Math.floor(Math.random() * conjugations.length)];
@@ -473,20 +519,38 @@ const app = {
     },
 
     checkVerbAnswer() {
-        const userAnswer = document.getElementById('verb-input').value.trim();
+        const userAnswer = document.getElementById('verb-input').value.trim().toLowerCase();
         const feedback = document.getElementById('verb-feedback');
-
-        // Cette partie nécessiterait une logique plus complexe pour vérifier les conjugaisons
-        // Pour simplifier, on accepte n'importe quelle réponse et on montre la bonne
         const verb = this.state.currentVerbQuestion.verb;
         const conjugation = this.state.currentVerbQuestion.conjugation;
 
+        // Récupérer la bonne réponse en romaji depuis les conjugaisons du verbe
+        const conjugationData = verb.conjugations[conjugation.key];
+        const correctAnswerRomaji = conjugationData.romaji.toLowerCase();
+        const correctAnswerKanji = conjugationData.kanji;
+
+        // Vérifier si la réponse est correcte (comparaison en romaji)
+        const isCorrect = userAnswer === correctAnswerRomaji;
+
         feedback.style.display = 'block';
-        feedback.innerHTML = `
-            <p><strong>Votre réponse:</strong> ${userAnswer || '(vide)'}</p>
-            <p><strong>Forme attendue:</strong> ${conjugation.name}</p>
-            <p><em>Consultez vos notes pour vérifier la conjugaison exacte</em></p>
-        `;
+
+        if (isCorrect) {
+            feedback.className = 'verb-feedback correct';
+            feedback.innerHTML = `
+                <p>✓ <strong>Correct !</strong></p>
+                <p><strong>Romaji:</strong> ${conjugationData.romaji}</p>
+                <p><strong>Kanji:</strong> ${correctAnswerKanji}</p>
+            `;
+            this.progress.correctAnswers++;
+        } else {
+            feedback.className = 'verb-feedback incorrect';
+            feedback.innerHTML = `
+                <p>✗ <strong>Incorrect</strong></p>
+                <p><strong>Votre réponse:</strong> ${userAnswer || '(vide)'}</p>
+                <p><strong>Bonne réponse (romaji):</strong> ${conjugationData.romaji}</p>
+                <p><strong>Kanji:</strong> ${correctAnswerKanji}</p>
+            `;
+        }
 
         this.progress.totalAttempts++;
         this.saveProgress();
@@ -507,22 +571,134 @@ const app = {
             const groupDiv = document.createElement('div');
             groupDiv.className = 'verb-group';
 
-            let verbsHTML = group.verbs.map(verb => `
-                <div class="verb-item">
+            const verbsList = document.createElement('div');
+            verbsList.className = 'verb-list';
+
+            group.verbs.forEach((verb) => {
+                const verbItem = document.createElement('div');
+                verbItem.className = 'verb-item';
+                verbItem.innerHTML = `
                     <div class="verb-item-kanji">${verb.kanji || verb.kana}</div>
                     <div class="verb-item-kana">${verb.kana}</div>
                     <div class="verb-item-meaning">${verb.meaning}</div>
-                </div>
-            `).join('');
+                    <div class="verb-conjugations" style="display: none;">
+                        <div class="conjugation-item">
+                            <span class="conj-label">Présent neutre:</span>
+                            <span class="conj-value">${verb.conjugations.present_neutral.kanji} (${verb.conjugations.present_neutral.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Présent poli:</span>
+                            <span class="conj-value">${verb.conjugations.present_polite.kanji} (${verb.conjugations.present_polite.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Présent neutre négatif:</span>
+                            <span class="conj-value">${verb.conjugations.present_neutral_negative.kanji} (${verb.conjugations.present_neutral_negative.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Présent poli négatif:</span>
+                            <span class="conj-value">${verb.conjugations.present_polite_negative.kanji} (${verb.conjugations.present_polite_negative.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Passé neutre:</span>
+                            <span class="conj-value">${verb.conjugations.past_neutral.kanji} (${verb.conjugations.past_neutral.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Passé poli:</span>
+                            <span class="conj-value">${verb.conjugations.past_polite.kanji} (${verb.conjugations.past_polite.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Passé neutre négatif:</span>
+                            <span class="conj-value">${verb.conjugations.past_neutral_negative.kanji} (${verb.conjugations.past_neutral_negative.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Passé poli négatif:</span>
+                            <span class="conj-value">${verb.conjugations.past_polite_negative.kanji} (${verb.conjugations.past_polite_negative.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Forme en -て:</span>
+                            <span class="conj-value">${verb.conjugations.te_form.kanji} (${verb.conjugations.te_form.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Forme en -ている:</span>
+                            <span class="conj-value">${verb.conjugations.te_iru.kanji} (${verb.conjugations.te_iru.romaji})</span>
+                        </div>
+                    </div>
+                `;
+
+                // Toggle conjugations on click
+                verbItem.onclick = () => {
+                    const conjugationsDiv = verbItem.querySelector('.verb-conjugations');
+                    const isVisible = conjugationsDiv.style.display !== 'none';
+                    conjugationsDiv.style.display = isVisible ? 'none' : 'block';
+                    verbItem.classList.toggle('expanded');
+                };
+
+                verbsList.appendChild(verbItem);
+            });
 
             groupDiv.innerHTML = `
                 <h2>${group.name}</h2>
                 <p class="verb-group-description">${group.description}</p>
-                <div class="verb-list">${verbsHTML}</div>
             `;
+            groupDiv.appendChild(verbsList);
 
             container.appendChild(groupDiv);
         });
+    },
+
+    // ===== ADVERBES =====
+    displayAdverbs() {
+        const container = document.getElementById('adverbs-list');
+        container.innerHTML = '';
+
+        // Créer la grille de navigation en haut
+        const navGrid = document.createElement('div');
+        navGrid.className = 'adverbs-nav-grid';
+
+        this.data.adverbs.adverbs.forEach((adverb, index) => {
+            const navItem = document.createElement('div');
+            navItem.className = 'adverb-nav-item';
+
+            navItem.innerHTML = `
+                <div class="nav-kanji">${adverb.kanji}</div>
+                <div class="nav-hiragana">${adverb.hiragana}</div>
+                <div class="nav-meaning">${adverb.meaning}</div>
+            `;
+            navItem.onclick = () => {
+                document.getElementById(`adverb-${index}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
+            navGrid.appendChild(navItem);
+        });
+
+        container.appendChild(navGrid);
+
+        // Créer les cartes détaillées
+        this.data.adverbs.adverbs.forEach((adverb, index) => {
+            const card = document.createElement('div');
+            card.className = 'adverb-card';
+            card.id = `adverb-${index}`;
+
+            card.innerHTML = `
+                <div class="adverb-header">
+                    <div class="adverb-kanji">${adverb.kanji}</div>
+                    <div class="adverb-hiragana">${adverb.hiragana}</div>
+                </div>
+                <div class="adverb-meaning">${adverb.meaning}</div>
+                <div class="adverb-example">
+                    <div class="example-sentence">${adverb.example.sentence}</div>
+                    <div class="example-reading">${adverb.example.reading}</div>
+                    <div class="example-translation">${adverb.example.translation}</div>
+                </div>
+            `;
+
+            container.appendChild(card);
+
+            // Marquer comme étudié
+            this.progress.studiedAdverbs.add(adverb.hiragana);
+        });
+
+        this.saveProgress();
+        this.updateHomeStats();
     },
 
     // Service Worker

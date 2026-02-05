@@ -66,6 +66,18 @@
                         <span class="progress-text" id="verbs-count">0/60</span>
                     </div>
                 </div>
+
+                <div class="menu-card" onclick="app.showMode('adverbs')">
+                    <div class="card-icon">副</div>
+                    <h2>Adverbes</h2>
+                    <p>50 adverbes essentiels</p>
+                    <div class="card-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="adverbs-progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="adverbs-count">0/50</span>
+                    </div>
+                </div>
             </div>
 
             <button class="reset-button" onclick="app.resetProgress()">Réinitialiser la progression</button>
@@ -176,6 +188,18 @@
 
             <div id="verb-list" class="content-area" style="display: none;">
                 <div class="verb-groups" id="verb-groups"></div>
+            </div>
+        </div>
+
+        <!-- Page Adverbes -->
+        <div id="adverbs-page" class="page">
+            <header class="page-header">
+                <button class="back-button" onclick="app.showPage('home')">← Retour</button>
+                <h1>Adverbes</h1>
+            </header>
+
+            <div class="content-area">
+                <div class="adverbs-list" id="adverbs-list"></div>
             </div>
         </div>
     </div>

@@ -520,11 +520,55 @@ header h1 {
     gap: 20px;
 }
 
+/* Tableau de navigation des compteurs */
+.counters-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: var(--light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.counter-nav-item {
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 3px solid transparent;
+}
+
+.counter-nav-item:hover {
+    background: var(--accent);
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.nav-kanji {
+    font-size: 2.5em;
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.nav-reading {
+    font-size: 1em;
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .counter-card {
     background: var(--light);
     padding: 30px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    scroll-margin-top: 20px;
 }
 
 .counter-header {
@@ -729,6 +773,22 @@ header h1 {
     background: var(--secondary);
     padding: 15px;
     border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.verb-item:hover {
+    background: var(--light);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.verb-item.expanded {
+    background: var(--light);
+    border-color: var(--primary);
+    grid-column: 1 / -1;
 }
 
 .verb-item-kanji {
@@ -748,6 +808,34 @@ header h1 {
     margin-top: 5px;
 }
 
+.verb-conjugations {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid var(--secondary);
+}
+
+.conjugation-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 8px;
+    background: var(--secondary);
+    border-radius: 6px;
+}
+
+.conj-label {
+    font-weight: bold;
+    color: var(--dark);
+    flex: 0 0 45%;
+}
+
+.conj-value {
+    color: var(--text);
+    flex: 1;
+    text-align: right;
+    font-family: 'Hiragino Sans', sans-serif;
+}
+
 /* Reset Button */
 .reset-button {
     background: var(--error);
@@ -765,6 +853,131 @@ header h1 {
 .reset-button:hover {
     background: var(--dark);
     transform: scale(1.05);
+}
+
+/* Adverbs */
+.adverbs-list {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Grille de navigation des adverbes */
+.adverbs-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: var(--light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.adverb-nav-item {
+    background: var(--secondary);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 3px solid transparent;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.adverb-nav-item:hover {
+    background: var(--accent);
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.adverb-nav-item .nav-kanji {
+    font-size: 2em;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.adverb-nav-item .nav-hiragana {
+    font-size: 1em;
+    color: var(--dark);
+}
+
+.adverb-nav-item .nav-meaning {
+    font-size: 0.9em;
+    color: var(--success);
+    font-weight: 600;
+}
+
+.adverb-card {
+    background: var(--light);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+    scroll-margin-top: 20px;
+}
+
+.adverb-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+}
+
+.adverb-header {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--secondary);
+}
+
+.adverb-kanji {
+    font-size: 2.5em;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.adverb-hiragana {
+    font-size: 1.3em;
+    color: var(--dark);
+}
+
+.adverb-meaning {
+    font-size: 1.2em;
+    color: var(--success);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.adverb-example {
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary);
+}
+
+.example-sentence {
+    font-size: 1.3em;
+    color: var(--dark);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.example-reading {
+    font-size: 1em;
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.example-translation {
+    font-size: 1em;
+    color: var(--primary);
+    font-style: italic;
 }
 
 /* Responsive */

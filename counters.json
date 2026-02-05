@@ -1,0 +1,240 @@
+{
+  "counters": [
+    {
+      "name": "つ (tsu)",
+      "kanji": "つ",
+      "description": "Compteur générique pour objets",
+      "usage": "Objets en général, pommes, oranges, petits objets",
+      "numbers": [
+        { "number": 1, "hiragana": "ひとつ", "romaji": "hitotsu" },
+        { "number": 2, "hiragana": "ふたつ", "romaji": "futatsu" },
+        { "number": 3, "hiragana": "みっつ", "romaji": "mittsu" },
+        { "number": 4, "hiragana": "よっつ", "romaji": "yottsu" },
+        { "number": 5, "hiragana": "いつつ", "romaji": "itsutsu" },
+        { "number": 6, "hiragana": "むっつ", "romaji": "muttsu" },
+        { "number": 7, "hiragana": "ななつ", "romaji": "nanatsu" },
+        { "number": 8, "hiragana": "やっつ", "romaji": "yattsu" },
+        { "number": 9, "hiragana": "ここのつ", "romaji": "kokonotsu" },
+        { "number": 10, "hiragana": "とお", "romaji": "tō" }
+      ]
+    },
+    {
+      "name": "個 (ko)",
+      "kanji": "個",
+      "description": "Petits objets, objets ronds",
+      "usage": "Pommes, oranges, œufs, balles, objets petits et ronds",
+      "numbers": [
+        { "number": 1, "hiragana": "いっこ", "romaji": "ikko" },
+        { "number": 2, "hiragana": "にこ", "romaji": "niko" },
+        { "number": 3, "hiragana": "さんこ", "romaji": "sanko" },
+        { "number": 4, "hiragana": "よんこ", "romaji": "yonko" },
+        { "number": 5, "hiragana": "ごこ", "romaji": "goko" },
+        { "number": 6, "hiragana": "ろっこ", "romaji": "rokko" },
+        { "number": 7, "hiragana": "ななこ", "romaji": "nanako" },
+        { "number": 8, "hiragana": "はっこ", "romaji": "hakko" },
+        { "number": 9, "hiragana": "きゅうこ", "romaji": "kyūko" },
+        { "number": 10, "hiragana": "じゅっこ", "romaji": "jukko" }
+      ]
+    },
+    {
+      "name": "人 (nin)",
+      "kanji": "人",
+      "description": "Personnes",
+      "usage": "Compter les personnes",
+      "note": "1 et 2 sont complètement irréguliers!",
+      "numbers": [
+        { "number": 1, "hiragana": "ひとり", "romaji": "hitori", "irregular": true },
+        { "number": 2, "hiragana": "ふたり", "romaji": "futari", "irregular": true },
+        { "number": 3, "hiragana": "さんにん", "romaji": "sannin" },
+        { "number": 4, "hiragana": "よにん", "romaji": "yonin" },
+        { "number": 5, "hiragana": "ごにん", "romaji": "gonin" },
+        { "number": 6, "hiragana": "ろくにん", "romaji": "rokunin" },
+        { "number": 7, "hiragana": "しちにん", "romaji": "shichinin" },
+        { "number": 8, "hiragana": "はちにん", "romaji": "hachinin" },
+        { "number": 9, "hiragana": "きゅうにん", "romaji": "kyūnin" },
+        { "number": 10, "hiragana": "じゅうにん", "romaji": "jūnin" }
+      ]
+    },
+    {
+      "name": "本 (hon)",
+      "kanji": "本",
+      "description": "Objets longs et cylindriques",
+      "usage": "Bouteilles, stylos, crayons, bananes, parapluies, baguettes, arbres, routes",
+      "phonetic_changes": "ぽん/ぼん/ほん",
+      "numbers": [
+        { "number": 1, "hiragana": "いっぽん", "romaji": "ippon" },
+        { "number": 2, "hiragana": "にほん", "romaji": "nihon" },
+        { "number": 3, "hiragana": "さんぼん", "romaji": "sanbon" },
+        { "number": 4, "hiragana": "よんほん", "romaji": "yonhon" },
+        { "number": 5, "hiragana": "ごほん", "romaji": "gohon" },
+        { "number": 6, "hiragana": "ろっぽん", "romaji": "roppon" },
+        { "number": 7, "hiragana": "ななほん", "romaji": "nanahon" },
+        { "number": 8, "hiragana": "はっぽん", "romaji": "happon" },
+        { "number": 9, "hiragana": "きゅうほん", "romaji": "kyūhon" },
+        { "number": 10, "hiragana": "じゅっぽん", "romaji": "juppon" }
+      ]
+    },
+    {
+      "name": "枚 (mai)",
+      "kanji": "枚",
+      "description": "Objets plats et minces",
+      "usage": "Feuilles de papier, timbres, assiettes, photos, billets, CD/DVD, vêtements plats",
+      "note": "Prononciation régulière, sans changement!",
+      "numbers": [
+        { "number": 1, "hiragana": "いちまい", "romaji": "ichimai" },
+        { "number": 2, "hiragana": "にまい", "romaji": "nimai" },
+        { "number": 3, "hiragana": "さんまい", "romaji": "sanmai" },
+        { "number": 4, "hiragana": "よんまい", "romaji": "yonmai" },
+        { "number": 5, "hiragana": "ごまい", "romaji": "gomai" },
+        { "number": 6, "hiragana": "ろくまい", "romaji": "rokumai" },
+        { "number": 7, "hiragana": "ななまい", "romaji": "nanamai" },
+        { "number": 8, "hiragana": "はちまい", "romaji": "hachimai" },
+        { "number": 9, "hiragana": "きゅうまい", "romaji": "kyūmai" },
+        { "number": 10, "hiragana": "じゅうまい", "romaji": "jūmai" }
+      ]
+    },
+    {
+      "name": "匹 (hiki)",
+      "kanji": "匹",
+      "description": "Petits animaux et insectes",
+      "usage": "Chiens, chats, poissons, oiseaux, insectes",
+      "phonetic_changes": "ぴき/びき/ひき",
+      "numbers": [
+        { "number": 1, "hiragana": "いっぴき", "romaji": "ippiki" },
+        { "number": 2, "hiragana": "にひき", "romaji": "nihiki" },
+        { "number": 3, "hiragana": "さんびき", "romaji": "sanbiki" },
+        { "number": 4, "hiragana": "よんひき", "romaji": "yonhiki" },
+        { "number": 5, "hiragana": "ごひき", "romaji": "gohiki" },
+        { "number": 6, "hiragana": "ろっぴき", "romaji": "roppiki" },
+        { "number": 7, "hiragana": "ななひき", "romaji": "nanahiki" },
+        { "number": 8, "hiragana": "はっぴき", "romaji": "happiki" },
+        { "number": 9, "hiragana": "きゅうひき", "romaji": "kyūhiki" },
+        { "number": 10, "hiragana": "じゅっぴき", "romaji": "juppiki" }
+      ]
+    },
+    {
+      "name": "冊 (satsu)",
+      "kanji": "冊",
+      "description": "Livres et publications",
+      "usage": "Livres, magazines, cahiers, carnets",
+      "numbers": [
+        { "number": 1, "hiragana": "いっさつ", "romaji": "issatsu" },
+        { "number": 2, "hiragana": "にさつ", "romaji": "nisatsu" },
+        { "number": 3, "hiragana": "さんさつ", "romaji": "sansatsu" },
+        { "number": 4, "hiragana": "よんさつ", "romaji": "yonsatsu" },
+        { "number": 5, "hiragana": "ごさつ", "romaji": "gosatsu" },
+        { "number": 6, "hiragana": "ろくさつ", "romaji": "rokusatsu" },
+        { "number": 7, "hiragana": "ななさつ", "romaji": "nanasatsu" },
+        { "number": 8, "hiragana": "はっさつ", "romaji": "hassatsu" },
+        { "number": 9, "hiragana": "きゅうさつ", "romaji": "kyūsatsu" },
+        { "number": 10, "hiragana": "じゅっさつ", "romaji": "jussatsu" }
+      ]
+    },
+    {
+      "name": "台 (dai)",
+      "kanji": "台",
+      "description": "Machines et véhicules",
+      "usage": "Voitures, vélos, motos, ordinateurs, télévisions, appareils électroménagers",
+      "note": "Prononciation régulière!",
+      "numbers": [
+        { "number": 1, "hiragana": "いちだい", "romaji": "ichidai" },
+        { "number": 2, "hiragana": "にだい", "romaji": "nidai" },
+        { "number": 3, "hiragana": "さんだい", "romaji": "sandai" },
+        { "number": 4, "hiragana": "よんだい", "romaji": "yondai" },
+        { "number": 5, "hiragana": "ごだい", "romaji": "godai" },
+        { "number": 6, "hiragana": "ろくだい", "romaji": "rokudai" },
+        { "number": 7, "hiragana": "ななだい", "romaji": "nanadai" },
+        { "number": 8, "hiragana": "はちだい", "romaji": "hachidai" },
+        { "number": 9, "hiragana": "きゅうだい", "romaji": "kyūdai" },
+        { "number": 10, "hiragana": "じゅうだい", "romaji": "jūdai" }
+      ]
+    },
+    {
+      "name": "歳 (sai)",
+      "kanji": "歳",
+      "description": "Âge",
+      "usage": "Âge des personnes et des animaux",
+      "note": "20 ans = はたち (très important!)",
+      "numbers": [
+        { "number": 1, "hiragana": "いっさい", "romaji": "issai" },
+        { "number": 2, "hiragana": "にさい", "romaji": "nisai" },
+        { "number": 3, "hiragana": "さんさい", "romaji": "sansai" },
+        { "number": 4, "hiragana": "よんさい", "romaji": "yonsai" },
+        { "number": 5, "hiragana": "ごさい", "romaji": "gosai" },
+        { "number": 6, "hiragana": "ろくさい", "romaji": "rokusai" },
+        { "number": 7, "hiragana": "ななさい", "romaji": "nanasai" },
+        { "number": 8, "hiragana": "はっさい", "romaji": "hassai" },
+        { "number": 9, "hiragana": "きゅうさい", "romaji": "kyūsai" },
+        { "number": 10, "hiragana": "じゅっさい", "romaji": "jussai" },
+        { "number": 20, "hiragana": "はたち", "romaji": "hatachi", "special": true }
+      ]
+    },
+    {
+      "name": "杯 (hai)",
+      "kanji": "杯",
+      "description": "Contenants pour liquides",
+      "usage": "Tasses de café/thé, verres d'eau, bols de riz/soupe",
+      "phonetic_changes": "ぱい/ばい/はい",
+      "numbers": [
+        { "number": 1, "hiragana": "いっぱい", "romaji": "ippai" },
+        { "number": 2, "hiragana": "にはい", "romaji": "nihai" },
+        { "number": 3, "hiragana": "さんばい", "romaji": "sanbai" },
+        { "number": 4, "hiragana": "よんはい", "romaji": "yonhai" },
+        { "number": 5, "hiragana": "ごはい", "romaji": "gohai" },
+        { "number": 6, "hiragana": "ろっぱい", "romaji": "roppai" },
+        { "number": 7, "hiragana": "ななはい", "romaji": "nanahai" },
+        { "number": 8, "hiragana": "はっぱい", "romaji": "happai" },
+        { "number": 9, "hiragana": "きゅうはい", "romaji": "kyūhai" },
+        { "number": 10, "hiragana": "じゅっぱい", "romaji": "juppai" }
+      ]
+    },
+    {
+      "name": "回 (kai)",
+      "kanji": "回",
+      "description": "Nombre de fois, occurrences",
+      "usage": "Combien de fois",
+      "numbers": [
+        { "number": 1, "hiragana": "いっかい", "romaji": "ikkai" },
+        { "number": 2, "hiragana": "にかい", "romaji": "nikai" },
+        { "number": 3, "hiragana": "さんかい", "romaji": "sankai" },
+        { "number": 4, "hiragana": "よんかい", "romaji": "yonkai" }
+      ]
+    },
+    {
+      "name": "階 (kai)",
+      "kanji": "階",
+      "description": "Étages de bâtiment",
+      "usage": "Étages",
+      "numbers": [
+        { "number": 1, "hiragana": "いっかい", "romaji": "ikkai" },
+        { "number": 2, "hiragana": "にかい", "romaji": "nikai" },
+        { "number": 3, "hiragana": "さんかい", "romaji": "sankai" },
+        { "number": 4, "hiragana": "よんかい", "romaji": "yonkai" }
+      ]
+    },
+    {
+      "name": "番 (ban)",
+      "kanji": "番",
+      "description": "Numéro d'ordre, rang",
+      "usage": "Numéros",
+      "numbers": [
+        { "number": 1, "hiragana": "いちばん", "romaji": "ichiban" },
+        { "number": 2, "hiragana": "にばん", "romaji": "niban" },
+        { "number": 3, "hiragana": "さんばん", "romaji": "sanban" },
+        { "number": 4, "hiragana": "よんばん", "romaji": "yonban" }
+      ]
+    },
+    {
+      "name": "度 (do)",
+      "kanji": "度",
+      "description": "Degrés, fois, fréquence",
+      "usage": "Températures, fois",
+      "numbers": [
+        { "number": 1, "hiragana": "いちど", "romaji": "ichido" },
+        { "number": 2, "hiragana": "にど", "romaji": "nido" },
+        { "number": 3, "hiragana": "さんど", "romaji": "sando" },
+        { "number": 20, "hiragana": "にじゅうど", "romaji": "nijūdo" }
+      ]
+    }
+  ]
+}
