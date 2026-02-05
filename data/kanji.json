@@ -1,0 +1,339 @@
+{
+  "categories": [
+    {
+      "name": "Nombres (1-10)",
+      "kanji": [
+        {
+          "character": "一",
+          "meaning": "un / one",
+          "readings": {
+            "onyomi": ["イチ", "イツ"],
+            "kunyomi": ["ひと"]
+          },
+          "examples": [
+            { "word": "一つ", "reading": "ひとつ", "meaning": "un objet" },
+            { "word": "一人", "reading": "ひとり", "meaning": "une personne" },
+            { "word": "一日", "reading": "ついたち", "meaning": "un jour" }
+          ]
+        },
+        {
+          "character": "二",
+          "meaning": "deux / two",
+          "readings": {
+            "onyomi": ["ニ"],
+            "kunyomi": ["ふた"]
+          },
+          "examples": [
+            { "word": "二つ", "reading": "ふたつ", "meaning": "deux objets" },
+            { "word": "二人", "reading": "ふたり", "meaning": "deux personnes" },
+            { "word": "二年", "reading": "にねん", "meaning": "deux ans" }
+          ]
+        },
+        {
+          "character": "三",
+          "meaning": "trois / three",
+          "readings": {
+            "onyomi": ["サン"],
+            "kunyomi": ["み"]
+          },
+          "examples": [
+            { "word": "三つ", "reading": "みっつ", "meaning": "trois objets" },
+            { "word": "三人", "reading": "さんにん", "meaning": "trois personnes" },
+            { "word": "三月", "reading": "さんがつ", "meaning": "mars" }
+          ]
+        },
+        {
+          "character": "四",
+          "meaning": "quatre / four",
+          "readings": {
+            "onyomi": ["シ"],
+            "kunyomi": ["よん", "よ"]
+          },
+          "examples": [
+            { "word": "四つ", "reading": "よっつ", "meaning": "quatre objets" },
+            { "word": "四人", "reading": "よにん", "meaning": "quatre personnes" },
+            { "word": "四月", "reading": "しがつ", "meaning": "avril" }
+          ]
+        },
+        {
+          "character": "五",
+          "meaning": "cinq / five",
+          "readings": {
+            "onyomi": ["ゴ"],
+            "kunyomi": ["いつ"]
+          },
+          "examples": [
+            { "word": "五つ", "reading": "いつつ", "meaning": "cinq objets" },
+            { "word": "五人", "reading": "ごにん", "meaning": "cinq personnes" },
+            { "word": "五月", "reading": "ごがつ", "meaning": "mai" }
+          ]
+        },
+        {
+          "character": "六",
+          "meaning": "six / six",
+          "readings": {
+            "onyomi": ["ロク"],
+            "kunyomi": ["む"]
+          },
+          "examples": [
+            { "word": "六つ", "reading": "むっつ", "meaning": "six objets" },
+            { "word": "六月", "reading": "ろくがつ", "meaning": "juin" },
+            { "word": "六人", "reading": "ろくにん", "meaning": "six personnes" }
+          ]
+        },
+        {
+          "character": "七",
+          "meaning": "sept / seven",
+          "readings": {
+            "onyomi": ["シチ"],
+            "kunyomi": ["なな"]
+          },
+          "examples": [
+            { "word": "七つ", "reading": "ななつ", "meaning": "sept objets" },
+            { "word": "七人", "reading": "しちにん", "meaning": "sept personnes" },
+            { "word": "七月", "reading": "しちがつ", "meaning": "juillet" }
+          ]
+        },
+        {
+          "character": "八",
+          "meaning": "huit / eight",
+          "readings": {
+            "onyomi": ["ハチ"],
+            "kunyomi": ["や"]
+          },
+          "examples": [
+            { "word": "八つ", "reading": "やっつ", "meaning": "huit objets" },
+            { "word": "八人", "reading": "はちにん", "meaning": "huit personnes" },
+            { "word": "八月", "reading": "はちがつ", "meaning": "août" }
+          ]
+        },
+        {
+          "character": "九",
+          "meaning": "neuf / nine",
+          "readings": {
+            "onyomi": ["キュウ", "ク"],
+            "kunyomi": ["ここの"]
+          },
+          "examples": [
+            { "word": "九つ", "reading": "ここのつ", "meaning": "neuf objets" },
+            { "word": "九人", "reading": "きゅうにん", "meaning": "neuf personnes" },
+            { "word": "九月", "reading": "くがつ", "meaning": "septembre" }
+          ]
+        },
+        {
+          "character": "十",
+          "meaning": "dix / ten",
+          "readings": {
+            "onyomi": ["ジュウ"],
+            "kunyomi": ["とお"]
+          },
+          "examples": [
+            { "word": "十日", "reading": "とおか", "meaning": "dix jours" },
+            { "word": "十人", "reading": "じゅうにん", "meaning": "dix personnes" },
+            { "word": "十月", "reading": "じゅうがつ", "meaning": "octobre" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Temps / Position (11-25)",
+      "kanji": [
+        {
+          "character": "日",
+          "meaning": "jour, soleil / day, sun",
+          "readings": {
+            "onyomi": ["ニチ", "ジツ"],
+            "kunyomi": ["ひ", "か"]
+          },
+          "examples": [
+            { "word": "日本", "reading": "にほん", "meaning": "Japon" },
+            { "word": "毎日", "reading": "まいにち", "meaning": "tous les jours" },
+            { "word": "日曜日", "reading": "にちようび", "meaning": "dimanche" }
+          ]
+        },
+        {
+          "character": "月",
+          "meaning": "mois, lune / month, moon",
+          "readings": {
+            "onyomi": ["ゲツ", "ガツ"],
+            "kunyomi": ["つき"]
+          },
+          "examples": [
+            { "word": "月曜日", "reading": "げつようび", "meaning": "lundi" },
+            { "word": "今月", "reading": "こんげつ", "meaning": "ce mois-ci" },
+            { "word": "一月", "reading": "いちがつ", "meaning": "janvier" }
+          ]
+        },
+        {
+          "character": "火",
+          "meaning": "feu / fire",
+          "readings": {
+            "onyomi": ["カ"],
+            "kunyomi": ["ひ"]
+          },
+          "examples": [
+            { "word": "火曜日", "reading": "かようび", "meaning": "mardi" },
+            { "word": "火", "reading": "ひ", "meaning": "feu" },
+            { "word": "火山", "reading": "かざん", "meaning": "volcan" }
+          ]
+        },
+        {
+          "character": "水",
+          "meaning": "eau / water",
+          "readings": {
+            "onyomi": ["スイ"],
+            "kunyomi": ["みず"]
+          },
+          "examples": [
+            { "word": "水", "reading": "みず", "meaning": "eau" },
+            { "word": "水曜日", "reading": "すいようび", "meaning": "mercredi" },
+            { "word": "水を飲む", "reading": "みずをのむ", "meaning": "boire de l'eau" }
+          ]
+        },
+        {
+          "character": "木",
+          "meaning": "arbre, bois / tree, wood",
+          "readings": {
+            "onyomi": ["モク", "ボク"],
+            "kunyomi": ["き"]
+          },
+          "examples": [
+            { "word": "木", "reading": "き", "meaning": "arbre" },
+            { "word": "木曜日", "reading": "もくようび", "meaning": "jeudi" },
+            { "word": "木の下", "reading": "きのした", "meaning": "sous l'arbre" }
+          ]
+        },
+        {
+          "character": "金",
+          "meaning": "argent / money",
+          "readings": {
+            "onyomi": ["キン", "コン"],
+            "kunyomi": ["かね"]
+          },
+          "examples": [
+            { "word": "お金", "reading": "おかね", "meaning": "argent" },
+            { "word": "金曜日", "reading": "きんようび", "meaning": "vendredi" },
+            { "word": "料金", "reading": "りょうきん", "meaning": "tarif" }
+          ]
+        },
+        {
+          "character": "土",
+          "meaning": "terre / earth",
+          "readings": {
+            "onyomi": ["ド", "ト"],
+            "kunyomi": ["つち"]
+          },
+          "examples": [
+            { "word": "土曜日", "reading": "どようび", "meaning": "samedi" },
+            { "word": "土", "reading": "つち", "meaning": "terre" },
+            { "word": "土地", "reading": "とち", "meaning": "terrain" }
+          ]
+        },
+        {
+          "character": "年",
+          "meaning": "année / year",
+          "readings": {
+            "onyomi": ["ネン"],
+            "kunyomi": ["とし"]
+          },
+          "examples": [
+            { "word": "今年", "reading": "ことし", "meaning": "cette année" },
+            { "word": "毎年", "reading": "まいとし", "meaning": "chaque année" },
+            { "word": "来年", "reading": "らいねん", "meaning": "l'an prochain" }
+          ]
+        },
+        {
+          "character": "時",
+          "meaning": "heure, temps / time",
+          "readings": {
+            "onyomi": ["ジ"],
+            "kunyomi": ["とき"]
+          },
+          "examples": [
+            { "word": "時間", "reading": "じかん", "meaning": "temps, durée" },
+            { "word": "一時", "reading": "いちじ", "meaning": "une heure" },
+            { "word": "何時", "reading": "なんじ", "meaning": "quelle heure" }
+          ]
+        },
+        {
+          "character": "人",
+          "meaning": "personne / person",
+          "readings": {
+            "onyomi": ["ジン", "ニン"],
+            "kunyomi": ["ひと"]
+          },
+          "examples": [
+            { "word": "人", "reading": "ひと", "meaning": "personne" },
+            { "word": "日本人", "reading": "にほんじん", "meaning": "Japonais" },
+            { "word": "三人", "reading": "さんにん", "meaning": "trois personnes" }
+          ]
+        },
+        {
+          "character": "今",
+          "meaning": "maintenant / now",
+          "readings": {
+            "onyomi": ["コン", "キン"],
+            "kunyomi": ["いま"]
+          },
+          "examples": [
+            { "word": "今", "reading": "いま", "meaning": "maintenant" },
+            { "word": "今週", "reading": "こんしゅう", "meaning": "cette semaine" },
+            { "word": "今月", "reading": "こんげつ", "meaning": "ce mois-ci" }
+          ]
+        },
+        {
+          "character": "大",
+          "meaning": "grand / big",
+          "readings": {
+            "onyomi": ["ダイ", "タイ"],
+            "kunyomi": ["おお"]
+          },
+          "examples": [
+            { "word": "大きい", "reading": "おおきい", "meaning": "grand" },
+            { "word": "大学", "reading": "だいがく", "meaning": "université" },
+            { "word": "大人", "reading": "おとな", "meaning": "adulte" }
+          ]
+        },
+        {
+          "character": "小",
+          "meaning": "petit / small",
+          "readings": {
+            "onyomi": ["ショウ"],
+            "kunyomi": ["ちい", "こ", "お"]
+          },
+          "examples": [
+            { "word": "小さい", "reading": "ちいさい", "meaning": "petit" },
+            { "word": "小学生", "reading": "しょうがくせい", "meaning": "écolier" },
+            { "word": "小さな", "reading": "ちいさな", "meaning": "petit (adj.)" }
+          ]
+        },
+        {
+          "character": "上",
+          "meaning": "haut / up",
+          "readings": {
+            "onyomi": ["ジョウ"],
+            "kunyomi": ["うえ", "あ", "のぼ"]
+          },
+          "examples": [
+            { "word": "上", "reading": "うえ", "meaning": "au-dessus" },
+            { "word": "上がる", "reading": "あがる", "meaning": "monter" },
+            { "word": "上手", "reading": "じょうず", "meaning": "habile" }
+          ]
+        },
+        {
+          "character": "下",
+          "meaning": "bas / down",
+          "readings": {
+            "onyomi": ["カ", "ゲ"],
+            "kunyomi": ["した", "さ", "くだ", "お"]
+          },
+          "examples": [
+            { "word": "下", "reading": "した", "meaning": "dessous" },
+            { "word": "下りる", "reading": "おりる", "meaning": "descendre" },
+            { "word": "地下", "reading": "ちか", "meaning": "sous-sol" }
+          ]
+        }
+      ]
+    }
+  ]
+}

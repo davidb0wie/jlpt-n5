@@ -1,0 +1,133 @@
+{
+  "groups": [
+    {
+      "id": 1,
+      "name": "Groupe 1 - Verbes en -u (五段動詞)",
+      "description": "La dernière syllabe du verbe peut passer par 5 lignes du tableau des kana",
+      "verbs": [
+        { "kanji": "行く", "kana": "いく", "romaji": "iku", "meaning": "aller" },
+        { "kanji": "帰る", "kana": "かえる", "romaji": "kaeru", "meaning": "rentrer" },
+        { "kanji": "飲む", "kana": "のむ", "romaji": "nomu", "meaning": "boire" },
+        { "kanji": "書く", "kana": "かく", "romaji": "kaku", "meaning": "écrire" },
+        { "kanji": "読む", "kana": "よむ", "romaji": "yomu", "meaning": "lire" },
+        { "kanji": "話す", "kana": "はなす", "romaji": "hanasu", "meaning": "parler" },
+        { "kanji": "聞く", "kana": "きく", "romaji": "kiku", "meaning": "écouter" },
+        { "kanji": "会う", "kana": "あう", "romaji": "au", "meaning": "rencontrer" },
+        { "kanji": "入る", "kana": "はいる", "romaji": "hairu", "meaning": "entrer" },
+        { "kanji": "出す", "kana": "だす", "romaji": "dasu", "meaning": "sortir (qqe chose)" },
+        { "kanji": "乗る", "kana": "のる", "romaji": "noru", "meaning": "monter (transport)" },
+        { "kanji": "待つ", "kana": "まつ", "romaji": "matsu", "meaning": "attendre" },
+        { "kanji": "持つ", "kana": "もつ", "romaji": "motsu", "meaning": "avoir / tenir" },
+        { "kanji": "買う", "kana": "かう", "romaji": "kau", "meaning": "acheter" },
+        { "kanji": "使う", "kana": "つかう", "romaji": "tsukau", "meaning": "utiliser" },
+        { "kanji": "言う", "kana": "いう", "romaji": "iu", "meaning": "dire" },
+        { "kanji": "知る", "kana": "しる", "romaji": "shiru", "meaning": "savoir / connaître" },
+        { "kanji": "分かる", "kana": "わかる", "romaji": "wakaru", "meaning": "comprendre" },
+        { "kanji": "歩く", "kana": "あるく", "romaji": "aruku", "meaning": "marcher" },
+        { "kanji": "働く", "kana": "はたらく", "romaji": "hataraku", "meaning": "travailler" },
+        { "kanji": "遊ぶ", "kana": "あそぶ", "romaji": "asobu", "meaning": "jouer" },
+        { "kanji": "泳ぐ", "kana": "およぐ", "romaji": "oyogu", "meaning": "nager" },
+        { "kanji": "走る", "kana": "はしる", "romaji": "hashiru", "meaning": "courir" },
+        { "kanji": "呼ぶ", "kana": "よぶ", "romaji": "yobu", "meaning": "appeler" },
+        { "kanji": "作る", "kana": "つくる", "romaji": "tsukuru", "meaning": "fabriquer" },
+        { "kanji": "立つ", "kana": "たつ", "romaji": "tatsu", "meaning": "se lever" },
+        { "kanji": "座る", "kana": "すわる", "romaji": "suwaru", "meaning": "s'asseoir" },
+        { "kanji": "死ぬ", "kana": "しぬ", "romaji": "shinu", "meaning": "mourir" },
+        { "kanji": "住む", "kana": "すむ", "romaji": "sumu", "meaning": "habiter" },
+        { "kanji": "泊まる", "kana": "とまる", "romaji": "tomaru", "meaning": "passer la nuit" },
+        { "kanji": "送る", "kana": "おくる", "romaji": "okuru", "meaning": "envoyer" },
+        { "kanji": "置く", "kana": "おく", "romaji": "oku", "meaning": "poser" },
+        { "kanji": "習う", "kana": "ならう", "romaji": "narau", "meaning": "apprendre" },
+        { "kanji": "ある", "kana": "ある", "romaji": "aru", "meaning": "il y a (objet)" },
+        { "kanji": "なる", "kana": "なる", "romaji": "naru", "meaning": "devenir" },
+        { "kanji": "始まる", "kana": "はじまる", "romaji": "hajimaru", "meaning": "commencer" },
+        { "kanji": "終わる", "kana": "おわる", "romaji": "owaru", "meaning": "finir" },
+        { "kanji": "休む", "kana": "やすむ", "romaji": "yasumu", "meaning": "se reposer" },
+        { "kanji": "手伝う", "kana": "てつだう", "romaji": "tetsudau", "meaning": "aider" },
+        { "kanji": "返す", "kana": "かえす", "romaji": "kaesu", "meaning": "rendre" },
+        { "kanji": "貸す", "kana": "かす", "romaji": "kasu", "meaning": "prêter" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Groupe 2 - Verbes en -iru / -eru (一段動詞)",
+      "description": "Un seul niveau / une seule marche",
+      "verbs": [
+        { "kanji": "食べる", "kana": "たべる", "romaji": "taberu", "meaning": "manger" },
+        { "kanji": "見る", "kana": "みる", "romaji": "miru", "meaning": "voir" },
+        { "kanji": "起きる", "kana": "おきる", "romaji": "okiru", "meaning": "se lever" },
+        { "kanji": "寝る", "kana": "ねる", "romaji": "neru", "meaning": "dormir" },
+        { "kanji": "教える", "kana": "おしえる", "romaji": "oshieru", "meaning": "enseigner" },
+        { "kanji": "借りる", "kana": "かりる", "romaji": "kariru", "meaning": "emprunter" },
+        { "kanji": "開ける", "kana": "あける", "romaji": "akeru", "meaning": "ouvrir" },
+        { "kanji": "閉める", "kana": "しめる", "romaji": "shimeru", "meaning": "fermer" },
+        { "kanji": "入れる", "kana": "いれる", "romaji": "ireru", "meaning": "mettre" },
+        { "kanji": "出かける", "kana": "でかける", "romaji": "dekakeru", "meaning": "sortir (activité)" },
+        { "kanji": "降りる", "kana": "おりる", "romaji": "oriru", "meaning": "descendre" },
+        { "kanji": "生まれる", "kana": "うまれる", "romaji": "umareru", "meaning": "naître" },
+        { "kanji": "いる", "kana": "いる", "romaji": "iru", "meaning": "il y a (être vivant)" },
+        { "kanji": "出る", "kana": "でる", "romaji": "deru", "meaning": "sortir" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Groupe 3 - Verbes irréguliers",
+      "description": "する (faire) et 来る (venir)",
+      "verbs": [
+        { "kanji": "する", "kana": "する", "romaji": "suru", "meaning": "faire" },
+        { "kanji": "来る", "kana": "くる", "romaji": "kuru", "meaning": "venir" },
+        { "kanji": "勉強する", "kana": "べんきょうする", "romaji": "benkyōsuru", "meaning": "étudier" },
+        { "kanji": "結婚する", "kana": "けっこんする", "romaji": "kekkonsuru", "meaning": "se marier" },
+        { "kanji": "入院する", "kana": "にゅういんする", "romaji": "nyūinsuru", "meaning": "être hospitalisé" }
+      ]
+    }
+  ],
+  "conjugations": {
+    "group1": {
+      "present_affirmative_casual": "辞書形 (u)",
+      "present_negative_casual": "u → a + ない",
+      "present_affirmative_polite": "u → i + ます",
+      "present_negative_polite": "u → i + ません",
+      "past_affirmative_casual": "た形",
+      "past_negative_casual": "ない形 → なかった",
+      "past_affirmative_polite": "ます → ました",
+      "past_negative_polite": "ません → ませんでした",
+      "te_form": "て形"
+    },
+    "group2": {
+      "present_affirmative_casual": "辞書形 (ru)",
+      "present_negative_casual": "ru → ない",
+      "present_affirmative_polite": "ru → ます",
+      "present_negative_polite": "ru → ません",
+      "past_affirmative_casual": "ru → た",
+      "past_negative_casual": "ru → なかった",
+      "past_affirmative_polite": "ru → ました",
+      "past_negative_polite": "ru → ませんでした",
+      "te_form": "ru → て"
+    },
+    "group3": {
+      "する": {
+        "present_affirmative_casual": "する",
+        "present_negative_casual": "しない",
+        "present_affirmative_polite": "します",
+        "present_negative_polite": "しません",
+        "past_affirmative_casual": "した",
+        "past_negative_casual": "しなかった",
+        "past_affirmative_polite": "しました",
+        "past_negative_polite": "しませんでした",
+        "te_form": "して"
+      },
+      "来る": {
+        "present_affirmative_casual": "来る",
+        "present_negative_casual": "来ない",
+        "present_affirmative_polite": "来ます",
+        "present_negative_polite": "来ません",
+        "past_affirmative_casual": "来た",
+        "past_negative_casual": "来なかった",
+        "past_affirmative_polite": "来ました",
+        "past_negative_polite": "来ませんでした",
+        "te_form": "来て"
+      }
+    }
+  }
+}
