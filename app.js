@@ -652,51 +652,42 @@ const app = {
         const container = document.getElementById('adverbs-list');
         container.innerHTML = '';
 
-        // Créer la grille de navigation en haut
-        const navGrid = document.createElement('div');
-        navGrid.className = 'adverbs-nav-grid';
+        // Créer la grille d'adverbes (3 par ligne)
+        const grid = document.createElement('div');
+        grid.className = 'adverbs-grid';
 
-        this.data.adverbs.adverbs.forEach((adverb, index) => {
-            const navItem = document.createElement('div');
-            navItem.className = 'adverb-nav-item';
+        this.data.adverbs.adverbs.forEach((adverb) => {
+            const item = document.createElement('div');
+            item.className = 'adverb-item';
 
-            navItem.innerHTML = `
-                <div class="nav-kanji">${adverb.kanji}</div>
-                <div class="nav-hiragana">${adverb.hiragana}</div>
-                <div class="nav-meaning">${adverb.meaning}</div>
-            `;
-            navItem.onclick = () => {
-                document.getElementById(`adverb-${index}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
-            };
-            navGrid.appendChild(navItem);
-        });
-
-        container.appendChild(navGrid);
-
-        // Créer les cartes détaillées
-        this.data.adverbs.adverbs.forEach((adverb, index) => {
-            const card = document.createElement('div');
-            card.className = 'adverb-card';
-            card.id = `adverb-${index}`;
-
-            card.innerHTML = `
-                <div class="adverb-header">
+            item.innerHTML = `
+                <div class="adverb-main">
                     <div class="adverb-kanji">${adverb.kanji}</div>
                     <div class="adverb-hiragana">${adverb.hiragana}</div>
+                    <div class="adverb-meaning">${adverb.meaning}</div>
                 </div>
-                <div class="adverb-meaning">${adverb.meaning}</div>
-                <div class="adverb-example">
+                <div class="adverb-details" style="display: none;">
                     <div class="example-sentence">${adverb.example.sentence}</div>
                     <div class="example-reading">${adverb.example.reading}</div>
                     <div class="example-translation">${adverb.example.translation}</div>
                 </div>
             `;
 
-            container.appendChild(card);
+            // Toggle détails au clic
+            item.onclick = () => {
+                const details = item.querySelector('.adverb-details');
+                const isVisible = details.style.display !== 'none';
+                details.style.display = isVisible ? 'none' : 'block';
+                item.classList.toggle('expanded');
+            };
+
+            grid.appendChild(item);
 
             // Marquer comme étudié
             this.progress.studiedAdverbs.add(adverb.hiragana);
         });
+
+        container.appendChild(grid);
 
         this.saveProgress();
         this.updateHomeStats();
