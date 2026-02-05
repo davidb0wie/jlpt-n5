@@ -334,6 +334,1081 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Directions / Positions (26-35)",
+      "kanji": [
+        {
+          "character": "中",
+          "meaning": "milieu, intérieur / middle, inside",
+          "readings": {
+            "onyomi": ["チュウ"],
+            "kunyomi": ["なか"]
+          },
+          "examples": [
+            { "word": "中", "reading": "なか", "meaning": "dedans" },
+            { "word": "中国", "reading": "ちゅうごく", "meaning": "Chine" },
+            { "word": "中学生", "reading": "ちゅうがくせい", "meaning": "collégien" }
+          ]
+        },
+        {
+          "character": "外",
+          "meaning": "extérieur / outside",
+          "readings": {
+            "onyomi": ["ガイ", "ゲ"],
+            "kunyomi": ["そと"]
+          },
+          "examples": [
+            { "word": "外", "reading": "そと", "meaning": "dehors" },
+            { "word": "外国", "reading": "がいこく", "meaning": "pays étranger" },
+            { "word": "外国人", "reading": "がいこくじん", "meaning": "étranger (personne)" }
+          ]
+        },
+        {
+          "character": "前",
+          "meaning": "avant, devant / before, front",
+          "readings": {
+            "onyomi": ["ゼン"],
+            "kunyomi": ["まえ"]
+          },
+          "examples": [
+            { "word": "前", "reading": "まえ", "meaning": "devant" },
+            { "word": "名前", "reading": "なまえ", "meaning": "nom" },
+            { "word": "前日", "reading": "ぜんじつ", "meaning": "la veille" }
+          ]
+        },
+        {
+          "character": "後",
+          "meaning": "après, derrière / after, behind",
+          "readings": {
+            "onyomi": ["ゴ", "コウ"],
+            "kunyomi": ["あと", "うし"]
+          },
+          "examples": [
+            { "word": "後", "reading": "あと", "meaning": "après" },
+            { "word": "午後", "reading": "ごご", "meaning": "après-midi" },
+            { "word": "後ろ", "reading": "うしろ", "meaning": "derrière" }
+          ]
+        },
+        {
+          "character": "左",
+          "meaning": "gauche / left",
+          "readings": {
+            "onyomi": ["サ"],
+            "kunyomi": ["ひだり"]
+          },
+          "examples": [
+            { "word": "左", "reading": "ひだり", "meaning": "gauche" },
+            { "word": "左手", "reading": "ひだりて", "meaning": "main gauche" },
+            { "word": "左側", "reading": "ひだりがわ", "meaning": "côté gauche" }
+          ]
+        },
+        {
+          "character": "右",
+          "meaning": "droite / right",
+          "readings": {
+            "onyomi": ["ウ", "ユウ"],
+            "kunyomi": ["みぎ"]
+          },
+          "examples": [
+            { "word": "右", "reading": "みぎ", "meaning": "droite" },
+            { "word": "右手", "reading": "みぎて", "meaning": "main droite" },
+            { "word": "右側", "reading": "みぎがわ", "meaning": "côté droit" }
+          ]
+        },
+        {
+          "character": "東",
+          "meaning": "est / east",
+          "readings": {
+            "onyomi": ["トウ"],
+            "kunyomi": ["ひがし"]
+          },
+          "examples": [
+            { "word": "東", "reading": "ひがし", "meaning": "est" },
+            { "word": "東京", "reading": "とうきょう", "meaning": "Tokyo" },
+            { "word": "東口", "reading": "ひがしぐち", "meaning": "sortie est" }
+          ]
+        },
+        {
+          "character": "西",
+          "meaning": "ouest / west",
+          "readings": {
+            "onyomi": ["セイ", "サイ"],
+            "kunyomi": ["にし"]
+          },
+          "examples": [
+            { "word": "西", "reading": "にし", "meaning": "ouest" },
+            { "word": "西口", "reading": "にしぐち", "meaning": "sortie ouest" },
+            { "word": "西日本", "reading": "にしにほん", "meaning": "ouest du Japon" }
+          ]
+        },
+        {
+          "character": "南",
+          "meaning": "sud / south",
+          "readings": {
+            "onyomi": ["ナン"],
+            "kunyomi": ["みなみ"]
+          },
+          "examples": [
+            { "word": "南", "reading": "みなみ", "meaning": "sud" },
+            { "word": "南口", "reading": "みなみぐち", "meaning": "sortie sud" },
+            { "word": "南国", "reading": "なんごく", "meaning": "pays du sud" }
+          ]
+        },
+        {
+          "character": "北",
+          "meaning": "nord / north",
+          "readings": {
+            "onyomi": ["ホク"],
+            "kunyomi": ["きた"]
+          },
+          "examples": [
+            { "word": "北", "reading": "きた", "meaning": "nord" },
+            { "word": "北口", "reading": "きたぐち", "meaning": "sortie nord" },
+            { "word": "北海道", "reading": "ほっかいどう", "meaning": "Hokkaido" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Corps / Nature (36-45)",
+      "kanji": [
+        {
+          "character": "口",
+          "meaning": "bouche / mouth",
+          "readings": {
+            "onyomi": ["コウ", "ク"],
+            "kunyomi": ["くち"]
+          },
+          "examples": [
+            { "word": "口", "reading": "くち", "meaning": "bouche" },
+            { "word": "入口", "reading": "いりぐち", "meaning": "entrée" },
+            { "word": "出口", "reading": "でぐち", "meaning": "sortie" }
+          ]
+        },
+        {
+          "character": "目",
+          "meaning": "œil / eye",
+          "readings": {
+            "onyomi": ["モク", "ボク"],
+            "kunyomi": ["め"]
+          },
+          "examples": [
+            { "word": "目", "reading": "め", "meaning": "œil" },
+            { "word": "目上", "reading": "めうえ", "meaning": "supérieur (statut)" },
+            { "word": "一番目", "reading": "いちばんめ", "meaning": "premier" }
+          ]
+        },
+        {
+          "character": "耳",
+          "meaning": "oreille / ear",
+          "readings": {
+            "onyomi": ["ジ"],
+            "kunyomi": ["みみ"]
+          },
+          "examples": [
+            { "word": "耳", "reading": "みみ", "meaning": "oreille" },
+            { "word": "耳が痛い", "reading": "みみがいたい", "meaning": "avoir mal à l'oreille" },
+            { "word": "耳を聞く", "reading": "みみをきく", "meaning": "écouter" }
+          ]
+        },
+        {
+          "character": "手",
+          "meaning": "main / hand",
+          "readings": {
+            "onyomi": ["シュ"],
+            "kunyomi": ["て"]
+          },
+          "examples": [
+            { "word": "手", "reading": "て", "meaning": "main" },
+            { "word": "手紙", "reading": "てがみ", "meaning": "lettre" },
+            { "word": "上手", "reading": "じょうず", "meaning": "habile" }
+          ]
+        },
+        {
+          "character": "足",
+          "meaning": "pied, jambe / foot, leg",
+          "readings": {
+            "onyomi": ["ソク"],
+            "kunyomi": ["あし", "た"]
+          },
+          "examples": [
+            { "word": "足", "reading": "あし", "meaning": "pied / jambe" },
+            { "word": "足りる", "reading": "たりる", "meaning": "suffire" },
+            { "word": "足元", "reading": "あしもと", "meaning": "aux pieds" }
+          ]
+        },
+        {
+          "character": "力",
+          "meaning": "force / power",
+          "readings": {
+            "onyomi": ["リョク", "リキ"],
+            "kunyomi": ["ちから"]
+          },
+          "examples": [
+            { "word": "力", "reading": "ちから", "meaning": "force" },
+            { "word": "力仕事", "reading": "ちからしごと", "meaning": "travail physique" },
+            { "word": "体力", "reading": "たいりょく", "meaning": "endurance" }
+          ]
+        },
+        {
+          "character": "気",
+          "meaning": "esprit, énergie / spirit, energy",
+          "readings": {
+            "onyomi": ["キ", "ケ"],
+            "kunyomi": []
+          },
+          "examples": [
+            { "word": "元気", "reading": "げんき", "meaning": "en forme" },
+            { "word": "天気", "reading": "てんき", "meaning": "météo" },
+            { "word": "気分", "reading": "きぶん", "meaning": "humeur" }
+          ]
+        },
+        {
+          "character": "雨",
+          "meaning": "pluie / rain",
+          "readings": {
+            "onyomi": ["ウ"],
+            "kunyomi": ["あめ"]
+          },
+          "examples": [
+            { "word": "雨", "reading": "あめ", "meaning": "pluie" },
+            { "word": "雨の日", "reading": "あめのひ", "meaning": "jour de pluie" },
+            { "word": "大雨", "reading": "おおあめ", "meaning": "forte pluie" }
+          ]
+        },
+        {
+          "character": "天",
+          "meaning": "ciel / heaven",
+          "readings": {
+            "onyomi": ["テン"],
+            "kunyomi": ["あま"]
+          },
+          "examples": [
+            { "word": "天気", "reading": "てんき", "meaning": "météo" },
+            { "word": "天国", "reading": "てんごく", "meaning": "paradis" },
+            { "word": "天の川", "reading": "あまのがわ", "meaning": "Voie lactée" }
+          ]
+        },
+        {
+          "character": "空",
+          "meaning": "ciel / sky",
+          "readings": {
+            "onyomi": ["クウ"],
+            "kunyomi": ["そら", "から"]
+          },
+          "examples": [
+            { "word": "空", "reading": "そら", "meaning": "ciel" },
+            { "word": "青空", "reading": "あおぞら", "meaning": "ciel bleu" },
+            { "word": "空港", "reading": "くうこう", "meaning": "aéroport" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nature / Objets / Transport (46-55)",
+      "kanji": [
+        {
+          "character": "山",
+          "meaning": "montagne / mountain",
+          "readings": {
+            "onyomi": ["サン"],
+            "kunyomi": ["やま"]
+          },
+          "examples": [
+            { "word": "山", "reading": "やま", "meaning": "montagne" },
+            { "word": "富士山", "reading": "ふじさん", "meaning": "mont Fuji" },
+            { "word": "山に行く", "reading": "やまにいく", "meaning": "aller à la montagne" }
+          ]
+        },
+        {
+          "character": "川",
+          "meaning": "rivière / river",
+          "readings": {
+            "onyomi": ["セン"],
+            "kunyomi": ["かわ"]
+          },
+          "examples": [
+            { "word": "川", "reading": "かわ", "meaning": "rivière" },
+            { "word": "川の水", "reading": "かわのみず", "meaning": "eau de la rivière" },
+            { "word": "川で泳ぐ", "reading": "かわでおよぐ", "meaning": "nager dans la rivière" }
+          ]
+        },
+        {
+          "character": "田",
+          "meaning": "rizière / rice field",
+          "readings": {
+            "onyomi": ["デン"],
+            "kunyomi": ["た"]
+          },
+          "examples": [
+            { "word": "田んぼ", "reading": "たんぼ", "meaning": "rizière" },
+            { "word": "田中", "reading": "たなか", "meaning": "nom de famille Tanaka" },
+            { "word": "田舎", "reading": "いなか", "meaning": "campagne" }
+          ]
+        },
+        {
+          "character": "白",
+          "meaning": "blanc / white",
+          "readings": {
+            "onyomi": ["ハク", "ビャク"],
+            "kunyomi": ["しろ"]
+          },
+          "examples": [
+            { "word": "白", "reading": "しろ", "meaning": "blanc" },
+            { "word": "白い", "reading": "しろい", "meaning": "blanc (adj.)" },
+            { "word": "白い紙", "reading": "しろいかみ", "meaning": "papier blanc" }
+          ]
+        },
+        {
+          "character": "黒",
+          "meaning": "noir / black",
+          "readings": {
+            "onyomi": ["コク"],
+            "kunyomi": ["くろ"]
+          },
+          "examples": [
+            { "word": "黒", "reading": "くろ", "meaning": "noir" },
+            { "word": "黒い", "reading": "くろい", "meaning": "noir (adj.)" },
+            { "word": "黒い服", "reading": "くろいふく", "meaning": "vêtement noir" }
+          ]
+        },
+        {
+          "character": "赤",
+          "meaning": "rouge / red",
+          "readings": {
+            "onyomi": ["セキ", "シャク"],
+            "kunyomi": ["あか"]
+          },
+          "examples": [
+            { "word": "赤", "reading": "あか", "meaning": "rouge" },
+            { "word": "赤い", "reading": "あかい", "meaning": "rouge (adj.)" },
+            { "word": "赤いりんご", "reading": "あかいりんご", "meaning": "pomme rouge" }
+          ]
+        },
+        {
+          "character": "青",
+          "meaning": "bleu / blue",
+          "readings": {
+            "onyomi": ["セイ", "ショウ"],
+            "kunyomi": ["あお"]
+          },
+          "examples": [
+            { "word": "青", "reading": "あお", "meaning": "bleu" },
+            { "word": "青い", "reading": "あおい", "meaning": "bleu (adj.)" },
+            { "word": "青空", "reading": "あおぞら", "meaning": "ciel bleu" }
+          ]
+        },
+        {
+          "character": "本",
+          "meaning": "livre, origine / book, origin",
+          "readings": {
+            "onyomi": ["ホン"],
+            "kunyomi": ["もと"]
+          },
+          "examples": [
+            { "word": "本", "reading": "ほん", "meaning": "livre" },
+            { "word": "日本", "reading": "にほん", "meaning": "Japon" },
+            { "word": "本屋", "reading": "ほんや", "meaning": "librairie" }
+          ]
+        },
+        {
+          "character": "車",
+          "meaning": "voiture / car",
+          "readings": {
+            "onyomi": ["シャ"],
+            "kunyomi": ["くるま"]
+          },
+          "examples": [
+            { "word": "車", "reading": "くるま", "meaning": "voiture" },
+            { "word": "電車", "reading": "でんしゃ", "meaning": "train" },
+            { "word": "車で行く", "reading": "くるまでいく", "meaning": "aller en voiture" }
+          ]
+        },
+        {
+          "character": "電",
+          "meaning": "électricité / electricity",
+          "readings": {
+            "onyomi": ["デン"],
+            "kunyomi": []
+          },
+          "examples": [
+            { "word": "電気", "reading": "でんき", "meaning": "électricité" },
+            { "word": "電車", "reading": "でんしゃ", "meaning": "train" },
+            { "word": "電話", "reading": "でんわ", "meaning": "téléphone" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "École / Vie Quotidienne (56-65)",
+      "kanji": [
+        {
+          "character": "駅",
+          "meaning": "gare / station",
+          "readings": {
+            "onyomi": ["エキ"],
+            "kunyomi": []
+          },
+          "examples": [
+            { "word": "駅", "reading": "えき", "meaning": "gare" },
+            { "word": "駅の前", "reading": "えきのまえ", "meaning": "devant la gare" },
+            { "word": "駅に行く", "reading": "えきにいく", "meaning": "aller à la gare" }
+          ]
+        },
+        {
+          "character": "校",
+          "meaning": "école / school",
+          "readings": {
+            "onyomi": ["コウ"],
+            "kunyomi": []
+          },
+          "examples": [
+            { "word": "学校", "reading": "がっこう", "meaning": "école" },
+            { "word": "高校", "reading": "こうこう", "meaning": "lycée" },
+            { "word": "校門", "reading": "こうもん", "meaning": "portail de l'école" }
+          ]
+        },
+        {
+          "character": "生",
+          "meaning": "vie, naissance / life, birth",
+          "readings": {
+            "onyomi": ["セイ", "ショウ"],
+            "kunyomi": ["い", "う", "なま"]
+          },
+          "examples": [
+            { "word": "学生", "reading": "がくせい", "meaning": "étudiant" },
+            { "word": "先生", "reading": "せんせい", "meaning": "professeur" },
+            { "word": "生まれる", "reading": "うまれる", "meaning": "naître" }
+          ]
+        },
+        {
+          "character": "学",
+          "meaning": "étudier / study",
+          "readings": {
+            "onyomi": ["ガク"],
+            "kunyomi": ["まな"]
+          },
+          "examples": [
+            { "word": "学ぶ", "reading": "まなぶ", "meaning": "apprendre" },
+            { "word": "学校", "reading": "がっこう", "meaning": "école" },
+            { "word": "学生", "reading": "がくせい", "meaning": "étudiant" }
+          ]
+        },
+        {
+          "character": "先",
+          "meaning": "avant, précédent / previous",
+          "readings": {
+            "onyomi": ["セン"],
+            "kunyomi": ["さき"]
+          },
+          "examples": [
+            { "word": "先生", "reading": "せんせい", "meaning": "professeur" },
+            { "word": "先週", "reading": "せんしゅう", "meaning": "la semaine dernière" },
+            { "word": "先に行く", "reading": "さきにいく", "meaning": "aller avant" }
+          ]
+        },
+        {
+          "character": "私",
+          "meaning": "je / I",
+          "readings": {
+            "onyomi": ["シ"],
+            "kunyomi": ["わたし"]
+          },
+          "examples": [
+            { "word": "私", "reading": "わたし", "meaning": "je, moi" },
+            { "word": "私の本", "reading": "わたしのほん", "meaning": "mon livre" },
+            { "word": "私は学生です", "reading": "わたしはがくせいです", "meaning": "je suis étudiant" }
+          ]
+        },
+        {
+          "character": "友",
+          "meaning": "ami / friend",
+          "readings": {
+            "onyomi": ["ユウ"],
+            "kunyomi": ["とも"]
+          },
+          "examples": [
+            { "word": "友だち", "reading": "ともだち", "meaning": "ami" },
+            { "word": "友人", "reading": "ゆうじん", "meaning": "ami (formel)" },
+            { "word": "友だちと行く", "reading": "ともだちといく", "meaning": "aller avec un ami" }
+          ]
+        },
+        {
+          "character": "名",
+          "meaning": "nom / name",
+          "readings": {
+            "onyomi": ["メイ", "ミョウ"],
+            "kunyomi": ["な"]
+          },
+          "examples": [
+            { "word": "名前", "reading": "なまえ", "meaning": "nom" },
+            { "word": "有名", "reading": "ゆうめい", "meaning": "célèbre" },
+            { "word": "名人", "reading": "めいじん", "meaning": "expert" }
+          ]
+        },
+        {
+          "character": "語",
+          "meaning": "langue, mot / language",
+          "readings": {
+            "onyomi": ["ゴ"],
+            "kunyomi": ["かた"]
+          },
+          "examples": [
+            { "word": "日本語", "reading": "にほんご", "meaning": "japonais" },
+            { "word": "英語", "reading": "えいご", "meaning": "anglais" },
+            { "word": "外国語", "reading": "がいこくご", "meaning": "langue étrangère" }
+          ]
+        },
+        {
+          "character": "話",
+          "meaning": "parler / talk",
+          "readings": {
+            "onyomi": ["ワ"],
+            "kunyomi": ["はな", "はなし"]
+          },
+          "examples": [
+            { "word": "話す", "reading": "はなす", "meaning": "parler" },
+            { "word": "会話", "reading": "かいわ", "meaning": "conversation" },
+            { "word": "話を聞く", "reading": "はなしをきく", "meaning": "écouter une histoire" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Actions Courantes (66-75)",
+      "kanji": [
+        {
+          "character": "読",
+          "meaning": "lire / read",
+          "readings": {
+            "onyomi": ["ドク", "トク"],
+            "kunyomi": ["よ"]
+          },
+          "examples": [
+            { "word": "読む", "reading": "よむ", "meaning": "lire" },
+            { "word": "本を読む", "reading": "ほんをよむ", "meaning": "lire un livre" },
+            { "word": "新聞を読む", "reading": "しんぶんをよむ", "meaning": "lire le journal" }
+          ]
+        },
+        {
+          "character": "書",
+          "meaning": "écrire / write",
+          "readings": {
+            "onyomi": ["ショ"],
+            "kunyomi": ["か"]
+          },
+          "examples": [
+            { "word": "書く", "reading": "かく", "meaning": "écrire" },
+            { "word": "字を書く", "reading": "じをかく", "meaning": "écrire des caractères" },
+            { "word": "手紙を書く", "reading": "てがみをかく", "meaning": "écrire une lettre" }
+          ]
+        },
+        {
+          "character": "食",
+          "meaning": "manger / eat",
+          "readings": {
+            "onyomi": ["ショク"],
+            "kunyomi": ["た"]
+          },
+          "examples": [
+            { "word": "食べる", "reading": "たべる", "meaning": "manger" },
+            { "word": "食事をする", "reading": "しょくじをする", "meaning": "manger un repas" },
+            { "word": "朝ご飯を食べる", "reading": "あさごはんをたべる", "meaning": "prendre le petit-déjeuner" }
+          ]
+        },
+        {
+          "character": "飲",
+          "meaning": "boire / drink",
+          "readings": {
+            "onyomi": ["イン"],
+            "kunyomi": ["の"]
+          },
+          "examples": [
+            { "word": "飲む", "reading": "のむ", "meaning": "boire" },
+            { "word": "水を飲む", "reading": "みずをのむ", "meaning": "boire de l'eau" },
+            { "word": "お茶を飲む", "reading": "おちゃをのむ", "meaning": "boire du thé" }
+          ]
+        },
+        {
+          "character": "行",
+          "meaning": "aller / go",
+          "readings": {
+            "onyomi": ["コウ", "ギョウ"],
+            "kunyomi": ["い", "ゆ"]
+          },
+          "examples": [
+            { "word": "行く", "reading": "いく", "meaning": "aller" },
+            { "word": "学校に行く", "reading": "がっこうにいく", "meaning": "aller à l'école" },
+            { "word": "日本に行く", "reading": "にほんにいく", "meaning": "aller au Japon" }
+          ]
+        },
+        {
+          "character": "来",
+          "meaning": "venir / come",
+          "readings": {
+            "onyomi": ["ライ"],
+            "kunyomi": ["く", "き"]
+          },
+          "examples": [
+            { "word": "来る", "reading": "くる", "meaning": "venir" },
+            { "word": "友だちが来る", "reading": "ともだちがくる", "meaning": "un ami vient" },
+            { "word": "日本に来る", "reading": "にほんにくる", "meaning": "venir au Japon" }
+          ]
+        },
+        {
+          "character": "見",
+          "meaning": "voir / see",
+          "readings": {
+            "onyomi": ["ケン"],
+            "kunyomi": ["み"]
+          },
+          "examples": [
+            { "word": "見る", "reading": "みる", "meaning": "voir" },
+            { "word": "映画を見る", "reading": "えいがをみる", "meaning": "regarder un film" },
+            { "word": "テレビを見る", "reading": "テレビをみる", "meaning": "regarder la télévision" }
+          ]
+        },
+        {
+          "character": "聞",
+          "meaning": "entendre, écouter / hear, listen",
+          "readings": {
+            "onyomi": ["ブン", "モン"],
+            "kunyomi": ["き"]
+          },
+          "examples": [
+            { "word": "聞く", "reading": "きく", "meaning": "écouter" },
+            { "word": "音楽を聞く", "reading": "おんがくをきく", "meaning": "écouter de la musique" },
+            { "word": "先生の話を聞く", "reading": "せんせいのはなしをきく", "meaning": "écouter le professeur" }
+          ]
+        },
+        {
+          "character": "買",
+          "meaning": "acheter / buy",
+          "readings": {
+            "onyomi": ["バイ"],
+            "kunyomi": ["か"]
+          },
+          "examples": [
+            { "word": "買う", "reading": "かう", "meaning": "acheter" },
+            { "word": "本を買う", "reading": "ほんをかう", "meaning": "acheter un livre" },
+            { "word": "スーパーで買う", "reading": "スーパーでかう", "meaning": "acheter au supermarché" }
+          ]
+        },
+        {
+          "character": "休",
+          "meaning": "se reposer / rest",
+          "readings": {
+            "onyomi": ["キュウ"],
+            "kunyomi": ["やす"]
+          },
+          "examples": [
+            { "word": "休む", "reading": "やすむ", "meaning": "se reposer" },
+            { "word": "学校を休む", "reading": "がっこうをやすむ", "meaning": "manquer l'école" },
+            { "word": "休み", "reading": "やすみ", "meaning": "jour de repos" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Actions / Adjectifs (76-85)",
+      "kanji": [
+        {
+          "character": "入",
+          "meaning": "entrer / enter",
+          "readings": {
+            "onyomi": ["ニュウ"],
+            "kunyomi": ["い", "はい"]
+          },
+          "examples": [
+            { "word": "入る", "reading": "はいる", "meaning": "entrer" },
+            { "word": "部屋に入る", "reading": "へやにはいる", "meaning": "entrer dans une pièce" },
+            { "word": "大学に入る", "reading": "だいがくにはいる", "meaning": "entrer à l'université" }
+          ]
+        },
+        {
+          "character": "出",
+          "meaning": "sortir / exit",
+          "readings": {
+            "onyomi": ["シュツ", "スイ"],
+            "kunyomi": ["で", "だ"]
+          },
+          "examples": [
+            { "word": "出る", "reading": "でる", "meaning": "sortir" },
+            { "word": "家を出る", "reading": "いえをでる", "meaning": "sortir de la maison" },
+            { "word": "出口から出る", "reading": "でぐちからでる", "meaning": "sortir par la sortie" }
+          ]
+        },
+        {
+          "character": "会",
+          "meaning": "rencontrer / meet",
+          "readings": {
+            "onyomi": ["カイ", "エ"],
+            "kunyomi": ["あ"]
+          },
+          "examples": [
+            { "word": "会う", "reading": "あう", "meaning": "rencontrer" },
+            { "word": "友だちに会う", "reading": "ともだちにあう", "meaning": "rencontrer un ami" },
+            { "word": "先生に会う", "reading": "せんせいにあう", "meaning": "rencontrer le professeur" }
+          ]
+        },
+        {
+          "character": "分",
+          "meaning": "comprendre, part / understand, part",
+          "readings": {
+            "onyomi": ["ブン", "フン", "ブ"],
+            "kunyomi": ["わ"]
+          },
+          "examples": [
+            { "word": "分かる", "reading": "わかる", "meaning": "comprendre" },
+            { "word": "半分", "reading": "はんぶん", "meaning": "moitié" },
+            { "word": "十分", "reading": "じゅうぶん", "meaning": "suffisant" }
+          ]
+        },
+        {
+          "character": "多",
+          "meaning": "beaucoup / many",
+          "readings": {
+            "onyomi": ["タ"],
+            "kunyomi": ["おお"]
+          },
+          "examples": [
+            { "word": "多い", "reading": "おおい", "meaning": "nombreux" },
+            { "word": "人が多い", "reading": "ひとがおおい", "meaning": "il y a beaucoup de gens" },
+            { "word": "多くの人", "reading": "おおくのひと", "meaning": "beaucoup de personnes" }
+          ]
+        },
+        {
+          "character": "少",
+          "meaning": "peu / few",
+          "readings": {
+            "onyomi": ["ショウ"],
+            "kunyomi": ["すく", "すこ"]
+          },
+          "examples": [
+            { "word": "少ない", "reading": "すくない", "meaning": "peu nombreux" },
+            { "word": "人が少ない", "reading": "ひとがすくない", "meaning": "il y a peu de gens" },
+            { "word": "少し", "reading": "すこし", "meaning": "un peu" }
+          ]
+        },
+        {
+          "character": "長",
+          "meaning": "long / long",
+          "readings": {
+            "onyomi": ["チョウ"],
+            "kunyomi": ["なが"]
+          },
+          "examples": [
+            { "word": "長い", "reading": "ながい", "meaning": "long" },
+            { "word": "長い道", "reading": "ながいみち", "meaning": "longue route" },
+            { "word": "社長", "reading": "しゃちょう", "meaning": "président d'entreprise" }
+          ]
+        },
+        {
+          "character": "高",
+          "meaning": "haut, cher / high, expensive",
+          "readings": {
+            "onyomi": ["コウ"],
+            "kunyomi": ["たか"]
+          },
+          "examples": [
+            { "word": "高い", "reading": "たかい", "meaning": "cher / haut" },
+            { "word": "高い山", "reading": "たかいやま", "meaning": "haute montagne" },
+            { "word": "高校", "reading": "こうこう", "meaning": "lycée" }
+          ]
+        },
+        {
+          "character": "安",
+          "meaning": "bon marché, calme / cheap, safe",
+          "readings": {
+            "onyomi": ["アン"],
+            "kunyomi": ["やす"]
+          },
+          "examples": [
+            { "word": "安い", "reading": "やすい", "meaning": "bon marché" },
+            { "word": "安い店", "reading": "やすいみせ", "meaning": "magasin bon marché" },
+            { "word": "安全", "reading": "あんぜん", "meaning": "sécurité" }
+          ]
+        },
+        {
+          "character": "新",
+          "meaning": "nouveau / new",
+          "readings": {
+            "onyomi": ["シン"],
+            "kunyomi": ["あたら", "あら", "にい"]
+          },
+          "examples": [
+            { "word": "新しい", "reading": "あたらしい", "meaning": "nouveau" },
+            { "word": "新しい本", "reading": "あたらしいほん", "meaning": "nouveau livre" },
+            { "word": "新年", "reading": "しんねん", "meaning": "nouvelle année" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Famille / Adjectifs / Temps (86-105)",
+      "kanji": [
+        {
+          "character": "古",
+          "meaning": "ancien / old",
+          "readings": {
+            "onyomi": ["コ"],
+            "kunyomi": ["ふる"]
+          },
+          "examples": [
+            { "word": "古い", "reading": "ふるい", "meaning": "ancien" },
+            { "word": "古い家", "reading": "ふるいいえ", "meaning": "vieille maison" },
+            { "word": "古い本", "reading": "ふるいほん", "meaning": "vieux livre" }
+          ]
+        },
+        {
+          "character": "早",
+          "meaning": "tôt, rapide / early",
+          "readings": {
+            "onyomi": ["ソウ", "サッ"],
+            "kunyomi": ["はや"]
+          },
+          "examples": [
+            { "word": "早い", "reading": "はやい", "meaning": "tôt / rapide" },
+            { "word": "早く来る", "reading": "はやくくる", "meaning": "venir tôt" },
+            { "word": "早い時間", "reading": "はやいじかん", "meaning": "heure tôt" }
+          ]
+        },
+        {
+          "character": "近",
+          "meaning": "près / near",
+          "readings": {
+            "onyomi": ["キン"],
+            "kunyomi": ["ちか"]
+          },
+          "examples": [
+            { "word": "近い", "reading": "ちかい", "meaning": "près" },
+            { "word": "駅が近い", "reading": "えきがちかい", "meaning": "la gare est proche" },
+            { "word": "近くの店", "reading": "ちかくのみせ", "meaning": "magasin proche" }
+          ]
+        },
+        {
+          "character": "遠",
+          "meaning": "loin / far",
+          "readings": {
+            "onyomi": ["エン", "オン"],
+            "kunyomi": ["とお"]
+          },
+          "examples": [
+            { "word": "遠い", "reading": "とおい", "meaning": "loin" },
+            { "word": "遠い国", "reading": "とおいくに", "meaning": "pays lointain" },
+            { "word": "学校が遠い", "reading": "がっこうがとおい", "meaning": "l'école est loin" }
+          ]
+        },
+        {
+          "character": "楽",
+          "meaning": "plaisir, facile / comfort, easy",
+          "readings": {
+            "onyomi": ["ラク", "ガク"],
+            "kunyomi": ["たの"]
+          },
+          "examples": [
+            { "word": "楽しい", "reading": "たのしい", "meaning": "amusant" },
+            { "word": "楽な仕事", "reading": "らくなしごと", "meaning": "travail facile" },
+            { "word": "音楽", "reading": "おんがく", "meaning": "musique" }
+          ]
+        },
+        {
+          "character": "好",
+          "meaning": "aimer / like",
+          "readings": {
+            "onyomi": ["コウ"],
+            "kunyomi": ["す"]
+          },
+          "examples": [
+            { "word": "好き", "reading": "すき", "meaning": "aimer" },
+            { "word": "日本が好き", "reading": "にほんがすき", "meaning": "aimer le Japon" },
+            { "word": "好きな食べ物", "reading": "すきなたべもの", "meaning": "nourriture préférée" }
+          ]
+        },
+        {
+          "character": "男",
+          "meaning": "homme / man",
+          "readings": {
+            "onyomi": ["ダン", "ナン"],
+            "kunyomi": ["おとこ"]
+          },
+          "examples": [
+            { "word": "男", "reading": "おとこ", "meaning": "homme" },
+            { "word": "男の人", "reading": "おとこのひと", "meaning": "homme (personne)" },
+            { "word": "男の子", "reading": "おとこのこ", "meaning": "garçon" }
+          ]
+        },
+        {
+          "character": "女",
+          "meaning": "femme / woman",
+          "readings": {
+            "onyomi": ["ジョ", "ニョ"],
+            "kunyomi": ["おんな"]
+          },
+          "examples": [
+            { "word": "女", "reading": "おんな", "meaning": "femme" },
+            { "word": "女の人", "reading": "おんなのひと", "meaning": "femme (personne)" },
+            { "word": "女の子", "reading": "おんなのこ", "meaning": "fille" }
+          ]
+        },
+        {
+          "character": "子",
+          "meaning": "enfant / child",
+          "readings": {
+            "onyomi": ["シ", "ス"],
+            "kunyomi": ["こ"]
+          },
+          "examples": [
+            { "word": "子ども", "reading": "こども", "meaning": "enfant" },
+            { "word": "男の子", "reading": "おとこのこ", "meaning": "garçon" },
+            { "word": "女の子", "reading": "おんなのこ", "meaning": "fille" }
+          ]
+        },
+        {
+          "character": "父",
+          "meaning": "père / father",
+          "readings": {
+            "onyomi": ["フ"],
+            "kunyomi": ["ちち"]
+          },
+          "examples": [
+            { "word": "父", "reading": "ちち", "meaning": "père (son propre père)" },
+            { "word": "父の名前", "reading": "ちちのなまえ", "meaning": "nom du père" },
+            { "word": "父と話す", "reading": "ちちとはなす", "meaning": "parler avec son père" }
+          ]
+        },
+        {
+          "character": "母",
+          "meaning": "mère / mother",
+          "readings": {
+            "onyomi": ["ボ"],
+            "kunyomi": ["はは"]
+          },
+          "examples": [
+            { "word": "母", "reading": "はは", "meaning": "mère (sa propre mère)" },
+            { "word": "母の料理", "reading": "ははのりょうり", "meaning": "cuisine de la mère" },
+            { "word": "母と行く", "reading": "ははといく", "meaning": "aller avec sa mère" }
+          ]
+        },
+        {
+          "character": "毎",
+          "meaning": "chaque / every",
+          "readings": {
+            "onyomi": ["マイ"],
+            "kunyomi": []
+          },
+          "examples": [
+            { "word": "毎日", "reading": "まいにち", "meaning": "tous les jours" },
+            { "word": "毎週", "reading": "まいしゅう", "meaning": "chaque semaine" },
+            { "word": "毎年", "reading": "まいとし", "meaning": "chaque année" }
+          ]
+        },
+        {
+          "character": "何",
+          "meaning": "quoi / what",
+          "readings": {
+            "onyomi": ["カ"],
+            "kunyomi": ["なに", "なん"]
+          },
+          "examples": [
+            { "word": "何", "reading": "なに", "meaning": "quoi" },
+            { "word": "何時", "reading": "なんじ", "meaning": "quelle heure" },
+            { "word": "何をする", "reading": "なにをする", "meaning": "que faire" }
+          ]
+        },
+        {
+          "character": "午",
+          "meaning": "midi / noon",
+          "readings": {
+            "onyomi": ["ゴ"],
+            "kunyomi": []
+          },
+          "examples": [
+            { "word": "午後", "reading": "ごご", "meaning": "après-midi" },
+            { "word": "午後三時", "reading": "ごごさんじ", "meaning": "trois heures de l'après-midi" },
+            { "word": "午後に行く", "reading": "ごごにいく", "meaning": "aller l'après-midi" }
+          ]
+        },
+        {
+          "character": "半",
+          "meaning": "moitié / half",
+          "readings": {
+            "onyomi": ["ハン"],
+            "kunyomi": ["なか"]
+          },
+          "examples": [
+            { "word": "半分", "reading": "はんぶん", "meaning": "moitié" },
+            { "word": "三時半", "reading": "さんじはん", "meaning": "trois heures et demie" },
+            { "word": "一年半", "reading": "いちねんはん", "meaning": "un an et demi" }
+          ]
+        },
+        {
+          "character": "間",
+          "meaning": "intervalle / interval",
+          "readings": {
+            "onyomi": ["カン", "ケン"],
+            "kunyomi": ["あいだ", "ま"]
+          },
+          "examples": [
+            { "word": "時間", "reading": "じかん", "meaning": "durée, temps" },
+            { "word": "一時間", "reading": "いちじかん", "meaning": "une heure" },
+            { "word": "間に合う", "reading": "まにあう", "meaning": "être à temps" }
+          ]
+        },
+        {
+          "character": "週",
+          "meaning": "semaine / week",
+          "readings": {
+            "onyomi": ["シュウ"],
+            "kunyomi": []
+          },
+          "examples": [
+            { "word": "週末", "reading": "しゅうまつ", "meaning": "week-end" },
+            { "word": "毎週", "reading": "まいしゅう", "meaning": "chaque semaine" },
+            { "word": "来週", "reading": "らいしゅう", "meaning": "semaine prochaine" }
+          ]
+        },
+        {
+          "character": "店",
+          "meaning": "magasin / shop",
+          "readings": {
+            "onyomi": ["テン"],
+            "kunyomi": ["みせ"]
+          },
+          "examples": [
+            { "word": "店", "reading": "みせ", "meaning": "magasin" },
+            { "word": "店に行く", "reading": "みせにいく", "meaning": "aller au magasin" },
+            { "word": "本屋の店", "reading": "ほんやのみせ", "meaning": "librairie" }
+          ]
+        },
+        {
+          "character": "道",
+          "meaning": "route, chemin / road",
+          "readings": {
+            "onyomi": ["ドウ", "トウ"],
+            "kunyomi": ["みち"]
+          },
+          "examples": [
+            { "word": "道", "reading": "みち", "meaning": "route" },
+            { "word": "この道", "reading": "このみち", "meaning": "cette route" },
+            { "word": "道を聞く", "reading": "みちをきく", "meaning": "demander son chemin" }
+          ]
+        },
+        {
+          "character": "社",
+          "meaning": "société / company",
+          "readings": {
+            "onyomi": ["シャ"],
+            "kunyomi": ["やしろ"]
+          },
+          "examples": [
+            { "word": "会社", "reading": "かいしゃ", "meaning": "entreprise" },
+            { "word": "社長", "reading": "しゃちょう", "meaning": "directeur" },
+            { "word": "会社に行く", "reading": "かいしゃにいく", "meaning": "aller à l'entreprise" }
+          ]
+        }
+      ]
     }
   ]
 }
