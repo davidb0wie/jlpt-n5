@@ -32,6 +32,7 @@ const app = {
         this.loadProgress();
         this.updateHomeStats();
         this.registerServiceWorker();
+        this.initSwipeGesture();
     },
 
     // Chargement des données
@@ -707,6 +708,42 @@ const app = {
             navigator.serviceWorker.register('service-worker.js')
                 .then(reg => console.log('Service Worker enregistré'))
                 .catch(err => console.log('Erreur Service Worker:', err));
+        }
+    },
+
+    // Gestion du swipe
+    initSwipeGesture() {
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchEndX = 0;
+        let touchEndY = 0;
+
+        const minSwipeDistance = 50; // Distance minimale pour considérer un swipe
+        const maxVerticalDistance = 100; // Distance verticale max pour un swipe horizontal
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+            this.handleSwipe(touchStartX, touchStartY, touchEndX, touchEndY, minSwipeDistance, maxVerticalDistance);
+        }, { passive: true });
+    },
+
+    handleSwipe(startX, startY, endX, endY, minDistance, maxVerticalDistance) {
+        const deltaX = endX - startX;
+        const deltaY = Math.abs(endY - startY);
+
+        // Vérifier si c'est un swipe vers la gauche
+        // (deltaX négatif = swipe gauche, assez long, et pas trop vertical)
+        if (deltaX < -minDistance && deltaY < maxVerticalDistance) {
+            // Ne retourner au menu que si on n'est pas déjà sur la page d'accueil
+            if (this.state.currentPage !== 'home') {
+                this.showPage('home');
+            }
         }
     }
 };
