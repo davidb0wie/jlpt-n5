@@ -23,11 +23,28 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+    background-image: url('Kyoto.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: var(--text);
     min-height: 100vh;
     padding: 20px;
     line-height: 1.6;
+    position: relative;
+}
+
+/* Overlay semi-transparent pour améliorer la lisibilité */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(241, 250, 238, 0.85);
+    z-index: -1;
 }
 
 #app {
@@ -818,8 +835,14 @@ header h1 {
 
 .verb-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .verb-list {
+        gap: 15px;
+    }
 }
 
 .verb-item {
@@ -913,16 +936,17 @@ header h1 {
     padding: 20px;
 }
 
-/* Grille des adverbes - 3 par ligne */
+/* Grille des adverbes - 2 colonnes */
 .adverbs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
 }
 
 @media (min-width: 768px) {
     .adverbs-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
@@ -1020,6 +1044,133 @@ header h1 {
     font-size: 1.5em;
     color: var(--dark);
     margin-bottom: 10px;
+}
+
+/* Particles */
+.particles-list {
+    padding: 20px;
+}
+
+.particles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .particles-grid {
+        gap: 20px;
+    }
+}
+
+.particle-item {
+    background: var(--light);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.particle-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.particle-item.expanded {
+    background: var(--secondary);
+}
+
+.particle-main {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.particle-char {
+    font-size: 3em;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.particle-romaji-small {
+    font-size: 1em;
+    color: var(--dark);
+    font-style: italic;
+}
+
+.particle-desc {
+    font-size: 0.9em;
+    color: var(--success);
+    font-weight: 600;
+    padding-top: 10px;
+    border-top: 2px solid var(--secondary);
+}
+
+.particle-details {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid var(--primary);
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.particle-usage {
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.particle-example {
+    color: var(--text);
+    font-style: italic;
+}
+
+/* Particle Quiz 1 */
+.particle-display {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.particle-large {
+    font-size: 5em;
+    font-weight: bold;
+    color: var(--primary);
+    margin: 20px 0;
+}
+
+.particle-romaji {
+    font-size: 1.5em;
+    color: var(--dark);
+    font-style: italic;
+}
+
+/* Particle Quiz 2 */
+.sentence-display {
+    text-align: center;
+    margin: 30px 0;
+    background: var(--secondary);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.sentence-japanese {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.sentence-reading {
+    font-size: 1.2em;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.sentence-translation {
+    font-size: 1em;
+    color: var(--text);
+    font-style: italic;
 }
 
 /* Responsive */
