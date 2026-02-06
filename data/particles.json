@@ -1,0 +1,698 @@
+{
+  "particles": [
+    {
+      "particle": "は",
+      "romaji": "wa",
+      "description": "Marqueur de thème/sujet",
+      "usage": "Indique le thème principal de la phrase",
+      "example": "私は学生です。(Watashi wa gakusei desu. - Je suis étudiant.)"
+    },
+    {
+      "particle": "が",
+      "romaji": "ga",
+      "description": "Marqueur de sujet grammatical",
+      "usage": "Indique le sujet qui fait l'action, utilisé pour identifier/contraster",
+      "example": "誰が来ますか。(Dare ga kimasu ka. - Qui vient ?)"
+    },
+    {
+      "particle": "を",
+      "romaji": "wo/o",
+      "description": "Marqueur d'objet direct",
+      "usage": "Indique l'objet direct d'une action",
+      "example": "りんごを食べます。(Ringo wo tabemasu. - Je mange une pomme.)"
+    },
+    {
+      "particle": "に",
+      "romaji": "ni",
+      "description": "Lieu, temps, direction, objet indirect",
+      "usage": "Indique la destination, le temps, le lieu d'existence, l'objet indirect",
+      "example": "学校に行きます。(Gakkou ni ikimasu. - Je vais à l'école.)"
+    },
+    {
+      "particle": "で",
+      "romaji": "de",
+      "description": "Lieu d'action, moyen/méthode",
+      "usage": "Indique où une action se déroule ou le moyen utilisé",
+      "example": "図書館で勉強します。(Toshokan de benkyou shimasu. - J'étudie à la bibliothèque.)"
+    },
+    {
+      "particle": "と",
+      "romaji": "to",
+      "description": "Et (liste exhaustive), avec, citation",
+      "usage": "Relie des noms (liste complète), indique avec qui, ou marque une citation",
+      "example": "友達と映画を見ます。(Tomodachi to eiga wo mimasu. - Je regarde un film avec un ami.)"
+    },
+    {
+      "particle": "の",
+      "romaji": "no",
+      "description": "Possessif, modificateur de nom",
+      "usage": "Indique la possession ou relie des noms",
+      "example": "私の本です。(Watashi no hon desu. - C'est mon livre.)"
+    },
+    {
+      "particle": "へ",
+      "romaji": "e",
+      "description": "Direction (vers)",
+      "usage": "Indique la direction générale du mouvement",
+      "example": "東京へ行きます。(Tokyo e ikimasu. - Je vais vers Tokyo.)"
+    },
+    {
+      "particle": "か",
+      "romaji": "ka",
+      "description": "Marqueur de question",
+      "usage": "Transforme une phrase en question",
+      "example": "これは何ですか。(Kore wa nan desu ka. - Qu'est-ce que c'est ?)"
+    },
+    {
+      "particle": "も",
+      "romaji": "mo",
+      "description": "Aussi, également",
+      "usage": "Indique l'inclusion, remplace は ou が",
+      "example": "私も学生です。(Watashi mo gakusei desu. - Je suis étudiant aussi.)"
+    },
+    {
+      "particle": "や",
+      "romaji": "ya",
+      "description": "Et (liste non exhaustive)",
+      "usage": "Relie des noms avec l'implication qu'il y en a d'autres",
+      "example": "りんごやバナナを買いました。(Ringo ya banana wo kaimashita. - J'ai acheté des pommes, des bananes, etc.)"
+    },
+    {
+      "particle": "から",
+      "romaji": "kara",
+      "description": "De (point de départ), parce que",
+      "usage": "Indique le point de départ dans le temps/espace ou la raison",
+      "example": "駅から来ました。(Eki kara kimashita. - Je viens de la gare.)"
+    },
+    {
+      "particle": "まで",
+      "romaji": "made",
+      "description": "Jusqu'à",
+      "usage": "Indique le point d'arrivée dans le temps ou l'espace",
+      "example": "五時まで働きます。(Goji made hatarakimasu. - Je travaille jusqu'à 5 heures.)"
+    },
+    {
+      "particle": "より",
+      "romaji": "yori",
+      "description": "Que (comparaison), de",
+      "usage": "Utilisé pour les comparaisons",
+      "example": "これはあれより大きいです。(Kore wa are yori ookii desu. - Ceci est plus grand que cela.)"
+    }
+  ],
+  "sentences": [
+    {
+      "sentence": "私___学生です。",
+      "correctParticle": "は",
+      "translation": "Je suis étudiant.",
+      "reading": "わたし___がくせいです。"
+    },
+    {
+      "sentence": "これ___本です。",
+      "correctParticle": "は",
+      "translation": "Ceci est un livre.",
+      "reading": "これ___ほんです。"
+    },
+    {
+      "sentence": "誰___来ますか。",
+      "correctParticle": "が",
+      "translation": "Qui vient ?",
+      "reading": "だれ___きますか。"
+    },
+    {
+      "sentence": "りんご___食べます。",
+      "correctParticle": "を",
+      "translation": "Je mange une pomme.",
+      "reading": "りんご___たべます。"
+    },
+    {
+      "sentence": "水___飲みます。",
+      "correctParticle": "を",
+      "translation": "Je bois de l'eau.",
+      "reading": "みず___のみます。"
+    },
+    {
+      "sentence": "学校___行きます。",
+      "correctParticle": "に",
+      "translation": "Je vais à l'école.",
+      "reading": "がっこう___いきます。"
+    },
+    {
+      "sentence": "図書館___勉強します。",
+      "correctParticle": "で",
+      "translation": "J'étudie à la bibliothèque.",
+      "reading": "としょかん___べんきょうします。"
+    },
+    {
+      "sentence": "友達___映画を見ます。",
+      "correctParticle": "と",
+      "translation": "Je regarde un film avec un ami.",
+      "reading": "ともだち___えいがをみます。"
+    },
+    {
+      "sentence": "私___本です。",
+      "correctParticle": "の",
+      "translation": "C'est mon livre.",
+      "reading": "わたし___ほんです。"
+    },
+    {
+      "sentence": "東京___行きます。",
+      "correctParticle": "へ",
+      "translation": "Je vais à Tokyo.",
+      "reading": "とうきょう___いきます。"
+    },
+    {
+      "sentence": "これは何です___。",
+      "correctParticle": "か",
+      "translation": "Qu'est-ce que c'est ?",
+      "reading": "これはなんです___。"
+    },
+    {
+      "sentence": "私___学生です。",
+      "correctParticle": "も",
+      "translation": "Je suis étudiant aussi.",
+      "reading": "わたし___がくせいです。"
+    },
+    {
+      "sentence": "駅___来ました。",
+      "correctParticle": "から",
+      "translation": "Je viens de la gare.",
+      "reading": "えき___きました。"
+    },
+    {
+      "sentence": "五時___働きます。",
+      "correctParticle": "まで",
+      "translation": "Je travaille jusqu'à 5 heures.",
+      "reading": "ごじ___はたらきます。"
+    },
+    {
+      "sentence": "猫___好きです。",
+      "correctParticle": "が",
+      "translation": "J'aime les chats.",
+      "reading": "ねこ___すきです。"
+    },
+    {
+      "sentence": "日本語___話します。",
+      "correctParticle": "を",
+      "translation": "Je parle japonais.",
+      "reading": "にほんご___はなします。"
+    },
+    {
+      "sentence": "朝___起きます。",
+      "correctParticle": "に",
+      "translation": "Je me lève le matin.",
+      "reading": "あさ___おきます。"
+    },
+    {
+      "sentence": "バス___行きます。",
+      "correctParticle": "で",
+      "translation": "J'y vais en bus.",
+      "reading": "バス___いきます。"
+    },
+    {
+      "sentence": "コーヒー___紅茶を飲みます。",
+      "correctParticle": "と",
+      "translation": "Je bois du café et du thé.",
+      "reading": "コーヒー___こうちゃをのみます。"
+    },
+    {
+      "sentence": "先生___名前",
+      "correctParticle": "の",
+      "translation": "Le nom du professeur",
+      "reading": "せんせい___なまえ"
+    },
+    {
+      "sentence": "公園___行きます。",
+      "correctParticle": "へ",
+      "translation": "Je vais au parc.",
+      "reading": "こうえん___いきます。"
+    },
+    {
+      "sentence": "いつ来ます___。",
+      "correctParticle": "か",
+      "translation": "Quand venez-vous ?",
+      "reading": "いつきます___。"
+    },
+    {
+      "sentence": "彼___来ます。",
+      "correctParticle": "も",
+      "translation": "Il vient aussi.",
+      "reading": "かれ___きます。"
+    },
+    {
+      "sentence": "朝___晩まで",
+      "correctParticle": "から",
+      "translation": "Du matin au soir",
+      "reading": "あさ___ばんまで"
+    },
+    {
+      "sentence": "ここ___あそこまで",
+      "correctParticle": "から",
+      "translation": "D'ici à là-bas",
+      "reading": "ここ___あそこまで"
+    },
+    {
+      "sentence": "昨日___雨でした。",
+      "correctParticle": "は",
+      "translation": "Hier il pleuvait.",
+      "reading": "きのう___あめでした。"
+    },
+    {
+      "sentence": "犬___います。",
+      "correctParticle": "が",
+      "translation": "Il y a un chien.",
+      "reading": "いぬ___います。"
+    },
+    {
+      "sentence": "手紙___書きます。",
+      "correctParticle": "を",
+      "translation": "J'écris une lettre.",
+      "reading": "てがみ___かきます。"
+    },
+    {
+      "sentence": "三時___会いましょう。",
+      "correctParticle": "に",
+      "translation": "Rencontrons-nous à 3 heures.",
+      "reading": "さんじ___あいましょう。"
+    },
+    {
+      "sentence": "レストラン___食べます。",
+      "correctParticle": "で",
+      "translation": "Je mange au restaurant.",
+      "reading": "レストラン___たべます。"
+    },
+    {
+      "sentence": "兄___妹がいます。",
+      "correctParticle": "と",
+      "translation": "J'ai un frère et une sœur.",
+      "reading": "あに___いもうとがいます。"
+    },
+    {
+      "sentence": "田中さん___車",
+      "correctParticle": "の",
+      "translation": "La voiture de M. Tanaka",
+      "reading": "たなかさん___くるま"
+    },
+    {
+      "sentence": "大阪___行きます。",
+      "correctParticle": "へ",
+      "translation": "Je vais à Osaka.",
+      "reading": "おおさか___いきます。"
+    },
+    {
+      "sentence": "どこですか___。",
+      "correctParticle": "か",
+      "translation": "Où est-ce ?",
+      "reading": "どこですか___。"
+    },
+    {
+      "sentence": "あれ___本です。",
+      "correctParticle": "も",
+      "translation": "Cela aussi est un livre.",
+      "reading": "あれ___ほんです。"
+    },
+    {
+      "sentence": "今___帰ります。",
+      "correctParticle": "から",
+      "translation": "Je rentre maintenant.",
+      "reading": "いま___かえります。"
+    },
+    {
+      "sentence": "十時___待ちます。",
+      "correctParticle": "まで",
+      "translation": "J'attends jusqu'à 10 heures.",
+      "reading": "じゅうじ___まちます。"
+    },
+    {
+      "sentence": "映画___見ました。",
+      "correctParticle": "を",
+      "translation": "J'ai regardé un film.",
+      "reading": "えいが___みました。"
+    },
+    {
+      "sentence": "明日___テストです。",
+      "correctParticle": "は",
+      "translation": "Demain c'est un test.",
+      "reading": "あした___テストです。"
+    },
+    {
+      "sentence": "雨___降っています。",
+      "correctParticle": "が",
+      "translation": "Il pleut.",
+      "reading": "あめ___ふっています。"
+    },
+    {
+      "sentence": "音楽___聞きます。",
+      "correctParticle": "を",
+      "translation": "J'écoute de la musique.",
+      "reading": "おんがく___ききます。"
+    },
+    {
+      "sentence": "部屋___います。",
+      "correctParticle": "に",
+      "translation": "Je suis dans la chambre.",
+      "reading": "へや___います。"
+    },
+    {
+      "sentence": "電車___帰ります。",
+      "correctParticle": "で",
+      "translation": "Je rentre en train.",
+      "reading": "でんしゃ___かえります。"
+    },
+    {
+      "sentence": "母___買い物します。",
+      "correctParticle": "と",
+      "translation": "Je fais les courses avec ma mère.",
+      "reading": "はは___かいものします。"
+    },
+    {
+      "sentence": "日本___食べ物",
+      "correctParticle": "の",
+      "translation": "Nourriture japonaise",
+      "reading": "にほん___たべもの"
+    },
+    {
+      "sentence": "北___行きます。",
+      "correctParticle": "へ",
+      "translation": "Je vais vers le nord.",
+      "reading": "きた___いきます。"
+    },
+    {
+      "sentence": "誰です___。",
+      "correctParticle": "か",
+      "translation": "Qui est-ce ?",
+      "reading": "だれです___。"
+    },
+    {
+      "sentence": "これ___ください。",
+      "correctParticle": "を",
+      "translation": "Donnez-moi ceci s'il vous plaît.",
+      "reading": "これ___ください。"
+    },
+    {
+      "sentence": "毎日___勉強します。",
+      "correctParticle": "は",
+      "translation": "J'étudie tous les jours.",
+      "reading": "まいにち___べんきょうします。"
+    },
+    {
+      "sentence": "花___きれいです。",
+      "correctParticle": "が",
+      "translation": "La fleur est belle.",
+      "reading": "はな___きれいです。"
+    },
+    {
+      "sentence": "写真___撮ります。",
+      "correctParticle": "を",
+      "translation": "Je prends une photo.",
+      "reading": "しゃしん___とります。"
+    },
+    {
+      "sentence": "駅___います。",
+      "correctParticle": "に",
+      "translation": "Je suis à la gare.",
+      "reading": "えき___います。"
+    },
+    {
+      "sentence": "日本語___話します。",
+      "correctParticle": "で",
+      "translation": "Je parle en japonais.",
+      "reading": "にほんご___はなします。"
+    },
+    {
+      "sentence": "犬___猫がいます。",
+      "correctParticle": "と",
+      "translation": "Il y a un chien et un chat.",
+      "reading": "いぬ___ねこがいます。"
+    },
+    {
+      "sentence": "友達___電話",
+      "correctParticle": "の",
+      "translation": "Le téléphone de mon ami",
+      "reading": "ともだち___でんわ"
+    },
+    {
+      "sentence": "病院___行きます。",
+      "correctParticle": "へ",
+      "translation": "Je vais à l'hôpital.",
+      "reading": "びょういん___いきます。"
+    },
+    {
+      "sentence": "何時です___。",
+      "correctParticle": "か",
+      "translation": "Quelle heure est-il ?",
+      "reading": "なんじです___。"
+    },
+    {
+      "sentence": "彼女___来ます。",
+      "correctParticle": "も",
+      "translation": "Elle vient aussi.",
+      "reading": "かのじょ___きます。"
+    },
+    {
+      "sentence": "家___学校まで",
+      "correctParticle": "から",
+      "translation": "De la maison à l'école",
+      "reading": "いえ___がっこうまで"
+    },
+    {
+      "sentence": "夜___寝ます。",
+      "correctParticle": "に",
+      "translation": "Je dors la nuit.",
+      "reading": "よる___ねます。"
+    },
+    {
+      "sentence": "テレビ___見ます。",
+      "correctParticle": "を",
+      "translation": "Je regarde la télé.",
+      "reading": "テレビ___みます。"
+    },
+    {
+      "sentence": "今日___暑いです。",
+      "correctParticle": "は",
+      "translation": "Il fait chaud aujourd'hui.",
+      "reading": "きょう___あついです。"
+    },
+    {
+      "sentence": "誰___いますか。",
+      "correctParticle": "が",
+      "translation": "Qui est là ?",
+      "reading": "だれ___いますか。"
+    },
+    {
+      "sentence": "宿題___します。",
+      "correctParticle": "を",
+      "translation": "Je fais mes devoirs.",
+      "reading": "しゅくだい___します。"
+    },
+    {
+      "sentence": "月曜日___来ます。",
+      "correctParticle": "に",
+      "translation": "Je viens lundi.",
+      "reading": "げつようび___きます。"
+    },
+    {
+      "sentence": "ペン___書きます。",
+      "correctParticle": "で",
+      "translation": "J'écris avec un stylo.",
+      "reading": "ペン___かきます。"
+    },
+    {
+      "sentence": "先生___話します。",
+      "correctParticle": "と",
+      "translation": "Je parle avec le professeur.",
+      "reading": "せんせい___はなします。"
+    },
+    {
+      "sentence": "会社___人",
+      "correctParticle": "の",
+      "translation": "Personne de l'entreprise",
+      "reading": "かいしゃ___ひと"
+    },
+    {
+      "sentence": "海___行きます。",
+      "correctParticle": "へ",
+      "translation": "Je vais à la mer.",
+      "reading": "うみ___いきます。"
+    },
+    {
+      "sentence": "おいしいです___。",
+      "correctParticle": "か",
+      "translation": "Est-ce délicieux ?",
+      "reading": "おいしいです___。"
+    },
+    {
+      "sentence": "私___行きます。",
+      "correctParticle": "も",
+      "translation": "J'y vais aussi.",
+      "reading": "わたし___いきます。"
+    },
+    {
+      "sentence": "一時___二時まで",
+      "correctParticle": "から",
+      "translation": "De 1 heure à 2 heures",
+      "reading": "いちじ___にじまで"
+    },
+    {
+      "sentence": "ご飯___食べました。",
+      "correctParticle": "を",
+      "translation": "J'ai mangé du riz.",
+      "reading": "ごはん___たべました。"
+    },
+    {
+      "sentence": "週末___暇です。",
+      "correctParticle": "は",
+      "translation": "Je suis libre le week-end.",
+      "reading": "しゅうまつ___ひまです。"
+    },
+    {
+      "sentence": "何___ありますか。",
+      "correctParticle": "が",
+      "translation": "Qu'y a-t-il ?",
+      "reading": "なに___ありますか。"
+    },
+    {
+      "sentence": "本___読みます。",
+      "correctParticle": "を",
+      "translation": "Je lis un livre.",
+      "reading": "ほん___よみます。"
+    },
+    {
+      "sentence": "机___あります。",
+      "correctParticle": "に",
+      "translation": "C'est sur le bureau.",
+      "reading": "つくえ___あります。"
+    },
+    {
+      "sentence": "タクシー___行きます。",
+      "correctParticle": "で",
+      "translation": "J'y vais en taxi.",
+      "reading": "タクシー___いきます。"
+    },
+    {
+      "sentence": "姉___買い物しました。",
+      "correctParticle": "と",
+      "translation": "J'ai fait du shopping avec ma sœur.",
+      "reading": "あね___かいものしました。"
+    },
+    {
+      "sentence": "学校___先生",
+      "correctParticle": "の",
+      "translation": "Le professeur de l'école",
+      "reading": "がっこう___せんせい"
+    },
+    {
+      "sentence": "山___登ります。",
+      "correctParticle": "へ",
+      "translation": "Je monte vers la montagne.",
+      "reading": "やま___のぼります。"
+    },
+    {
+      "sentence": "どうです___。",
+      "correctParticle": "か",
+      "translation": "Comment c'est ?",
+      "reading": "どうです___。"
+    },
+    {
+      "sentence": "あなた___知っています。",
+      "correctParticle": "を",
+      "translation": "Je vous connais.",
+      "reading": "あなた___しっています。"
+    },
+    {
+      "sentence": "彼___親切です。",
+      "correctParticle": "は",
+      "translation": "Il est gentil.",
+      "reading": "かれ___しんせつです。"
+    },
+    {
+      "sentence": "鳥___飛んでいます。",
+      "correctParticle": "が",
+      "translation": "Un oiseau vole.",
+      "reading": "とり___とんでいます。"
+    },
+    {
+      "sentence": "質問___します。",
+      "correctParticle": "を",
+      "translation": "Je pose une question.",
+      "reading": "しつもん___します。"
+    },
+    {
+      "sentence": "七時___会いましょう。",
+      "correctParticle": "に",
+      "translation": "Rencontrons-nous à 7 heures.",
+      "reading": "しちじ___あいましょう。"
+    },
+    {
+      "sentence": "自転車___来ました。",
+      "correctParticle": "で",
+      "translation": "Je suis venu à vélo.",
+      "reading": "じてんしゃ___きました。"
+    },
+    {
+      "sentence": "父___話しました。",
+      "correctParticle": "と",
+      "translation": "J'ai parlé avec mon père.",
+      "reading": "ちち___はなしました。"
+    },
+    {
+      "sentence": "東京___大学",
+      "correctParticle": "の",
+      "translation": "L'université de Tokyo",
+      "reading": "とうきょう___だいがく"
+    },
+    {
+      "sentence": "南___行きます。",
+      "correctParticle": "へ",
+      "translation": "Je vais vers le sud.",
+      "reading": "みなみ___いきます。"
+    },
+    {
+      "sentence": "好きです___。",
+      "correctParticle": "か",
+      "translation": "Aimez-vous ça ?",
+      "reading": "すきです___。"
+    },
+    {
+      "sentence": "明日___行きます。",
+      "correctParticle": "も",
+      "translation": "J'y vais aussi demain.",
+      "reading": "あした___いきます。"
+    },
+    {
+      "sentence": "駅___歩きます。",
+      "correctParticle": "まで",
+      "translation": "Je marche jusqu'à la gare.",
+      "reading": "えき___あるきます。"
+    },
+    {
+      "sentence": "パン___食べます。",
+      "correctParticle": "を",
+      "translation": "Je mange du pain.",
+      "reading": "パン___たべます。"
+    },
+    {
+      "sentence": "天気___いいです。",
+      "correctParticle": "が",
+      "translation": "Le temps est beau.",
+      "reading": "てんき___いいです。"
+    },
+    {
+      "sentence": "傘___持ちます。",
+      "correctParticle": "を",
+      "translation": "Je prends un parapluie.",
+      "reading": "かさ___もちます。"
+    },
+    {
+      "sentence": "公園___遊びます。",
+      "correctParticle": "で",
+      "translation": "Je joue au parc.",
+      "reading": "こうえん___あそびます。"
+    },
+    {
+      "sentence": "弟___ゲームをします。",
+      "correctParticle": "と",
+      "translation": "Je joue aux jeux vidéo avec mon petit frère.",
+      "reading": "おとうと___ゲームをします。"
+    }
+  ]
+}
