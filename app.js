@@ -4,7 +4,8 @@ const app = {
         kanji: null,
         counters: null,
         verbs: null,
-        adverbs: null
+        adverbs: null,
+        particles: null
     },
     state: {
         currentKanjiIndex: 0,
@@ -13,6 +14,7 @@ const app = {
         counterMode: 'list',
         verbMode: 'practice',
         adverbMode: 'list',
+        particleMode: 'list',
         quizScore: 0,
         quizTotal: 0,
         counterQuizScore: 0,
@@ -21,10 +23,15 @@ const app = {
         verbQuizTotal: 0,
         adverbQuizScore: 0,
         adverbQuizTotal: 0,
+        particleQuiz1Score: 0,
+        particleQuiz1Total: 0,
+        particleQuiz2Score: 0,
+        particleQuiz2Total: 0,
         currentQuizQuestion: null,
         currentCounterQuestion: null,
         currentVerbQuestion: null,
         currentAdverbQuestion: null,
+        currentParticleQuestion: null,
         allKanji: []
     },
     progress: {
@@ -32,6 +39,7 @@ const app = {
         studiedCounters: new Set(),
         studiedVerbs: new Set(),
         studiedAdverbs: new Set(),
+        studiedParticles: new Set(),
         correctAnswers: 0,
         totalAttempts: 0
     },
@@ -48,17 +56,19 @@ const app = {
     // Chargement des données
     async loadData() {
         try {
-            const [kanjiResponse, countersResponse, verbsResponse, adverbsResponse] = await Promise.all([
+            const [kanjiResponse, countersResponse, verbsResponse, adverbsResponse, particlesResponse] = await Promise.all([
                 fetch('data/kanji.json'),
                 fetch('data/counters.json'),
                 fetch('data/verbs.json'),
-                fetch('data/adverbs.json')
+                fetch('data/adverbs.json'),
+                fetch('data/particles.json')
             ]);
 
             this.data.kanji = await kanjiResponse.json();
             this.data.counters = await countersResponse.json();
             this.data.verbs = await verbsResponse.json();
             this.data.adverbs = await adverbsResponse.json();
+            this.data.particles = await particlesResponse.json();
 
             // Créer une liste plate de tous les kanji
             this.state.allKanji = [];
@@ -85,6 +95,7 @@ const app = {
             studiedCounters: Array.from(this.progress.studiedCounters),
             studiedVerbs: Array.from(this.progress.studiedVerbs),
             studiedAdverbs: Array.from(this.progress.studiedAdverbs),
+            studiedParticles: Array.from(this.progress.studiedParticles),
             correctAnswers: this.progress.correctAnswers,
             totalAttempts: this.progress.totalAttempts
         }));
@@ -98,6 +109,7 @@ const app = {
             this.progress.studiedCounters = new Set(data.studiedCounters || []);
             this.progress.studiedVerbs = new Set(data.studiedVerbs || []);
             this.progress.studiedAdverbs = new Set(data.studiedAdverbs || []);
+            this.progress.studiedParticles = new Set(data.studiedParticles || []);
             this.progress.correctAnswers = data.correctAnswers || 0;
             this.progress.totalAttempts = data.totalAttempts || 0;
         }
@@ -110,6 +122,7 @@ const app = {
                 studiedCounters: new Set(),
                 studiedVerbs: new Set(),
                 studiedAdverbs: new Set(),
+                studiedParticles: new Set(),
                 correctAnswers: 0,
                 totalAttempts: 0
             };
@@ -138,6 +151,8 @@ const app = {
             this.initVerbPractice();
         } else if (mode === 'adverbs') {
             this.setAdverbMode('list');
+        } else if (mode === 'particles') {
+            this.setParticleMode('list');
         }
     },
 
@@ -146,7 +161,8 @@ const app = {
         const totalStudied = this.progress.studiedKanji.size +
                             this.progress.studiedCounters.size +
                             this.progress.studiedVerbs.size +
-                            this.progress.studiedAdverbs.size;
+                            this.progress.studiedAdverbs.size +
+                            this.progress.studiedParticles.size;
 
         const successRate = this.progress.totalAttempts > 0
             ? Math.round((this.progress.correctAnswers / this.progress.totalAttempts) * 100)
@@ -165,6 +181,9 @@ const app = {
 
         const totalAdverbs = this.data.adverbs?.adverbs.length || 50;
         this.updateProgress('adverbs', this.progress.studiedAdverbs.size, totalAdverbs);
+
+        const totalParticles = this.data.particles?.particles.length || 14;
+        this.updateProgress('particles', this.progress.studiedParticles.size, totalParticles);
     },
 
     updateProgress(type, current, total) {
@@ -1011,6 +1030,265 @@ const app = {
         document.getElementById('adverb-quiz-score').textContent =
             `Score: ${this.state.adverbQuizScore}/${this.state.adverbQuizTotal}`;
         document.getElementById('adverb-next-question-btn').style.display = 'block';
+    },
+
+    // ===== PARTICULES =====
+    displayParticles() {
+        const container = document.getElementById('particles-list');
+        container.innerHTML = '';
+
+        const grid = document.createElement('div');
+        grid.className = 'particles-grid';
+
+        this.data.particles.particles.forEach((particle) => {
+            const item = document.createElement('div');
+            item.className = 'particle-item';
+
+            item.innerHTML = `
+                <div class="particle-main">
+                    <div class="particle-char">${particle.particle}</div>
+                    <div class="particle-romaji-small">${particle.romaji}</div>
+                    <div class="particle-desc">${particle.description}</div>
+                </div>
+                <div class="particle-details" style="display: none;">
+                    <div class="particle-usage"><strong>Usage:</strong> ${particle.usage}</div>
+                    <div class="particle-example">${particle.example}</div>
+                </div>
+            `;
+
+            item.onclick = () => {
+                const details = item.querySelector('.particle-details');
+                const isVisible = details.style.display !== 'none';
+                details.style.display = isVisible ? 'none' : 'block';
+                item.classList.toggle('expanded');
+            };
+
+            grid.appendChild(item);
+            this.progress.studiedParticles.add(particle.particle);
+        });
+
+        container.appendChild(grid);
+        this.saveProgress();
+        this.updateHomeStats();
+    },
+
+    setParticleMode(mode) {
+        this.state.particleMode = mode;
+
+        document.querySelectorAll('#particles-page .mode-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        event.target.classList.add('active');
+
+        document.getElementById('particle-list').style.display = 'none';
+        document.getElementById('particle-quiz1').style.display = 'none';
+        document.getElementById('particle-quiz2').style.display = 'none';
+
+        if (mode === 'list') {
+            document.getElementById('particle-list').style.display = 'block';
+            this.displayParticles();
+        } else if (mode === 'quiz1') {
+            document.getElementById('particle-quiz1').style.display = 'block';
+            this.startParticleQuiz1();
+        } else if (mode === 'quiz2') {
+            document.getElementById('particle-quiz2').style.display = 'block';
+            this.startParticleQuiz2();
+        }
+    },
+
+    // Quiz 1: À quoi sert cette particule?
+    startParticleQuiz1() {
+        this.state.particleQuiz1Score = 0;
+        this.state.particleQuiz1Total = 0;
+        this.nextParticleQuiz1();
+    },
+
+    nextParticleQuiz1() {
+        if (!this.data.particles || this.data.particles.particles.length === 0) return;
+
+        const correctParticle = this.data.particles.particles[Math.floor(Math.random() * this.data.particles.particles.length)];
+
+        const options = [correctParticle.description];
+
+        while (options.length < 4 && this.data.particles.particles.length >= 4) {
+            const randomParticle = this.data.particles.particles[Math.floor(Math.random() * this.data.particles.particles.length)];
+            if (!options.includes(randomParticle.description)) {
+                options.push(randomParticle.description);
+            }
+        }
+
+        options.sort(() => Math.random() - 0.5);
+
+        this.state.currentParticleQuestion = {
+            particle: correctParticle,
+            correctAnswer: correctParticle.description,
+            options: options
+        };
+
+        document.getElementById('quiz1-particle').textContent = correctParticle.particle;
+        document.getElementById('quiz1-romaji').textContent = correctParticle.romaji;
+
+        const optionsContainer = document.getElementById('particle-quiz1-options');
+        optionsContainer.innerHTML = '';
+
+        options.forEach(option => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option';
+            btn.textContent = option;
+            btn.onclick = () => this.checkParticleQuiz1Answer(option);
+            optionsContainer.appendChild(btn);
+        });
+
+        const feedback = document.getElementById('particle-quiz1-feedback');
+        feedback.innerHTML = '';
+        feedback.className = 'quiz-feedback';
+        feedback.style.cursor = 'default';
+        feedback.onclick = null;
+        document.getElementById('particle-quiz1-next-btn').style.display = 'none';
+
+        this.progress.studiedParticles.add(correctParticle.particle);
+        this.saveProgress();
+        this.updateHomeStats();
+    },
+
+    checkParticleQuiz1Answer(selected) {
+        const correct = selected === this.state.currentParticleQuestion.correctAnswer;
+        this.state.particleQuiz1Total++;
+
+        if (correct) {
+            this.state.particleQuiz1Score++;
+            this.progress.correctAnswers++;
+        }
+        this.progress.totalAttempts++;
+        this.saveProgress();
+        this.updateHomeStats();
+
+        const options = document.querySelectorAll('#particle-quiz1-options .quiz-option');
+        options.forEach(opt => {
+            opt.classList.add('disabled');
+            opt.onclick = null;
+            if (opt.textContent === this.state.currentParticleQuestion.correctAnswer) {
+                opt.classList.add('correct');
+            } else if (opt.textContent === selected && !correct) {
+                opt.classList.add('incorrect');
+            }
+        });
+
+        const feedback = document.getElementById('particle-quiz1-feedback');
+        const particle = this.state.currentParticleQuestion.particle;
+        const usage = particle.usage;
+
+        if (correct) {
+            feedback.className = 'quiz-feedback correct';
+            feedback.innerHTML = `✓ Correct !<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${usage}</span>`;
+        } else {
+            feedback.className = 'quiz-feedback incorrect';
+            feedback.innerHTML = `✗ Incorrect. La bonne réponse était : ${this.state.currentParticleQuestion.correctAnswer}<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${usage}</span>`;
+        }
+
+        feedback.style.cursor = 'pointer';
+        feedback.onclick = () => this.nextParticleQuiz1();
+
+        document.getElementById('particle-quiz1-score').textContent =
+            `Score: ${this.state.particleQuiz1Score}/${this.state.particleQuiz1Total}`;
+        document.getElementById('particle-quiz1-next-btn').style.display = 'block';
+    },
+
+    // Quiz 2: Quelle particule dans cette phrase?
+    startParticleQuiz2() {
+        this.state.particleQuiz2Score = 0;
+        this.state.particleQuiz2Total = 0;
+        this.nextParticleQuiz2();
+    },
+
+    nextParticleQuiz2() {
+        if (!this.data.particles || this.data.particles.sentences.length === 0) return;
+
+        const sentence = this.data.particles.sentences[Math.floor(Math.random() * this.data.particles.sentences.length)];
+
+        // Générer des options avec la bonne particule et 3 mauvaises
+        const allParticles = this.data.particles.particles.map(p => p.particle);
+        const options = [sentence.correctParticle];
+
+        while (options.length < 4) {
+            const randomParticle = allParticles[Math.floor(Math.random() * allParticles.length)];
+            if (!options.includes(randomParticle)) {
+                options.push(randomParticle);
+            }
+        }
+
+        options.sort(() => Math.random() - 0.5);
+
+        this.state.currentParticleQuestion = {
+            sentence: sentence,
+            correctAnswer: sentence.correctParticle,
+            options: options
+        };
+
+        document.getElementById('quiz2-sentence').textContent = sentence.sentence;
+        document.getElementById('quiz2-reading').textContent = sentence.reading;
+        document.getElementById('quiz2-translation').textContent = sentence.translation;
+
+        const optionsContainer = document.getElementById('particle-quiz2-options');
+        optionsContainer.innerHTML = '';
+
+        options.forEach(option => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option';
+            btn.textContent = option;
+            btn.onclick = () => this.checkParticleQuiz2Answer(option);
+            optionsContainer.appendChild(btn);
+        });
+
+        const feedback = document.getElementById('particle-quiz2-feedback');
+        feedback.innerHTML = '';
+        feedback.className = 'quiz-feedback';
+        feedback.style.cursor = 'default';
+        feedback.onclick = null;
+        document.getElementById('particle-quiz2-next-btn').style.display = 'none';
+    },
+
+    checkParticleQuiz2Answer(selected) {
+        const correct = selected === this.state.currentParticleQuestion.correctAnswer;
+        this.state.particleQuiz2Total++;
+
+        if (correct) {
+            this.state.particleQuiz2Score++;
+            this.progress.correctAnswers++;
+        }
+        this.progress.totalAttempts++;
+        this.saveProgress();
+        this.updateHomeStats();
+
+        const options = document.querySelectorAll('#particle-quiz2-options .quiz-option');
+        options.forEach(opt => {
+            opt.classList.add('disabled');
+            opt.onclick = null;
+            if (opt.textContent === this.state.currentParticleQuestion.correctAnswer) {
+                opt.classList.add('correct');
+            } else if (opt.textContent === selected && !correct) {
+                opt.classList.add('incorrect');
+            }
+        });
+
+        const feedback = document.getElementById('particle-quiz2-feedback');
+        const sentence = this.state.currentParticleQuestion.sentence;
+        const completeSentence = sentence.sentence.replace('___', sentence.correctParticle);
+
+        if (correct) {
+            feedback.className = 'quiz-feedback correct';
+            feedback.innerHTML = `✓ Correct !<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${completeSentence}</span>`;
+        } else {
+            feedback.className = 'quiz-feedback incorrect';
+            feedback.innerHTML = `✗ Incorrect. La bonne particule était : ${this.state.currentParticleQuestion.correctAnswer}<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${completeSentence}</span>`;
+        }
+
+        feedback.style.cursor = 'pointer';
+        feedback.onclick = () => this.nextParticleQuiz2();
+
+        document.getElementById('particle-quiz2-score').textContent =
+            `Score: ${this.state.particleQuiz2Score}/${this.state.particleQuiz2Total}`;
+        document.getElementById('particle-quiz2-next-btn').style.display = 'block';
     },
 
     // Service Worker

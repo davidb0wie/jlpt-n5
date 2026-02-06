@@ -67,6 +67,18 @@
                         <span class="progress-text" id="adverbs-count">0/50</span>
                     </div>
                 </div>
+
+                <div class="menu-card" onclick="app.showMode('particles')">
+                    <div class="card-icon">助</div>
+                    <h2>Particules</h2>
+                    <p>14 particules + 100 phrases</p>
+                    <div class="card-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="particles-progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="particles-count">0/14</span>
+                    </div>
+                </div>
             </div>
 
             <div class="stats-container">
@@ -251,6 +263,61 @@
                 </div>
                 <div class="quiz-score">
                     <span id="adverb-quiz-score">Score: 0/0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Particules -->
+        <div id="particles-page" class="page">
+            <header class="page-header">
+                <button class="back-button" onclick="app.showPage('home')">← Retour</button>
+                <h1>Particules</h1>
+            </header>
+
+            <div class="mode-selector">
+                <button class="mode-btn active" onclick="app.setParticleMode('list')">Liste</button>
+                <button class="mode-btn" onclick="app.setParticleMode('quiz1')">Quiz 1</button>
+                <button class="mode-btn" onclick="app.setParticleMode('quiz2')">Quiz 2</button>
+            </div>
+
+            <div id="particle-list" class="content-area">
+                <div class="particles-list" id="particles-list"></div>
+            </div>
+
+            <div id="particle-quiz1" class="content-area" style="display: none;">
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h2>À quoi sert cette particule ?</h2>
+                        <div class="particle-display">
+                            <div class="particle-large" id="quiz1-particle">は</div>
+                            <div class="particle-romaji" id="quiz1-romaji">wa</div>
+                        </div>
+                    </div>
+                    <div class="quiz-options" id="particle-quiz1-options"></div>
+                    <div class="quiz-feedback" id="particle-quiz1-feedback"></div>
+                    <button class="next-question-btn" id="particle-quiz1-next-btn" onclick="app.nextParticleQuiz1()" style="display: none;">Question suivante</button>
+                </div>
+                <div class="quiz-score">
+                    <span id="particle-quiz1-score">Score: 0/0</span>
+                </div>
+            </div>
+
+            <div id="particle-quiz2" class="content-area" style="display: none;">
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h2>Quelle particule complète cette phrase ?</h2>
+                        <div class="sentence-display">
+                            <div class="sentence-japanese" id="quiz2-sentence">私___学生です。</div>
+                            <div class="sentence-reading" id="quiz2-reading">わたし___がくせいです。</div>
+                            <div class="sentence-translation" id="quiz2-translation">Je suis étudiant.</div>
+                        </div>
+                    </div>
+                    <div class="quiz-options" id="particle-quiz2-options"></div>
+                    <div class="quiz-feedback" id="particle-quiz2-feedback"></div>
+                    <button class="next-question-btn" id="particle-quiz2-next-btn" onclick="app.nextParticleQuiz2()" style="display: none;">Question suivante</button>
+                </div>
+                <div class="quiz-score">
+                    <span id="particle-quiz2-score">Score: 0/0</span>
                 </div>
             </div>
         </div>
