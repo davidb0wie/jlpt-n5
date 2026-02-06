@@ -154,7 +154,35 @@
                 <h1>Compteurs</h1>
             </header>
 
-            <div class="counters-list" id="counters-list"></div>
+            <div class="mode-selector">
+                <button class="mode-btn active" onclick="app.setCounterMode('list')">Liste</button>
+                <button class="mode-btn" onclick="app.setCounterMode('quiz')">Quiz</button>
+            </div>
+
+            <div id="counter-list" class="content-area">
+                <div class="counters-list" id="counters-list"></div>
+            </div>
+
+            <div id="counter-quiz" class="content-area" style="display: none;">
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h2>À quoi sert ce compteur ?</h2>
+                        <div class="counter-display">
+                            <div class="counter-info" id="counter-quiz-info">
+                                <span class="counter-name" id="quiz-counter-name">個 (ko)</span>
+                            </div>
+                            <div class="counter-number" id="quiz-counter-number" style="display: none;">5</div>
+                        </div>
+                        <div class="counter-usage-hint" id="quiz-counter-usage" style="font-style: italic; color: #666; margin-top: 10px;"></div>
+                    </div>
+                    <div class="quiz-options" id="counter-quiz-options"></div>
+                    <div class="quiz-feedback" id="counter-quiz-feedback"></div>
+                    <button class="next-question-btn" id="counter-next-question-btn" onclick="app.nextCounterQuestion()" style="display: none;">Question suivante</button>
+                </div>
+                <div class="quiz-score">
+                    <span id="counter-quiz-score">Score: 0/0</span>
+                </div>
+            </div>
         </div>
 
         <!-- Page Verbes -->
@@ -170,19 +198,20 @@
             </div>
 
             <div id="verb-practice" class="content-area">
-                <div class="verb-card">
-                    <div class="verb-question">
-                        <h3>Conjuguez le verbe :</h3>
-                        <div class="verb-display">
-                            <span class="verb-kanji" id="verb-kanji">飲む</span>
-                            <span class="verb-meaning" id="verb-meaning">(boire)</span>
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h2>Quel est ce verbe ?</h2>
+                        <div class="verb-quiz-display">
+                            <div class="conjugated-verb" id="conjugated-verb">飲みます</div>
+                            <div class="verb-form-label" id="verb-form-label">Présent poli</div>
                         </div>
-                        <p class="conjugation-type" id="conjugation-type">Présent poli affirmatif</p>
                     </div>
-                    <input type="text" id="verb-input" class="verb-input" placeholder="Votre réponse...">
-                    <button class="check-btn" onclick="app.checkVerbAnswer()">Vérifier</button>
-                    <div class="verb-feedback" id="verb-feedback"></div>
-                    <button class="next-verb-btn" onclick="app.nextVerb()" style="display: none;">Verbe suivant</button>
+                    <div class="quiz-options" id="verb-quiz-options"></div>
+                    <div class="quiz-feedback" id="verb-quiz-feedback"></div>
+                    <button class="next-question-btn" id="verb-next-question-btn" onclick="app.nextVerbQuestion()" style="display: none;">Question suivante</button>
+                </div>
+                <div class="quiz-score">
+                    <span id="verb-quiz-score">Score: 0/0</span>
                 </div>
             </div>
 
@@ -198,8 +227,31 @@
                 <h1>Adverbes</h1>
             </header>
 
-            <div class="content-area">
+            <div class="mode-selector">
+                <button class="mode-btn active" onclick="app.setAdverbMode('list')">Liste</button>
+                <button class="mode-btn" onclick="app.setAdverbMode('quiz')">Quiz</button>
+            </div>
+
+            <div id="adverb-list" class="content-area">
                 <div class="adverbs-list" id="adverbs-list"></div>
+            </div>
+
+            <div id="adverb-quiz" class="content-area" style="display: none;">
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h2>Que signifie cet adverbe ?</h2>
+                        <div class="adverb-quiz-display">
+                            <div class="adverb-kanji-large" id="quiz-adverb-kanji">今</div>
+                            <div class="adverb-hiragana-hint" id="quiz-adverb-hiragana">いま</div>
+                        </div>
+                    </div>
+                    <div class="quiz-options" id="adverb-quiz-options"></div>
+                    <div class="quiz-feedback" id="adverb-quiz-feedback"></div>
+                    <button class="next-question-btn" id="adverb-next-question-btn" onclick="app.nextAdverbQuestion()" style="display: none;">Question suivante</button>
+                </div>
+                <div class="quiz-score">
+                    <span id="adverb-quiz-score">Score: 0/0</span>
+                </div>
             </div>
         </div>
     </div>

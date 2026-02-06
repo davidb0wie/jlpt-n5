@@ -10,11 +10,21 @@ const app = {
         currentKanjiIndex: 0,
         currentPage: 'home',
         kanjiMode: 'flashcard',
+        counterMode: 'list',
         verbMode: 'practice',
+        adverbMode: 'list',
         quizScore: 0,
         quizTotal: 0,
+        counterQuizScore: 0,
+        counterQuizTotal: 0,
+        verbQuizScore: 0,
+        verbQuizTotal: 0,
+        adverbQuizScore: 0,
+        adverbQuizTotal: 0,
         currentQuizQuestion: null,
+        currentCounterQuestion: null,
         currentVerbQuestion: null,
+        currentAdverbQuestion: null,
         allKanji: []
     },
     progress: {
@@ -123,11 +133,11 @@ const app = {
             this.initKanjiFlashcard();
             this.populateCategorySelect();
         } else if (mode === 'counters') {
-            this.displayCounters();
+            this.setCounterMode('list');
         } else if (mode === 'verbs') {
             this.initVerbPractice();
         } else if (mode === 'adverbs') {
-            this.displayAdverbs();
+            this.setAdverbMode('list');
         }
     },
 
@@ -291,8 +301,11 @@ const app = {
             optionsContainer.appendChild(btn);
         });
 
-        document.getElementById('quiz-feedback').innerHTML = '';
-        document.getElementById('quiz-feedback').className = 'quiz-feedback';
+        const feedback = document.getElementById('quiz-feedback');
+        feedback.innerHTML = '';
+        feedback.className = 'quiz-feedback';
+        feedback.style.cursor = 'default';
+        feedback.onclick = null;
         document.getElementById('next-question-btn').style.display = 'none';
     },
 
@@ -322,13 +335,23 @@ const app = {
 
         // Afficher feedback
         const feedback = document.getElementById('quiz-feedback');
+        const kanji = this.state.currentQuizQuestion.kanji;
+        const pronunciations = [];
+        if (kanji.on) pronunciations.push(`On: ${kanji.on}`);
+        if (kanji.kun) pronunciations.push(`Kun: ${kanji.kun}`);
+        const pronText = pronunciations.join(' | ');
+
         if (correct) {
             feedback.className = 'quiz-feedback correct';
-            feedback.textContent = '✓ Correct !';
+            feedback.innerHTML = `✓ Correct !<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${pronText}</span>`;
         } else {
             feedback.className = 'quiz-feedback incorrect';
-            feedback.textContent = `✗ Incorrect. La bonne réponse était : ${this.state.currentQuizQuestion.correctAnswer}`;
+            feedback.innerHTML = `✗ Incorrect. La bonne réponse était : ${this.state.currentQuizQuestion.correctAnswer}<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${pronText}</span>`;
         }
+
+        // Rendre la boîte de feedback cliquable pour passer à la question suivante
+        feedback.style.cursor = 'pointer';
+        feedback.onclick = () => this.nextQuestion();
 
         document.getElementById('quiz-score').textContent =
             `Score: ${this.state.quizScore}/${this.state.quizTotal}`;
@@ -452,6 +475,130 @@ const app = {
         this.updateHomeStats();
     },
 
+    setCounterMode(mode) {
+        this.state.counterMode = mode;
+
+        // Mettre à jour les boutons
+        document.querySelectorAll('#counters-page .mode-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        event.target.classList.add('active');
+
+        // Afficher le bon contenu
+        document.getElementById('counter-list').style.display = 'none';
+        document.getElementById('counter-quiz').style.display = 'none';
+
+        if (mode === 'list') {
+            document.getElementById('counter-list').style.display = 'block';
+            this.displayCounters();
+        } else if (mode === 'quiz') {
+            document.getElementById('counter-quiz').style.display = 'block';
+            this.startCounterQuiz();
+        }
+    },
+
+    startCounterQuiz() {
+        this.state.counterQuizScore = 0;
+        this.state.counterQuizTotal = 0;
+        this.nextCounterQuestion();
+    },
+
+    nextCounterQuestion() {
+        if (!this.data.counters || this.data.counters.counters.length === 0) return;
+
+        // Choisir un compteur aléatoire
+        const correctCounter = this.data.counters.counters[Math.floor(Math.random() * this.data.counters.counters.length)];
+
+        // Générer des options avec les descriptions d'autres compteurs
+        const options = [correctCounter.description];
+
+        // Ajouter des options incorrectes (descriptions d'autres compteurs)
+        while (options.length < 4 && this.data.counters.counters.length >= 4) {
+            const randomCounter = this.data.counters.counters[Math.floor(Math.random() * this.data.counters.counters.length)];
+            if (!options.includes(randomCounter.description)) {
+                options.push(randomCounter.description);
+            }
+        }
+
+        // Mélanger les options
+        options.sort(() => Math.random() - 0.5);
+
+        this.state.currentCounterQuestion = {
+            counter: correctCounter,
+            correctAnswer: correctCounter.description,
+            options: options
+        };
+
+        // Afficher la question (seulement le nom du compteur, sans l'usage!)
+        document.getElementById('quiz-counter-name').textContent = correctCounter.name;
+        document.getElementById('quiz-counter-usage').textContent = ''; // Ne rien afficher
+        document.getElementById('quiz-counter-number').style.display = 'none'; // Cacher le nombre
+
+        const optionsContainer = document.getElementById('counter-quiz-options');
+        optionsContainer.innerHTML = '';
+
+        options.forEach(option => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option';
+            btn.textContent = option;
+            btn.onclick = () => this.checkCounterAnswer(option);
+            optionsContainer.appendChild(btn);
+        });
+
+        const feedback = document.getElementById('counter-quiz-feedback');
+        feedback.innerHTML = '';
+        feedback.className = 'quiz-feedback';
+        feedback.style.cursor = 'default';
+        feedback.onclick = null;
+        document.getElementById('counter-next-question-btn').style.display = 'none';
+    },
+
+    checkCounterAnswer(selected) {
+        const correct = selected === this.state.currentCounterQuestion.correctAnswer;
+        this.state.counterQuizTotal++;
+
+        if (correct) {
+            this.state.counterQuizScore++;
+            this.progress.correctAnswers++;
+        }
+        this.progress.totalAttempts++;
+        this.saveProgress();
+        this.updateHomeStats();
+
+        // Désactiver les boutons
+        const options = document.querySelectorAll('#counter-quiz-options .quiz-option');
+        options.forEach(opt => {
+            opt.classList.add('disabled');
+            opt.onclick = null;
+            if (opt.textContent === this.state.currentCounterQuestion.correctAnswer) {
+                opt.classList.add('correct');
+            } else if (opt.textContent === selected && !correct) {
+                opt.classList.add('incorrect');
+            }
+        });
+
+        // Afficher feedback avec usage
+        const feedback = document.getElementById('counter-quiz-feedback');
+        const counter = this.state.currentCounterQuestion.counter;
+        const usage = counter.usage;
+
+        if (correct) {
+            feedback.className = 'quiz-feedback correct';
+            feedback.innerHTML = `✓ Correct !<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">Usage : ${usage}</span>`;
+        } else {
+            feedback.className = 'quiz-feedback incorrect';
+            feedback.innerHTML = `✗ Incorrect. La bonne réponse était : ${this.state.currentCounterQuestion.correctAnswer}<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">Usage : ${usage}</span>`;
+        }
+
+        // Rendre la boîte de feedback cliquable pour passer à la question suivante
+        feedback.style.cursor = 'pointer';
+        feedback.onclick = () => this.nextCounterQuestion();
+
+        document.getElementById('counter-quiz-score').textContent =
+            `Score: ${this.state.counterQuizScore}/${this.state.counterQuizTotal}`;
+        document.getElementById('counter-next-question-btn').style.display = 'block';
+    },
+
     // ===== VERBES =====
     setVerbMode(mode) {
         this.state.verbMode = mode;
@@ -475,15 +622,28 @@ const app = {
     },
 
     initVerbPractice() {
-        this.generateVerbQuestion();
+        this.state.verbQuizScore = 0;
+        this.state.verbQuizTotal = 0;
+        this.nextVerbQuestion();
     },
 
-    generateVerbQuestion() {
-        // Choisir un groupe aléatoire
-        const group = this.data.verbs.groups[Math.floor(Math.random() * this.data.verbs.groups.length)];
-        const verb = group.verbs[Math.floor(Math.random() * group.verbs.length)];
+    nextVerbQuestion() {
+        if (!this.data.verbs || this.data.verbs.groups.length === 0) return;
 
-        // Choisir une conjugaison aléatoire (toutes les 10 formes)
+        // Créer une liste de tous les verbes
+        const allVerbs = [];
+        this.data.verbs.groups.forEach(group => {
+            group.verbs.forEach(verb => {
+                allVerbs.push({ ...verb, groupName: group.name });
+            });
+        });
+
+        if (allVerbs.length === 0) return;
+
+        // Choisir un verbe aléatoire
+        const correctVerb = allVerbs[Math.floor(Math.random() * allVerbs.length)];
+
+        // Choisir une conjugaison aléatoire
         const conjugations = [
             { name: 'Présent neutre', key: 'present_neutral' },
             { name: 'Présent poli', key: 'present_polite' },
@@ -498,70 +658,102 @@ const app = {
         ];
 
         const conjugation = conjugations[Math.floor(Math.random() * conjugations.length)];
+        const conjugatedForm = correctVerb.conjugations[conjugation.key];
+
+        // Générer des options (autres verbes)
+        const options = [`${correctVerb.kana} (${correctVerb.meaning})`];
+
+        while (options.length < 4 && allVerbs.length >= 4) {
+            const randomVerb = allVerbs[Math.floor(Math.random() * allVerbs.length)];
+            const option = `${randomVerb.kana} (${randomVerb.meaning})`;
+            if (!options.includes(option)) {
+                options.push(option);
+            }
+        }
+
+        // Mélanger les options
+        options.sort(() => Math.random() - 0.5);
 
         this.state.currentVerbQuestion = {
-            verb: verb,
-            group: group,
-            conjugation: conjugation
+            verb: correctVerb,
+            conjugation: conjugation,
+            conjugatedForm: conjugatedForm,
+            correctAnswer: `${correctVerb.kana} (${correctVerb.meaning})`,
+            options: options
         };
 
-        document.getElementById('verb-kanji').textContent = verb.kanji || verb.kana;
-        document.getElementById('verb-meaning').textContent = `(${verb.meaning})`;
-        document.getElementById('conjugation-type').textContent = conjugation.name;
-        document.getElementById('verb-input').value = '';
-        document.getElementById('verb-feedback').innerHTML = '';
-        document.getElementById('verb-feedback').className = 'verb-feedback';
-        document.querySelector('.next-verb-btn').style.display = 'none';
+        // Afficher la question
+        document.getElementById('conjugated-verb').textContent = conjugatedForm.kanji;
+        document.getElementById('verb-form-label').textContent = conjugation.name;
+
+        const optionsContainer = document.getElementById('verb-quiz-options');
+        optionsContainer.innerHTML = '';
+
+        options.forEach(option => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option';
+            btn.textContent = option;
+            btn.onclick = () => this.checkVerbAnswer(option);
+            optionsContainer.appendChild(btn);
+        });
+
+        const feedback = document.getElementById('verb-quiz-feedback');
+        feedback.innerHTML = '';
+        feedback.className = 'quiz-feedback';
+        feedback.style.cursor = 'default';
+        feedback.onclick = null;
+        document.getElementById('verb-next-question-btn').style.display = 'none';
 
         // Marquer comme étudié
-        this.progress.studiedVerbs.add(verb.kana);
+        this.progress.studiedVerbs.add(correctVerb.kana);
         this.saveProgress();
         this.updateHomeStats();
     },
 
-    checkVerbAnswer() {
-        const userAnswer = document.getElementById('verb-input').value.trim().toLowerCase();
-        const feedback = document.getElementById('verb-feedback');
-        const verb = this.state.currentVerbQuestion.verb;
-        const conjugation = this.state.currentVerbQuestion.conjugation;
+    checkVerbAnswer(selected) {
+        const correct = selected === this.state.currentVerbQuestion.correctAnswer;
+        this.state.verbQuizTotal++;
 
-        // Récupérer la bonne réponse en romaji depuis les conjugaisons du verbe
-        const conjugationData = verb.conjugations[conjugation.key];
-        const correctAnswerRomaji = conjugationData.romaji.toLowerCase();
-        const correctAnswerKanji = conjugationData.kanji;
-
-        // Vérifier si la réponse est correcte (comparaison en romaji)
-        const isCorrect = userAnswer === correctAnswerRomaji;
-
-        feedback.style.display = 'block';
-
-        if (isCorrect) {
-            feedback.className = 'verb-feedback correct';
-            feedback.innerHTML = `
-                <p>✓ <strong>Correct !</strong></p>
-                <p><strong>Romaji:</strong> ${conjugationData.romaji}</p>
-                <p><strong>Kanji:</strong> ${correctAnswerKanji}</p>
-            `;
+        if (correct) {
+            this.state.verbQuizScore++;
             this.progress.correctAnswers++;
-        } else {
-            feedback.className = 'verb-feedback incorrect';
-            feedback.innerHTML = `
-                <p>✗ <strong>Incorrect</strong></p>
-                <p><strong>Votre réponse:</strong> ${userAnswer || '(vide)'}</p>
-                <p><strong>Bonne réponse (romaji):</strong> ${conjugationData.romaji}</p>
-                <p><strong>Kanji:</strong> ${correctAnswerKanji}</p>
-            `;
         }
-
         this.progress.totalAttempts++;
         this.saveProgress();
         this.updateHomeStats();
 
-        document.querySelector('.next-verb-btn').style.display = 'block';
-    },
+        // Désactiver les boutons
+        const options = document.querySelectorAll('#verb-quiz-options .quiz-option');
+        options.forEach(opt => {
+            opt.classList.add('disabled');
+            opt.onclick = null;
+            if (opt.textContent === this.state.currentVerbQuestion.correctAnswer) {
+                opt.classList.add('correct');
+            } else if (opt.textContent === selected && !correct) {
+                opt.classList.add('incorrect');
+            }
+        });
 
-    nextVerb() {
-        this.generateVerbQuestion();
+        // Afficher feedback avec romaji
+        const feedback = document.getElementById('verb-quiz-feedback');
+        const romaji = this.state.currentVerbQuestion.conjugatedForm.romaji;
+        const verb = this.state.currentVerbQuestion.verb;
+
+        if (correct) {
+            feedback.className = 'quiz-feedback correct';
+            feedback.innerHTML = `✓ Correct !<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${romaji}</span>`;
+        } else {
+            feedback.className = 'quiz-feedback incorrect';
+            feedback.innerHTML = `✗ Incorrect. La bonne réponse était : ${verb.kana} (${verb.meaning})<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${romaji}</span>`;
+        }
+
+        // Rendre la boîte de feedback cliquable pour passer à la question suivante
+        feedback.style.cursor = 'pointer';
+        feedback.onclick = () => this.nextVerbQuestion();
+
+        document.getElementById('verb-quiz-score').textContent =
+            `Score: ${this.state.verbQuizScore}/${this.state.verbQuizTotal}`;
+        document.getElementById('verb-next-question-btn').style.display = 'block';
     },
 
     displayVerbList() {
@@ -691,6 +883,134 @@ const app = {
 
         this.saveProgress();
         this.updateHomeStats();
+    },
+
+    setAdverbMode(mode) {
+        this.state.adverbMode = mode;
+
+        // Mettre à jour les boutons
+        document.querySelectorAll('#adverbs-page .mode-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        event.target.classList.add('active');
+
+        // Afficher le bon contenu
+        document.getElementById('adverb-list').style.display = 'none';
+        document.getElementById('adverb-quiz').style.display = 'none';
+
+        if (mode === 'list') {
+            document.getElementById('adverb-list').style.display = 'block';
+            this.displayAdverbs();
+        } else if (mode === 'quiz') {
+            document.getElementById('adverb-quiz').style.display = 'block';
+            this.startAdverbQuiz();
+        }
+    },
+
+    startAdverbQuiz() {
+        this.state.adverbQuizScore = 0;
+        this.state.adverbQuizTotal = 0;
+        this.nextAdverbQuestion();
+    },
+
+    nextAdverbQuestion() {
+        if (!this.data.adverbs || this.data.adverbs.adverbs.length === 0) return;
+
+        // Choisir un adverbe aléatoire
+        const correctAdverb = this.data.adverbs.adverbs[Math.floor(Math.random() * this.data.adverbs.adverbs.length)];
+
+        // Générer des options (significations d'autres adverbes)
+        const options = [correctAdverb.meaning];
+
+        // Ajouter des options incorrectes
+        while (options.length < 4 && this.data.adverbs.adverbs.length >= 4) {
+            const randomAdverb = this.data.adverbs.adverbs[Math.floor(Math.random() * this.data.adverbs.adverbs.length)];
+            if (!options.includes(randomAdverb.meaning)) {
+                options.push(randomAdverb.meaning);
+            }
+        }
+
+        // Mélanger les options
+        options.sort(() => Math.random() - 0.5);
+
+        this.state.currentAdverbQuestion = {
+            adverb: correctAdverb,
+            correctAnswer: correctAdverb.meaning,
+            options: options
+        };
+
+        // Afficher la question
+        document.getElementById('quiz-adverb-kanji').textContent = correctAdverb.kanji;
+        document.getElementById('quiz-adverb-hiragana').textContent = correctAdverb.hiragana;
+
+        const optionsContainer = document.getElementById('adverb-quiz-options');
+        optionsContainer.innerHTML = '';
+
+        options.forEach(option => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option';
+            btn.textContent = option;
+            btn.onclick = () => this.checkAdverbAnswer(option);
+            optionsContainer.appendChild(btn);
+        });
+
+        const feedback = document.getElementById('adverb-quiz-feedback');
+        feedback.innerHTML = '';
+        feedback.className = 'quiz-feedback';
+        feedback.style.cursor = 'default';
+        feedback.onclick = null;
+        document.getElementById('adverb-next-question-btn').style.display = 'none';
+
+        // Marquer comme étudié
+        this.progress.studiedAdverbs.add(correctAdverb.hiragana);
+        this.saveProgress();
+        this.updateHomeStats();
+    },
+
+    checkAdverbAnswer(selected) {
+        const correct = selected === this.state.currentAdverbQuestion.correctAnswer;
+        this.state.adverbQuizTotal++;
+
+        if (correct) {
+            this.state.adverbQuizScore++;
+            this.progress.correctAnswers++;
+        }
+        this.progress.totalAttempts++;
+        this.saveProgress();
+        this.updateHomeStats();
+
+        // Désactiver les boutons
+        const options = document.querySelectorAll('#adverb-quiz-options .quiz-option');
+        options.forEach(opt => {
+            opt.classList.add('disabled');
+            opt.onclick = null;
+            if (opt.textContent === this.state.currentAdverbQuestion.correctAnswer) {
+                opt.classList.add('correct');
+            } else if (opt.textContent === selected && !correct) {
+                opt.classList.add('incorrect');
+            }
+        });
+
+        // Afficher feedback avec exemple
+        const feedback = document.getElementById('adverb-quiz-feedback');
+        const adverb = this.state.currentAdverbQuestion.adverb;
+        const example = `${adverb.example.sentence}<br><small>${adverb.example.translation}</small>`;
+
+        if (correct) {
+            feedback.className = 'quiz-feedback correct';
+            feedback.innerHTML = `✓ Correct !<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${example}</span>`;
+        } else {
+            feedback.className = 'quiz-feedback incorrect';
+            feedback.innerHTML = `✗ Incorrect. La bonne réponse était : ${this.state.currentAdverbQuestion.correctAnswer}<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${example}</span>`;
+        }
+
+        // Rendre la boîte de feedback cliquable pour passer à la question suivante
+        feedback.style.cursor = 'pointer';
+        feedback.onclick = () => this.nextAdverbQuestion();
+
+        document.getElementById('adverb-quiz-score').textContent =
+            `Score: ${this.state.adverbQuizScore}/${this.state.adverbQuizTotal}`;
+        document.getElementById('adverb-next-question-btn').style.display = 'block';
     },
 
     // Service Worker
