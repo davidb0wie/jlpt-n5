@@ -4,8 +4,10 @@ const app = {
         kanji: null,
         counters: null,
         verbs: null,
+        verbsPlus: null,
         adverbs: null,
-        particles: null
+        particles: null,
+        sentences: null
     },
     state: {
         currentKanjiIndex: 0,
@@ -13,33 +15,46 @@ const app = {
         kanjiMode: 'flashcard',
         counterMode: 'list',
         verbMode: 'practice',
+        verbPlusMode: 'practice',
         adverbMode: 'list',
         particleMode: 'list',
+        sentenceMode: 'quiz',
         quizScore: 0,
         quizTotal: 0,
         counterQuizScore: 0,
         counterQuizTotal: 0,
         verbQuizScore: 0,
         verbQuizTotal: 0,
+        verbPlusQuizScore: 0,
+        verbPlusQuizTotal: 0,
         adverbQuizScore: 0,
         adverbQuizTotal: 0,
         particleQuiz1Score: 0,
         particleQuiz1Total: 0,
         particleQuiz2Score: 0,
         particleQuiz2Total: 0,
+        sentenceQuizScore: 0,
+        sentenceQuizTotal: 0,
         currentQuizQuestion: null,
         currentCounterQuestion: null,
         currentVerbQuestion: null,
+        currentVerbPlusQuestion: null,
         currentAdverbQuestion: null,
         currentParticleQuestion: null,
+        currentSentenceQuestion: null,
+        selectedDifficulty: 'all',
+        selectedCategory: 'all',
+        showRomaji: false,
         allKanji: []
     },
     progress: {
         studiedKanji: new Set(),
         studiedCounters: new Set(),
         studiedVerbs: new Set(),
+        studiedVerbsPlus: new Set(),
         studiedAdverbs: new Set(),
         studiedParticles: new Set(),
+        studiedSentences: new Set(),
         correctAnswers: 0,
         totalAttempts: 0
     },
@@ -56,19 +71,23 @@ const app = {
     // Chargement des données
     async loadData() {
         try {
-            const [kanjiResponse, countersResponse, verbsResponse, adverbsResponse, particlesResponse] = await Promise.all([
+            const [kanjiResponse, countersResponse, verbsResponse, verbsPlusResponse, adverbsResponse, particlesResponse, sentencesResponse] = await Promise.all([
                 fetch('data/kanji.json'),
                 fetch('data/counters.json'),
                 fetch('data/verbs.json'),
+                fetch('data/verbs-plus.json'),
                 fetch('data/adverbs.json'),
-                fetch('data/particles.json')
+                fetch('data/particles.json'),
+                fetch('data/sentences.json')
             ]);
 
             this.data.kanji = await kanjiResponse.json();
             this.data.counters = await countersResponse.json();
             this.data.verbs = await verbsResponse.json();
+            this.data.verbsPlus = await verbsPlusResponse.json();
             this.data.adverbs = await adverbsResponse.json();
             this.data.particles = await particlesResponse.json();
+            this.data.sentences = await sentencesResponse.json();
 
             // Créer une liste plate de tous les kanji
             this.state.allKanji = [];
@@ -94,8 +113,10 @@ const app = {
             studiedKanji: Array.from(this.progress.studiedKanji),
             studiedCounters: Array.from(this.progress.studiedCounters),
             studiedVerbs: Array.from(this.progress.studiedVerbs),
+            studiedVerbsPlus: Array.from(this.progress.studiedVerbsPlus),
             studiedAdverbs: Array.from(this.progress.studiedAdverbs),
             studiedParticles: Array.from(this.progress.studiedParticles),
+            studiedSentences: Array.from(this.progress.studiedSentences),
             correctAnswers: this.progress.correctAnswers,
             totalAttempts: this.progress.totalAttempts
         }));
@@ -108,8 +129,10 @@ const app = {
             this.progress.studiedKanji = new Set(data.studiedKanji || []);
             this.progress.studiedCounters = new Set(data.studiedCounters || []);
             this.progress.studiedVerbs = new Set(data.studiedVerbs || []);
+            this.progress.studiedVerbsPlus = new Set(data.studiedVerbsPlus || []);
             this.progress.studiedAdverbs = new Set(data.studiedAdverbs || []);
             this.progress.studiedParticles = new Set(data.studiedParticles || []);
+            this.progress.studiedSentences = new Set(data.studiedSentences || []);
             this.progress.correctAnswers = data.correctAnswers || 0;
             this.progress.totalAttempts = data.totalAttempts || 0;
         }
@@ -121,8 +144,10 @@ const app = {
                 studiedKanji: new Set(),
                 studiedCounters: new Set(),
                 studiedVerbs: new Set(),
+                studiedVerbsPlus: new Set(),
                 studiedAdverbs: new Set(),
                 studiedParticles: new Set(),
+                studiedSentences: new Set(),
                 correctAnswers: 0,
                 totalAttempts: 0
             };
@@ -149,10 +174,15 @@ const app = {
             this.setCounterMode('list');
         } else if (mode === 'verbs') {
             this.initVerbPractice();
+        } else if (mode === 'verbs-plus') {
+            this.initVerbPlusPractice();
         } else if (mode === 'adverbs') {
             this.setAdverbMode('list');
         } else if (mode === 'particles') {
             this.setParticleMode('list');
+        } else if (mode === 'sentences') {
+            this.initSentenceQuiz();
+            this.populateCategoryFilter();
         }
     },
 
@@ -161,8 +191,10 @@ const app = {
         const totalStudied = this.progress.studiedKanji.size +
                             this.progress.studiedCounters.size +
                             this.progress.studiedVerbs.size +
+                            this.progress.studiedVerbsPlus.size +
                             this.progress.studiedAdverbs.size +
-                            this.progress.studiedParticles.size;
+                            this.progress.studiedParticles.size +
+                            this.progress.studiedSentences.size;
 
         const successRate = this.progress.totalAttempts > 0
             ? Math.round((this.progress.correctAnswers / this.progress.totalAttempts) * 100)
@@ -179,11 +211,18 @@ const app = {
             this.data.verbs.groups.reduce((sum, group) => sum + group.verbs.length, 0) : 60;
         this.updateProgress('verbs', this.progress.studiedVerbs.size, totalVerbs);
 
+        const totalVerbsPlus = this.data.verbsPlus ?
+            this.data.verbsPlus.groups.reduce((sum, group) => sum + group.verbs.length, 0) : 81;
+        this.updateProgress('verbs-plus', this.progress.studiedVerbsPlus.size, totalVerbsPlus);
+
         const totalAdverbs = this.data.adverbs?.adverbs.length || 50;
         this.updateProgress('adverbs', this.progress.studiedAdverbs.size, totalAdverbs);
 
         const totalParticles = this.data.particles?.particles.length || 14;
         this.updateProgress('particles', this.progress.studiedParticles.size, totalParticles);
+
+        const totalSentences = this.data.sentences?.sentences.length || 100;
+        this.updateProgress('sentences', this.progress.studiedSentences.size, totalSentences);
     },
 
     updateProgress(type, current, total) {
@@ -858,6 +897,246 @@ const app = {
         });
     },
 
+    // ===== VERBES++ =====
+    setVerbPlusMode(mode) {
+        this.state.verbPlusMode = mode;
+
+        // Mettre à jour les boutons
+        document.querySelectorAll('#verbs-plus-page .mode-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        event.target.classList.add('active');
+
+        document.getElementById('verb-plus-practice').style.display = 'none';
+        document.getElementById('verb-plus-list').style.display = 'none';
+
+        if (mode === 'practice') {
+            document.getElementById('verb-plus-practice').style.display = 'block';
+            this.initVerbPlusPractice();
+        } else if (mode === 'list') {
+            document.getElementById('verb-plus-list').style.display = 'block';
+            this.displayVerbPlusList();
+        }
+    },
+
+    initVerbPlusPractice() {
+        this.state.verbPlusQuizScore = 0;
+        this.state.verbPlusQuizTotal = 0;
+        this.nextVerbPlusQuestion();
+    },
+
+    nextVerbPlusQuestion() {
+        if (!this.data.verbsPlus || this.data.verbsPlus.groups.length === 0) return;
+
+        // Créer une liste de tous les verbes++
+        const allVerbs = [];
+        this.data.verbsPlus.groups.forEach(group => {
+            group.verbs.forEach(verb => {
+                allVerbs.push({ ...verb, groupName: group.name });
+            });
+        });
+
+        if (allVerbs.length === 0) return;
+
+        // Choisir un verbe aléatoire
+        const correctVerb = allVerbs[Math.floor(Math.random() * allVerbs.length)];
+
+        // Choisir une conjugaison aléatoire
+        const conjugations = [
+            { name: 'Présent neutre', key: 'present_neutral' },
+            { name: 'Présent poli', key: 'present_polite' },
+            { name: 'Présent neutre négatif', key: 'present_neutral_negative' },
+            { name: 'Présent poli négatif', key: 'present_polite_negative' },
+            { name: 'Passé neutre', key: 'past_neutral' },
+            { name: 'Passé poli', key: 'past_polite' },
+            { name: 'Passé neutre négatif', key: 'past_neutral_negative' },
+            { name: 'Passé poli négatif', key: 'past_polite_negative' },
+            { name: 'Forme en -て', key: 'te_form' },
+            { name: 'Forme en -ている', key: 'te_iru' }
+        ];
+
+        const conjugation = conjugations[Math.floor(Math.random() * conjugations.length)];
+        const conjugatedForm = correctVerb.conjugations[conjugation.key];
+
+        // Générer des options (autres verbes)
+        const options = [`${correctVerb.kana} (${correctVerb.meaning})`];
+
+        while (options.length < 4 && allVerbs.length >= 4) {
+            const randomVerb = allVerbs[Math.floor(Math.random() * allVerbs.length)];
+            const option = `${randomVerb.kana} (${randomVerb.meaning})`;
+            if (!options.includes(option)) {
+                options.push(option);
+            }
+        }
+
+        // Mélanger les options
+        options.sort(() => Math.random() - 0.5);
+
+        this.state.currentVerbPlusQuestion = {
+            verb: correctVerb,
+            conjugation: conjugation,
+            conjugatedForm: conjugatedForm,
+            correctAnswer: `${correctVerb.kana} (${correctVerb.meaning})`,
+            options: options
+        };
+
+        // Afficher la question
+        document.getElementById('conjugated-verb-plus').textContent = conjugatedForm.kanji;
+        document.getElementById('verb-form-label-plus').textContent = conjugation.name;
+
+        const optionsContainer = document.getElementById('verb-plus-quiz-options');
+        optionsContainer.innerHTML = '';
+
+        options.forEach(option => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option';
+            btn.textContent = option;
+            btn.onclick = () => this.checkVerbPlusAnswer(option);
+            optionsContainer.appendChild(btn);
+        });
+
+        const feedback = document.getElementById('verb-plus-quiz-feedback');
+        feedback.innerHTML = '';
+        feedback.className = 'quiz-feedback';
+        feedback.style.cursor = 'default';
+        feedback.onclick = null;
+        document.getElementById('verb-plus-next-question-btn').style.display = 'none';
+
+        // Marquer comme étudié
+        this.progress.studiedVerbsPlus.add(correctVerb.kana);
+        this.saveProgress();
+        this.updateHomeStats();
+    },
+
+    checkVerbPlusAnswer(selected) {
+        const correct = selected === this.state.currentVerbPlusQuestion.correctAnswer;
+        this.state.verbPlusQuizTotal++;
+
+        if (correct) {
+            this.state.verbPlusQuizScore++;
+            this.progress.correctAnswers++;
+        }
+        this.progress.totalAttempts++;
+        this.saveProgress();
+        this.updateHomeStats();
+
+        // Désactiver les boutons
+        const options = document.querySelectorAll('#verb-plus-quiz-options .quiz-option');
+        options.forEach(opt => {
+            opt.classList.add('disabled');
+            opt.onclick = null;
+            if (opt.textContent === this.state.currentVerbPlusQuestion.correctAnswer) {
+                opt.classList.add('correct');
+            } else if (opt.textContent === selected && !correct) {
+                opt.classList.add('incorrect');
+            }
+        });
+
+        // Afficher feedback avec romaji
+        const feedback = document.getElementById('verb-plus-quiz-feedback');
+        const romaji = this.state.currentVerbPlusQuestion.conjugatedForm.romaji;
+        const verb = this.state.currentVerbPlusQuestion.verb;
+
+        if (correct) {
+            feedback.className = 'quiz-feedback correct';
+            feedback.innerHTML = `✓ Correct !<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${romaji}</span>`;
+        } else {
+            feedback.className = 'quiz-feedback incorrect';
+            feedback.innerHTML = `✗ Incorrect. La bonne réponse était : ${verb.kana} (${verb.meaning})<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${romaji}</span>`;
+        }
+
+        // Rendre la boîte de feedback cliquable pour passer à la question suivante
+        feedback.style.cursor = 'pointer';
+        feedback.onclick = () => this.nextVerbPlusQuestion();
+
+        document.getElementById('verb-plus-quiz-score').textContent =
+            `Score: ${this.state.verbPlusQuizScore}/${this.state.verbPlusQuizTotal}`;
+        document.getElementById('verb-plus-next-question-btn').style.display = 'block';
+    },
+
+    displayVerbPlusList() {
+        const container = document.getElementById('verb-plus-groups');
+        container.innerHTML = '';
+
+        this.data.verbsPlus.groups.forEach(group => {
+            const groupDiv = document.createElement('div');
+            groupDiv.className = 'verb-group';
+
+            const verbsList = document.createElement('div');
+            verbsList.className = 'verb-list';
+
+            group.verbs.forEach((verb) => {
+                const verbItem = document.createElement('div');
+                verbItem.className = 'verb-item';
+                verbItem.innerHTML = `
+                    <div class="verb-item-kanji">${verb.kanji || verb.kana}</div>
+                    <div class="verb-item-kana">${verb.kana}</div>
+                    <div class="verb-item-meaning">${verb.meaning}</div>
+                    <div class="verb-conjugations" style="display: none;">
+                        <div class="conjugation-item">
+                            <span class="conj-label">Présent neutre:</span>
+                            <span class="conj-value">${verb.conjugations.present_neutral.kanji} (${verb.conjugations.present_neutral.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Présent poli:</span>
+                            <span class="conj-value">${verb.conjugations.present_polite.kanji} (${verb.conjugations.present_polite.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Présent neutre négatif:</span>
+                            <span class="conj-value">${verb.conjugations.present_neutral_negative.kanji} (${verb.conjugations.present_neutral_negative.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Présent poli négatif:</span>
+                            <span class="conj-value">${verb.conjugations.present_polite_negative.kanji} (${verb.conjugations.present_polite_negative.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Passé neutre:</span>
+                            <span class="conj-value">${verb.conjugations.past_neutral.kanji} (${verb.conjugations.past_neutral.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Passé poli:</span>
+                            <span class="conj-value">${verb.conjugations.past_polite.kanji} (${verb.conjugations.past_polite.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Passé neutre négatif:</span>
+                            <span class="conj-value">${verb.conjugations.past_neutral_negative.kanji} (${verb.conjugations.past_neutral_negative.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Passé poli négatif:</span>
+                            <span class="conj-value">${verb.conjugations.past_polite_negative.kanji} (${verb.conjugations.past_polite_negative.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Forme en -て:</span>
+                            <span class="conj-value">${verb.conjugations.te_form.kanji} (${verb.conjugations.te_form.romaji})</span>
+                        </div>
+                        <div class="conjugation-item">
+                            <span class="conj-label">Forme en -ている:</span>
+                            <span class="conj-value">${verb.conjugations.te_iru.kanji} (${verb.conjugations.te_iru.romaji})</span>
+                        </div>
+                    </div>
+                `;
+
+                // Toggle conjugations on click
+                verbItem.onclick = () => {
+                    const conjugationsDiv = verbItem.querySelector('.verb-conjugations');
+                    const isVisible = conjugationsDiv.style.display !== 'none';
+                    conjugationsDiv.style.display = isVisible ? 'none' : 'block';
+                    verbItem.classList.toggle('expanded');
+                };
+
+                verbsList.appendChild(verbItem);
+            });
+
+            groupDiv.innerHTML = `
+                <h2>${group.name}</h2>
+                <p class="verb-group-description">${group.description}</p>
+            `;
+            groupDiv.appendChild(verbsList);
+
+            container.appendChild(groupDiv);
+        });
+    },
+
     // ===== ADVERBES =====
     displayAdverbs() {
         const container = document.getElementById('adverbs-list');
@@ -1289,6 +1568,276 @@ const app = {
         document.getElementById('particle-quiz2-score').textContent =
             `Score: ${this.state.particleQuiz2Score}/${this.state.particleQuiz2Total}`;
         document.getElementById('particle-quiz2-next-btn').style.display = 'block';
+    },
+
+    // ===== PHRASES N5 =====
+    setSentenceMode(mode) {
+        this.state.sentenceMode = mode;
+
+        document.querySelectorAll('#sentences-page .mode-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        event.target.classList.add('active');
+
+        document.getElementById('sentence-quiz').style.display = 'none';
+        document.getElementById('sentence-list').style.display = 'none';
+
+        if (mode === 'quiz') {
+            document.getElementById('sentence-quiz').style.display = 'block';
+            this.initSentenceQuiz();
+        } else if (mode === 'list') {
+            document.getElementById('sentence-list').style.display = 'block';
+            this.displaySentencesByCategory();
+        }
+    },
+
+    initSentenceQuiz() {
+        this.state.sentenceQuizScore = 0;
+        this.state.sentenceQuizTotal = 0;
+        this.state.showRomaji = false;
+        this.nextSentenceQuestion();
+    },
+
+    populateCategoryFilter() {
+        const select = document.getElementById('category-filter');
+        if (!select || !this.data.sentences) return;
+
+        // Ajouter les catégories
+        this.data.sentences.categories.forEach(cat => {
+            const option = document.createElement('option');
+            option.value = cat.id;
+            option.textContent = `${cat.icon} ${cat.name}`;
+            select.appendChild(option);
+        });
+    },
+
+    filterSentences() {
+        this.state.selectedDifficulty = document.getElementById('difficulty-filter').value;
+        this.nextSentenceQuestion();
+    },
+
+    nextSentenceQuestion() {
+        if (!this.data.sentences || this.data.sentences.sentences.length === 0) return;
+
+        // Filtrer par difficulté
+        let filteredSentences = this.data.sentences.sentences;
+        if (this.state.selectedDifficulty !== 'all') {
+            const difficulty = parseInt(this.state.selectedDifficulty);
+            filteredSentences = filteredSentences.filter(s => s.difficulty === difficulty);
+        }
+
+        if (filteredSentences.length === 0) {
+            alert('Aucune phrase pour ce niveau. Sélectionnez "Tous niveaux".');
+            return;
+        }
+
+        // Choisir une phrase aléatoire
+        const correctSentence = filteredSentences[Math.floor(Math.random() * filteredSentences.length)];
+
+        // Créer les options (bonne réponse + 3 mauvaises)
+        const options = [correctSentence.french, ...correctSentence.wrong_answers];
+
+        // Mélanger les options
+        options.sort(() => Math.random() - 0.5);
+
+        this.state.currentSentenceQuestion = {
+            sentence: correctSentence,
+            correctAnswer: correctSentence.french,
+            options: options
+        };
+
+        // Afficher la question
+        document.getElementById('quiz-sentence-japanese').textContent = correctSentence.japanese;
+        document.getElementById('quiz-sentence-romaji').textContent = correctSentence.romaji;
+        document.getElementById('quiz-sentence-romaji').style.display = 'none';
+        this.state.showRomaji = false;
+
+        // Vérifier si Web Speech API est disponible avec voix japonaise
+        const audioBtn = document.getElementById('audio-btn');
+        if (this.hasJapaneseVoice()) {
+            audioBtn.style.display = 'inline-block';
+            audioBtn.disabled = false;
+        } else {
+            audioBtn.style.display = 'none';
+        }
+
+        const optionsContainer = document.getElementById('sentence-quiz-options');
+        optionsContainer.innerHTML = '';
+
+        options.forEach(option => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option';
+            btn.textContent = option;
+            btn.onclick = () => this.checkSentenceAnswer(option);
+            optionsContainer.appendChild(btn);
+        });
+
+        const feedback = document.getElementById('sentence-quiz-feedback');
+        feedback.innerHTML = '';
+        feedback.className = 'quiz-feedback';
+        feedback.style.cursor = 'default';
+        feedback.onclick = null;
+        document.getElementById('sentence-next-question-btn').style.display = 'none';
+
+        // Marquer comme étudié
+        this.progress.studiedSentences.add(correctSentence.japanese);
+        this.saveProgress();
+        this.updateHomeStats();
+    },
+
+    checkSentenceAnswer(selected) {
+        const correct = selected === this.state.currentSentenceQuestion.correctAnswer;
+        this.state.sentenceQuizTotal++;
+
+        if (correct) {
+            this.state.sentenceQuizScore++;
+            this.progress.correctAnswers++;
+        }
+        this.progress.totalAttempts++;
+        this.saveProgress();
+        this.updateHomeStats();
+
+        // Désactiver les boutons
+        const options = document.querySelectorAll('#sentence-quiz-options .quiz-option');
+        options.forEach(opt => {
+            opt.classList.add('disabled');
+            opt.onclick = null;
+            if (opt.textContent === this.state.currentSentenceQuestion.correctAnswer) {
+                opt.classList.add('correct');
+            } else if (opt.textContent === selected && !correct) {
+                opt.classList.add('incorrect');
+            }
+        });
+
+        // Afficher feedback
+        const feedback = document.getElementById('sentence-quiz-feedback');
+        const sentence = this.state.currentSentenceQuestion.sentence;
+
+        if (correct) {
+            feedback.className = 'quiz-feedback correct';
+            feedback.innerHTML = `✓ Correct !<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${sentence.romaji}</span>`;
+        } else {
+            feedback.className = 'quiz-feedback incorrect';
+            feedback.innerHTML = `✗ Incorrect. La bonne réponse était : ${sentence.french}<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${sentence.romaji}</span>`;
+        }
+
+        // Rendre cliquable pour passer à la question suivante
+        feedback.style.cursor = 'pointer';
+        feedback.onclick = () => this.nextSentenceQuestion();
+
+        document.getElementById('sentence-quiz-score').textContent =
+            `Score: ${this.state.sentenceQuizScore}/${this.state.sentenceQuizTotal}`;
+        document.getElementById('sentence-next-question-btn').style.display = 'block';
+    },
+
+    displaySentencesByCategory() {
+        const container = document.getElementById('sentences-container');
+        container.innerHTML = '';
+
+        const selectedCategory = document.getElementById('category-filter').value;
+
+        // Filtrer les phrases par catégorie
+        let sentences = this.data.sentences.sentences;
+        if (selectedCategory !== 'all') {
+            sentences = sentences.filter(s => s.category === selectedCategory);
+        }
+
+        // Grouper par catégorie
+        const grouped = {};
+        sentences.forEach(s => {
+            if (!grouped[s.category]) {
+                grouped[s.category] = [];
+            }
+            grouped[s.category].push(s);
+        });
+
+        // Afficher par catégorie
+        Object.keys(grouped).forEach(categoryId => {
+            const category = this.data.sentences.categories.find(c => c.id === categoryId);
+            const categoryDiv = document.createElement('div');
+            categoryDiv.className = 'sentence-category';
+
+            const header = document.createElement('h2');
+            header.innerHTML = `${category.icon} ${category.name} <span style="font-size: 0.8em; color: #666;">(${grouped[categoryId].length})</span>`;
+            categoryDiv.appendChild(header);
+
+            const grid = document.createElement('div');
+            grid.className = 'sentences-grid';
+
+            grouped[categoryId].forEach(sentence => {
+                const item = document.createElement('div');
+                item.className = 'sentence-item';
+
+                const difficultyStars = '⭐'.repeat(sentence.difficulty);
+
+                item.innerHTML = `
+                    <div class="sentence-main">
+                        <div class="sentence-japanese">${sentence.japanese}</div>
+                        <button class="audio-btn-small" onclick="app.playSentenceAudioDirect('${sentence.japanese.replace(/'/g, "\\'")}')">🔊</button>
+                        <div class="sentence-romaji-small">${sentence.romaji}</div>
+                        <div class="sentence-french">${sentence.french}</div>
+                        <div class="sentence-difficulty">${difficultyStars}</div>
+                    </div>
+                `;
+
+                grid.appendChild(item);
+            });
+
+            categoryDiv.appendChild(grid);
+            container.appendChild(categoryDiv);
+        });
+    },
+
+    toggleRomaji() {
+        this.state.showRomaji = !this.state.showRomaji;
+        const romajiDiv = document.getElementById('quiz-sentence-romaji');
+        romajiDiv.style.display = this.state.showRomaji ? 'block' : 'none';
+
+        const btn = event.target;
+        btn.textContent = this.state.showRomaji ? 'Masquer romaji' : 'Afficher romaji';
+    },
+
+    // Web Speech API
+    hasJapaneseVoice() {
+        if (!('speechSynthesis' in window)) return false;
+
+        const voices = speechSynthesis.getVoices();
+        return voices.some(voice => voice.lang.startsWith('ja') && voice.localService);
+    },
+
+    playSentenceAudio() {
+        const sentence = this.state.currentSentenceQuestion?.sentence;
+        if (!sentence) return;
+
+        this.speakJapanese(sentence.japanese);
+    },
+
+    playSentenceAudioDirect(text) {
+        this.speakJapanese(text);
+    },
+
+    speakJapanese(text) {
+        if (!('speechSynthesis' in window)) {
+            alert('Votre navigateur ne supporte pas la synthèse vocale.');
+            return;
+        }
+
+        // Annuler toute lecture en cours
+        speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'ja-JP';
+        utterance.rate = 0.8; // Vitesse légèrement réduite pour la clarté
+
+        // Chercher une voix japonaise
+        const voices = speechSynthesis.getVoices();
+        const japaneseVoice = voices.find(voice => voice.lang.startsWith('ja'));
+
+        if (japaneseVoice) {
+            utterance.voice = japaneseVoice;
+        }
+
+        speechSynthesis.speak(utterance);
     },
 
     // Service Worker

@@ -56,6 +56,18 @@
                     </div>
                 </div>
 
+                <div class="menu-card" onclick="app.showMode('verbs-plus')">
+                    <div class="card-icon">動+</div>
+                    <h2>Verbes++</h2>
+                    <p>81 verbes N5 avancés</p>
+                    <div class="card-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="verbs-plus-progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="verbs-plus-count">0/81</span>
+                    </div>
+                </div>
+
                 <div class="menu-card" onclick="app.showMode('adverbs')">
                     <div class="card-icon">副</div>
                     <h2>Adverbes</h2>
@@ -77,6 +89,18 @@
                             <div class="progress-fill" id="particles-progress" style="width: 0%"></div>
                         </div>
                         <span class="progress-text" id="particles-count">0/14</span>
+                    </div>
+                </div>
+
+                <div class="menu-card" onclick="app.showMode('sentences')">
+                    <div class="card-icon">📝</div>
+                    <h2>Phrases N5</h2>
+                    <p>100 phrases par thèmes</p>
+                    <div class="card-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="sentences-progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="sentences-count">0/100</span>
                     </div>
                 </div>
             </div>
@@ -232,6 +256,41 @@
             </div>
         </div>
 
+        <!-- Page Verbes++ -->
+        <div id="verbs-plus-page" class="page">
+            <header class="page-header">
+                <button class="back-button" onclick="app.showPage('home')">← Retour</button>
+                <h1>Verbes++</h1>
+            </header>
+
+            <div class="mode-selector">
+                <button class="mode-btn active" onclick="app.setVerbPlusMode('practice')">Pratique</button>
+                <button class="mode-btn" onclick="app.setVerbPlusMode('list')">Liste</button>
+            </div>
+
+            <div id="verb-plus-practice" class="content-area">
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h2>Quel est ce verbe ?</h2>
+                        <div class="verb-quiz-display">
+                            <div class="conjugated-verb" id="conjugated-verb-plus">洗います</div>
+                            <div class="verb-form-label" id="verb-form-label-plus">Présent poli</div>
+                        </div>
+                    </div>
+                    <div class="quiz-options" id="verb-plus-quiz-options"></div>
+                    <div class="quiz-feedback" id="verb-plus-quiz-feedback"></div>
+                    <button class="next-question-btn" id="verb-plus-next-question-btn" onclick="app.nextVerbPlusQuestion()" style="display: none;">Question suivante</button>
+                </div>
+                <div class="quiz-score">
+                    <span id="verb-plus-quiz-score">Score: 0/0</span>
+                </div>
+            </div>
+
+            <div id="verb-plus-list" class="content-area" style="display: none;">
+                <div class="verb-groups" id="verb-plus-groups"></div>
+            </div>
+        </div>
+
         <!-- Page Adverbes -->
         <div id="adverbs-page" class="page">
             <header class="page-header">
@@ -319,6 +378,59 @@
                 <div class="quiz-score">
                     <span id="particle-quiz2-score">Score: 0/0</span>
                 </div>
+            </div>
+        </div>
+
+        <!-- Page Phrases N5 -->
+        <div id="sentences-page" class="page">
+            <header class="page-header">
+                <button class="back-button" onclick="app.showPage('home')">← Retour</button>
+                <h1>Phrases N5</h1>
+            </header>
+
+            <div class="mode-selector">
+                <button class="mode-btn active" onclick="app.setSentenceMode('quiz')">Quiz</button>
+                <button class="mode-btn" onclick="app.setSentenceMode('list')">Liste</button>
+            </div>
+
+            <div id="sentence-quiz" class="content-area">
+                <!-- Filtres -->
+                <div class="filters-container">
+                    <select id="difficulty-filter" onchange="app.filterSentences()">
+                        <option value="all">Tous niveaux</option>
+                        <option value="1">⭐ Facile</option>
+                        <option value="2">⭐⭐ Moyen</option>
+                        <option value="3">⭐⭐⭐ Difficile</option>
+                    </select>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h2>Que signifie cette phrase ?</h2>
+                        <div class="sentence-quiz-display">
+                            <div class="sentence-japanese-large" id="quiz-sentence-japanese">私は学生です。</div>
+                            <button class="audio-btn" id="audio-btn" onclick="app.playSentenceAudio()" title="Écouter">🔊</button>
+                            <div class="sentence-romaji" id="quiz-sentence-romaji" style="display: none;">Watashi wa gakusei desu.</div>
+                            <button class="toggle-romaji-btn" onclick="app.toggleRomaji()">Afficher romaji</button>
+                        </div>
+                    </div>
+                    <div class="quiz-options" id="sentence-quiz-options"></div>
+                    <div class="quiz-feedback" id="sentence-quiz-feedback"></div>
+                    <button class="next-question-btn" id="sentence-next-question-btn" onclick="app.nextSentenceQuestion()" style="display: none;">Question suivante</button>
+                </div>
+                <div class="quiz-score">
+                    <span id="sentence-quiz-score">Score: 0/0</span>
+                </div>
+            </div>
+
+            <div id="sentence-list" class="content-area" style="display: none;">
+                <!-- Filtre par catégorie -->
+                <div class="category-filter">
+                    <select id="category-filter" onchange="app.displaySentencesByCategory()">
+                        <option value="all">Toutes les catégories</option>
+                    </select>
+                </div>
+                <div class="sentences-container" id="sentences-container"></div>
             </div>
         </div>
     </div>
