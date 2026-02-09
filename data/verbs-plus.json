@@ -1,0 +1,1033 @@
+{
+  "groups": [
+    {
+      "id": 1,
+      "name": "Groupe 1 - Verbes en -u (五段動詞)",
+      "description": "La dernière syllabe du verbe peut passer par 5 lignes du tableau des kana",
+      "verbs": [
+        {
+          "kanji": "洗う",
+          "kana": "あらう",
+          "romaji": "arau",
+          "meaning": "laver",
+          "conjugations": {
+            "present_neutral": { "kanji": "洗う", "romaji": "arau" },
+            "present_polite": { "kanji": "洗います", "romaji": "araimasu" },
+            "present_neutral_negative": { "kanji": "洗わない", "romaji": "arawanai" },
+            "present_polite_negative": { "kanji": "洗いません", "romaji": "araimasen" },
+            "past_neutral": { "kanji": "洗った", "romaji": "aratta" },
+            "past_polite": { "kanji": "洗いました", "romaji": "araimashita" },
+            "past_neutral_negative": { "kanji": "洗わなかった", "romaji": "arawanakatta" },
+            "past_polite_negative": { "kanji": "洗いませんでした", "romaji": "araimasendeshita" },
+            "te_form": { "kanji": "洗って", "romaji": "aratte" },
+            "te_iru": { "kanji": "洗っている", "romaji": "aratteiru" }
+          }
+        },
+        {
+          "kanji": "要る",
+          "kana": "いる",
+          "romaji": "iru",
+          "meaning": "avoir besoin",
+          "conjugations": {
+            "present_neutral": { "kanji": "要る", "romaji": "iru" },
+            "present_polite": { "kanji": "要ります", "romaji": "irimasu" },
+            "present_neutral_negative": { "kanji": "要らない", "romaji": "iranai" },
+            "present_polite_negative": { "kanji": "要りません", "romaji": "irimasen" },
+            "past_neutral": { "kanji": "要った", "romaji": "itta" },
+            "past_polite": { "kanji": "要りました", "romaji": "irimashita" },
+            "past_neutral_negative": { "kanji": "要らなかった", "romaji": "iranakatta" },
+            "past_polite_negative": { "kanji": "要りませんでした", "romaji": "irimasendeshita" },
+            "te_form": { "kanji": "要って", "romaji": "itte" },
+            "te_iru": { "kanji": "要っている", "romaji": "itteiru" }
+          }
+        },
+        {
+          "kanji": "歌う",
+          "kana": "うたう",
+          "romaji": "utau",
+          "meaning": "chanter",
+          "conjugations": {
+            "present_neutral": { "kanji": "歌う", "romaji": "utau" },
+            "present_polite": { "kanji": "歌います", "romaji": "utaimasu" },
+            "present_neutral_negative": { "kanji": "歌わない", "romaji": "utawanai" },
+            "present_polite_negative": { "kanji": "歌いません", "romaji": "utaimasen" },
+            "past_neutral": { "kanji": "歌った", "romaji": "utatta" },
+            "past_polite": { "kanji": "歌いました", "romaji": "utaimashita" },
+            "past_neutral_negative": { "kanji": "歌わなかった", "romaji": "utawanakatta" },
+            "past_polite_negative": { "kanji": "歌いませんでした", "romaji": "utaimasendeshita" },
+            "te_form": { "kanji": "歌って", "romaji": "utatte" },
+            "te_iru": { "kanji": "歌っている", "romaji": "utatteiru" }
+          }
+        },
+        {
+          "kanji": "売る",
+          "kana": "うる",
+          "romaji": "uru",
+          "meaning": "vendre",
+          "conjugations": {
+            "present_neutral": { "kanji": "売る", "romaji": "uru" },
+            "present_polite": { "kanji": "売ります", "romaji": "urimasu" },
+            "present_neutral_negative": { "kanji": "売らない", "romaji": "uranai" },
+            "present_polite_negative": { "kanji": "売りません", "romaji": "urimasen" },
+            "past_neutral": { "kanji": "売った", "romaji": "utta" },
+            "past_polite": { "kanji": "売りました", "romaji": "urimashita" },
+            "past_neutral_negative": { "kanji": "売らなかった", "romaji": "uranakatta" },
+            "past_polite_negative": { "kanji": "売りませんでした", "romaji": "urimasendeshita" },
+            "te_form": { "kanji": "売って", "romaji": "utte" },
+            "te_iru": { "kanji": "売っている", "romaji": "utteiru" }
+          }
+        },
+        {
+          "kanji": "押す",
+          "kana": "おす",
+          "romaji": "osu",
+          "meaning": "pousser",
+          "conjugations": {
+            "present_neutral": { "kanji": "押す", "romaji": "osu" },
+            "present_polite": { "kanji": "押します", "romaji": "oshimasu" },
+            "present_neutral_negative": { "kanji": "押さない", "romaji": "osanai" },
+            "present_polite_negative": { "kanji": "押しません", "romaji": "oshimasen" },
+            "past_neutral": { "kanji": "押した", "romaji": "oshita" },
+            "past_polite": { "kanji": "押しました", "romaji": "oshimashita" },
+            "past_neutral_negative": { "kanji": "押さなかった", "romaji": "osanakatta" },
+            "past_polite_negative": { "kanji": "押しませんでした", "romaji": "oshimasendeshita" },
+            "te_form": { "kanji": "押して", "romaji": "oshite" },
+            "te_iru": { "kanji": "押している", "romaji": "oshiteiru" }
+          }
+        },
+        {
+          "kanji": "切る",
+          "kana": "きる",
+          "romaji": "kiru",
+          "meaning": "couper",
+          "conjugations": {
+            "present_neutral": { "kanji": "切る", "romaji": "kiru" },
+            "present_polite": { "kanji": "切ります", "romaji": "kirimasu" },
+            "present_neutral_negative": { "kanji": "切らない", "romaji": "kiranai" },
+            "present_polite_negative": { "kanji": "切りません", "romaji": "kirimasen" },
+            "past_neutral": { "kanji": "切った", "romaji": "kitta" },
+            "past_polite": { "kanji": "切りました", "romaji": "kirimashita" },
+            "past_neutral_negative": { "kanji": "切らなかった", "romaji": "kiranakatta" },
+            "past_polite_negative": { "kanji": "切りませんでした", "romaji": "kirimasendeshita" },
+            "te_form": { "kanji": "切って", "romaji": "kitte" },
+            "te_iru": { "kanji": "切っている", "romaji": "kitteiru" }
+          }
+        },
+        {
+          "kanji": "曇る",
+          "kana": "くもる",
+          "romaji": "kumoru",
+          "meaning": "devenir nuageux",
+          "conjugations": {
+            "present_neutral": { "kanji": "曇る", "romaji": "kumoru" },
+            "present_polite": { "kanji": "曇ります", "romaji": "kumorimasu" },
+            "present_neutral_negative": { "kanji": "曇らない", "romaji": "kumoranai" },
+            "present_polite_negative": { "kanji": "曇りません", "romaji": "kumorimasen" },
+            "past_neutral": { "kanji": "曇った", "romaji": "kumotta" },
+            "past_polite": { "kanji": "曇りました", "romaji": "kumorimashita" },
+            "past_neutral_negative": { "kanji": "曇らなかった", "romaji": "kumoranakatta" },
+            "past_polite_negative": { "kanji": "曇りませんでした", "romaji": "kumorimasendeshita" },
+            "te_form": { "kanji": "曇って", "romaji": "kumotte" },
+            "te_iru": { "kanji": "曇っている", "romaji": "kumotteiru" }
+          }
+        },
+        {
+          "kanji": "消す",
+          "kana": "けす",
+          "romaji": "kesu",
+          "meaning": "effacer / éteindre",
+          "conjugations": {
+            "present_neutral": { "kanji": "消す", "romaji": "kesu" },
+            "present_polite": { "kanji": "消します", "romaji": "keshimasu" },
+            "present_neutral_negative": { "kanji": "消さない", "romaji": "kesanai" },
+            "present_polite_negative": { "kanji": "消しません", "romaji": "keshimasen" },
+            "past_neutral": { "kanji": "消した", "romaji": "keshita" },
+            "past_polite": { "kanji": "消しました", "romaji": "keshimashita" },
+            "past_neutral_negative": { "kanji": "消さなかった", "romaji": "kesanakatta" },
+            "past_polite_negative": { "kanji": "消しませんでした", "romaji": "keshimasendeshita" },
+            "te_form": { "kanji": "消して", "romaji": "keshite" },
+            "te_iru": { "kanji": "消している", "romaji": "keshiteiru" }
+          }
+        },
+        {
+          "kanji": "困る",
+          "kana": "こまる",
+          "romaji": "komaru",
+          "meaning": "être inquiet / avoir des problèmes",
+          "conjugations": {
+            "present_neutral": { "kanji": "困る", "romaji": "komaru" },
+            "present_polite": { "kanji": "困ります", "romaji": "komarimasu" },
+            "present_neutral_negative": { "kanji": "困らない", "romaji": "komaranai" },
+            "present_polite_negative": { "kanji": "困りません", "romaji": "komarimasen" },
+            "past_neutral": { "kanji": "困った", "romaji": "komatta" },
+            "past_polite": { "kanji": "困りました", "romaji": "komarimashita" },
+            "past_neutral_negative": { "kanji": "困らなかった", "romaji": "komaranakatta" },
+            "past_polite_negative": { "kanji": "困りませんでした", "romaji": "komarimasendeshita" },
+            "te_form": { "kanji": "困って", "romaji": "komatte" },
+            "te_iru": { "kanji": "困っている", "romaji": "komatteiru" }
+          }
+        },
+        {
+          "kanji": "咲く",
+          "kana": "さく",
+          "romaji": "saku",
+          "meaning": "fleurir",
+          "conjugations": {
+            "present_neutral": { "kanji": "咲く", "romaji": "saku" },
+            "present_polite": { "kanji": "咲きます", "romaji": "sakimasu" },
+            "present_neutral_negative": { "kanji": "咲かない", "romaji": "sakanai" },
+            "present_polite_negative": { "kanji": "咲きません", "romaji": "sakimasen" },
+            "past_neutral": { "kanji": "咲いた", "romaji": "saita" },
+            "past_polite": { "kanji": "咲きました", "romaji": "sakimashita" },
+            "past_neutral_negative": { "kanji": "咲かなかった", "romaji": "sakanakatta" },
+            "past_polite_negative": { "kanji": "咲きませんでした", "romaji": "sakimasendeshita" },
+            "te_form": { "kanji": "咲いて", "romaji": "saite" },
+            "te_iru": { "kanji": "咲いている", "romaji": "saiteiru" }
+          }
+        },
+        {
+          "kanji": "差す",
+          "kana": "さす",
+          "romaji": "sasu",
+          "meaning": "ouvrir (parapluie)",
+          "conjugations": {
+            "present_neutral": { "kanji": "差す", "romaji": "sasu" },
+            "present_polite": { "kanji": "差します", "romaji": "sashimasu" },
+            "present_neutral_negative": { "kanji": "差さない", "romaji": "sasanai" },
+            "present_polite_negative": { "kanji": "差しません", "romaji": "sashimasen" },
+            "past_neutral": { "kanji": "差した", "romaji": "sashita" },
+            "past_polite": { "kanji": "差しました", "romaji": "sashimashita" },
+            "past_neutral_negative": { "kanji": "差さなかった", "romaji": "sasanakatta" },
+            "past_polite_negative": { "kanji": "差しませんでした", "romaji": "sashimasendeshita" },
+            "te_form": { "kanji": "差して", "romaji": "sashite" },
+            "te_iru": { "kanji": "差している", "romaji": "sashiteiru" }
+          }
+        },
+        {
+          "kanji": "吸う",
+          "kana": "すう",
+          "romaji": "suu",
+          "meaning": "fumer / inhaler",
+          "conjugations": {
+            "present_neutral": { "kanji": "吸う", "romaji": "suu" },
+            "present_polite": { "kanji": "吸います", "romaji": "suimasu" },
+            "present_neutral_negative": { "kanji": "吸わない", "romaji": "suwanai" },
+            "present_polite_negative": { "kanji": "吸いません", "romaji": "suimasen" },
+            "past_neutral": { "kanji": "吸った", "romaji": "sutta" },
+            "past_polite": { "kanji": "吸いました", "romaji": "suimashita" },
+            "past_neutral_negative": { "kanji": "吸わなかった", "romaji": "suwanakatta" },
+            "past_polite_negative": { "kanji": "吸いませんでした", "romaji": "suimasendeshita" },
+            "te_form": { "kanji": "吸って", "romaji": "sutte" },
+            "te_iru": { "kanji": "吸っている", "romaji": "sutteiru" }
+          }
+        },
+        {
+          "kanji": "頼む",
+          "kana": "たのむ",
+          "romaji": "tanomu",
+          "meaning": "demander / prier",
+          "conjugations": {
+            "present_neutral": { "kanji": "頼む", "romaji": "tanomu" },
+            "present_polite": { "kanji": "頼みます", "romaji": "tanomimasu" },
+            "present_neutral_negative": { "kanji": "頼まない", "romaji": "tanomanai" },
+            "present_polite_negative": { "kanji": "頼みません", "romaji": "tanomimasen" },
+            "past_neutral": { "kanji": "頼んだ", "romaji": "tanonda" },
+            "past_polite": { "kanji": "頼みました", "romaji": "tanomimashita" },
+            "past_neutral_negative": { "kanji": "頼まなかった", "romaji": "tanomanakatta" },
+            "past_polite_negative": { "kanji": "頼みませんでした", "romaji": "tanomimasendeshita" },
+            "te_form": { "kanji": "頼んで", "romaji": "tanonde" },
+            "te_iru": { "kanji": "頼んでいる", "romaji": "tanondeiru" }
+          }
+        },
+        {
+          "kanji": "着く",
+          "kana": "つく",
+          "romaji": "tsuku",
+          "meaning": "arriver",
+          "conjugations": {
+            "present_neutral": { "kanji": "着く", "romaji": "tsuku" },
+            "present_polite": { "kanji": "着きます", "romaji": "tsukimasu" },
+            "present_neutral_negative": { "kanji": "着かない", "romaji": "tsukanai" },
+            "present_polite_negative": { "kanji": "着きません", "romaji": "tsukimasen" },
+            "past_neutral": { "kanji": "着いた", "romaji": "tsuita" },
+            "past_polite": { "kanji": "着きました", "romaji": "tsukimashita" },
+            "past_neutral_negative": { "kanji": "着かなかった", "romaji": "tsukanakatta" },
+            "past_polite_negative": { "kanji": "着きませんでした", "romaji": "tsukimasendeshita" },
+            "te_form": { "kanji": "着いて", "romaji": "tsuite" },
+            "te_iru": { "kanji": "着いている", "romaji": "tsuiteiru" }
+          }
+        },
+        {
+          "kanji": "止まる",
+          "kana": "とまる",
+          "romaji": "tomaru",
+          "meaning": "s'arrêter",
+          "conjugations": {
+            "present_neutral": { "kanji": "止まる", "romaji": "tomaru" },
+            "present_polite": { "kanji": "止まります", "romaji": "tomarimasu" },
+            "present_neutral_negative": { "kanji": "止まらない", "romaji": "tomaranai" },
+            "present_polite_negative": { "kanji": "止まりません", "romaji": "tomarimasen" },
+            "past_neutral": { "kanji": "止まった", "romaji": "tomatta" },
+            "past_polite": { "kanji": "止まりました", "romaji": "tomarimashita" },
+            "past_neutral_negative": { "kanji": "止まらなかった", "romaji": "tomaranakatta" },
+            "past_polite_negative": { "kanji": "止まりませんでした", "romaji": "tomarimasendeshita" },
+            "te_form": { "kanji": "止まって", "romaji": "tomatte" },
+            "te_iru": { "kanji": "止まっている", "romaji": "tomatteiru" }
+          }
+        },
+        {
+          "kanji": "撮る",
+          "kana": "とる",
+          "romaji": "toru",
+          "meaning": "prendre (photo)",
+          "conjugations": {
+            "present_neutral": { "kanji": "撮る", "romaji": "toru" },
+            "present_polite": { "kanji": "撮ります", "romaji": "torimasu" },
+            "present_neutral_negative": { "kanji": "撮らない", "romaji": "toranai" },
+            "present_polite_negative": { "kanji": "撮りません", "romaji": "torimasen" },
+            "past_neutral": { "kanji": "撮った", "romaji": "totta" },
+            "past_polite": { "kanji": "撮りました", "romaji": "torimashita" },
+            "past_neutral_negative": { "kanji": "撮らなかった", "romaji": "toranakatta" },
+            "past_polite_negative": { "kanji": "撮りませんでした", "romaji": "torimasendeshita" },
+            "te_form": { "kanji": "撮って", "romaji": "totte" },
+            "te_iru": { "kanji": "撮っている", "romaji": "totteiru" }
+          }
+        },
+        {
+          "kanji": "取る",
+          "kana": "とる",
+          "romaji": "toru",
+          "meaning": "prendre",
+          "conjugations": {
+            "present_neutral": { "kanji": "取る", "romaji": "toru" },
+            "present_polite": { "kanji": "取ります", "romaji": "torimasu" },
+            "present_neutral_negative": { "kanji": "取らない", "romaji": "toranai" },
+            "present_polite_negative": { "kanji": "取りません", "romaji": "torimasen" },
+            "past_neutral": { "kanji": "取った", "romaji": "totta" },
+            "past_polite": { "kanji": "取りました", "romaji": "torimashita" },
+            "past_neutral_negative": { "kanji": "取らなかった", "romaji": "toranakatta" },
+            "past_polite_negative": { "kanji": "取りませんでした", "romaji": "torimasendeshita" },
+            "te_form": { "kanji": "取って", "romaji": "totte" },
+            "te_iru": { "kanji": "取っている", "romaji": "totteiru" }
+          }
+        },
+        {
+          "kanji": "鳴る",
+          "kana": "なる",
+          "romaji": "naru",
+          "meaning": "sonner / résonner",
+          "conjugations": {
+            "present_neutral": { "kanji": "鳴る", "romaji": "naru" },
+            "present_polite": { "kanji": "鳴ります", "romaji": "narimasu" },
+            "present_neutral_negative": { "kanji": "鳴らない", "romaji": "naranai" },
+            "present_polite_negative": { "kanji": "鳴りません", "romaji": "narimasen" },
+            "past_neutral": { "kanji": "鳴った", "romaji": "natta" },
+            "past_polite": { "kanji": "鳴りました", "romaji": "narimashita" },
+            "past_neutral_negative": { "kanji": "鳴らなかった", "romaji": "naranakatta" },
+            "past_polite_negative": { "kanji": "鳴りませんでした", "romaji": "narimasendeshita" },
+            "te_form": { "kanji": "鳴って", "romaji": "natte" },
+            "te_iru": { "kanji": "鳴っている", "romaji": "natteiru" }
+          }
+        },
+        {
+          "kanji": "習う",
+          "kana": "ならう",
+          "romaji": "narau",
+          "meaning": "apprendre",
+          "conjugations": {
+            "present_neutral": { "kanji": "習う", "romaji": "narau" },
+            "present_polite": { "kanji": "習います", "romaji": "naraimasu" },
+            "present_neutral_negative": { "kanji": "習わない", "romaji": "narawanai" },
+            "present_polite_negative": { "kanji": "習いません", "romaji": "naraimasen" },
+            "past_neutral": { "kanji": "習った", "romaji": "naratta" },
+            "past_polite": { "kanji": "習いました", "romaji": "naraimashita" },
+            "past_neutral_negative": { "kanji": "習わなかった", "romaji": "narawanakatta" },
+            "past_polite_negative": { "kanji": "習いませんでした", "romaji": "naraimasendeshita" },
+            "te_form": { "kanji": "習って", "romaji": "naratte" },
+            "te_iru": { "kanji": "習っている", "romaji": "naratteiru" }
+          }
+        },
+        {
+          "kanji": "並ぶ",
+          "kana": "ならぶ",
+          "romaji": "narabu",
+          "meaning": "faire la queue / s'aligner",
+          "conjugations": {
+            "present_neutral": { "kanji": "並ぶ", "romaji": "narabu" },
+            "present_polite": { "kanji": "並びます", "romaji": "narabimasu" },
+            "present_neutral_negative": { "kanji": "並ばない", "romaji": "narabanai" },
+            "present_polite_negative": { "kanji": "並びません", "romaji": "narabimasen" },
+            "past_neutral": { "kanji": "並んだ", "romaji": "naranda" },
+            "past_polite": { "kanji": "並びました", "romaji": "narabimashita" },
+            "past_neutral_negative": { "kanji": "並ばなかった", "romaji": "narabanakatta" },
+            "past_polite_negative": { "kanji": "並びませんでした", "romaji": "narabimasendeshita" },
+            "te_form": { "kanji": "並んで", "romaji": "narande" },
+            "te_iru": { "kanji": "並んでいる", "romaji": "narandeiru" }
+          }
+        },
+        {
+          "kanji": "脱ぐ",
+          "kana": "ぬぐ",
+          "romaji": "nugu",
+          "meaning": "enlever (vêtements)",
+          "conjugations": {
+            "present_neutral": { "kanji": "脱ぐ", "romaji": "nugu" },
+            "present_polite": { "kanji": "脱ぎます", "romaji": "nugimasu" },
+            "present_neutral_negative": { "kanji": "脱がない", "romaji": "nuganai" },
+            "present_polite_negative": { "kanji": "脱ぎません", "romaji": "nugimasen" },
+            "past_neutral": { "kanji": "脱いだ", "romaji": "nuida" },
+            "past_polite": { "kanji": "脱ぎました", "romaji": "nugimashita" },
+            "past_neutral_negative": { "kanji": "脱がなかった", "romaji": "nuganakatta" },
+            "past_polite_negative": { "kanji": "脱ぎませんでした", "romaji": "nugimasendeshita" },
+            "te_form": { "kanji": "脱いで", "romaji": "nuide" },
+            "te_iru": { "kanji": "脱いでいる", "romaji": "nuideiru" }
+          }
+        },
+        {
+          "kanji": "登る",
+          "kana": "のぼる",
+          "romaji": "noboru",
+          "meaning": "grimper / monter",
+          "conjugations": {
+            "present_neutral": { "kanji": "登る", "romaji": "noboru" },
+            "present_polite": { "kanji": "登ります", "romaji": "noborimasu" },
+            "present_neutral_negative": { "kanji": "登らない", "romaji": "noboranai" },
+            "present_polite_negative": { "kanji": "登りません", "romaji": "noborimasen" },
+            "past_neutral": { "kanji": "登った", "romaji": "nobotta" },
+            "past_polite": { "kanji": "登りました", "romaji": "noborimashita" },
+            "past_neutral_negative": { "kanji": "登らなかった", "romaji": "noboranakatta" },
+            "past_polite_negative": { "kanji": "登りませんでした", "romaji": "noborimasendeshita" },
+            "te_form": { "kanji": "登って", "romaji": "nobotte" },
+            "te_iru": { "kanji": "登っている", "romaji": "nobotteiru" }
+          }
+        },
+        {
+          "kanji": "履く",
+          "kana": "はく",
+          "romaji": "haku",
+          "meaning": "porter (chaussures, pantalon)",
+          "conjugations": {
+            "present_neutral": { "kanji": "履く", "romaji": "haku" },
+            "present_polite": { "kanji": "履きます", "romaji": "hakimasu" },
+            "present_neutral_negative": { "kanji": "履かない", "romaji": "hakanai" },
+            "present_polite_negative": { "kanji": "履きません", "romaji": "hakimasen" },
+            "past_neutral": { "kanji": "履いた", "romaji": "haita" },
+            "past_polite": { "kanji": "履きました", "romaji": "hakimashita" },
+            "past_neutral_negative": { "kanji": "履かなかった", "romaji": "hakanakatta" },
+            "past_polite_negative": { "kanji": "履きませんでした", "romaji": "hakimasendeshita" },
+            "te_form": { "kanji": "履いて", "romaji": "haite" },
+            "te_iru": { "kanji": "履いている", "romaji": "haiteiru" }
+          }
+        },
+        {
+          "kanji": "弾く",
+          "kana": "ひく",
+          "romaji": "hiku",
+          "meaning": "jouer (instrument)",
+          "conjugations": {
+            "present_neutral": { "kanji": "弾く", "romaji": "hiku" },
+            "present_polite": { "kanji": "弾きます", "romaji": "hikimasu" },
+            "present_neutral_negative": { "kanji": "弾かない", "romaji": "hikanai" },
+            "present_polite_negative": { "kanji": "弾きません", "romaji": "hikimasen" },
+            "past_neutral": { "kanji": "弾いた", "romaji": "hiita" },
+            "past_polite": { "kanji": "弾きました", "romaji": "hikimashita" },
+            "past_neutral_negative": { "kanji": "弾かなかった", "romaji": "hikanakatta" },
+            "past_polite_negative": { "kanji": "弾きませんでした", "romaji": "hikimasendeshita" },
+            "te_form": { "kanji": "弾いて", "romaji": "hiite" },
+            "te_iru": { "kanji": "弾いている", "romaji": "hiiteiru" }
+          }
+        },
+        {
+          "kanji": "吹く",
+          "kana": "ふく",
+          "romaji": "fuku",
+          "meaning": "souffler",
+          "conjugations": {
+            "present_neutral": { "kanji": "吹く", "romaji": "fuku" },
+            "present_polite": { "kanji": "吹きます", "romaji": "fukimasu" },
+            "present_neutral_negative": { "kanji": "吹かない", "romaji": "fukanai" },
+            "present_polite_negative": { "kanji": "吹きません", "romaji": "fukimasen" },
+            "past_neutral": { "kanji": "吹いた", "romaji": "fuita" },
+            "past_polite": { "kanji": "吹きました", "romaji": "fukimashita" },
+            "past_neutral_negative": { "kanji": "吹かなかった", "romaji": "fukanakatta" },
+            "past_polite_negative": { "kanji": "吹きませんでした", "romaji": "fukimasendeshita" },
+            "te_form": { "kanji": "吹いて", "romaji": "fuite" },
+            "te_iru": { "kanji": "吹いている", "romaji": "fuiteiru" }
+          }
+        },
+        {
+          "kanji": "降る",
+          "kana": "ふる",
+          "romaji": "furu",
+          "meaning": "tomber (pluie, neige)",
+          "conjugations": {
+            "present_neutral": { "kanji": "降る", "romaji": "furu" },
+            "present_polite": { "kanji": "降ります", "romaji": "furimasu" },
+            "present_neutral_negative": { "kanji": "降らない", "romaji": "furanai" },
+            "present_polite_negative": { "kanji": "降りません", "romaji": "furimasen" },
+            "past_neutral": { "kanji": "降った", "romaji": "futta" },
+            "past_polite": { "kanji": "降りました", "romaji": "furimashita" },
+            "past_neutral_negative": { "kanji": "降らなかった", "romaji": "furanakatta" },
+            "past_polite_negative": { "kanji": "降りませんでした", "romaji": "furimasendeshita" },
+            "te_form": { "kanji": "降って", "romaji": "futte" },
+            "te_iru": { "kanji": "降っている", "romaji": "futteiru" }
+          }
+        },
+        {
+          "kanji": "曲がる",
+          "kana": "まがる",
+          "romaji": "magaru",
+          "meaning": "tourner",
+          "conjugations": {
+            "present_neutral": { "kanji": "曲がる", "romaji": "magaru" },
+            "present_polite": { "kanji": "曲がります", "romaji": "magarimasu" },
+            "present_neutral_negative": { "kanji": "曲がらない", "romaji": "magaranai" },
+            "present_polite_negative": { "kanji": "曲がりません", "romaji": "magarimasen" },
+            "past_neutral": { "kanji": "曲がった", "romaji": "magatta" },
+            "past_polite": { "kanji": "曲がりました", "romaji": "magarimashita" },
+            "past_neutral_negative": { "kanji": "曲がらなかった", "romaji": "magaranakatta" },
+            "past_polite_negative": { "kanji": "曲がりませんでした", "romaji": "magarimasendeshita" },
+            "te_form": { "kanji": "曲がって", "romaji": "magatte" },
+            "te_iru": { "kanji": "曲がっている", "romaji": "magatteiru" }
+          }
+        },
+        {
+          "kanji": "磨く",
+          "kana": "みがく",
+          "romaji": "migaku",
+          "meaning": "polir / se brosser",
+          "conjugations": {
+            "present_neutral": { "kanji": "磨く", "romaji": "migaku" },
+            "present_polite": { "kanji": "磨きます", "romaji": "migakimasu" },
+            "present_neutral_negative": { "kanji": "磨かない", "romaji": "migakanai" },
+            "present_polite_negative": { "kanji": "磨きません", "romaji": "migakimasen" },
+            "past_neutral": { "kanji": "磨いた", "romaji": "migaita" },
+            "past_polite": { "kanji": "磨きました", "romaji": "migakimashita" },
+            "past_neutral_negative": { "kanji": "磨かなかった", "romaji": "migakanakatta" },
+            "past_polite_negative": { "kanji": "磨きませんでした", "romaji": "migakimasendeshita" },
+            "te_form": { "kanji": "磨いて", "romaji": "migaite" },
+            "te_iru": { "kanji": "磨いている", "romaji": "migaiteiru" }
+          }
+        },
+        {
+          "kanji": "持つ",
+          "kana": "もつ",
+          "romaji": "motsu",
+          "meaning": "tenir / avoir",
+          "conjugations": {
+            "present_neutral": { "kanji": "持つ", "romaji": "motsu" },
+            "present_polite": { "kanji": "持ちます", "romaji": "mochimasu" },
+            "present_neutral_negative": { "kanji": "持たない", "romaji": "motanai" },
+            "present_polite_negative": { "kanji": "持ちません", "romaji": "mochimasen" },
+            "past_neutral": { "kanji": "持った", "romaji": "motta" },
+            "past_polite": { "kanji": "持ちました", "romaji": "mochimashita" },
+            "past_neutral_negative": { "kanji": "持たなかった", "romaji": "motanakatta" },
+            "past_polite_negative": { "kanji": "持ちませんでした", "romaji": "mochimasendeshita" },
+            "te_form": { "kanji": "持って", "romaji": "motte" },
+            "te_iru": { "kanji": "持っている", "romaji": "motteiru" }
+          }
+        },
+        {
+          "kanji": "やる",
+          "kana": "やる",
+          "romaji": "yaru",
+          "meaning": "faire / donner",
+          "conjugations": {
+            "present_neutral": { "kanji": "やる", "romaji": "yaru" },
+            "present_polite": { "kanji": "やります", "romaji": "yarimasu" },
+            "present_neutral_negative": { "kanji": "やらない", "romaji": "yaranai" },
+            "present_polite_negative": { "kanji": "やりません", "romaji": "yarimasen" },
+            "past_neutral": { "kanji": "やった", "romaji": "yatta" },
+            "past_polite": { "kanji": "やりました", "romaji": "yarimashita" },
+            "past_neutral_negative": { "kanji": "やらなかった", "romaji": "yaranakatta" },
+            "past_polite_negative": { "kanji": "やりませんでした", "romaji": "yarimasendeshita" },
+            "te_form": { "kanji": "やって", "romaji": "yatte" },
+            "te_iru": { "kanji": "やっている", "romaji": "yatteiru" }
+          }
+        },
+        {
+          "kanji": "渡す",
+          "kana": "わたす",
+          "romaji": "watasu",
+          "meaning": "remettre / donner",
+          "conjugations": {
+            "present_neutral": { "kanji": "渡す", "romaji": "watasu" },
+            "present_polite": { "kanji": "渡します", "romaji": "watashimasu" },
+            "present_neutral_negative": { "kanji": "渡さない", "romaji": "watasanai" },
+            "present_polite_negative": { "kanji": "渡しません", "romaji": "watashimasen" },
+            "past_neutral": { "kanji": "渡した", "romaji": "watashita" },
+            "past_polite": { "kanji": "渡しました", "romaji": "watashimashita" },
+            "past_neutral_negative": { "kanji": "渡さなかった", "romaji": "watasanakatta" },
+            "past_polite_negative": { "kanji": "渡しませんでした", "romaji": "watashimasendeshita" },
+            "te_form": { "kanji": "渡して", "romaji": "watashite" },
+            "te_iru": { "kanji": "渡している", "romaji": "watashiteiru" }
+          }
+        },
+        {
+          "kanji": "渡る",
+          "kana": "わたる",
+          "romaji": "wataru",
+          "meaning": "traverser",
+          "conjugations": {
+            "present_neutral": { "kanji": "渡る", "romaji": "wataru" },
+            "present_polite": { "kanji": "渡ります", "romaji": "watarimasu" },
+            "present_neutral_negative": { "kanji": "渡らない", "romaji": "wataranai" },
+            "present_polite_negative": { "kanji": "渡りません", "romaji": "watarimasen" },
+            "past_neutral": { "kanji": "渡った", "romaji": "watatta" },
+            "past_polite": { "kanji": "渡りました", "romaji": "watarimashita" },
+            "past_neutral_negative": { "kanji": "渡らなかった", "romaji": "wataranakatta" },
+            "past_polite_negative": { "kanji": "渡りませんでした", "romaji": "watarimasendeshita" },
+            "te_form": { "kanji": "渡って", "romaji": "watatte" },
+            "te_iru": { "kanji": "渡っている", "romaji": "watatteiru" }
+          }
+        },
+        {
+          "kanji": "かぶる",
+          "kana": "かぶる",
+          "romaji": "kaburu",
+          "meaning": "porter (sur la tête)",
+          "conjugations": {
+            "present_neutral": { "kanji": "かぶる", "romaji": "kaburu" },
+            "present_polite": { "kanji": "かぶります", "romaji": "kaburimasu" },
+            "present_neutral_negative": { "kanji": "かぶらない", "romaji": "kaburanai" },
+            "present_polite_negative": { "kanji": "かぶりません", "romaji": "kaburimasen" },
+            "past_neutral": { "kanji": "かぶった", "romaji": "kabutta" },
+            "past_polite": { "kanji": "かぶりました", "romaji": "kaburimashita" },
+            "past_neutral_negative": { "kanji": "かぶらなかった", "romaji": "kaburanakatta" },
+            "past_polite_negative": { "kanji": "かぶりませんでした", "romaji": "kaburimasendeshita" },
+            "te_form": { "kanji": "かぶって", "romaji": "kabutte" },
+            "te_iru": { "kanji": "かぶっている", "romaji": "kabutteiru" }
+          }
+        },
+        {
+          "kanji": "もらう",
+          "kana": "もらう",
+          "romaji": "morau",
+          "meaning": "recevoir",
+          "conjugations": {
+            "present_neutral": { "kanji": "もらう", "romaji": "morau" },
+            "present_polite": { "kanji": "もらいます", "romaji": "moraimasu" },
+            "present_neutral_negative": { "kanji": "もらわない", "romaji": "morawanai" },
+            "present_polite_negative": { "kanji": "もらいません", "romaji": "moraimasen" },
+            "past_neutral": { "kanji": "もらった", "romaji": "moratta" },
+            "past_polite": { "kanji": "もらいました", "romaji": "moraimashita" },
+            "past_neutral_negative": { "kanji": "もらわなかった", "romaji": "morawanakatta" },
+            "past_polite_negative": { "kanji": "もらいませんでした", "romaji": "moraimasendeshita" },
+            "te_form": { "kanji": "もらって", "romaji": "moratte" },
+            "te_iru": { "kanji": "もらっている", "romaji": "moratteiru" }
+          }
+        },
+        {
+          "kanji": "かかる",
+          "kana": "かかる",
+          "romaji": "kakaru",
+          "meaning": "prendre (temps) / coûter",
+          "conjugations": {
+            "present_neutral": { "kanji": "かかる", "romaji": "kakaru" },
+            "present_polite": { "kanji": "かかります", "romaji": "kakarimasu" },
+            "present_neutral_negative": { "kanji": "かからない", "romaji": "kakaranai" },
+            "present_polite_negative": { "kanji": "かかりません", "romaji": "kakarimasen" },
+            "past_neutral": { "kanji": "かかった", "romaji": "kakatta" },
+            "past_polite": { "kanji": "かかりました", "romaji": "kakarimashita" },
+            "past_neutral_negative": { "kanji": "かからなかった", "romaji": "kakaranakatta" },
+            "past_polite_negative": { "kanji": "かかりませんでした", "romaji": "kakarimasendeshita" },
+            "te_form": { "kanji": "かかって", "romaji": "kakatte" },
+            "te_iru": { "kanji": "かかっている", "romaji": "kakatteiru" }
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Groupe 2 - Verbes en -iru / -eru (一段動詞)",
+      "description": "Un seul niveau / une seule marche",
+      "verbs": [
+        {
+          "kanji": "上げる",
+          "kana": "あげる",
+          "romaji": "ageru",
+          "meaning": "lever / donner",
+          "conjugations": {
+            "present_neutral": { "kanji": "上げる", "romaji": "ageru" },
+            "present_polite": { "kanji": "上げます", "romaji": "agemasu" },
+            "present_neutral_negative": { "kanji": "上げない", "romaji": "agenai" },
+            "present_polite_negative": { "kanji": "上げません", "romaji": "agemasen" },
+            "past_neutral": { "kanji": "上げた", "romaji": "ageta" },
+            "past_polite": { "kanji": "上げました", "romaji": "agemashita" },
+            "past_neutral_negative": { "kanji": "上げなかった", "romaji": "agenakatta" },
+            "past_polite_negative": { "kanji": "上げませんでした", "romaji": "agemasendeshita" },
+            "te_form": { "kanji": "上げて", "romaji": "agete" },
+            "te_iru": { "kanji": "上げている", "romaji": "ageteiru" }
+          }
+        },
+        {
+          "kanji": "浴びる",
+          "kana": "あびる",
+          "romaji": "abiru",
+          "meaning": "se baigner / se doucher",
+          "conjugations": {
+            "present_neutral": { "kanji": "浴びる", "romaji": "abiru" },
+            "present_polite": { "kanji": "浴びます", "romaji": "abimasu" },
+            "present_neutral_negative": { "kanji": "浴びない", "romaji": "abinai" },
+            "present_polite_negative": { "kanji": "浴びません", "romaji": "abimasen" },
+            "past_neutral": { "kanji": "浴びた", "romaji": "abita" },
+            "past_polite": { "kanji": "浴びました", "romaji": "abimashita" },
+            "past_neutral_negative": { "kanji": "浴びなかった", "romaji": "abinakatta" },
+            "past_polite_negative": { "kanji": "浴びませんでした", "romaji": "abimasendeshita" },
+            "te_form": { "kanji": "浴びて", "romaji": "abite" },
+            "te_iru": { "kanji": "浴びている", "romaji": "abiteiru" }
+          }
+        },
+        {
+          "kanji": "覚える",
+          "kana": "おぼえる",
+          "romaji": "oboeru",
+          "meaning": "se souvenir / mémoriser",
+          "conjugations": {
+            "present_neutral": { "kanji": "覚える", "romaji": "oboeru" },
+            "present_polite": { "kanji": "覚えます", "romaji": "oboemasu" },
+            "present_neutral_negative": { "kanji": "覚えない", "romaji": "oboenai" },
+            "present_polite_negative": { "kanji": "覚えません", "romaji": "oboemasen" },
+            "past_neutral": { "kanji": "覚えた", "romaji": "oboeta" },
+            "past_polite": { "kanji": "覚えました", "romaji": "oboemashita" },
+            "past_neutral_negative": { "kanji": "覚えなかった", "romaji": "oboenakatta" },
+            "past_polite_negative": { "kanji": "覚えませんでした", "romaji": "oboemasendeshita" },
+            "te_form": { "kanji": "覚えて", "romaji": "oboete" },
+            "te_iru": { "kanji": "覚えている", "romaji": "oboeteiru" }
+          }
+        },
+        {
+          "kanji": "かける",
+          "kana": "かける",
+          "romaji": "kakeru",
+          "meaning": "téléphoner / accrocher",
+          "conjugations": {
+            "present_neutral": { "kanji": "かける", "romaji": "kakeru" },
+            "present_polite": { "kanji": "かけます", "romaji": "kakemasu" },
+            "present_neutral_negative": { "kanji": "かけない", "romaji": "kakenai" },
+            "present_polite_negative": { "kanji": "かけません", "romaji": "kakemasen" },
+            "past_neutral": { "kanji": "かけた", "romaji": "kaketa" },
+            "past_polite": { "kanji": "かけました", "romaji": "kakemashita" },
+            "past_neutral_negative": { "kanji": "かけなかった", "romaji": "kakenakatta" },
+            "past_polite_negative": { "kanji": "かけませんでした", "romaji": "kakemasendeshita" },
+            "te_form": { "kanji": "かけて", "romaji": "kakete" },
+            "te_iru": { "kanji": "かけている", "romaji": "kaketeiru" }
+          }
+        },
+        {
+          "kanji": "消える",
+          "kana": "きえる",
+          "romaji": "kieru",
+          "meaning": "disparaître",
+          "conjugations": {
+            "present_neutral": { "kanji": "消える", "romaji": "kieru" },
+            "present_polite": { "kanji": "消えます", "romaji": "kiemasu" },
+            "present_neutral_negative": { "kanji": "消えない", "romaji": "kienai" },
+            "present_polite_negative": { "kanji": "消えません", "romaji": "kiemasen" },
+            "past_neutral": { "kanji": "消えた", "romaji": "kieta" },
+            "past_polite": { "kanji": "消えました", "romaji": "kiemashita" },
+            "past_neutral_negative": { "kanji": "消えなかった", "romaji": "kienakatta" },
+            "past_polite_negative": { "kanji": "消えませんでした", "romaji": "kiemasendeshita" },
+            "te_form": { "kanji": "消えて", "romaji": "kiete" },
+            "te_iru": { "kanji": "消えている", "romaji": "kieteiru" }
+          }
+        },
+        {
+          "kanji": "着る",
+          "kana": "きる",
+          "romaji": "kiru",
+          "meaning": "porter (vêtements)",
+          "conjugations": {
+            "present_neutral": { "kanji": "着る", "romaji": "kiru" },
+            "present_polite": { "kanji": "着ます", "romaji": "kimasu" },
+            "present_neutral_negative": { "kanji": "着ない", "romaji": "kinai" },
+            "present_polite_negative": { "kanji": "着ません", "romaji": "kimasen" },
+            "past_neutral": { "kanji": "着た", "romaji": "kita" },
+            "past_polite": { "kanji": "着ました", "romaji": "kimashita" },
+            "past_neutral_negative": { "kanji": "着なかった", "romaji": "kinakatta" },
+            "past_polite_negative": { "kanji": "着ませんでした", "romaji": "kimasendeshita" },
+            "te_form": { "kanji": "着て", "romaji": "kite" },
+            "te_iru": { "kanji": "着ている", "romaji": "kiteiru" }
+          }
+        },
+        {
+          "kanji": "答える",
+          "kana": "こたえる",
+          "romaji": "kotaeru",
+          "meaning": "répondre",
+          "conjugations": {
+            "present_neutral": { "kanji": "答える", "romaji": "kotaeru" },
+            "present_polite": { "kanji": "答えます", "romaji": "kotaemasu" },
+            "present_neutral_negative": { "kanji": "答えない", "romaji": "kotaenai" },
+            "present_polite_negative": { "kanji": "答えません", "romaji": "kotaemasen" },
+            "past_neutral": { "kanji": "答えた", "romaji": "kotaeta" },
+            "past_polite": { "kanji": "答えました", "romaji": "kotaemashita" },
+            "past_neutral_negative": { "kanji": "答えなかった", "romaji": "kotaenakatta" },
+            "past_polite_negative": { "kanji": "答えませんでした", "romaji": "kotaemasendeshita" },
+            "te_form": { "kanji": "答えて", "romaji": "kotaete" },
+            "te_iru": { "kanji": "答えている", "romaji": "kotaeteiru" }
+          }
+        },
+        {
+          "kanji": "締める",
+          "kana": "しめる",
+          "romaji": "shimeru",
+          "meaning": "attacher / fermer",
+          "conjugations": {
+            "present_neutral": { "kanji": "締める", "romaji": "shimeru" },
+            "present_polite": { "kanji": "締めます", "romaji": "shimemasu" },
+            "present_neutral_negative": { "kanji": "締めない", "romaji": "shimenai" },
+            "present_polite_negative": { "kanji": "締めません", "romaji": "shimemasen" },
+            "past_neutral": { "kanji": "締めた", "romaji": "shimeta" },
+            "past_polite": { "kanji": "締めました", "romaji": "shimemashita" },
+            "past_neutral_negative": { "kanji": "締めなかった", "romaji": "shimenakatta" },
+            "past_polite_negative": { "kanji": "締めませんでした", "romaji": "shimemasendeshita" },
+            "te_form": { "kanji": "締めて", "romaji": "shimete" },
+            "te_iru": { "kanji": "締めている", "romaji": "shimeteiru" }
+          }
+        },
+        {
+          "kanji": "疲れる",
+          "kana": "つかれる",
+          "romaji": "tsukareru",
+          "meaning": "être fatigué",
+          "conjugations": {
+            "present_neutral": { "kanji": "疲れる", "romaji": "tsukareru" },
+            "present_polite": { "kanji": "疲れます", "romaji": "tsukaremasu" },
+            "present_neutral_negative": { "kanji": "疲れない", "romaji": "tsukarenai" },
+            "present_polite_negative": { "kanji": "疲れません", "romaji": "tsukaremasen" },
+            "past_neutral": { "kanji": "疲れた", "romaji": "tsukareta" },
+            "past_polite": { "kanji": "疲れました", "romaji": "tsukaremashita" },
+            "past_neutral_negative": { "kanji": "疲れなかった", "romaji": "tsukarenakatta" },
+            "past_polite_negative": { "kanji": "疲れませんでした", "romaji": "tsukaremasendeshita" },
+            "te_form": { "kanji": "疲れて", "romaji": "tsukarete" },
+            "te_iru": { "kanji": "疲れている", "romaji": "tsukare teiru" }
+          }
+        },
+        {
+          "kanji": "点ける",
+          "kana": "つける",
+          "romaji": "tsukeru",
+          "meaning": "allumer",
+          "conjugations": {
+            "present_neutral": { "kanji": "点ける", "romaji": "tsukeru" },
+            "present_polite": { "kanji": "点けます", "romaji": "tsukemasu" },
+            "present_neutral_negative": { "kanji": "点けない", "romaji": "tsukenai" },
+            "present_polite_negative": { "kanji": "点けません", "romaji": "tsukemasen" },
+            "past_neutral": { "kanji": "点けた", "romaji": "tsuketa" },
+            "past_polite": { "kanji": "点けました", "romaji": "tsukemashita" },
+            "past_neutral_negative": { "kanji": "点けなかった", "romaji": "tsukenakatta" },
+            "past_polite_negative": { "kanji": "点けませんでした", "romaji": "tsukemasendeshita" },
+            "te_form": { "kanji": "点けて", "romaji": "tsukete" },
+            "te_iru": { "kanji": "点けている", "romaji": "tsuketeiru" }
+          }
+        },
+        {
+          "kanji": "勤める",
+          "kana": "つとめる",
+          "romaji": "tsutomeru",
+          "meaning": "travailler pour",
+          "conjugations": {
+            "present_neutral": { "kanji": "勤める", "romaji": "tsutomeru" },
+            "present_polite": { "kanji": "勤めます", "romaji": "tsutomemasu" },
+            "present_neutral_negative": { "kanji": "勤めない", "romaji": "tsutomenai" },
+            "present_polite_negative": { "kanji": "勤めません", "romaji": "tsutomemasen" },
+            "past_neutral": { "kanji": "勤めた", "romaji": "tsutometa" },
+            "past_polite": { "kanji": "勤めました", "romaji": "tsutomemashita" },
+            "past_neutral_negative": { "kanji": "勤めなかった", "romaji": "tsutomenakatta" },
+            "past_polite_negative": { "kanji": "勤めませんでした", "romaji": "tsutomemasendeshita" },
+            "te_form": { "kanji": "勤めて", "romaji": "tsutomete" },
+            "te_iru": { "kanji": "勤めている", "romaji": "tsutometeiru" }
+          }
+        },
+        {
+          "kanji": "できる",
+          "kana": "できる",
+          "romaji": "dekiru",
+          "meaning": "pouvoir / être complété",
+          "conjugations": {
+            "present_neutral": { "kanji": "できる", "romaji": "dekiru" },
+            "present_polite": { "kanji": "できます", "romaji": "dekimasu" },
+            "present_neutral_negative": { "kanji": "できない", "romaji": "dekinai" },
+            "present_polite_negative": { "kanji": "できません", "romaji": "dekimasen" },
+            "past_neutral": { "kanji": "できた", "romaji": "dekita" },
+            "past_polite": { "kanji": "できました", "romaji": "dekimashita" },
+            "past_neutral_negative": { "kanji": "できなかった", "romaji": "dekinakatta" },
+            "past_polite_negative": { "kanji": "できませんでした", "romaji": "dekimasendeshita" },
+            "te_form": { "kanji": "できて", "romaji": "dekite" },
+            "te_iru": { "kanji": "できている", "romaji": "dekiteiru" }
+          }
+        },
+        {
+          "kanji": "見せる",
+          "kana": "みせる",
+          "romaji": "miseru",
+          "meaning": "montrer",
+          "conjugations": {
+            "present_neutral": { "kanji": "見せる", "romaji": "miseru" },
+            "present_polite": { "kanji": "見せます", "romaji": "misemasu" },
+            "present_neutral_negative": { "kanji": "見せない", "romaji": "misenai" },
+            "present_polite_negative": { "kanji": "見せません", "romaji": "misemasen" },
+            "past_neutral": { "kanji": "見せた", "romaji": "miseta" },
+            "past_polite": { "kanji": "見せました", "romaji": "misemashita" },
+            "past_neutral_negative": { "kanji": "見せなかった", "romaji": "misenakatta" },
+            "past_polite_negative": { "kanji": "見せませんでした", "romaji": "misemasendeshita" },
+            "te_form": { "kanji": "見せて", "romaji": "misete" },
+            "te_iru": { "kanji": "見せている", "romaji": "miseteiru" }
+          }
+        },
+        {
+          "kanji": "忘れる",
+          "kana": "わすれる",
+          "romaji": "wasureru",
+          "meaning": "oublier",
+          "conjugations": {
+            "present_neutral": { "kanji": "忘れる", "romaji": "wasureru" },
+            "present_polite": { "kanji": "忘れます", "romaji": "wasuremasu" },
+            "present_neutral_negative": { "kanji": "忘れない", "romaji": "wasurenai" },
+            "present_polite_negative": { "kanji": "忘れません", "romaji": "wasuremasen" },
+            "past_neutral": { "kanji": "忘れた", "romaji": "wasureta" },
+            "past_polite": { "kanji": "忘れました", "romaji": "wasuremashita" },
+            "past_neutral_negative": { "kanji": "忘れなかった", "romaji": "wasurenakatta" },
+            "past_polite_negative": { "kanji": "忘れませんでした", "romaji": "wasuremasendeshita" },
+            "te_form": { "kanji": "忘れて", "romaji": "wasurete" },
+            "te_iru": { "kanji": "忘れている", "romaji": "wasureteiru" }
+          }
+        },
+        {
+          "kanji": "晴れる",
+          "kana": "はれる",
+          "romaji": "hareru",
+          "meaning": "être ensoleillé",
+          "conjugations": {
+            "present_neutral": { "kanji": "晴れる", "romaji": "hareru" },
+            "present_polite": { "kanji": "晴れます", "romaji": "haremasu" },
+            "present_neutral_negative": { "kanji": "晴れない", "romaji": "harenai" },
+            "present_polite_negative": { "kanji": "晴れません", "romaji": "haremasen" },
+            "past_neutral": { "kanji": "晴れた", "romaji": "hareta" },
+            "past_polite": { "kanji": "晴れました", "romaji": "haremashita" },
+            "past_neutral_negative": { "kanji": "晴れなかった", "romaji": "harenakatta" },
+            "past_polite_negative": { "kanji": "晴れませんでした", "romaji": "haremasendeshita" },
+            "te_form": { "kanji": "晴れて", "romaji": "harete" },
+            "te_iru": { "kanji": "晴れている", "romaji": "hareteiru" }
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Groupe 3 - Verbes irréguliers",
+      "description": "する (faire) et composés avec する",
+      "verbs": [
+        {
+          "kanji": "コピーする",
+          "kana": "こぴーする",
+          "romaji": "kopī suru",
+          "meaning": "copier",
+          "conjugations": {
+            "present_neutral": { "kanji": "コピーする", "romaji": "kopī suru" },
+            "present_polite": { "kanji": "コピーします", "romaji": "kopī shimasu" },
+            "present_neutral_negative": { "kanji": "コピーしない", "romaji": "kopī shinai" },
+            "present_polite_negative": { "kanji": "コピーしません", "romaji": "kopī shimasen" },
+            "past_neutral": { "kanji": "コピーした", "romaji": "kopī shita" },
+            "past_polite": { "kanji": "コピーしました", "romaji": "kopī shimashita" },
+            "past_neutral_negative": { "kanji": "コピーしなかった", "romaji": "kopī shinakatta" },
+            "past_polite_negative": { "kanji": "コピーしませんでした", "romaji": "kopī shimasendeshita" },
+            "te_form": { "kanji": "コピーして", "romaji": "kopī shite" },
+            "te_iru": { "kanji": "コピーしている", "romaji": "kopī shiteiru" }
+          }
+        },
+        {
+          "kanji": "散歩する",
+          "kana": "さんぽする",
+          "romaji": "sanpo suru",
+          "meaning": "se promener",
+          "conjugations": {
+            "present_neutral": { "kanji": "散歩する", "romaji": "sanpo suru" },
+            "present_polite": { "kanji": "散歩します", "romaji": "sanpo shimasu" },
+            "present_neutral_negative": { "kanji": "散歩しない", "romaji": "sanpo shinai" },
+            "present_polite_negative": { "kanji": "散歩しません", "romaji": "sanpo shimasen" },
+            "past_neutral": { "kanji": "散歩した", "romaji": "sanpo shita" },
+            "past_polite": { "kanji": "散歩しました", "romaji": "sanpo shimashita" },
+            "past_neutral_negative": { "kanji": "散歩しなかった", "romaji": "sanpo shinakatta" },
+            "past_polite_negative": { "kanji": "散歩しませんでした", "romaji": "sanpo shimasendeshita" },
+            "te_form": { "kanji": "散歩して", "romaji": "sanpo shite" },
+            "te_iru": { "kanji": "散歩している", "romaji": "sanpo shiteiru" }
+          }
+        },
+        {
+          "kanji": "掃除する",
+          "kana": "そうじする",
+          "romaji": "sōji suru",
+          "meaning": "nettoyer",
+          "conjugations": {
+            "present_neutral": { "kanji": "掃除する", "romaji": "sōji suru" },
+            "present_polite": { "kanji": "掃除します", "romaji": "sōji shimasu" },
+            "present_neutral_negative": { "kanji": "掃除しない", "romaji": "sōji shinai" },
+            "present_polite_negative": { "kanji": "掃除しません", "romaji": "sōji shimasen" },
+            "past_neutral": { "kanji": "掃除した", "romaji": "sōji shita" },
+            "past_polite": { "kanji": "掃除しました", "romaji": "sōji shimashita" },
+            "past_neutral_negative": { "kanji": "掃除しなかった", "romaji": "sōji shinakatta" },
+            "past_polite_negative": { "kanji": "掃除しませんでした", "romaji": "sōji shimasendeshita" },
+            "te_form": { "kanji": "掃除して", "romaji": "sōji shite" },
+            "te_iru": { "kanji": "掃除している", "romaji": "sōji shiteiru" }
+          }
+        },
+        {
+          "kanji": "練習する",
+          "kana": "れんしゅうする",
+          "romaji": "renshū suru",
+          "meaning": "pratiquer",
+          "conjugations": {
+            "present_neutral": { "kanji": "練習する", "romaji": "renshū suru" },
+            "present_polite": { "kanji": "練習します", "romaji": "renshū shimasu" },
+            "present_neutral_negative": { "kanji": "練習しない", "romaji": "renshū shinai" },
+            "present_polite_negative": { "kanji": "練習しません", "romaji": "renshū shimasen" },
+            "past_neutral": { "kanji": "練習した", "romaji": "renshū shita" },
+            "past_polite": { "kanji": "練習しました", "romaji": "renshū shimashita" },
+            "past_neutral_negative": { "kanji": "練習しなかった", "romaji": "renshū shinakatta" },
+            "past_polite_negative": { "kanji": "練習しませんでした", "romaji": "renshū shimasendeshita" },
+            "te_form": { "kanji": "練習して", "romaji": "renshū shite" },
+            "te_iru": { "kanji": "練習している", "romaji": "renshū shiteiru" }
+          }
+        },
+        {
+          "kanji": "料理する",
+          "kana": "りょうりする",
+          "romaji": "ryōri suru",
+          "meaning": "cuisiner",
+          "conjugations": {
+            "present_neutral": { "kanji": "料理する", "romaji": "ryōri suru" },
+            "present_polite": { "kanji": "料理します", "romaji": "ryōri shimasu" },
+            "present_neutral_negative": { "kanji": "料理しない", "romaji": "ryōri shinai" },
+            "present_polite_negative": { "kanji": "料理しません", "romaji": "ryōri shimasen" },
+            "past_neutral": { "kanji": "料理した", "romaji": "ryōri shita" },
+            "past_polite": { "kanji": "料理しました", "romaji": "ryōri shimashita" },
+            "past_neutral_negative": { "kanji": "料理しなかった", "romaji": "ryōri shinakatta" },
+            "past_polite_negative": { "kanji": "料理しませんでした", "romaji": "ryōri shimasendeshita" },
+            "te_form": { "kanji": "料理して", "romaji": "ryōri shite" },
+            "te_iru": { "kanji": "料理している", "romaji": "ryōri shiteiru" }
+          }
+        },
+        {
+          "kanji": "電話する",
+          "kana": "でんわする",
+          "romaji": "denwa suru",
+          "meaning": "téléphoner",
+          "conjugations": {
+            "present_neutral": { "kanji": "電話する", "romaji": "denwa suru" },
+            "present_polite": { "kanji": "電話します", "romaji": "denwa shimasu" },
+            "present_neutral_negative": { "kanji": "電話しない", "romaji": "denwa shinai" },
+            "present_polite_negative": { "kanji": "電話しません", "romaji": "denwa shimasen" },
+            "past_neutral": { "kanji": "電話した", "romaji": "denwa shita" },
+            "past_polite": { "kanji": "電話しました", "romaji": "denwa shimashita" },
+            "past_neutral_negative": { "kanji": "電話しなかった", "romaji": "denwa shinakatta" },
+            "past_polite_negative": { "kanji": "電話しませんでした", "romaji": "denwa shimasendeshita" },
+            "te_form": { "kanji": "電話して", "romaji": "denwa shite" },
+            "te_iru": { "kanji": "電話している", "romaji": "denwa shiteiru" }
+          }
+        }
+      ]
+    }
+  ]
+}
