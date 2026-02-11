@@ -1,0 +1,514 @@
+{
+  "hiragana": {
+    "basic": [
+      {
+        "row": "a",
+        "characters": [
+          {"kana": "あ", "romaji": "a"},
+          {"kana": "い", "romaji": "i"},
+          {"kana": "う", "romaji": "u"},
+          {"kana": "え", "romaji": "e"},
+          {"kana": "お", "romaji": "o"}
+        ]
+      },
+      {
+        "row": "ka",
+        "characters": [
+          {"kana": "か", "romaji": "ka"},
+          {"kana": "き", "romaji": "ki"},
+          {"kana": "く", "romaji": "ku"},
+          {"kana": "け", "romaji": "ke"},
+          {"kana": "こ", "romaji": "ko"}
+        ]
+      },
+      {
+        "row": "sa",
+        "characters": [
+          {"kana": "さ", "romaji": "sa"},
+          {"kana": "し", "romaji": "shi"},
+          {"kana": "す", "romaji": "su"},
+          {"kana": "せ", "romaji": "se"},
+          {"kana": "そ", "romaji": "so"}
+        ]
+      },
+      {
+        "row": "ta",
+        "characters": [
+          {"kana": "た", "romaji": "ta"},
+          {"kana": "ち", "romaji": "chi"},
+          {"kana": "つ", "romaji": "tsu"},
+          {"kana": "て", "romaji": "te"},
+          {"kana": "と", "romaji": "to"}
+        ]
+      },
+      {
+        "row": "na",
+        "characters": [
+          {"kana": "な", "romaji": "na"},
+          {"kana": "に", "romaji": "ni"},
+          {"kana": "ぬ", "romaji": "nu"},
+          {"kana": "ね", "romaji": "ne"},
+          {"kana": "の", "romaji": "no"}
+        ]
+      },
+      {
+        "row": "ha",
+        "characters": [
+          {"kana": "は", "romaji": "ha"},
+          {"kana": "ひ", "romaji": "hi"},
+          {"kana": "ふ", "romaji": "fu"},
+          {"kana": "へ", "romaji": "he"},
+          {"kana": "ほ", "romaji": "ho"}
+        ]
+      },
+      {
+        "row": "ma",
+        "characters": [
+          {"kana": "ま", "romaji": "ma"},
+          {"kana": "み", "romaji": "mi"},
+          {"kana": "む", "romaji": "mu"},
+          {"kana": "め", "romaji": "me"},
+          {"kana": "も", "romaji": "mo"}
+        ]
+      },
+      {
+        "row": "ya",
+        "characters": [
+          {"kana": "や", "romaji": "ya"},
+          {"kana": "", "romaji": ""},
+          {"kana": "ゆ", "romaji": "yu"},
+          {"kana": "", "romaji": ""},
+          {"kana": "よ", "romaji": "yo"}
+        ]
+      },
+      {
+        "row": "ra",
+        "characters": [
+          {"kana": "ら", "romaji": "ra"},
+          {"kana": "り", "romaji": "ri"},
+          {"kana": "る", "romaji": "ru"},
+          {"kana": "れ", "romaji": "re"},
+          {"kana": "ろ", "romaji": "ro"}
+        ]
+      },
+      {
+        "row": "wa",
+        "characters": [
+          {"kana": "わ", "romaji": "wa"},
+          {"kana": "", "romaji": ""},
+          {"kana": "", "romaji": ""},
+          {"kana": "", "romaji": ""},
+          {"kana": "を", "romaji": "wo"}
+        ]
+      },
+      {
+        "row": "n",
+        "characters": [
+          {"kana": "ん", "romaji": "n"},
+          {"kana": "", "romaji": ""},
+          {"kana": "", "romaji": ""},
+          {"kana": "", "romaji": ""},
+          {"kana": "", "romaji": ""}
+        ]
+      }
+    ],
+    "dakuten": [
+      {
+        "row": "ga",
+        "characters": [
+          {"kana": "が", "romaji": "ga"},
+          {"kana": "ぎ", "romaji": "gi"},
+          {"kana": "ぐ", "romaji": "gu"},
+          {"kana": "げ", "romaji": "ge"},
+          {"kana": "ご", "romaji": "go"}
+        ]
+      },
+      {
+        "row": "za",
+        "characters": [
+          {"kana": "ざ", "romaji": "za"},
+          {"kana": "じ", "romaji": "ji"},
+          {"kana": "ず", "romaji": "zu"},
+          {"kana": "ぜ", "romaji": "ze"},
+          {"kana": "ぞ", "romaji": "zo"}
+        ]
+      },
+      {
+        "row": "da",
+        "characters": [
+          {"kana": "だ", "romaji": "da"},
+          {"kana": "ぢ", "romaji": "ji"},
+          {"kana": "づ", "romaji": "zu"},
+          {"kana": "で", "romaji": "de"},
+          {"kana": "ど", "romaji": "do"}
+        ]
+      },
+      {
+        "row": "ba",
+        "characters": [
+          {"kana": "ば", "romaji": "ba"},
+          {"kana": "び", "romaji": "bi"},
+          {"kana": "ぶ", "romaji": "bu"},
+          {"kana": "べ", "romaji": "be"},
+          {"kana": "ぼ", "romaji": "bo"}
+        ]
+      },
+      {
+        "row": "pa",
+        "characters": [
+          {"kana": "ぱ", "romaji": "pa"},
+          {"kana": "ぴ", "romaji": "pi"},
+          {"kana": "ぷ", "romaji": "pu"},
+          {"kana": "ぺ", "romaji": "pe"},
+          {"kana": "ぽ", "romaji": "po"}
+        ]
+      }
+    ],
+    "combinations": [
+      {
+        "base": "ki",
+        "chars": [
+          {"kana": "きゃ", "romaji": "kya"},
+          {"kana": "きゅ", "romaji": "kyu"},
+          {"kana": "きょ", "romaji": "kyo"}
+        ]
+      },
+      {
+        "base": "shi",
+        "chars": [
+          {"kana": "しゃ", "romaji": "sha"},
+          {"kana": "しゅ", "romaji": "shu"},
+          {"kana": "しょ", "romaji": "sho"}
+        ]
+      },
+      {
+        "base": "chi",
+        "chars": [
+          {"kana": "ちゃ", "romaji": "cha"},
+          {"kana": "ちゅ", "romaji": "chu"},
+          {"kana": "ちょ", "romaji": "cho"}
+        ]
+      },
+      {
+        "base": "ni",
+        "chars": [
+          {"kana": "にゃ", "romaji": "nya"},
+          {"kana": "にゅ", "romaji": "nyu"},
+          {"kana": "にょ", "romaji": "nyo"}
+        ]
+      },
+      {
+        "base": "hi",
+        "chars": [
+          {"kana": "ひゃ", "romaji": "hya"},
+          {"kana": "ひゅ", "romaji": "hyu"},
+          {"kana": "ひょ", "romaji": "hyo"}
+        ]
+      },
+      {
+        "base": "mi",
+        "chars": [
+          {"kana": "みゃ", "romaji": "mya"},
+          {"kana": "みゅ", "romaji": "myu"},
+          {"kana": "みょ", "romaji": "myo"}
+        ]
+      },
+      {
+        "base": "ri",
+        "chars": [
+          {"kana": "りゃ", "romaji": "rya"},
+          {"kana": "りゅ", "romaji": "ryu"},
+          {"kana": "りょ", "romaji": "ryo"}
+        ]
+      },
+      {
+        "base": "gi",
+        "chars": [
+          {"kana": "ぎゃ", "romaji": "gya"},
+          {"kana": "ぎゅ", "romaji": "gyu"},
+          {"kana": "ぎょ", "romaji": "gyo"}
+        ]
+      },
+      {
+        "base": "ji",
+        "chars": [
+          {"kana": "じゃ", "romaji": "ja"},
+          {"kana": "じゅ", "romaji": "ju"},
+          {"kana": "じょ", "romaji": "jo"}
+        ]
+      },
+      {
+        "base": "bi",
+        "chars": [
+          {"kana": "びゃ", "romaji": "bya"},
+          {"kana": "びゅ", "romaji": "byu"},
+          {"kana": "びょ", "romaji": "byo"}
+        ]
+      },
+      {
+        "base": "pi",
+        "chars": [
+          {"kana": "ぴゃ", "romaji": "pya"},
+          {"kana": "ぴゅ", "romaji": "pyu"},
+          {"kana": "ぴょ", "romaji": "pyo"}
+        ]
+      }
+    ]
+  },
+  "katakana": {
+    "basic": [
+      {
+        "row": "a",
+        "characters": [
+          {"kana": "ア", "romaji": "a"},
+          {"kana": "イ", "romaji": "i"},
+          {"kana": "ウ", "romaji": "u"},
+          {"kana": "エ", "romaji": "e"},
+          {"kana": "オ", "romaji": "o"}
+        ]
+      },
+      {
+        "row": "ka",
+        "characters": [
+          {"kana": "カ", "romaji": "ka"},
+          {"kana": "キ", "romaji": "ki"},
+          {"kana": "ク", "romaji": "ku"},
+          {"kana": "ケ", "romaji": "ke"},
+          {"kana": "コ", "romaji": "ko"}
+        ]
+      },
+      {
+        "row": "sa",
+        "characters": [
+          {"kana": "サ", "romaji": "sa"},
+          {"kana": "シ", "romaji": "shi"},
+          {"kana": "ス", "romaji": "su"},
+          {"kana": "セ", "romaji": "se"},
+          {"kana": "ソ", "romaji": "so"}
+        ]
+      },
+      {
+        "row": "ta",
+        "characters": [
+          {"kana": "タ", "romaji": "ta"},
+          {"kana": "チ", "romaji": "chi"},
+          {"kana": "ツ", "romaji": "tsu"},
+          {"kana": "テ", "romaji": "te"},
+          {"kana": "ト", "romaji": "to"}
+        ]
+      },
+      {
+        "row": "na",
+        "characters": [
+          {"kana": "ナ", "romaji": "na"},
+          {"kana": "ニ", "romaji": "ni"},
+          {"kana": "ヌ", "romaji": "nu"},
+          {"kana": "ネ", "romaji": "ne"},
+          {"kana": "ノ", "romaji": "no"}
+        ]
+      },
+      {
+        "row": "ha",
+        "characters": [
+          {"kana": "ハ", "romaji": "ha"},
+          {"kana": "ヒ", "romaji": "hi"},
+          {"kana": "フ", "romaji": "fu"},
+          {"kana": "ヘ", "romaji": "he"},
+          {"kana": "ホ", "romaji": "ho"}
+        ]
+      },
+      {
+        "row": "ma",
+        "characters": [
+          {"kana": "マ", "romaji": "ma"},
+          {"kana": "ミ", "romaji": "mi"},
+          {"kana": "ム", "romaji": "mu"},
+          {"kana": "メ", "romaji": "me"},
+          {"kana": "モ", "romaji": "mo"}
+        ]
+      },
+      {
+        "row": "ya",
+        "characters": [
+          {"kana": "ヤ", "romaji": "ya"},
+          {"kana": "", "romaji": ""},
+          {"kana": "ユ", "romaji": "yu"},
+          {"kana": "", "romaji": ""},
+          {"kana": "ヨ", "romaji": "yo"}
+        ]
+      },
+      {
+        "row": "ra",
+        "characters": [
+          {"kana": "ラ", "romaji": "ra"},
+          {"kana": "リ", "romaji": "ri"},
+          {"kana": "ル", "romaji": "ru"},
+          {"kana": "レ", "romaji": "re"},
+          {"kana": "ロ", "romaji": "ro"}
+        ]
+      },
+      {
+        "row": "wa",
+        "characters": [
+          {"kana": "ワ", "romaji": "wa"},
+          {"kana": "", "romaji": ""},
+          {"kana": "", "romaji": ""},
+          {"kana": "", "romaji": ""},
+          {"kana": "ヲ", "romaji": "wo"}
+        ]
+      },
+      {
+        "row": "n",
+        "characters": [
+          {"kana": "ン", "romaji": "n"},
+          {"kana": "", "romaji": ""},
+          {"kana": "", "romaji": ""},
+          {"kana": "", "romaji": ""},
+          {"kana": "", "romaji": ""}
+        ]
+      }
+    ],
+    "dakuten": [
+      {
+        "row": "ga",
+        "characters": [
+          {"kana": "ガ", "romaji": "ga"},
+          {"kana": "ギ", "romaji": "gi"},
+          {"kana": "グ", "romaji": "gu"},
+          {"kana": "ゲ", "romaji": "ge"},
+          {"kana": "ゴ", "romaji": "go"}
+        ]
+      },
+      {
+        "row": "za",
+        "characters": [
+          {"kana": "ザ", "romaji": "za"},
+          {"kana": "ジ", "romaji": "ji"},
+          {"kana": "ズ", "romaji": "zu"},
+          {"kana": "ゼ", "romaji": "ze"},
+          {"kana": "ゾ", "romaji": "zo"}
+        ]
+      },
+      {
+        "row": "da",
+        "characters": [
+          {"kana": "ダ", "romaji": "da"},
+          {"kana": "ヂ", "romaji": "ji"},
+          {"kana": "ヅ", "romaji": "zu"},
+          {"kana": "デ", "romaji": "de"},
+          {"kana": "ド", "romaji": "do"}
+        ]
+      },
+      {
+        "row": "ba",
+        "characters": [
+          {"kana": "バ", "romaji": "ba"},
+          {"kana": "ビ", "romaji": "bi"},
+          {"kana": "ブ", "romaji": "bu"},
+          {"kana": "ベ", "romaji": "be"},
+          {"kana": "ボ", "romaji": "bo"}
+        ]
+      },
+      {
+        "row": "pa",
+        "characters": [
+          {"kana": "パ", "romaji": "pa"},
+          {"kana": "ピ", "romaji": "pi"},
+          {"kana": "プ", "romaji": "pu"},
+          {"kana": "ペ", "romaji": "pe"},
+          {"kana": "ポ", "romaji": "po"}
+        ]
+      }
+    ],
+    "combinations": [
+      {
+        "base": "ki",
+        "chars": [
+          {"kana": "キャ", "romaji": "kya"},
+          {"kana": "キュ", "romaji": "kyu"},
+          {"kana": "キョ", "romaji": "kyo"}
+        ]
+      },
+      {
+        "base": "shi",
+        "chars": [
+          {"kana": "シャ", "romaji": "sha"},
+          {"kana": "シュ", "romaji": "shu"},
+          {"kana": "ショ", "romaji": "sho"}
+        ]
+      },
+      {
+        "base": "chi",
+        "chars": [
+          {"kana": "チャ", "romaji": "cha"},
+          {"kana": "チュ", "romaji": "chu"},
+          {"kana": "チョ", "romaji": "cho"}
+        ]
+      },
+      {
+        "base": "ni",
+        "chars": [
+          {"kana": "ニャ", "romaji": "nya"},
+          {"kana": "ニュ", "romaji": "nyu"},
+          {"kana": "ニョ", "romaji": "nyo"}
+        ]
+      },
+      {
+        "base": "hi",
+        "chars": [
+          {"kana": "ヒャ", "romaji": "hya"},
+          {"kana": "ヒュ", "romaji": "hyu"},
+          {"kana": "ヒョ", "romaji": "hyo"}
+        ]
+      },
+      {
+        "base": "mi",
+        "chars": [
+          {"kana": "ミャ", "romaji": "mya"},
+          {"kana": "ミュ", "romaji": "myu"},
+          {"kana": "ミョ", "romaji": "myo"}
+        ]
+      },
+      {
+        "base": "ri",
+        "chars": [
+          {"kana": "リャ", "romaji": "rya"},
+          {"kana": "リュ", "romaji": "ryu"},
+          {"kana": "リョ", "romaji": "ryo"}
+        ]
+      },
+      {
+        "base": "gi",
+        "chars": [
+          {"kana": "ギャ", "romaji": "gya"},
+          {"kana": "ギュ", "romaji": "gyu"},
+          {"kana": "ギョ", "romaji": "gyo"}
+        ]
+      },
+      {
+        "base": "ji",
+        "chars": [
+          {"kana": "ジャ", "romaji": "ja"},
+          {"kana": "ジュ", "romaji": "ju"},
+          {"kana": "ジョ", "romaji": "jo"}
+        ]
+      },
+      {
+        "base": "bi",
+        "chars": [
+          {"kana": "ビャ", "romaji": "bya"},
+          {"kana": "ビュ", "romaji": "byu"},
+          {"kana": "ビョ", "romaji": "byo"}
+        ]
+      },
+      {
+        "base": "pi",
+        "chars": [
+          {"kana": "ピャ", "romaji": "pya"},
+          {"kana": "ピュ", "romaji": "pyu"},
+          {"kana": "ピョ", "romaji": "pyo"}
+        ]
+      }
+    ]
+  }
+}

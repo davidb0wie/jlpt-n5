@@ -1,0 +1,708 @@
+{
+  "texts": [
+    {
+      "id": 1,
+      "title": "自己紹介",
+      "difficulty": 1,
+      "category": "Présentation",
+      "text": "私はマリーです。フランスから来ました。今、東京に住んでいます。日本語の学生です。毎日日本語を勉強します。日本の食べ物が大好きです。",
+      "reading": "わたしはマリーです。フランスからきました。いま、とうきょうにすんでいます。にほんごのがくせいです。まいにちにほんごをべんきょうします。にほんのたべものがだいすきです。",
+      "translation": "Je suis Marie. Je viens de France. Maintenant, j'habite à Tokyo. Je suis étudiante en japonais. J'étudie le japonais tous les jours. J'adore la nourriture japonaise.",
+      "questions": [
+        {
+          "question": "マリーさんはどこから来ましたか。",
+          "question_fr": "D'où vient Marie ?",
+          "options": ["フランス", "アメリカ", "イギリス", "カナダ"],
+          "options_fr": ["France", "Amérique", "Angleterre", "Canada"],
+          "correct": 0
+        },
+        {
+          "question": "マリーさんは何をしていますか。",
+          "question_fr": "Que fait Marie ?",
+          "options": ["先生です", "学生です", "会社員です", "医者です"],
+          "options_fr": ["Elle est professeur", "Elle est étudiante", "Elle est employée", "Elle est médecin"],
+          "correct": 1
+        },
+        {
+          "question": "マリーさんは何が好きですか。",
+          "question_fr": "Qu'est-ce que Marie aime ?",
+          "options": ["日本の音楽", "日本の映画", "日本の食べ物", "日本の本"],
+          "options_fr": ["La musique japonaise", "Les films japonais", "La nourriture japonaise", "Les livres japonais"],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "週末の予定",
+      "difficulty": 1,
+      "category": "Vie quotidienne",
+      "text": "明日は土曜日です。朝、九時に起きます。友達と映画を見ます。映画は十二時からです。その後、レストランで昼ごはんを食べます。夜は家で本を読みます。",
+      "reading": "あしたはどようびです。あさ、くじにおきます。ともだちとえいがをみます。えいがはじゅうにじからです。そのあと、レストランでひるごはんをたべます。よるはいえでほんをよみます。",
+      "translation": "Demain c'est samedi. Le matin, je me lève à 9 heures. Je vais voir un film avec un ami. Le film commence à midi. Après, nous mangeons au restaurant. Le soir, je lis un livre à la maison.",
+      "questions": [
+        {
+          "question": "明日は何曜日ですか。",
+          "question_fr": "Quel jour sommes-nous demain ?",
+          "options": ["金曜日", "土曜日", "日曜日", "月曜日"],
+          "options_fr": ["Vendredi", "Samedi", "Dimanche", "Lundi"],
+          "correct": 1
+        },
+        {
+          "question": "映画は何時からですか。",
+          "question_fr": "À quelle heure commence le film ?",
+          "options": ["九時", "十時", "十一時", "十二時"],
+          "options_fr": ["9 heures", "10 heures", "11 heures", "12 heures"],
+          "correct": 3
+        },
+        {
+          "question": "夜、何をしますか。",
+          "question_fr": "Que fait-il le soir ?",
+          "options": ["テレビを見ます", "音楽を聞きます", "本を読みます", "寝ます"],
+          "options_fr": ["Regarder la télévision", "Écouter de la musique", "Lire un livre", "Dormir"],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "スーパーで",
+      "difficulty": 1,
+      "category": "Shopping",
+      "text": "今日、スーパーに行きました。野菜と果物を買いました。りんごは三個で三百円でした。安かったです。牛乳も買いました。全部で千円でした。",
+      "reading": "きょう、スーパーにいきました。やさいとくだものをかいました。りんごはさんこでさんびゃくえんでした。やすかったです。ぎゅうにゅうもかいました。ぜんぶでせんえんでした。",
+      "translation": "Aujourd'hui, je suis allé au supermarché. J'ai acheté des légumes et des fruits. Les pommes coûtaient 300 yens pour trois. C'était bon marché. J'ai aussi acheté du lait. Au total, c'était 1000 yens.",
+      "questions": [
+        {
+          "question": "何を買いましたか。",
+          "question_fr": "Qu'a-t-il acheté ?",
+          "options": ["野菜だけ", "果物だけ", "野菜と果物と牛乳", "肉と魚"],
+          "options_fr": ["Seulement des légumes", "Seulement des fruits", "Légumes, fruits et lait", "Viande et poisson"],
+          "correct": 2
+        },
+        {
+          "question": "りんごはいくらでしたか。",
+          "question_fr": "Combien coûtaient les pommes ?",
+          "options": ["二百円", "三百円", "五百円", "千円"],
+          "options_fr": ["200 yens", "300 yens", "500 yens", "1000 yens"],
+          "correct": 1
+        },
+        {
+          "question": "全部でいくらでしたか。",
+          "question_fr": "Combien au total ?",
+          "options": ["五百円", "千円", "千五百円", "二千円"],
+          "options_fr": ["500 yens", "1000 yens", "1500 yens", "2000 yens"],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "私の家族",
+      "difficulty": 1,
+      "category": "Famille",
+      "text": "私の家族は四人です。父と母と弟がいます。父は会社員です。母は先生です。弟は高校生です。週末、家族でよく公園に行きます。",
+      "reading": "わたしのかぞくはよにんです。ちちとははとおとうとがいます。ちちはかいしゃいんです。はははせんせいです。おとうとはこうこうせいです。しゅうまつ、かぞくでよくこうえんにいきます。",
+      "translation": "Ma famille compte quatre personnes. Il y a mon père, ma mère et mon petit frère. Mon père est employé de bureau. Ma mère est professeur. Mon petit frère est lycéen. Le week-end, nous allons souvent au parc en famille.",
+      "questions": [
+        {
+          "question": "家族は何人ですか。",
+          "question_fr": "Combien y a-t-il de personnes dans la famille ?",
+          "options": ["三人", "四人", "五人", "六人"],
+          "options_fr": ["3 personnes", "4 personnes", "5 personnes", "6 personnes"],
+          "correct": 1
+        },
+        {
+          "question": "お母さんは何をしていますか。",
+          "question_fr": "Que fait la mère ?",
+          "options": ["会社員", "先生", "医者", "学生"],
+          "options_fr": ["Employée", "Professeur", "Médecin", "Étudiante"],
+          "correct": 1
+        },
+        {
+          "question": "週末、どこに行きますか。",
+          "question_fr": "Où vont-ils le week-end ?",
+          "options": ["デパート", "映画館", "公園", "図書館"],
+          "options_fr": ["Grand magasin", "Cinéma", "Parc", "Bibliothèque"],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "天気",
+      "difficulty": 1,
+      "category": "Météo",
+      "text": "今日はとてもいい天気です。空は青くて、雲がありません。でも、明日は雨が降ります。傘を持って行かなければなりません。",
+      "reading": "きょうはとてもいいてんきです。そらはあおくて、くもがありません。でも、あしたはあめがふります。かさをもっていかなければなりません。",
+      "translation": "Aujourd'hui il fait très beau. Le ciel est bleu et il n'y a pas de nuages. Mais demain il va pleuvoir. Je dois emporter un parapluie.",
+      "questions": [
+        {
+          "question": "今日の天気はどうですか。",
+          "question_fr": "Comment est le temps aujourd'hui ?",
+          "options": ["雨です", "曇りです", "いい天気です", "雪です"],
+          "options_fr": ["Il pleut", "C'est nuageux", "Il fait beau", "Il neige"],
+          "correct": 2
+        },
+        {
+          "question": "明日の天気はどうですか。",
+          "question_fr": "Comment sera le temps demain ?",
+          "options": ["晴れます", "雨が降ります", "雪が降ります", "曇ります"],
+          "options_fr": ["Il fera beau", "Il pleuvra", "Il neigera", "Ce sera nuageux"],
+          "correct": 1
+        },
+        {
+          "question": "何を持って行きますか。",
+          "question_fr": "Qu'emportera-t-il ?",
+          "options": ["帽子", "傘", "カメラ", "本"],
+          "options_fr": ["Chapeau", "Parapluie", "Appareil photo", "Livre"],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "図書館で",
+      "difficulty": 2,
+      "category": "École",
+      "text": "昨日、図書館で勉強しました。日本語の本を三冊借りました。静かでとても勉強しやすかったです。二時間ぐらい勉強して、家に帰りました。図書館はとても便利です。",
+      "reading": "きのう、としょかんでべんきょうしました。にほんごのほんをさんさつかりました。しずかでとてもべんきょうしやすかったです。にじかんぐらいべんきょうして、いえにかえりました。としょかんはとてもべんりです。",
+      "translation": "Hier, j'ai étudié à la bibliothèque. J'ai emprunté trois livres de japonais. C'était calme et très facile d'étudier. J'ai étudié environ deux heures puis je suis rentré à la maison. La bibliothèque est très pratique.",
+      "questions": [
+        {
+          "question": "いつ図書館に行きましたか。",
+          "question_fr": "Quand est-il allé à la bibliothèque ?",
+          "options": ["今日", "昨日", "明日", "先週"],
+          "options_fr": ["Aujourd'hui", "Hier", "Demain", "La semaine dernière"],
+          "correct": 1
+        },
+        {
+          "question": "何冊本を借りましたか。",
+          "question_fr": "Combien de livres a-t-il emprunté ?",
+          "options": ["一冊", "二冊", "三冊", "四冊"],
+          "options_fr": ["1 livre", "2 livres", "3 livres", "4 livres"],
+          "correct": 2
+        },
+        {
+          "question": "図書館はどうでしたか。",
+          "question_fr": "Comment était la bibliothèque ?",
+          "options": ["うるさかった", "静かだった", "暑かった", "寒かった"],
+          "options_fr": ["C'était bruyant", "C'était calme", "Il faisait chaud", "Il faisait froid"],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "レストランで",
+      "difficulty": 2,
+      "category": "Restaurant",
+      "text": "昨日の夜、友達と新しいレストランに行きました。イタリア料理のレストランです。パスタとサラダを注文しました。とてもおいしかったです。値段も高くなかったです。また行きたいです。",
+      "reading": "きのうのよる、ともだちとあたらしいレストランにいきました。イタリアりょうりのレストランです。パスタとサラダをちゅうもんしました。とてもおいしかったです。ねだんもたかくなかったです。またいきたいです。",
+      "translation": "Hier soir, je suis allé dans un nouveau restaurant avec un ami. C'est un restaurant italien. J'ai commandé des pâtes et une salade. C'était très bon. Le prix n'était pas élevé non plus. Je veux y retourner.",
+      "questions": [
+        {
+          "question": "いつレストランに行きましたか。",
+          "question_fr": "Quand est-il allé au restaurant ?",
+          "options": ["今朝", "昨日の朝", "今日の夜", "昨日の夜"],
+          "options_fr": ["Ce matin", "Hier matin", "Ce soir", "Hier soir"],
+          "correct": 3
+        },
+        {
+          "question": "どんなレストランですか。",
+          "question_fr": "Quel type de restaurant ?",
+          "options": ["日本料理", "中華料理", "イタリア料理", "フランス料理"],
+          "options_fr": ["Cuisine japonaise", "Cuisine chinoise", "Cuisine italienne", "Cuisine française"],
+          "correct": 2
+        },
+        {
+          "question": "料理はどうでしたか。",
+          "question_fr": "Comment était la nourriture ?",
+          "options": ["まずかった", "おいしかった", "高かった", "冷たかった"],
+          "options_fr": ["C'était mauvais", "C'était délicieux", "C'était cher", "C'était froid"],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "駅の案内",
+      "difficulty": 2,
+      "category": "Transport",
+      "text": "新宿駅\n\n【お知らせ】\n本日、中央線は事故のため、遅れています。\n山手線は正常に運行しています。\nご迷惑をおかけして申し訳ございません。",
+      "reading": "しんじゅくえき\n\n【おしらせ】\nほんじつ、ちゅうおうせんはじこのため、おくれています。\nやまのてせんはせいじょうにうんこうしています。\nごめいわくをおかけしてもうしわけございません。",
+      "translation": "Gare de Shinjuku\n\n【Annonce】\nAujourd'hui, la ligne Chuo a du retard en raison d'un accident.\nLa ligne Yamanote fonctionne normalement.\nNous nous excusons pour la gêne occasionnée.",
+      "questions": [
+        {
+          "question": "どこの案内ですか。",
+          "question_fr": "De quelle gare est cette annonce ?",
+          "options": ["東京駅", "新宿駅", "渋谷駅", "池袋駅"],
+          "options_fr": ["Gare de Tokyo", "Gare de Shinjuku", "Gare de Shibuya", "Gare d'Ikebukuro"],
+          "correct": 1
+        },
+        {
+          "question": "中央線はどうですか。",
+          "question_fr": "Qu'en est-il de la ligne Chuo ?",
+          "options": ["遅れています", "止まっています", "正常です", "速いです"],
+          "options_fr": ["Elle a du retard", "Elle est arrêtée", "Elle est normale", "Elle est rapide"],
+          "correct": 0
+        },
+        {
+          "question": "山手線はどうですか。",
+          "question_fr": "Qu'en est-il de la ligne Yamanote ?",
+          "options": ["遅れています", "止まっています", "正常です", "事故です"],
+          "options_fr": ["Elle a du retard", "Elle est arrêtée", "Elle fonctionne normalement", "Il y a un accident"],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "メール",
+      "difficulty": 2,
+      "category": "Communication",
+      "text": "田中さんへ\n\n明日の会議は十時からです。場所は会議室Aです。資料を準備してください。よろしくお願いします。\n\n山田",
+      "reading": "たなかさんへ\n\nあしたのかいぎはじゅうじからです。ばしょはかいぎしつAです。しりょうをじゅんびしてください。よろしくおねがいします。\n\nやまだ",
+      "translation": "À Tanaka-san\n\nLa réunion de demain commence à 10 heures. Le lieu est la salle de réunion A. Veuillez préparer les documents. Cordialement.\n\nYamada",
+      "questions": [
+        {
+          "question": "誰からのメールですか。",
+          "question_fr": "De qui vient ce mail ?",
+          "options": ["田中さん", "山田さん", "佐藤さん", "鈴木さん"],
+          "options_fr": ["Tanaka-san", "Yamada-san", "Sato-san", "Suzuki-san"],
+          "correct": 1
+        },
+        {
+          "question": "会議は何時からですか。",
+          "question_fr": "À quelle heure commence la réunion ?",
+          "options": ["九時", "十時", "十一時", "十二時"],
+          "options_fr": ["9 heures", "10 heures", "11 heures", "12 heures"],
+          "correct": 1
+        },
+        {
+          "question": "何を準備しますか。",
+          "question_fr": "Que faut-il préparer ?",
+          "options": ["お茶", "資料", "パソコン", "お弁当"],
+          "options_fr": ["Du thé", "Les documents", "L'ordinateur", "Le bento"],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "趣味",
+      "difficulty": 2,
+      "category": "Loisirs",
+      "text": "私の趣味は写真を撮ることです。週末、カメラを持って、いろいろな所に行きます。特に、桜の写真が好きです。春はとてもきれいです。友達にも写真を見せます。みんな「きれいですね」と言います。",
+      "reading": "わたしのしゅみはしゃしんをとることです。しゅうまつ、カメラをもって、いろいろなところにいきます。とくに、さくらのしゃしんがすきです。はるはとてもきれいです。ともだちにもしゃしんをみせます。みんな「きれいですね」といいます。",
+      "translation": "Mon hobby est de prendre des photos. Le week-end, je prends mon appareil photo et je vais à différents endroits. J'aime particulièrement les photos de cerisiers. Le printemps est très beau. Je montre aussi mes photos à mes amis. Tout le monde dit 'C'est joli !'",
+      "questions": [
+        {
+          "question": "趣味は何ですか。",
+          "question_fr": "Quel est son hobby ?",
+          "options": ["絵を描くこと", "写真を撮ること", "音楽を聞くこと", "本を読むこと"],
+          "options_fr": ["Dessiner", "Prendre des photos", "Écouter de la musique", "Lire des livres"],
+          "correct": 1
+        },
+        {
+          "question": "特に何の写真が好きですか。",
+          "question_fr": "Quelles photos aime-t-il particulièrement ?",
+          "options": ["山", "海", "桜", "雪"],
+          "options_fr": ["Montagnes", "Mer", "Cerisiers", "Neige"],
+          "correct": 2
+        },
+        {
+          "question": "友達は何と言いますか。",
+          "question_fr": "Que disent les amis ?",
+          "options": ["おもしろいですね", "きれいですね", "難しいですね", "高いですね"],
+          "options_fr": ["C'est intéressant", "C'est joli", "C'est difficile", "C'est cher"],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "アルバイト",
+      "difficulty": 2,
+      "category": "Travail",
+      "text": "私は週に三回、コンビニでアルバイトをしています。月曜日と水曜日と金曜日です。仕事は午後五時から九時までです。仕事は大変ですが、楽しいです。お客さんはいつも親切です。",
+      "reading": "わたしはしゅうにさんかい、コンビニでアルバイトをしています。げつようびとすいようびときんようびです。しごとはごごごじからくじまでです。しごとはたいへんですが、たのしいです。おきゃくさんはいつもしんせつです。",
+      "translation": "Je travaille à temps partiel dans un konbini trois fois par semaine. Le lundi, mercredi et vendredi. Le travail est de 17h à 21h. Le travail est difficile mais amusant. Les clients sont toujours gentils.",
+      "questions": [
+        {
+          "question": "どこでアルバイトをしていますか。",
+          "question_fr": "Où travaille-t-il à temps partiel ?",
+          "options": ["レストラン", "コンビニ", "本屋", "カフェ"],
+          "options_fr": ["Restaurant", "Konbini", "Librairie", "Café"],
+          "correct": 1
+        },
+        {
+          "question": "週に何回働きますか。",
+          "question_fr": "Combien de fois par semaine travaille-t-il ?",
+          "options": ["二回", "三回", "四回", "五回"],
+          "options_fr": ["2 fois", "3 fois", "4 fois", "5 fois"],
+          "correct": 1
+        },
+        {
+          "question": "仕事は何時までですか。",
+          "question_fr": "Jusqu'à quelle heure travaille-t-il ?",
+          "options": ["八時", "九時", "十時", "十一時"],
+          "options_fr": ["20h", "21h", "22h", "23h"],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "病院",
+      "difficulty": 2,
+      "category": "Santé",
+      "text": "昨日から頭が痛いです。熱もあります。今日、病院に行きました。医者は「風邪ですね。薬を飲んで、よく休んでください」と言いました。三日間、仕事を休みます。",
+      "reading": "きのうからあたまがいたいです。ねつもあります。きょう、びょういんにいきました。いしゃは「かぜですね。くすりをのんで、よくやすんでください」といいました。みっかかん、しごとをやすみます。",
+      "translation": "J'ai mal à la tête depuis hier. J'ai aussi de la fièvre. Aujourd'hui, je suis allé à l'hôpital. Le médecin a dit 'C'est un rhume. Prenez des médicaments et reposez-vous bien'. Je vais me reposer du travail pendant trois jours.",
+      "questions": [
+        {
+          "question": "何が痛いですか。",
+          "question_fr": "Qu'est-ce qui fait mal ?",
+          "options": ["お腹", "頭", "足", "手"],
+          "options_fr": ["Ventre", "Tête", "Pied", "Main"],
+          "correct": 1
+        },
+        {
+          "question": "医者は何と言いましたか。",
+          "question_fr": "Qu'a dit le médecin ?",
+          "options": ["大丈夫です", "風邪です", "入院してください", "手術が必要です"],
+          "options_fr": ["C'est bon", "C'est un rhume", "Hospitalisez-vous", "Une opération est nécessaire"],
+          "correct": 1
+        },
+        {
+          "question": "何日間休みますか。",
+          "question_fr": "Combien de jours va-t-il se reposer ?",
+          "options": ["一日間", "二日間", "三日間", "四日間"],
+          "options_fr": ["1 jour", "2 jours", "3 jours", "4 jours"],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "誕生日",
+      "difficulty": 2,
+      "category": "Vie quotidienne",
+      "text": "来週の土曜日は私の誕生日です。二十歳になります。友達がパーティーを開いてくれます。ケーキを食べて、プレゼントをもらって、とても楽しみです。",
+      "reading": "らいしゅうのどようびはわたしのたんじょうびです。はたちになります。ともだちがパーティーをひらいてくれます。ケーキをたべて、プレゼントをもらって、とてもたのしみです。",
+      "translation": "Samedi prochain, c'est mon anniversaire. Je vais avoir 20 ans. Mes amis organisent une fête pour moi. Je vais manger du gâteau, recevoir des cadeaux, j'ai vraiment hâte.",
+      "questions": [
+        {
+          "question": "いつ誕生日ですか。",
+          "question_fr": "Quand est son anniversaire ?",
+          "options": ["今週の土曜日", "来週の土曜日", "来週の日曜日", "今日"],
+          "options_fr": ["Samedi cette semaine", "Samedi prochain", "Dimanche prochain", "Aujourd'hui"],
+          "correct": 1
+        },
+        {
+          "question": "何歳になりますか。",
+          "question_fr": "Quel âge va-t-il avoir ?",
+          "options": ["十八歳", "十九歳", "二十歳", "二十一歳"],
+          "options_fr": ["18 ans", "19 ans", "20 ans", "21 ans"],
+          "correct": 2
+        },
+        {
+          "question": "誰がパーティーを開きますか。",
+          "question_fr": "Qui organise la fête ?",
+          "options": ["家族", "友達", "先生", "自分"],
+          "options_fr": ["Famille", "Amis", "Professeur", "Lui-même"],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "ペット",
+      "difficulty": 2,
+      "category": "Animaux",
+      "text": "私は猫を飼っています。名前はミケです。三歳です。白くてとてもかわいいです。毎朝、ごはんをあげます。ミケは魚が大好きです。一緒に遊ぶのが楽しいです。",
+      "reading": "わたしはねこをかっています。なまえはミケです。さんさいです。しろくてとてもかわいいです。まいあさ、ごはんをあげます。ミケはさかながだいすきです。いっしょにあそぶのがたのしいです。",
+      "translation": "J'ai un chat. Il s'appelle Mike. Il a trois ans. Il est blanc et très mignon. Tous les matins, je lui donne à manger. Mike adore le poisson. C'est amusant de jouer avec lui.",
+      "questions": [
+        {
+          "question": "何を飼っていますか。",
+          "question_fr": "Quel animal a-t-il ?",
+          "options": ["犬", "猫", "鳥", "魚"],
+          "options_fr": ["Chien", "Chat", "Oiseau", "Poisson"],
+          "correct": 1
+        },
+        {
+          "question": "ペットは何歳ですか。",
+          "question_fr": "Quel âge a l'animal ?",
+          "options": ["二歳", "三歳", "四歳", "五歳"],
+          "options_fr": ["2 ans", "3 ans", "4 ans", "5 ans"],
+          "correct": 1
+        },
+        {
+          "question": "ミケは何が好きですか。",
+          "question_fr": "Qu'est-ce que Mike aime ?",
+          "options": ["肉", "野菜", "魚", "果物"],
+          "options_fr": ["Viande", "Légumes", "Poisson", "Fruits"],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "引っ越し",
+      "difficulty": 3,
+      "category": "Vie quotidienne",
+      "text": "来月、新しいアパートに引っ越します。今のアパートは古くて、駅から遠いです。新しいアパートは駅の近くで、部屋も広いです。引っ越しの準備で忙しいですが、新しい生活が楽しみです。",
+      "reading": "らいげつ、あたらしいアパートにひっこします。いまのアパートはふるくて、えきからとおいです。あたらしいアパートはえきのちかくで、へやもひろいです。ひっこしのじゅんびでいそがしいですが、あたらしいせいかつがたのしみです。",
+      "translation": "Le mois prochain, je déménage dans un nouvel appartement. Mon appartement actuel est vieux et loin de la gare. Le nouvel appartement est près de la gare et la chambre est aussi spacieuse. Je suis occupé avec les préparatifs du déménagement, mais j'ai hâte de commencer ma nouvelle vie.",
+      "questions": [
+        {
+          "question": "いつ引っ越しますか。",
+          "question_fr": "Quand déménage-t-il ?",
+          "options": ["今週", "来週", "今月", "来月"],
+          "options_fr": ["Cette semaine", "La semaine prochaine", "Ce mois-ci", "Le mois prochain"],
+          "correct": 3
+        },
+        {
+          "question": "今のアパートの問題は何ですか。",
+          "question_fr": "Quel est le problème de l'appartement actuel ?",
+          "options": ["新しい", "古くて駅から遠い", "狭い", "高い"],
+          "options_fr": ["Il est neuf", "Il est vieux et loin de la gare", "Il est étroit", "Il est cher"],
+          "correct": 1
+        },
+        {
+          "question": "新しいアパートはどうですか。",
+          "question_fr": "Comment est le nouvel appartement ?",
+          "options": ["駅から遠い", "古い", "駅の近くで広い", "狭い"],
+          "options_fr": ["Loin de la gare", "Vieux", "Près de la gare et spacieux", "Étroit"],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "旅行の計画",
+      "difficulty": 3,
+      "category": "Voyage",
+      "text": "夏休みに京都に行く予定です。三泊四日の旅行です。お寺や神社を見たいです。抹茶のアイスクリームも食べたいです。ホテルはもう予約しました。飛行機のチケットはまだです。早く予約しなければなりません。",
+      "reading": "なつやすみにきょうとにいくよていです。さんぱくよっかのりょこうです。おてらやじんじゃをみたいです。まっちゃのアイスクリームもたべたいです。ホテルはもうよやくしました。ひこうきのチケットはまだです。はやくよやくしなければなりません。",
+      "translation": "Je prévois d'aller à Kyoto pendant les vacances d'été. C'est un voyage de quatre jours et trois nuits. Je veux voir des temples et des sanctuaires. Je veux aussi manger de la glace au matcha. J'ai déjà réservé l'hôtel. Pas encore le billet d'avion. Je dois le réserver rapidement.",
+      "questions": [
+        {
+          "question": "いつ京都に行きますか。",
+          "question_fr": "Quand va-t-il à Kyoto ?",
+          "options": ["春休み", "夏休み", "冬休み", "ゴールデンウィーク"],
+          "options_fr": ["Vacances de printemps", "Vacances d'été", "Vacances d'hiver", "Golden Week"],
+          "correct": 1
+        },
+        {
+          "question": "何を見たいですか。",
+          "question_fr": "Que veut-il voir ?",
+          "options": ["山と海", "お寺と神社", "デパート", "映画館"],
+          "options_fr": ["Montagnes et mer", "Temples et sanctuaires", "Grands magasins", "Cinémas"],
+          "correct": 1
+        },
+        {
+          "question": "何をまだ予約していませんか。",
+          "question_fr": "Qu'est-ce qu'il n'a pas encore réservé ?",
+          "options": ["ホテル", "レストラン", "飛行機のチケット", "お寺"],
+          "options_fr": ["Hôtel", "Restaurant", "Billet d'avion", "Temple"],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "料理",
+      "difficulty": 3,
+      "category": "Cuisine",
+      "text": "今日、初めてカレーを作りました。母にレシピを教えてもらいました。野菜と肉を切って、煮ました。三時間ぐらいかかりましたが、とてもおいしくできました。家族も「おいしい」と言ってくれました。今度は別の料理に挑戦したいです。",
+      "reading": "きょう、はじめてカレーをつくりました。ははにレシピをおしえてもらいました。やさいとにくをきって、にました。さんじかんぐらいかかりましたが、とてもおいしくできました。かぞくも「おいしい」といってくれました。こんどはべつのりょうりにちょうせんしたいです。",
+      "translation": "Aujourd'hui, j'ai fait du curry pour la première fois. Ma mère m'a enseigné la recette. J'ai coupé les légumes et la viande, puis je les ai fait mijoter. Ça a pris environ trois heures, mais c'était très bon. Ma famille a aussi dit 'C'est délicieux'. La prochaine fois, je veux essayer un autre plat.",
+      "questions": [
+        {
+          "question": "何を作りましたか。",
+          "question_fr": "Qu'a-t-il préparé ?",
+          "options": ["ラーメン", "カレー", "寿司", "天ぷら"],
+          "options_fr": ["Ramen", "Curry", "Sushi", "Tempura"],
+          "correct": 1
+        },
+        {
+          "question": "誰がレシピを教えましたか。",
+          "question_fr": "Qui a enseigné la recette ?",
+          "options": ["父", "母", "友達", "先生"],
+          "options_fr": ["Père", "Mère", "Ami", "Professeur"],
+          "correct": 1
+        },
+        {
+          "question": "どのぐらい時間がかかりましたか。",
+          "question_fr": "Combien de temps cela a-t-il pris ?",
+          "options": ["一時間", "二時間", "三時間", "四時間"],
+          "options_fr": ["1 heure", "2 heures", "3 heures", "4 heures"],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "日本語の勉強",
+      "difficulty": 3,
+      "category": "Études",
+      "text": "私は二年前から日本語を勉強しています。最初はひらがなとカタカナが難しかったです。今は漢字も勉強しています。毎日、新しい言葉を覚えます。来年、日本に留学したいです。もっと日本語が上手になりたいです。",
+      "reading": "わたしはにねんまえからにほんごをべんきょうしています。さいしょはひらがなとカタカナがむずかしかったです。いまはかんじもべんきょうしています。まいにち、あたらしいことばをおぼえます。らいねん、にほんにりゅうがくしたいです。もっとにほんごがじょうずになりたいです。",
+      "translation": "J'étudie le japonais depuis deux ans. Au début, les hiragana et katakana étaient difficiles. Maintenant, j'étudie aussi les kanji. Tous les jours, j'apprends de nouveaux mots. L'année prochaine, je veux étudier au Japon. Je veux devenir meilleur en japonais.",
+      "questions": [
+        {
+          "question": "いつから日本語を勉強していますか。",
+          "question_fr": "Depuis quand étudie-t-il le japonais ?",
+          "options": ["一年前", "二年前", "三年前", "四年前"],
+          "options_fr": ["Depuis 1 an", "Depuis 2 ans", "Depuis 3 ans", "Depuis 4 ans"],
+          "correct": 1
+        },
+        {
+          "question": "最初、何が難しかったですか。",
+          "question_fr": "Qu'est-ce qui était difficile au début ?",
+          "options": ["漢字", "文法", "ひらがなとカタカナ", "会話"],
+          "options_fr": ["Kanji", "Grammaire", "Hiragana et katakana", "Conversation"],
+          "correct": 2
+        },
+        {
+          "question": "来年、何をしたいですか。",
+          "question_fr": "Que veut-il faire l'année prochaine ?",
+          "options": ["働く", "旅行する", "留学する", "結婚する"],
+          "options_fr": ["Travailler", "Voyager", "Étudier à l'étranger", "Se marier"],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "買い物",
+      "difficulty": 3,
+      "category": "Shopping",
+      "text": "店員：いらっしゃいませ。何かお探しですか。\nお客：青いシャツを探しています。\n店員：こちらはいかがですか。今、セールで三十パーセント引きです。\nお客：いいですね。試着してもいいですか。\n店員：もちろんです。試着室はあちらです。",
+      "reading": "てんいん：いらっしゃいませ。なにかおさがしですか。\nおきゃく：あおいシャツをさがしています。\nてんいん：こちらはいかがですか。いま、セールでさんじゅうパーセントびきです。\nおきゃく：いいですね。しちゃくしてもいいですか。\nてんいん：もちろんです。しちゃくしつはあちらです。",
+      "translation": "Vendeur : Bienvenue. Cherchez-vous quelque chose ?\nClient : Je cherche une chemise bleue.\nVendeur : Que pensez-vous de celle-ci ? Elle est actuellement en solde avec 30% de réduction.\nClient : C'est bien. Puis-je l'essayer ?\nVendeur : Bien sûr. La cabine d'essayage est là-bas.",
+      "questions": [
+        {
+          "question": "お客さんは何を探していますか。",
+          "question_fr": "Que cherche le client ?",
+          "options": ["赤いシャツ", "青いシャツ", "白いシャツ", "黒いシャツ"],
+          "options_fr": ["Chemise rouge", "Chemise bleue", "Chemise blanche", "Chemise noire"],
+          "correct": 1
+        },
+        {
+          "question": "今、いくら引きですか。",
+          "question_fr": "Quelle est la réduction actuelle ?",
+          "options": ["二十パーセント", "三十パーセント", "四十パーセント", "五十パーセント"],
+          "options_fr": ["20%", "30%", "40%", "50%"],
+          "correct": 1
+        },
+        {
+          "question": "試着室はどこですか。",
+          "question_fr": "Où est la cabine d'essayage ?",
+          "options": ["こちら", "そちら", "あちら", "どこでも"],
+          "options_fr": ["Ici", "Là", "Là-bas", "N'importe où"],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "電話",
+      "difficulty": 3,
+      "category": "Communication",
+      "text": "山田：もしもし、田中さんのお宅ですか。\n田中：はい、そうです。\n山田：山田と申します。佐藤さんはいらっしゃいますか。\n田中：申し訳ございません。今、外出しております。\n山田：そうですか。では、また後でかけ直します。\n田中：かしこまりました。よろしくお願いいたします。",
+      "reading": "やまだ：もしもし、たなかさんのおたくですか。\nたなか：はい、そうです。\nやまだ：やまだともうします。さとうさんはいらっしゃいますか。\nたなか：もうしわけございません。いま、がいしゅつしております。\nやまだ：そうですか。では、またあとでかけなおします。\nたなか：かしこまりました。よろしくおねがいいたします。",
+      "translation": "Yamada : Allô, est-ce la résidence de Tanaka-san ?\nTanaka : Oui, c'est ça.\nYamada : Je m'appelle Yamada. Sato-san est-il là ?\nTanaka : Je suis désolé. Il est sorti pour le moment.\nYamada : Je vois. Alors, je rappellerai plus tard.\nTanaka : Très bien. Merci beaucoup.",
+      "questions": [
+        {
+          "question": "山田さんは誰に電話しましたか。",
+          "question_fr": "À qui Yamada-san a-t-il téléphoné ?",
+          "options": ["田中さんの家", "佐藤さんの家", "鈴木さんの家", "会社"],
+          "options_fr": ["Chez Tanaka-san", "Chez Sato-san", "Chez Suzuki-san", "L'entreprise"],
+          "correct": 0
+        },
+        {
+          "question": "山田さんは誰と話したいですか。",
+          "question_fr": "Avec qui Yamada-san veut-il parler ?",
+          "options": ["田中さん", "佐藤さん", "鈴木さん", "山本さん"],
+          "options_fr": ["Tanaka-san", "Sato-san", "Suzuki-san", "Yamamoto-san"],
+          "correct": 1
+        },
+        {
+          "question": "佐藤さんは今どこですか。",
+          "question_fr": "Où est Sato-san maintenant ?",
+          "options": ["家にいます", "会社にいます", "外出しています", "学校にいます"],
+          "options_fr": ["À la maison", "Au bureau", "Sorti", "À l'école"],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "季節",
+      "difficulty": 3,
+      "category": "Saisons",
+      "text": "日本には四つの季節があります。春は桜がきれいです。夏は暑くて、海に行く人が多いです。秋は紅葉が美しいです。冬は寒くて、雪が降ります。私は春が一番好きです。花を見るのが楽しいからです。",
+      "reading": "にほんにはよっつのきせつがあります。はるはさくらがきれいです。なつはあつくて、うみにいくひとがおおいです。あきはこうようがうつくしいです。ふゆはさむくて、ゆきがふります。わたしははるがいちばんすきです。はなをみるのがたのしいからです。",
+      "translation": "Il y a quatre saisons au Japon. Au printemps, les cerisiers sont beaux. En été, il fait chaud et beaucoup de gens vont à la mer. En automne, les feuilles d'automne sont magnifiques. En hiver, il fait froid et il neige. Je préfère le printemps. Parce que c'est amusant de regarder les fleurs.",
+      "questions": [
+        {
+          "question": "日本にはいくつの季節がありますか。",
+          "question_fr": "Combien de saisons y a-t-il au Japon ?",
+          "options": ["二つ", "三つ", "四つ", "五つ"],
+          "options_fr": ["2", "3", "4", "5"],
+          "correct": 2
+        },
+        {
+          "question": "夏、何をする人が多いですか。",
+          "question_fr": "Que font beaucoup de gens en été ?",
+          "options": ["山に行く", "海に行く", "スキーをする", "花見をする"],
+          "options_fr": ["Vont à la montagne", "Vont à la mer", "Font du ski", "Font du hanami"],
+          "correct": 1
+        },
+        {
+          "question": "この人はどの季節が好きですか。",
+          "question_fr": "Quelle saison cette personne préfère-t-elle ?",
+          "options": ["春", "夏", "秋", "冬"],
+          "options_fr": ["Printemps", "Été", "Automne", "Hiver"],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "パーティーの案内",
+      "difficulty": 3,
+      "category": "Communication",
+      "text": "クリスマスパーティーのご案内\n\n日時：12月24日（土）午後6時から\n場所：山田さんの家\n持ち物：飲み物と料理を一品\n服装：自由\n\nみんなで楽しく過ごしましょう！\n参加できる方は12月15日までに連絡してください。",
+      "reading": "クリスマスパーティーのごあんない\n\nにちじ：じゅうにがつにじゅうよっか（ど）ごごろくじから\nばしょ：やまださんのいえ\nもちもの：のみものとりょうりをいっぴん\nふくそう：じゆう\n\nみんなでたのしくすごしましょう！\nさんかできるかたはじゅうにがつじゅうごにちまでにれんらくしてください。",
+      "translation": "Invitation à la fête de Noël\n\nDate et heure : 24 décembre (samedi) à partir de 18h\nLieu : Chez Yamada-san\nÀ apporter : Boissons et un plat\nTenue : Libre\n\nPassons un bon moment ensemble !\nSi vous pouvez participer, veuillez nous contacter avant le 15 décembre.",
+      "questions": [
+        {
+          "question": "パーティーはいつですか。",
+          "question_fr": "Quand est la fête ?",
+          "options": ["12月15日", "12月24日", "12月25日", "12月31日"],
+          "options_fr": ["15 décembre", "24 décembre", "25 décembre", "31 décembre"],
+          "correct": 1
+        },
+        {
+          "question": "何を持って行きますか。",
+          "question_fr": "Qu'apporte-t-on ?",
+          "options": ["プレゼントだけ", "飲み物だけ", "飲み物と料理", "何も"],
+          "options_fr": ["Seulement un cadeau", "Seulement des boissons", "Boissons et nourriture", "Rien"],
+          "correct": 2
+        },
+        {
+          "question": "いつまでに連絡しますか。",
+          "question_fr": "Jusqu'à quand faut-il répondre ?",
+          "options": ["12月10日", "12月15日", "12月20日", "12月24日"],
+          "options_fr": ["10 décembre", "15 décembre", "20 décembre", "24 décembre"],
+          "correct": 1
+        }
+      ]
+    }
+  ]
+}
