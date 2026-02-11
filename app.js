@@ -10,7 +10,9 @@ const app = {
         sentences: null,
         adjectives: null,
         grammar: null,
-        vocabulary: null
+        vocabulary: null,
+        kana: null,
+        reading: null
     },
     state: {
         currentKanjiIndex: 0,
@@ -25,6 +27,10 @@ const app = {
         adjectiveMode: 'list',
         grammarMode: 'list',
         vocabularyMode: 'list',
+        kanaScript: 'hiragana',
+        kanaTable: 'basic',
+        readingMode: 'practice',
+        currentReadingIndex: 0,
         quizScore: 0,
         quizTotal: 0,
         counterQuizScore: 0,
@@ -47,6 +53,13 @@ const app = {
         grammarQuizTotal: 0,
         vocabularyQuizScore: 0,
         vocabularyQuizTotal: 0,
+        readingQuizScore: 0,
+        readingQuizTotal: 0,
+        showReadingHiragana: false,
+        showReadingTranslation: false,
+        selectedReadingDifficulty: 'all',
+        selectedReadingCategory: 'all',
+        currentReadingAnswers: [],
         currentQuizQuestion: null,
         currentCounterQuestion: null,
         currentVerbQuestion: null,
@@ -63,7 +76,11 @@ const app = {
         selectedGrammarCategory: 'all',
         selectedVocabularyCategory: 'all',
         showRomaji: false,
-        allKanji: []
+        allKanji: [],
+        globalQuizScore: 0,
+        globalQuizTotal: 0,
+        currentGlobalQuestion: null,
+        lastGlobalCategory: null
     },
     progress: {
         studiedKanji: new Set(),
@@ -76,6 +93,8 @@ const app = {
         studiedAdjectives: new Set(),
         studiedGrammar: new Set(),
         studiedVocabulary: new Set(),
+        studiedKana: new Set(),
+        studiedReading: new Set(),
         correctAnswers: 0,
         totalAttempts: 0
     },
@@ -92,7 +111,7 @@ const app = {
     // Chargement des données
     async loadData() {
         try {
-            const [kanjiResponse, countersResponse, verbsResponse, verbsPlusResponse, adverbsResponse, particlesResponse, sentencesResponse, adjectivesResponse, grammarResponse, vocabularyResponse] = await Promise.all([
+            const [kanjiResponse, countersResponse, verbsResponse, verbsPlusResponse, adverbsResponse, particlesResponse, sentencesResponse, adjectivesResponse, grammarResponse, vocabularyResponse, kanaResponse, readingResponse] = await Promise.all([
                 fetch('data/kanji.json'),
                 fetch('data/counters.json'),
                 fetch('data/verbs.json'),
@@ -102,7 +121,9 @@ const app = {
                 fetch('data/sentences.json'),
                 fetch('data/adjectives.json'),
                 fetch('data/grammar.json'),
-                fetch('data/vocabulary.json')
+                fetch('data/vocabulary.json'),
+                fetch('data/kana.json'),
+                fetch('data/reading.json')
             ]);
 
             this.data.kanji = await kanjiResponse.json();
@@ -115,6 +136,8 @@ const app = {
             this.data.adjectives = await adjectivesResponse.json();
             this.data.grammar = await grammarResponse.json();
             this.data.vocabulary = await vocabularyResponse.json();
+            this.data.kana = await kanaResponse.json();
+            this.data.reading = await readingResponse.json();
 
             // Créer une liste plate de tous les kanji
             this.state.allKanji = [];
@@ -147,6 +170,8 @@ const app = {
             studiedAdjectives: Array.from(this.progress.studiedAdjectives),
             studiedGrammar: Array.from(this.progress.studiedGrammar),
             studiedVocabulary: Array.from(this.progress.studiedVocabulary),
+            studiedKana: Array.from(this.progress.studiedKana),
+            studiedReading: Array.from(this.progress.studiedReading),
             correctAnswers: this.progress.correctAnswers,
             totalAttempts: this.progress.totalAttempts
         }));
@@ -166,6 +191,8 @@ const app = {
             this.progress.studiedAdjectives = new Set(data.studiedAdjectives || []);
             this.progress.studiedGrammar = new Set(data.studiedGrammar || []);
             this.progress.studiedVocabulary = new Set(data.studiedVocabulary || []);
+            this.progress.studiedKana = new Set(data.studiedKana || []);
+            this.progress.studiedReading = new Set(data.studiedReading || []);
             this.progress.correctAnswers = data.correctAnswers || 0;
             this.progress.totalAttempts = data.totalAttempts || 0;
         }
@@ -225,6 +252,12 @@ const app = {
             this.setGrammarMode('list');
         } else if (mode === 'vocabulary') {
             this.setVocabularyMode('list');
+        } else if (mode === 'kana') {
+            this.displayKanaTable();
+        } else if (mode === 'reading') {
+            this.setReadingMode('practice');
+        } else if (mode === 'global-quiz') {
+            this.startGlobalQuiz();
         }
     },
 
@@ -239,7 +272,9 @@ const app = {
                             this.progress.studiedSentences.size +
                             this.progress.studiedAdjectives.size +
                             this.progress.studiedGrammar.size +
-                            this.progress.studiedVocabulary.size;
+                            this.progress.studiedVocabulary.size +
+                            this.progress.studiedKana.size +
+                            this.progress.studiedReading.size;
 
         const successRate = this.progress.totalAttempts > 0
             ? Math.round((this.progress.correctAnswers / this.progress.totalAttempts) * 100)
@@ -277,6 +312,11 @@ const app = {
 
         const totalVocabulary = this.data.vocabulary?.categories.reduce((sum, cat) => sum + cat.words.length, 0) || 250;
         this.updateProgress('vocabulary', this.progress.studiedVocabulary.size, totalVocabulary);
+
+        this.updateProgress('kana', this.progress.studiedKana.size, 142);
+
+        const totalReading = this.data.reading?.texts.length || 22;
+        this.updateProgress('reading', this.progress.studiedReading.size, totalReading);
     },
 
     updateProgress(type, current, total) {
@@ -448,17 +488,32 @@ const app = {
         // Afficher feedback
         const feedback = document.getElementById('quiz-feedback');
         const kanji = this.state.currentQuizQuestion.kanji;
+
+        // Construire les lectures (on'yomi et kun'yomi)
         const pronunciations = [];
-        if (kanji.on) pronunciations.push(`On: ${kanji.on}`);
-        if (kanji.kun) pronunciations.push(`Kun: ${kanji.kun}`);
+        if (kanji.readings.onyomi && kanji.readings.onyomi.length > 0) {
+            pronunciations.push(`<strong>On:</strong> ${kanji.readings.onyomi.join('、')}`);
+        }
+        if (kanji.readings.kunyomi && kanji.readings.kunyomi.length > 0) {
+            pronunciations.push(`<strong>Kun:</strong> ${kanji.readings.kunyomi.join('、')}`);
+        }
         const pronText = pronunciations.join(' | ');
+
+        // Ajouter un exemple avec sa lecture
+        let exampleText = '';
+        if (kanji.examples && kanji.examples.length > 0) {
+            const ex = kanji.examples[0];
+            exampleText = `<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.2);">
+                <strong>Exemple:</strong> ${ex.word} (${ex.reading}) = ${ex.meaning}
+            </div>`;
+        }
 
         if (correct) {
             feedback.className = 'quiz-feedback correct';
-            feedback.innerHTML = `✓ Correct !<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${pronText}</span>`;
+            feedback.innerHTML = `✓ Correct !<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${pronText}</span>${exampleText}`;
         } else {
             feedback.className = 'quiz-feedback incorrect';
-            feedback.innerHTML = `✗ Incorrect. La bonne réponse était : ${this.state.currentQuizQuestion.correctAnswer}<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${pronText}</span>`;
+            feedback.innerHTML = `✗ Incorrect. La bonne réponse était : ${this.state.currentQuizQuestion.correctAnswer}<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${pronText}</span>${exampleText}`;
         }
 
         // Rendre la boîte de feedback cliquable pour passer à la question suivante
@@ -2584,6 +2639,808 @@ const app = {
 
     nextVocabularyQuestion() {
         this.generateVocabularyQuestion();
+    },
+
+    // ==================================================
+    // FONCTIONS POUR KANA
+    // ==================================================
+
+    setKanaScript(script) {
+        this.state.kanaScript = script;
+
+        // Update button states
+        const buttons = document.querySelectorAll('#kana-page .mode-selector:first-of-type .mode-btn');
+        buttons.forEach(btn => {
+            btn.classList.remove('active');
+            if ((script === 'hiragana' && btn.textContent.includes('Hiragana')) ||
+                (script === 'katakana' && btn.textContent.includes('Katakana'))) {
+                btn.classList.add('active');
+            }
+        });
+
+        this.displayKanaTable();
+    },
+
+    setKanaTable(table) {
+        this.state.kanaTable = table;
+
+        // Update button states
+        const buttons = document.querySelectorAll('#kana-page .mode-selector:last-of-type .mode-btn');
+        buttons.forEach(btn => {
+            btn.classList.remove('active');
+            if ((table === 'basic' && btn.textContent.includes('Basique')) ||
+                (table === 'dakuten' && btn.textContent.includes('Dakuten')) ||
+                (table === 'combinations' && btn.textContent.includes('Combinaisons'))) {
+                btn.classList.add('active');
+            }
+        });
+
+        this.displayKanaTable();
+    },
+
+    displayKanaTable() {
+        const container = document.getElementById('kana-table');
+        if (!this.data.kana) return;
+
+        const script = this.state.kanaScript;
+        const table = this.state.kanaTable;
+
+        let html = '';
+
+        if (table === 'basic' || table === 'dakuten') {
+            const rows = this.data.kana[script][table];
+
+            html = '<table class="kana-grid-table">';
+            html += '<thead><tr><th></th><th>a</th><th>i</th><th>u</th><th>e</th><th>o</th></tr></thead>';
+            html += '<tbody>';
+
+            rows.forEach(row => {
+                html += '<tr>';
+                html += `<td class="row-label">${row.row}</td>`;
+
+                row.characters.forEach(char => {
+                    if (char.kana) {
+                        html += `<td class="kana-cell" onclick="app.playKanaSound('${char.romaji}', '${char.kana}')">
+                                    <div class="kana-char">${char.kana}</div>
+                                    <div class="kana-romaji">${char.romaji}</div>
+                                 </td>`;
+                    } else {
+                        html += '<td class="kana-cell empty"></td>';
+                    }
+                });
+
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+        } else if (table === 'combinations') {
+            const combinations = this.data.kana[script][table];
+
+            html = '<div class="kana-combinations-grid">';
+
+            combinations.forEach(combo => {
+                html += `<div class="combination-group">`;
+                html += `<h4 class="combination-label">${combo.base}</h4>`;
+                html += `<div class="combination-chars">`;
+
+                combo.chars.forEach(char => {
+                    html += `<div class="kana-cell" onclick="app.playKanaSound('${char.romaji}', '${char.kana}')">
+                                <div class="kana-char">${char.kana}</div>
+                                <div class="kana-romaji">${char.romaji}</div>
+                             </div>`;
+                });
+
+                html += '</div></div>';
+            });
+
+            html += '</div>';
+        }
+
+        container.innerHTML = html;
+    },
+
+    playKanaSound(romaji, kana) {
+        if ('speechSynthesis' in window) {
+            const utterance = new SpeechSynthesisUtterance(kana || romaji);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            speechSynthesis.speak(utterance);
+
+            this.progress.studiedKana.add(romaji);
+            this.saveProgress();
+            this.updateHomeStats();
+        }
+    },
+
+    // ==================================================
+    // FONCTIONS POUR LECTURE (READING)
+    // ==================================================
+
+    setReadingMode(mode) {
+        this.state.readingMode = mode;
+
+        // Update button states
+        const buttons = document.querySelectorAll('#reading-page .mode-selector .mode-btn');
+        buttons.forEach(btn => {
+            btn.classList.remove('active');
+            if ((mode === 'practice' && btn.textContent.includes('Pratique')) ||
+                (mode === 'list' && btn.textContent.includes('Liste'))) {
+                btn.classList.add('active');
+            }
+        });
+
+        document.getElementById('reading-practice').style.display = mode === 'practice' ? 'block' : 'none';
+        document.getElementById('reading-list').style.display = mode === 'list' ? 'block' : 'none';
+
+        if (mode === 'practice') {
+            this.displayReadingText();
+        } else {
+            this.displayReadingList();
+        }
+    },
+
+    displayReadingText() {
+        if (!this.data.reading || !this.data.reading.texts) return;
+
+        const texts = this.getFilteredReadingTexts();
+        if (texts.length === 0) return;
+
+        const text = texts[this.state.currentReadingIndex];
+
+        document.getElementById('reading-text-title').textContent = text.title;
+
+        const stars = '⭐'.repeat(text.difficulty);
+        const difficultyLabels = ['', 'Facile', 'Moyen', 'Difficile'];
+        document.getElementById('reading-text-difficulty').textContent = `${stars} ${difficultyLabels[text.difficulty]}`;
+
+        document.getElementById('reading-text-japanese').textContent = text.text;
+
+        document.getElementById('reading-text-hiragana').textContent = text.reading;
+        document.getElementById('reading-text-hiragana').style.display = this.state.showReadingHiragana ? 'block' : 'none';
+        document.getElementById('toggle-reading-text').textContent = this.state.showReadingHiragana ? 'Masquer la lecture' : 'Afficher la lecture';
+
+        document.getElementById('reading-text-french').textContent = text.translation;
+        document.getElementById('reading-text-french').style.display = this.state.showReadingTranslation ? 'block' : 'none';
+        document.getElementById('toggle-translation-text').textContent = this.state.showReadingTranslation ? 'Masquer la traduction' : 'Afficher la traduction';
+
+        this.displayReadingQuestions(text);
+
+        document.getElementById('reading-counter').textContent = `${this.state.currentReadingIndex + 1} / ${texts.length}`;
+
+        this.progress.studiedReading.add(text.id);
+        this.saveProgress();
+        this.updateHomeStats();
+    },
+
+    displayReadingQuestions(text) {
+        const container = document.getElementById('reading-questions');
+        let html = '<h3>Questions de compréhension</h3>';
+
+        text.questions.forEach((q, index) => {
+            html += `<div class="reading-question-block" id="reading-q-${index}">`;
+            html += `<p class="question-text"><strong>${index + 1}. ${q.question}</strong></p>`;
+            html += `<p class="question-text-fr">${q.question_fr}</p>`;
+            html += `<div class="reading-question-options">`;
+
+            q.options.forEach((option, optIndex) => {
+                html += `<button class="reading-option-btn" onclick="app.checkReadingAnswer(${index}, ${optIndex})">
+                            ${option}
+                            <span class="option-translation">${q.options_fr[optIndex]}</span>
+                         </button>`;
+            });
+
+            html += '</div>';
+            html += `<div class="reading-feedback" id="reading-feedback-${index}" style="display: none;"></div>`;
+            html += '</div>';
+        });
+
+        container.innerHTML = html;
+        this.state.currentReadingAnswers = new Array(text.questions.length).fill(null);
+    },
+
+    checkReadingAnswer(questionIndex, selectedOption) {
+        if (!this.data.reading || !this.data.reading.texts) return;
+
+        const texts = this.getFilteredReadingTexts();
+        const text = texts[this.state.currentReadingIndex];
+        const question = text.questions[questionIndex];
+
+        if (this.state.currentReadingAnswers[questionIndex] !== null) return;
+
+        const isCorrect = selectedOption === question.correct;
+        this.state.currentReadingAnswers[questionIndex] = selectedOption;
+
+        this.state.readingQuizTotal++;
+        if (isCorrect) {
+            this.state.readingQuizScore++;
+            this.progress.correctAnswers++;
+        }
+        this.progress.totalAttempts++;
+
+        const feedbackDiv = document.getElementById(`reading-feedback-${questionIndex}`);
+        feedbackDiv.style.display = 'block';
+        feedbackDiv.className = `reading-feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+        feedbackDiv.textContent = isCorrect ? '✓ Correct !' : `✗ Incorrect. La bonne réponse est: ${question.options[question.correct]}`;
+
+        const questionBlock = document.getElementById(`reading-q-${questionIndex}`);
+        const buttons = questionBlock.querySelectorAll('.reading-option-btn');
+        buttons.forEach((btn, idx) => {
+            btn.disabled = true;
+            if (idx === question.correct) {
+                btn.classList.add('correct-answer');
+            } else if (idx === selectedOption && !isCorrect) {
+                btn.classList.add('wrong-answer');
+            }
+        });
+
+        this.updateReadingScore();
+        this.saveProgress();
+    },
+
+    updateReadingScore() {
+        document.getElementById('reading-quiz-score').textContent =
+            `Score: ${this.state.readingQuizScore}/${this.state.readingQuizTotal}`;
+    },
+
+    toggleReadingHiragana() {
+        this.state.showReadingHiragana = !this.state.showReadingHiragana;
+        document.getElementById('reading-text-hiragana').style.display =
+            this.state.showReadingHiragana ? 'block' : 'none';
+        document.getElementById('toggle-reading-text').textContent =
+            this.state.showReadingHiragana ? 'Masquer la lecture' : 'Afficher la lecture';
+    },
+
+    toggleReadingTranslation() {
+        this.state.showReadingTranslation = !this.state.showReadingTranslation;
+        document.getElementById('reading-text-french').style.display =
+            this.state.showReadingTranslation ? 'block' : 'none';
+        document.getElementById('toggle-translation-text').textContent =
+            this.state.showReadingTranslation ? 'Masquer la traduction' : 'Afficher la traduction';
+    },
+
+    previousReadingText() {
+        const texts = this.getFilteredReadingTexts();
+        if (this.state.currentReadingIndex > 0) {
+            this.state.currentReadingIndex--;
+            this.state.showReadingHiragana = false;
+            this.state.showReadingTranslation = false;
+            this.displayReadingText();
+        }
+    },
+
+    nextReadingText() {
+        const texts = this.getFilteredReadingTexts();
+        if (this.state.currentReadingIndex < texts.length - 1) {
+            this.state.currentReadingIndex++;
+            this.state.showReadingHiragana = false;
+            this.state.showReadingTranslation = false;
+            this.displayReadingText();
+        }
+    },
+
+    getFilteredReadingTexts() {
+        if (!this.data.reading || !this.data.reading.texts) return [];
+
+        let texts = this.data.reading.texts;
+
+        if (this.state.selectedReadingDifficulty !== 'all') {
+            texts = texts.filter(t => t.difficulty === parseInt(this.state.selectedReadingDifficulty));
+        }
+
+        if (this.state.selectedReadingCategory !== 'all') {
+            texts = texts.filter(t => t.category === this.state.selectedReadingCategory);
+        }
+
+        return texts;
+    },
+
+    filterReadingTexts() {
+        const difficultyFilter = document.getElementById('reading-difficulty-filter').value;
+        this.state.selectedReadingDifficulty = difficultyFilter;
+        this.state.currentReadingIndex = 0;
+        this.displayReadingText();
+    },
+
+    playReadingAudio() {
+        if (!this.data.reading || !this.data.reading.texts) return;
+
+        const texts = this.getFilteredReadingTexts();
+        const text = texts[this.state.currentReadingIndex];
+
+        if ('speechSynthesis' in window) {
+            const utterance = new SpeechSynthesisUtterance(text.text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.7;
+            speechSynthesis.speak(utterance);
+        }
+    },
+
+    displayReadingList() {
+        if (!this.data.reading || !this.data.reading.texts) return;
+
+        const container = document.getElementById('reading-list-container');
+        const categoryFilter = document.getElementById('reading-category-filter');
+
+        const categories = [...new Set(this.data.reading.texts.map(t => t.category))];
+        let filterHtml = '<option value="all">Toutes les catégories</option>';
+        categories.forEach(cat => {
+            filterHtml += `<option value="${cat}">${cat}</option>`;
+        });
+        categoryFilter.innerHTML = filterHtml;
+
+        const texts = this.getFilteredReadingTexts();
+        let html = '<div class="reading-list-grid">';
+
+        texts.forEach(text => {
+            const stars = '⭐'.repeat(text.difficulty);
+            const isStudied = this.progress.studiedReading.has(text.id);
+
+            html += `<div class="reading-list-item ${isStudied ? 'studied' : ''}" onclick="app.goToReadingText(${text.id})">
+                        <h4>${text.title}</h4>
+                        <p class="reading-category">${text.category}</p>
+                        <p class="reading-difficulty">${stars}</p>
+                        ${isStudied ? '<span class="studied-badge">✓ Étudié</span>' : ''}
+                     </div>`;
+        });
+
+        html += '</div>';
+        container.innerHTML = html;
+    },
+
+    filterReadingByCategory() {
+        const categoryFilter = document.getElementById('reading-category-filter').value;
+        this.state.selectedReadingCategory = categoryFilter;
+        this.displayReadingList();
+    },
+
+    goToReadingText(textId) {
+        const index = this.data.reading.texts.findIndex(t => t.id === textId);
+        if (index !== -1) {
+            this.state.currentReadingIndex = index;
+            this.state.selectedReadingDifficulty = 'all';
+            this.state.selectedReadingCategory = 'all';
+            this.setReadingMode('practice');
+        }
+    },
+
+    // ========== QUIZ GLOBAL ==========
+
+    startGlobalQuiz() {
+        this.state.globalQuizScore = 0;
+        this.state.globalQuizTotal = 0;
+        this.state.lastGlobalCategory = null;
+        this.updateGlobalQuizScore();
+        this.nextGlobalQuestion();
+    },
+
+    nextGlobalQuestion() {
+        // Réinitialiser le feedback
+        const feedback = document.getElementById('global-quiz-feedback');
+        feedback.innerHTML = '';
+        feedback.className = 'quiz-feedback';
+        feedback.style.cursor = 'default';
+        feedback.onclick = null;
+
+        // Générer une nouvelle question
+        this.generateRandomGlobalQuestion();
+    },
+
+    generateRandomGlobalQuestion() {
+        // Liste des catégories disponibles
+        const categories = [
+            'kanji',
+            'counters',
+            'verbs',
+            'adverbs',
+            'particles-usage',
+            'particles-fill',
+            'vocabulary'
+        ];
+
+        // Utiliser Fisher-Yates shuffle pour un bon aléatoire
+        const shuffled = [...categories].sort(() => Math.random() - 0.5);
+
+        // Éviter de répéter la même catégorie deux fois de suite
+        let selectedCategory = shuffled[0];
+        if (this.state.lastGlobalCategory && shuffled.length > 1) {
+            selectedCategory = shuffled.find(cat => cat !== this.state.lastGlobalCategory) || shuffled[0];
+        }
+
+        this.state.lastGlobalCategory = selectedCategory;
+
+        // Générer la question selon la catégorie
+        switch (selectedCategory) {
+            case 'kanji':
+                this.generateGlobalKanjiQuestion();
+                break;
+            case 'counters':
+                this.generateGlobalCounterQuestion();
+                break;
+            case 'verbs':
+                this.generateGlobalVerbQuestion();
+                break;
+            case 'adverbs':
+                this.generateGlobalAdverbQuestion();
+                break;
+            case 'particles-usage':
+                this.generateGlobalParticleUsageQuestion();
+                break;
+            case 'particles-fill':
+                this.generateGlobalParticleFillQuestion();
+                break;
+            case 'vocabulary':
+                this.generateGlobalVocabularyQuestion();
+                break;
+        }
+    },
+
+    generateGlobalKanjiQuestion() {
+        if (!this.data.kanji || this.state.allKanji.length === 0) {
+            this.generateRandomGlobalQuestion();
+            return;
+        }
+
+        const correctKanji = this.state.allKanji[Math.floor(Math.random() * this.state.allKanji.length)];
+        const options = [correctKanji.meaning];
+
+        while (options.length < 4) {
+            const randomKanji = this.state.allKanji[Math.floor(Math.random() * this.state.allKanji.length)];
+            if (!options.includes(randomKanji.meaning)) {
+                options.push(randomKanji.meaning);
+            }
+        }
+
+        this.shuffleArray(options);
+
+        this.state.currentGlobalQuestion = {
+            category: 'Kanji',
+            type: 'kanji',
+            question: correctKanji.character,
+            options: options,
+            correctAnswer: correctKanji.meaning,
+            detail: correctKanji
+        };
+
+        this.displayGlobalQuestion();
+    },
+
+    generateGlobalCounterQuestion() {
+        if (!this.data.counters) {
+            this.generateRandomGlobalQuestion();
+            return;
+        }
+
+        const correctCounter = this.data.counters.counters[Math.floor(Math.random() * this.data.counters.counters.length)];
+        const options = [correctCounter.usage];
+
+        while (options.length < 4) {
+            const randomCounter = this.data.counters.counters[Math.floor(Math.random() * this.data.counters.counters.length)];
+            if (!options.includes(randomCounter.usage)) {
+                options.push(randomCounter.usage);
+            }
+        }
+
+        this.shuffleArray(options);
+
+        this.state.currentGlobalQuestion = {
+            category: 'Compteurs',
+            type: 'counter',
+            question: correctCounter.name,  // name contient déjà "kanji (romaji)"
+            options: options,
+            correctAnswer: correctCounter.usage,
+            detail: correctCounter
+        };
+
+        this.displayGlobalQuestion();
+    },
+
+    generateGlobalVerbQuestion() {
+        if (!this.data.verbs) {
+            this.generateRandomGlobalQuestion();
+            return;
+        }
+
+        let allVerbs = [];
+        this.data.verbs.groups.forEach(group => {
+            allVerbs = allVerbs.concat(group.verbs);
+        });
+
+        const correctVerb = allVerbs[Math.floor(Math.random() * allVerbs.length)];
+        const conjugationKeys = Object.keys(correctVerb.conjugations);
+        const randomConjKey = conjugationKeys[Math.floor(Math.random() * conjugationKeys.length)];
+        const conjugatedForm = correctVerb.conjugations[randomConjKey];
+
+        const options = [correctVerb.kana];
+        while (options.length < 4) {
+            const randomVerb = allVerbs[Math.floor(Math.random() * allVerbs.length)];
+            if (!options.includes(randomVerb.kana)) {
+                options.push(randomVerb.kana);
+            }
+        }
+
+        this.shuffleArray(options);
+
+        this.state.currentGlobalQuestion = {
+            category: 'Verbes',
+            type: 'verb',
+            question: conjugatedForm.kanji,
+            options: options,
+            correctAnswer: correctVerb.kana,
+            detail: { verb: correctVerb, conjugation: conjugatedForm }
+        };
+
+        this.displayGlobalQuestion();
+    },
+
+    generateGlobalAdverbQuestion() {
+        if (!this.data.adverbs) {
+            this.generateRandomGlobalQuestion();
+            return;
+        }
+
+        let allAdverbs = [];
+        this.data.adverbs.categories.forEach(cat => {
+            allAdverbs = allAdverbs.concat(cat.adverbs);
+        });
+
+        const correctAdverb = allAdverbs[Math.floor(Math.random() * allAdverbs.length)];
+        const options = [correctAdverb.meaning];
+
+        while (options.length < 4) {
+            const randomAdverb = allAdverbs[Math.floor(Math.random() * allAdverbs.length)];
+            if (!options.includes(randomAdverb.meaning)) {
+                options.push(randomAdverb.meaning);
+            }
+        }
+
+        this.shuffleArray(options);
+
+        this.state.currentGlobalQuestion = {
+            category: 'Adverbes',
+            type: 'adverb',
+            question: `${correctAdverb.kanji || correctAdverb.hiragana} (${correctAdverb.hiragana})`,
+            options: options,
+            correctAnswer: correctAdverb.meaning,
+            detail: correctAdverb
+        };
+
+        this.displayGlobalQuestion();
+    },
+
+    generateGlobalParticleUsageQuestion() {
+        if (!this.data.particles) {
+            this.generateRandomGlobalQuestion();
+            return;
+        }
+
+        const correctParticle = this.data.particles.particles[Math.floor(Math.random() * this.data.particles.particles.length)];
+        const options = [correctParticle.usage];
+
+        while (options.length < 4) {
+            const randomParticle = this.data.particles.particles[Math.floor(Math.random() * this.data.particles.particles.length)];
+            if (!options.includes(randomParticle.usage)) {
+                options.push(randomParticle.usage);
+            }
+        }
+
+        this.shuffleArray(options);
+
+        this.state.currentGlobalQuestion = {
+            category: 'Particules (Usage)',
+            type: 'particle-usage',
+            question: `${correctParticle.particle} (${correctParticle.romaji})`,
+            options: options,
+            correctAnswer: correctParticle.usage,
+            detail: correctParticle
+        };
+
+        this.displayGlobalQuestion();
+    },
+
+    generateGlobalParticleFillQuestion() {
+        if (!this.data.particles || !this.data.particles.sentences) {
+            this.generateRandomGlobalQuestion();
+            return;
+        }
+
+        const correctSentence = this.data.particles.sentences[Math.floor(Math.random() * this.data.particles.sentences.length)];
+        const options = [correctSentence.particle];
+
+        // Générer des options différentes
+        const otherParticles = this.data.particles.particles.map(p => p.particle).filter(p => p !== correctSentence.particle);
+        while (options.length < 4 && otherParticles.length >= 3) {
+            const randomParticle = otherParticles[Math.floor(Math.random() * otherParticles.length)];
+            if (!options.includes(randomParticle)) {
+                options.push(randomParticle);
+            }
+        }
+
+        this.shuffleArray(options);
+
+        this.state.currentGlobalQuestion = {
+            category: 'Particules (Phrase)',
+            type: 'particle-fill',
+            question: correctSentence.sentence_incomplete,
+            options: options,
+            correctAnswer: correctSentence.particle,
+            detail: correctSentence
+        };
+
+        this.displayGlobalQuestion();
+    },
+
+    generateGlobalVocabularyQuestion() {
+        if (!this.data.vocabulary) {
+            this.generateRandomGlobalQuestion();
+            return;
+        }
+
+        let allWords = [];
+        this.data.vocabulary.categories.forEach(cat => {
+            allWords = allWords.concat(cat.words);
+        });
+
+        const correctWord = allWords[Math.floor(Math.random() * allWords.length)];
+        const options = [correctWord.meaning];
+
+        while (options.length < 4) {
+            const randomWord = allWords[Math.floor(Math.random() * allWords.length)];
+            if (!options.includes(randomWord.meaning)) {
+                options.push(randomWord.meaning);
+            }
+        }
+
+        this.shuffleArray(options);
+
+        this.state.currentGlobalQuestion = {
+            category: 'Vocabulaire',
+            type: 'vocabulary',
+            question: `${correctWord.kanji} (${correctWord.hiragana})`,
+            options: options,
+            correctAnswer: correctWord.meaning,
+            detail: correctWord
+        };
+
+        this.displayGlobalQuestion();
+    },
+
+    displayGlobalQuestion() {
+        const question = this.state.currentGlobalQuestion;
+
+        // Changer le titre selon la catégorie
+        const titleMap = {
+            'Kanji': 'Quel est le sens de ce kanji ?',
+            'Compteurs': 'À quoi sert ce compteur ?',
+            'Verbes': 'Quel est ce verbe ?',
+            'Adverbes': 'Quelle est la signification ?',
+            'Particules (Usage)': 'À quoi sert cette particule ?',
+            'Particules (Phrase)': 'Quelle particule compléter ?',
+            'Vocabulaire': 'Quelle est la signification ?'
+        };
+        document.getElementById('global-quiz-title').textContent = titleMap[question.category] || 'Quelle est la réponse ?';
+
+        // Afficher la catégorie
+        document.getElementById('global-quiz-category').textContent = question.category;
+
+        // Afficher la question
+        document.getElementById('global-quiz-question').textContent = question.question;
+
+        // Afficher les options
+        const optionsContainer = document.getElementById('global-quiz-options');
+        optionsContainer.innerHTML = '';
+
+        question.options.forEach(option => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option';
+            btn.textContent = option;
+            btn.onclick = () => this.checkGlobalAnswer(option);
+            optionsContainer.appendChild(btn);
+        });
+
+        // Cacher le bouton next au début
+        document.getElementById('global-next-question-btn').style.display = 'none';
+    },
+
+    checkGlobalAnswer(selected) {
+        const question = this.state.currentGlobalQuestion;
+        const correct = selected === question.correctAnswer;
+
+        this.state.globalQuizTotal++;
+        if (correct) {
+            this.state.globalQuizScore++;
+            this.progress.correctAnswers++;
+        }
+        this.progress.totalAttempts++;
+        this.saveProgress();
+        this.updateHomeStats();
+        this.updateGlobalQuizScore();
+
+        // Désactiver les boutons
+        const options = document.querySelectorAll('#global-quiz-options .quiz-option');
+        options.forEach(opt => {
+            opt.classList.add('disabled');
+            opt.onclick = null;
+            if (opt.textContent === question.correctAnswer) {
+                opt.classList.add('correct');
+            } else if (opt.textContent === selected && !correct) {
+                opt.classList.add('incorrect');
+            }
+        });
+
+        // Afficher feedback selon le type
+        const feedback = document.getElementById('global-quiz-feedback');
+        let feedbackHTML = '';
+
+        if (correct) {
+            feedbackHTML = '✓ Correct !';
+        } else {
+            feedbackHTML = `✗ Incorrect. La bonne réponse était : ${question.correctAnswer}`;
+        }
+
+        // Ajouter des détails selon le type
+        if (question.type === 'kanji') {
+            const kanji = question.detail;
+            const onReading = kanji.readings.onyomi.length > 0 ? kanji.readings.onyomi.join('、') : '';
+            const kunReading = kanji.readings.kunyomi.length > 0 ? kanji.readings.kunyomi.join('、') : '';
+            let readings = '';
+            if (onReading) readings += `<strong>On:</strong> ${onReading}`;
+            if (onReading && kunReading) readings += ' | ';
+            if (kunReading) readings += `<strong>Kun:</strong> ${kunReading}`;
+
+            feedbackHTML += `<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${readings}</span>`;
+
+            if (kanji.examples && kanji.examples.length > 0) {
+                const ex = kanji.examples[0];
+                feedbackHTML += `<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.2);">
+                    <strong>Exemple:</strong> ${ex.word} (${ex.reading}) = ${ex.meaning}
+                </div>`;
+            }
+        } else if (question.type === 'verb') {
+            const detail = question.detail;
+            feedbackHTML += `<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">
+                Verbe: ${detail.verb.kana} (${detail.verb.meaning})<br>
+                Forme: ${detail.conjugation.romaji}
+            </span>`;
+        } else if (question.type === 'counter') {
+            const counter = question.detail;
+            if (counter.examples && counter.examples.length > 0) {
+                feedbackHTML += `<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">
+                    Exemple: ${counter.examples[0]}
+                </span>`;
+            }
+        } else if (question.type === 'particle-fill') {
+            const sentence = question.detail;
+            feedbackHTML += `<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">
+                Phrase complète: ${sentence.sentence}<br>
+                ${sentence.translation}
+            </span>`;
+        }
+
+        feedback.className = correct ? 'quiz-feedback correct' : 'quiz-feedback incorrect';
+        feedback.innerHTML = feedbackHTML;
+
+        // Rendre cliquable pour passer à la suivante
+        feedback.style.cursor = 'pointer';
+        feedback.onclick = () => this.nextGlobalQuestion();
+
+        // Afficher le bouton "Question suivante"
+        document.getElementById('global-next-question-btn').style.display = 'block';
+    },
+
+    updateGlobalQuizScore() {
+        document.getElementById('global-quiz-score').textContent =
+            `Score: ${this.state.globalQuizScore}/${this.state.globalQuizTotal}`;
+        document.getElementById('global-quiz-count').textContent =
+            `Score: ${this.state.globalQuizScore}/${this.state.globalQuizTotal}`;
+    },
+
+    shuffleArray(array) {
+        // Fisher-Yates shuffle pour un bon aléatoire
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
     }
 };
 

@@ -20,6 +20,18 @@
             </header>
 
             <div class="menu-cards">
+                <div class="menu-card" onclick="app.showMode('global-quiz')" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="card-icon">🎯</div>
+                    <h2>Quiz Global</h2>
+                    <p>Révision quotidienne complète</p>
+                    <div class="card-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="global-quiz-progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="global-quiz-count">Score: 0/0</span>
+                    </div>
+                </div>
+
                 <div class="menu-card" onclick="app.showMode('kanji')">
                     <div class="card-icon">漢</div>
                     <h2>Kanji</h2>
@@ -131,12 +143,36 @@
                 <div class="menu-card" onclick="app.showMode('vocabulary')">
                     <div class="card-icon">語</div>
                     <h2>Vocabulaire</h2>
-                    <p>250 mots par thèmes</p>
+                    <p>371 mots par thèmes</p>
                     <div class="card-progress">
                         <div class="progress-bar">
                             <div class="progress-fill" id="vocabulary-progress" style="width: 0%"></div>
                         </div>
-                        <span class="progress-text" id="vocabulary-count">0/250</span>
+                        <span class="progress-text" id="vocabulary-count">0/371</span>
+                    </div>
+                </div>
+
+                <div class="menu-card" onclick="app.showMode('kana')">
+                    <div class="card-icon">あア</div>
+                    <h2>Kana</h2>
+                    <p>Hiragana & Katakana</p>
+                    <div class="card-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="kana-progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="kana-count">0/142</span>
+                    </div>
+                </div>
+
+                <div class="menu-card" onclick="app.showMode('reading')">
+                    <div class="card-icon">📖</div>
+                    <h2>Lecture</h2>
+                    <p>22 textes avec questions</p>
+                    <div class="card-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="reading-progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="reading-count">0/22</span>
                     </div>
                 </div>
             </div>
@@ -591,6 +627,120 @@
                 </div>
                 <div class="quiz-score">
                     <span id="vocabulary-quiz-score">Score: 0/0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Kana -->
+        <div id="kana-page" class="page">
+            <header class="page-header">
+                <button class="back-button" onclick="app.showPage('home')">← Retour</button>
+                <h1>Kana - Hiragana & Katakana</h1>
+            </header>
+
+            <div class="mode-selector">
+                <button class="mode-btn active" onclick="app.setKanaScript('hiragana')">Hiragana</button>
+                <button class="mode-btn" onclick="app.setKanaScript('katakana')">Katakana</button>
+            </div>
+
+            <div class="mode-selector" style="margin-top: 10px;">
+                <button class="mode-btn active" onclick="app.setKanaTable('basic')">Basique</button>
+                <button class="mode-btn" onclick="app.setKanaTable('dakuten')">Dakuten</button>
+                <button class="mode-btn" onclick="app.setKanaTable('combinations')">Combinaisons</button>
+            </div>
+
+            <div class="content-area">
+                <div class="kana-table" id="kana-table"></div>
+            </div>
+        </div>
+
+        <!-- Page Lecture -->
+        <div id="reading-page" class="page">
+            <header class="page-header">
+                <button class="back-button" onclick="app.showPage('home')">← Retour</button>
+                <h1>Lecture (読解)</h1>
+            </header>
+
+            <div class="mode-selector">
+                <button class="mode-btn active" onclick="app.setReadingMode('practice')">Pratique</button>
+                <button class="mode-btn" onclick="app.setReadingMode('list')">Liste</button>
+            </div>
+
+            <div id="reading-practice" class="content-area">
+                <!-- Filtres -->
+                <div class="filters-container">
+                    <select id="reading-difficulty-filter" onchange="app.filterReadingTexts()">
+                        <option value="all">Tous niveaux</option>
+                        <option value="1">⭐ Facile</option>
+                        <option value="2">⭐⭐ Moyen</option>
+                        <option value="3">⭐⭐⭐ Difficile</option>
+                    </select>
+                </div>
+
+                <div class="reading-container">
+                    <div class="reading-text-display">
+                        <h3 id="reading-text-title">自己紹介</h3>
+                        <div class="reading-difficulty" id="reading-text-difficulty">⭐ Facile</div>
+                        <div class="reading-text-content">
+                            <div class="reading-japanese" id="reading-text-japanese"></div>
+                            <button class="toggle-reading-btn" onclick="app.toggleReadingHiragana()">
+                                <span id="toggle-reading-text">Afficher la lecture</span>
+                            </button>
+                            <div class="reading-hiragana" id="reading-text-hiragana" style="display: none;"></div>
+                            <button class="audio-btn" id="reading-audio-btn" onclick="app.playReadingAudio()" title="Écouter">🔊</button>
+                        </div>
+                        <div class="reading-translation">
+                            <button class="toggle-translation-btn" onclick="app.toggleReadingTranslation()">
+                                <span id="toggle-translation-text">Afficher la traduction</span>
+                            </button>
+                            <div class="reading-french" id="reading-text-french" style="display: none;"></div>
+                        </div>
+                    </div>
+
+                    <div class="reading-questions" id="reading-questions"></div>
+
+                    <div class="reading-controls">
+                        <button class="control-btn" onclick="app.previousReadingText()">← Texte précédent</button>
+                        <span class="text-counter" id="reading-counter">1 / 22</span>
+                        <button class="control-btn" onclick="app.nextReadingText()">Texte suivant →</button>
+                    </div>
+                </div>
+
+                <div class="quiz-score">
+                    <span id="reading-quiz-score">Score: 0/0</span>
+                </div>
+            </div>
+
+            <div id="reading-list" class="content-area" style="display: none;">
+                <div class="category-filter">
+                    <select id="reading-category-filter" onchange="app.filterReadingByCategory()">
+                        <option value="all">Toutes les catégories</option>
+                    </select>
+                </div>
+                <div class="reading-list-container" id="reading-list-container"></div>
+            </div>
+        </div>
+
+        <!-- Page Quiz Global -->
+        <div id="global-quiz-page" class="page">
+            <header class="page-header">
+                <button class="back-button" onclick="app.showPage('home')">← Retour</button>
+                <h1>Quiz Global - Révision Complète</h1>
+            </header>
+
+            <div class="content-area">
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h2 id="global-quiz-title">Quelle est la réponse ?</h2>
+                        <div class="quiz-category-badge" id="global-quiz-category">Kanji</div>
+                        <div class="kanji-large" id="global-quiz-question">Question</div>
+                    </div>
+                    <div class="quiz-options" id="global-quiz-options"></div>
+                    <div class="quiz-feedback" id="global-quiz-feedback"></div>
+                    <button class="next-question-btn" id="global-next-question-btn" onclick="app.nextGlobalQuestion()" style="display: none;">Question suivante</button>
+                </div>
+                <div class="quiz-score">
+                    <span id="global-quiz-score">Score: 0/0</span>
                 </div>
             </div>
         </div>

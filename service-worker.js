@@ -1,4 +1,4 @@
-const CACHE_NAME = 'jlpt-n5-v3';
+const CACHE_NAME = 'jlpt-n5-v5';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -6,10 +6,19 @@ const urlsToCache = [
   '/app.js',
   '/manifest.json',
   '/japon.jpg',
+  '/Kyoto.jpg',
   '/data/kanji.json',
   '/data/counters.json',
   '/data/verbs.json',
-  '/data/adverbs.json'
+  '/data/verbs-plus.json',
+  '/data/adverbs.json',
+  '/data/particles.json',
+  '/data/sentences.json',
+  '/data/adjectives.json',
+  '/data/grammar.json',
+  '/data/vocabulary.json',
+  '/data/kana.json',
+  '/data/reading.json'
 ];
 
 // Installation du service worker
