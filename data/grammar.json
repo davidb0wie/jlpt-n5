@@ -1,0 +1,1044 @@
+{
+  "grammar_points": [
+    {
+      "id": 1,
+      "pattern": "〜は",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Marque le thème/sujet de la phrase. Indique de quoi on parle.",
+      "structure": "[Nom] + は + [reste de la phrase]",
+      "examples": [
+        {"japanese": "私は学生です。", "romaji": "Watashi wa gakusei desu.", "french": "Je suis étudiant(e)."},
+        {"japanese": "これは本です。", "romaji": "Kore wa hon desu.", "french": "Ceci est un livre."},
+        {"japanese": "日本は美しいです。", "romaji": "Nihon wa utsukushii desu.", "french": "Le Japon est beau."}
+      ]
+    },
+    {
+      "id": 2,
+      "pattern": "〜が",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Marque le sujet grammatical. Utilisé pour identifier quelque chose ou exprimer une préférence.",
+      "structure": "[Nom] + が + [verbe/adjectif]",
+      "examples": [
+        {"japanese": "誰が来ますか。", "romaji": "Dare ga kimasu ka.", "french": "Qui vient ?"},
+        {"japanese": "犬がいます。", "romaji": "Inu ga imasu.", "french": "Il y a un chien."},
+        {"japanese": "コーヒーが好きです。", "romaji": "Kōhī ga suki desu.", "french": "J'aime le café."}
+      ]
+    },
+    {
+      "id": 3,
+      "pattern": "〜を",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Marque le complément d'objet direct (COD).",
+      "structure": "[Nom] + を + [verbe transitif]",
+      "examples": [
+        {"japanese": "本を読みます。", "romaji": "Hon o yomimasu.", "french": "Je lis un livre."},
+        {"japanese": "水を飲みます。", "romaji": "Mizu o nomimasu.", "french": "Je bois de l'eau."},
+        {"japanese": "音楽を聞きます。", "romaji": "Ongaku o kikimasu.", "french": "J'écoute de la musique."}
+      ]
+    },
+    {
+      "id": 4,
+      "pattern": "〜に (lieu)",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Indique le lieu de destination ou d'existence.",
+      "structure": "[Nom de lieu] + に + [verbe de mouvement/existence]",
+      "examples": [
+        {"japanese": "学校に行きます。", "romaji": "Gakkō ni ikimasu.", "french": "Je vais à l'école."},
+        {"japanese": "東京に住んでいます。", "romaji": "Tōkyō ni sunde imasu.", "french": "J'habite à Tokyo."},
+        {"japanese": "机の上に本があります。", "romaji": "Tsukue no ue ni hon ga arimasu.", "french": "Il y a un livre sur le bureau."}
+      ]
+    },
+    {
+      "id": 5,
+      "pattern": "〜に (temps)",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Indique le moment précis d'une action.",
+      "structure": "[Expression de temps] + に + [verbe]",
+      "examples": [
+        {"japanese": "七時に起きます。", "romaji": "Shichi-ji ni okimasu.", "french": "Je me lève à 7 heures."},
+        {"japanese": "月曜日に会います。", "romaji": "Getsuyōbi ni aimasu.", "french": "On se voit lundi."},
+        {"japanese": "来年に日本に行きます。", "romaji": "Rainen ni Nihon ni ikimasu.", "french": "J'irai au Japon l'année prochaine."}
+      ]
+    },
+    {
+      "id": 6,
+      "pattern": "〜で (lieu)",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Indique le lieu où se déroule une action.",
+      "structure": "[Nom de lieu] + で + [verbe d'action]",
+      "examples": [
+        {"japanese": "図書館で勉強します。", "romaji": "Toshokan de benkyō shimasu.", "french": "J'étudie à la bibliothèque."},
+        {"japanese": "レストランで食べます。", "romaji": "Resutoran de tabemasu.", "french": "Je mange au restaurant."},
+        {"japanese": "公園で遊びます。", "romaji": "Kōen de asobimasu.", "french": "Je joue au parc."}
+      ]
+    },
+    {
+      "id": 7,
+      "pattern": "〜で (moyen)",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Indique le moyen, l'outil ou la méthode utilisée.",
+      "structure": "[Nom] + で + [verbe]",
+      "examples": [
+        {"japanese": "電車で行きます。", "romaji": "Densha de ikimasu.", "french": "J'y vais en train."},
+        {"japanese": "日本語で話します。", "romaji": "Nihongo de hanashimasu.", "french": "Je parle en japonais."},
+        {"japanese": "箸で食べます。", "romaji": "Hashi de tabemasu.", "french": "Je mange avec des baguettes."}
+      ]
+    },
+    {
+      "id": 8,
+      "pattern": "〜と",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Indique 'avec' (accompagnement) ou 'et' (énumération complète).",
+      "structure": "[Nom] + と + [Nom/verbe]",
+      "examples": [
+        {"japanese": "友達と映画を見ます。", "romaji": "Tomodachi to eiga o mimasu.", "french": "Je regarde un film avec un ami."},
+        {"japanese": "犬と猫がいます。", "romaji": "Inu to neko ga imasu.", "french": "Il y a un chien et un chat."},
+        {"japanese": "父と母は医者です。", "romaji": "Chichi to haha wa isha desu.", "french": "Mon père et ma mère sont médecins."}
+      ]
+    },
+    {
+      "id": 9,
+      "pattern": "〜の (possession)",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Indique la possession ou l'appartenance.",
+      "structure": "[Possesseur] + の + [Chose possédée]",
+      "examples": [
+        {"japanese": "私の本", "romaji": "Watashi no hon", "french": "Mon livre"},
+        {"japanese": "先生の車", "romaji": "Sensei no kuruma", "french": "La voiture du professeur"},
+        {"japanese": "日本の文化", "romaji": "Nihon no bunka", "french": "La culture du Japon"}
+      ]
+    },
+    {
+      "id": 10,
+      "pattern": "〜の (nominalisation)",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Transforme une phrase en nom (nominalisation).",
+      "structure": "[Phrase verbale] + の + [verbe/です]",
+      "examples": [
+        {"japanese": "本を読むのが好きです。", "romaji": "Hon o yomu no ga suki desu.", "french": "J'aime lire des livres."},
+        {"japanese": "日本語を勉強するのは楽しいです。", "romaji": "Nihongo o benkyō suru no wa tanoshii desu.", "french": "Étudier le japonais est amusant."},
+        {"japanese": "泳ぐのは上手です。", "romaji": "Oyogu no wa jōzu desu.", "french": "Je suis bon en natation."}
+      ]
+    },
+    {
+      "id": 11,
+      "pattern": "〜へ",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Indique la direction du mouvement (similaire à に mais plus directionnel).",
+      "structure": "[Lieu] + へ + [verbe de mouvement]",
+      "examples": [
+        {"japanese": "学校へ行きます。", "romaji": "Gakkō e ikimasu.", "french": "Je vais vers l'école."},
+        {"japanese": "日本へ来ます。", "romaji": "Nihon e kimasu.", "french": "Je viens au Japon."},
+        {"japanese": "家へ帰ります。", "romaji": "Ie e kaerimasu.", "french": "Je rentre à la maison."}
+      ]
+    },
+    {
+      "id": 12,
+      "pattern": "〜か",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Marque une question (forme polie).",
+      "structure": "[Phrase] + か",
+      "examples": [
+        {"japanese": "学生ですか。", "romaji": "Gakusei desu ka.", "french": "Êtes-vous étudiant ?"},
+        {"japanese": "これは何ですか。", "romaji": "Kore wa nan desu ka.", "french": "Qu'est-ce que c'est ?"},
+        {"japanese": "どこに行きますか。", "romaji": "Doko ni ikimasu ka.", "french": "Où allez-vous ?"}
+      ]
+    },
+    {
+      "id": 13,
+      "pattern": "〜も",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Signifie 'aussi, également'.",
+      "structure": "[Nom] + も + [verbe/adjectif]",
+      "examples": [
+        {"japanese": "私も学生です。", "romaji": "Watashi mo gakusei desu.", "french": "Moi aussi, je suis étudiant."},
+        {"japanese": "これもいいです。", "romaji": "Kore mo ii desu.", "french": "Celui-ci aussi est bien."},
+        {"japanese": "彼も来ます。", "romaji": "Kare mo kimasu.", "french": "Lui aussi viendra."}
+      ]
+    },
+    {
+      "id": 14,
+      "pattern": "〜や",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Liste non exhaustive d'exemples (et autres choses similaires).",
+      "structure": "[Nom] + や + [Nom] + など",
+      "examples": [
+        {"japanese": "りんごやバナナを買いました。", "romaji": "Ringo ya banana o kaimashita.", "french": "J'ai acheté des pommes, des bananes, etc."},
+        {"japanese": "本や雑誌があります。", "romaji": "Hon ya zasshi ga arimasu.", "french": "Il y a des livres, des magazines, etc."},
+        {"japanese": "犬や猫が好きです。", "romaji": "Inu ya neko ga suki desu.", "french": "J'aime les chiens, les chats, etc."}
+      ]
+    },
+    {
+      "id": 15,
+      "pattern": "〜から (origine)",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Indique le point de départ (lieu ou temps).",
+      "structure": "[Lieu/Temps] + から + [verbe]",
+      "examples": [
+        {"japanese": "九時から始まります。", "romaji": "Ku-ji kara hajimarimasu.", "french": "Ça commence à partir de 9 heures."},
+        {"japanese": "東京から来ました。", "romaji": "Tōkyō kara kimashita.", "french": "Je viens de Tokyo."},
+        {"japanese": "月曜日から金曜日まで働きます。", "romaji": "Getsuyōbi kara kin'yōbi made hatarakimasu.", "french": "Je travaille du lundi au vendredi."}
+      ]
+    },
+    {
+      "id": 16,
+      "pattern": "〜から (raison)",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Indique la raison ou la cause (parce que).",
+      "structure": "[Raison] + から、[Conséquence]",
+      "examples": [
+        {"japanese": "雨が降りますから、傘を持って行きます。", "romaji": "Ame ga furimasu kara, kasa o motte ikimasu.", "french": "Parce qu'il pleut, j'emporte un parapluie."},
+        {"japanese": "明日は試験ですから、今日は勉強します。", "romaji": "Ashita wa shiken desu kara, kyō wa benkyō shimasu.", "french": "Comme il y a un examen demain, j'étudie aujourd'hui."},
+        {"japanese": "寒いですから、窓を閉めてください。", "romaji": "Samui desu kara, mado o shimete kudasai.", "french": "Parce qu'il fait froid, fermez la fenêtre s'il vous plaît."}
+      ]
+    },
+    {
+      "id": 17,
+      "pattern": "〜まで",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Indique le point final (jusqu'à).",
+      "structure": "[Lieu/Temps] + まで + [verbe]",
+      "examples": [
+        {"japanese": "五時まで働きます。", "romaji": "Go-ji made hatarakimasu.", "french": "Je travaille jusqu'à 5 heures."},
+        {"japanese": "駅まで歩きます。", "romaji": "Eki made arukimasu.", "french": "Je marche jusqu'à la gare."},
+        {"japanese": "月曜日から金曜日まで学校があります。", "romaji": "Getsuyōbi kara kin'yōbi made gakkō ga arimasu.", "french": "Il y a école du lundi au vendredi."}
+      ]
+    },
+    {
+      "id": 18,
+      "pattern": "〜ね",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Demande confirmation ou accord (n'est-ce pas ?).",
+      "structure": "[Phrase] + ね",
+      "examples": [
+        {"japanese": "いい天気ですね。", "romaji": "Ii tenki desu ne.", "french": "Il fait beau, n'est-ce pas ?"},
+        {"japanese": "おいしいですね。", "romaji": "Oishii desu ne.", "french": "C'est délicieux, n'est-ce pas ?"},
+        {"japanese": "明日は休みですね。", "romaji": "Ashita wa yasumi desu ne.", "french": "Demain c'est un jour de congé, n'est-ce pas ?"}
+      ]
+    },
+    {
+      "id": 19,
+      "pattern": "〜よ",
+      "category": "particules",
+      "level": "N5",
+      "explanation": "Insiste sur une information ou donne un conseil.",
+      "structure": "[Phrase] + よ",
+      "examples": [
+        {"japanese": "もう遅いですよ。", "romaji": "Mō osoi desu yo.", "french": "Il est déjà tard !"},
+        {"japanese": "これはおいしいですよ。", "romaji": "Kore wa oishii desu yo.", "french": "C'est délicieux, tu sais !"},
+        {"japanese": "気をつけてくださいよ。", "romaji": "Ki o tsukete kudasai yo.", "french": "Faites attention, hein !"}
+      ]
+    },
+    {
+      "id": 20,
+      "pattern": "ます形",
+      "category": "verbes",
+      "level": "N5",
+      "explanation": "Forme polie affirmative présent/futur des verbes.",
+      "structure": "[Radical] + ます",
+      "examples": [
+        {"japanese": "食べます", "romaji": "tabemasu", "french": "manger (forme polie)"},
+        {"japanese": "行きます", "romaji": "ikimasu", "french": "aller (forme polie)"},
+        {"japanese": "勉強します", "romaji": "benkyō shimasu", "french": "étudier (forme polie)"}
+      ]
+    },
+    {
+      "id": 21,
+      "pattern": "ません",
+      "category": "verbes",
+      "level": "N5",
+      "explanation": "Forme polie négative présent/futur des verbes.",
+      "structure": "[Radical] + ません",
+      "examples": [
+        {"japanese": "食べません", "romaji": "tabemasen", "french": "ne pas manger"},
+        {"japanese": "行きません", "romaji": "ikimasen", "french": "ne pas aller"},
+        {"japanese": "飲みません", "romaji": "nomimasen", "french": "ne pas boire"}
+      ]
+    },
+    {
+      "id": 22,
+      "pattern": "ました",
+      "category": "verbes",
+      "level": "N5",
+      "explanation": "Forme polie affirmative passé des verbes.",
+      "structure": "[Radical] + ました",
+      "examples": [
+        {"japanese": "食べました", "romaji": "tabemashita", "french": "j'ai mangé"},
+        {"japanese": "行きました", "romaji": "ikimashita", "french": "je suis allé"},
+        {"japanese": "見ました", "romaji": "mimashita", "french": "j'ai vu"}
+      ]
+    },
+    {
+      "id": 23,
+      "pattern": "ませんでした",
+      "category": "verbes",
+      "level": "N5",
+      "explanation": "Forme polie négative passé des verbes.",
+      "structure": "[Radical] + ませんでした",
+      "examples": [
+        {"japanese": "食べませんでした", "romaji": "tabemasen deshita", "french": "je n'ai pas mangé"},
+        {"japanese": "行きませんでした", "romaji": "ikimasen deshita", "french": "je ne suis pas allé"},
+        {"japanese": "分かりませんでした", "romaji": "wakarimasen deshita", "french": "je n'ai pas compris"}
+      ]
+    },
+    {
+      "id": 24,
+      "pattern": "〜てください",
+      "category": "verbes",
+      "level": "N5",
+      "explanation": "Demande polie (s'il vous plaît faites...).",
+      "structure": "[Verbe forme て] + ください",
+      "examples": [
+        {"japanese": "待ってください。", "romaji": "Matte kudasai.", "french": "Attendez s'il vous plaît."},
+        {"japanese": "食べてください。", "romaji": "Tabete kudasai.", "french": "Mangez s'il vous plaît."},
+        {"japanese": "ここに座ってください。", "romaji": "Koko ni suwatte kudasai.", "french": "Asseyez-vous ici s'il vous plaît."}
+      ]
+    },
+    {
+      "id": 25,
+      "pattern": "〜ています",
+      "category": "verbes",
+      "level": "N5",
+      "explanation": "Action en cours ou état résultant.",
+      "structure": "[Verbe forme て] + います",
+      "examples": [
+        {"japanese": "今、勉強しています。", "romaji": "Ima, benkyō shite imasu.", "french": "Je suis en train d'étudier maintenant."},
+        {"japanese": "東京に住んでいます。", "romaji": "Tōkyō ni sunde imasu.", "french": "J'habite à Tokyo."},
+        {"japanese": "結婚しています。", "romaji": "Kekkon shite imasu.", "french": "Je suis marié(e)."}
+      ]
+    },
+    {
+      "id": 26,
+      "pattern": "〜たい",
+      "category": "verbes",
+      "level": "N5",
+      "explanation": "Exprime le désir de faire quelque chose (je veux...).",
+      "structure": "[Radical ます] + たい",
+      "examples": [
+        {"japanese": "日本に行きたいです。", "romaji": "Nihon ni ikitai desu.", "french": "Je veux aller au Japon."},
+        {"japanese": "寿司を食べたいです。", "romaji": "Sushi o tabetai desu.", "french": "Je veux manger des sushis."},
+        {"japanese": "映画を見たいです。", "romaji": "Eiga o mitai desu.", "french": "Je veux voir un film."}
+      ]
+    },
+    {
+      "id": 27,
+      "pattern": "〜たくない",
+      "category": "verbes",
+      "level": "N5",
+      "explanation": "Exprime le désir de ne pas faire quelque chose (je ne veux pas...).",
+      "structure": "[Radical ます] + たくない / たくないです",
+      "examples": [
+        {"japanese": "行きたくないです。", "romaji": "Ikitakunai desu.", "french": "Je ne veux pas y aller."},
+        {"japanese": "食べたくないです。", "romaji": "Tabetakunai desu.", "french": "Je ne veux pas manger."},
+        {"japanese": "勉強したくないです。", "romaji": "Benkyō shitakunai desu.", "french": "Je ne veux pas étudier."}
+      ]
+    },
+    {
+      "id": 28,
+      "pattern": "〜ない形",
+      "category": "verbes",
+      "level": "N5",
+      "explanation": "Forme négative neutre/dictionnaire des verbes.",
+      "structure": "[Verbe] → [Forme ない]",
+      "examples": [
+        {"japanese": "食べない", "romaji": "tabenai", "french": "ne pas manger"},
+        {"japanese": "行かない", "romaji": "ikanai", "french": "ne pas aller"},
+        {"japanese": "しない", "romaji": "shinai", "french": "ne pas faire"}
+      ]
+    },
+    {
+      "id": 29,
+      "pattern": "〜た形",
+      "category": "verbes",
+      "level": "N5",
+      "explanation": "Forme passée neutre/dictionnaire des verbes.",
+      "structure": "[Verbe forme て] → た/だ",
+      "examples": [
+        {"japanese": "食べた", "romaji": "tabeta", "french": "a mangé"},
+        {"japanese": "行った", "romaji": "itta", "french": "est allé"},
+        {"japanese": "読んだ", "romaji": "yonda", "french": "a lu"}
+      ]
+    },
+    {
+      "id": 30,
+      "pattern": "〜ませんか",
+      "category": "verbes",
+      "level": "N5",
+      "explanation": "Invitation polie (voulez-vous... ?).",
+      "structure": "[Radical] + ませんか",
+      "examples": [
+        {"japanese": "一緒に行きませんか。", "romaji": "Issho ni ikimasen ka.", "french": "Voulez-vous y aller ensemble ?"},
+        {"japanese": "コーヒーを飲みませんか。", "romaji": "Kōhī o nomimasen ka.", "french": "Voulez-vous boire du café ?"},
+        {"japanese": "映画を見ませんか。", "romaji": "Eiga o mimasen ka.", "french": "Voulez-vous regarder un film ?"}
+      ]
+    },
+    {
+      "id": 31,
+      "pattern": "〜ましょう",
+      "category": "verbes",
+      "level": "N5",
+      "explanation": "Proposition (faisons... / allons...).",
+      "structure": "[Radical] + ましょう",
+      "examples": [
+        {"japanese": "一緒に行きましょう。", "romaji": "Issho ni ikimashō.", "french": "Allons-y ensemble."},
+        {"japanese": "昼ご飯を食べましょう。", "romaji": "Hirugohan o tabemashō.", "french": "Mangeons le déjeuner."},
+        {"japanese": "休みましょう。", "romaji": "Yasumimashō.", "french": "Reposons-nous."}
+      ]
+    },
+    {
+      "id": 32,
+      "pattern": "〜ましょうか",
+      "category": "verbes",
+      "level": "N5",
+      "explanation": "Offre d'aide ou suggestion (dois-je... ?).",
+      "structure": "[Radical] + ましょうか",
+      "examples": [
+        {"japanese": "手伝いましょうか。", "romaji": "Tetsudaimashō ka.", "french": "Dois-je vous aider ?"},
+        {"japanese": "窓を開けましょうか。", "romaji": "Mado o akemashō ka.", "french": "Dois-je ouvrir la fenêtre ?"},
+        {"japanese": "一緒に行きましょうか。", "romaji": "Issho ni ikimashō ka.", "french": "Devons-nous y aller ensemble ?"}
+      ]
+    },
+    {
+      "id": 33,
+      "pattern": "〜ことができる",
+      "category": "capacité",
+      "level": "N5",
+      "explanation": "Exprime la capacité ou possibilité (pouvoir faire...).",
+      "structure": "[Verbe dictionnaire] + ことができます",
+      "examples": [
+        {"japanese": "日本語を話すことができます。", "romaji": "Nihongo o hanasu koto ga dekimasu.", "french": "Je peux parler japonais."},
+        {"japanese": "泳ぐことができます。", "romaji": "Oyogu koto ga dekimasu.", "french": "Je peux nager."},
+        {"japanese": "車を運転することができます。", "romaji": "Kuruma o unten suru koto ga dekimasu.", "french": "Je peux conduire une voiture."}
+      ]
+    },
+    {
+      "id": 34,
+      "pattern": "〜が欲しい",
+      "category": "désir",
+      "level": "N5",
+      "explanation": "Exprime le désir de posséder quelque chose (je veux...).",
+      "structure": "[Nom] + が欲しいです",
+      "examples": [
+        {"japanese": "新しい車が欲しいです。", "romaji": "Atarashii kuruma ga hoshii desu.", "french": "Je veux une nouvelle voiture."},
+        {"japanese": "お金が欲しいです。", "romaji": "Okane ga hoshii desu.", "french": "Je veux de l'argent."},
+        {"japanese": "休みが欲しいです。", "romaji": "Yasumi ga hoshii desu.", "french": "Je veux un congé."}
+      ]
+    },
+    {
+      "id": 35,
+      "pattern": "〜が好き/嫌い",
+      "category": "préférences",
+      "level": "N5",
+      "explanation": "Exprime ce qu'on aime ou déteste.",
+      "structure": "[Nom] + が好き/嫌いです",
+      "examples": [
+        {"japanese": "音楽が好きです。", "romaji": "Ongaku ga suki desu.", "french": "J'aime la musique."},
+        {"japanese": "野菜が嫌いです。", "romaji": "Yasai ga kirai desu.", "french": "Je déteste les légumes."},
+        {"japanese": "スポーツが大好きです。", "romaji": "Supōtsu ga daisuki desu.", "french": "J'adore le sport."}
+      ]
+    },
+    {
+      "id": 36,
+      "pattern": "〜が上手/下手",
+      "category": "capacité",
+      "level": "N5",
+      "explanation": "Exprime qu'on est doué ou maladroit pour quelque chose.",
+      "structure": "[Nom] + が上手/下手です",
+      "examples": [
+        {"japanese": "料理が上手です。", "romaji": "Ryōri ga jōzu desu.", "french": "Je suis doué en cuisine."},
+        {"japanese": "スポーツが下手です。", "romaji": "Supōtsu ga heta desu.", "french": "Je suis maladroit en sport."},
+        {"japanese": "ピアノが上手です。", "romaji": "Piano ga jōzu desu.", "french": "Je joue bien du piano."}
+      ]
+    },
+    {
+      "id": 37,
+      "pattern": "〜があります/います",
+      "category": "existence",
+      "level": "N5",
+      "explanation": "Exprime l'existence. あります (objets), います (êtres vivants).",
+      "structure": "[Lieu] + に + [Nom] + があります/います",
+      "examples": [
+        {"japanese": "机の上に本があります。", "romaji": "Tsukue no ue ni hon ga arimasu.", "french": "Il y a un livre sur le bureau."},
+        {"japanese": "公園に犬がいます。", "romaji": "Kōen ni inu ga imasu.", "french": "Il y a un chien dans le parc."},
+        {"japanese": "冷蔵庫に牛乳があります。", "romaji": "Reizōko ni gyūnyū ga arimasu.", "french": "Il y a du lait dans le réfrigérateur."}
+      ]
+    },
+    {
+      "id": 38,
+      "pattern": "何/なん",
+      "category": "interrogatifs",
+      "level": "N5",
+      "explanation": "Mot interrogatif 'quoi, que, quel'.",
+      "structure": "何 + [compteur/nom]",
+      "examples": [
+        {"japanese": "これは何ですか。", "romaji": "Kore wa nan desu ka.", "french": "Qu'est-ce que c'est ?"},
+        {"japanese": "何を食べますか。", "romaji": "Nani o tabemasu ka.", "french": "Que mangez-vous ?"},
+        {"japanese": "何時ですか。", "romaji": "Nan-ji desu ka.", "french": "Quelle heure est-il ?"}
+      ]
+    },
+    {
+      "id": 39,
+      "pattern": "どこ",
+      "category": "interrogatifs",
+      "level": "N5",
+      "explanation": "Mot interrogatif 'où'.",
+      "structure": "どこ + [particule]",
+      "examples": [
+        {"japanese": "どこに行きますか。", "romaji": "Doko ni ikimasu ka.", "french": "Où allez-vous ?"},
+        {"japanese": "トイレはどこですか。", "romaji": "Toire wa doko desu ka.", "french": "Où sont les toilettes ?"},
+        {"japanese": "どこで買いましたか。", "romaji": "Doko de kaimashita ka.", "french": "Où l'avez-vous acheté ?"}
+      ]
+    },
+    {
+      "id": 40,
+      "pattern": "いつ",
+      "category": "interrogatifs",
+      "level": "N5",
+      "explanation": "Mot interrogatif 'quand'.",
+      "structure": "いつ + [verbe]",
+      "examples": [
+        {"japanese": "いつ行きますか。", "romaji": "Itsu ikimasu ka.", "french": "Quand partez-vous ?"},
+        {"japanese": "誕生日はいつですか。", "romaji": "Tanjōbi wa itsu desu ka.", "french": "Quand est votre anniversaire ?"},
+        {"japanese": "いつ日本に来ましたか。", "romaji": "Itsu Nihon ni kimashita ka.", "french": "Quand êtes-vous venu au Japon ?"}
+      ]
+    },
+    {
+      "id": 41,
+      "pattern": "誰/だれ",
+      "category": "interrogatifs",
+      "level": "N5",
+      "explanation": "Mot interrogatif 'qui'.",
+      "structure": "誰 + [particule/verbe]",
+      "examples": [
+        {"japanese": "誰が来ますか。", "romaji": "Dare ga kimasu ka.", "french": "Qui vient ?"},
+        {"japanese": "これは誰のですか。", "romaji": "Kore wa dare no desu ka.", "french": "À qui est-ce ?"},
+        {"japanese": "誰と行きますか。", "romaji": "Dare to ikimasu ka.", "french": "Avec qui y allez-vous ?"}
+      ]
+    },
+    {
+      "id": 42,
+      "pattern": "どう",
+      "category": "interrogatifs",
+      "level": "N5",
+      "explanation": "Mot interrogatif 'comment'.",
+      "structure": "どう + [verbe/です]",
+      "examples": [
+        {"japanese": "週末はどうでしたか。", "romaji": "Shūmatsu wa dō deshita ka.", "french": "Comment était le week-end ?"},
+        {"japanese": "どうやって行きますか。", "romaji": "Dō yatte ikimasu ka.", "french": "Comment y va-t-on ?"},
+        {"japanese": "この本はどうですか。", "romaji": "Kono hon wa dō desu ka.", "french": "Comment est ce livre ?"}
+      ]
+    },
+    {
+      "id": 43,
+      "pattern": "どうして/なぜ",
+      "category": "interrogatifs",
+      "level": "N5",
+      "explanation": "Mots interrogatifs 'pourquoi'.",
+      "structure": "どうして/なぜ + [phrase]",
+      "examples": [
+        {"japanese": "どうして遅れましたか。", "romaji": "Dōshite okuremashita ka.", "french": "Pourquoi êtes-vous en retard ?"},
+        {"japanese": "なぜ日本語を勉強しますか。", "romaji": "Naze Nihongo o benkyō shimasu ka.", "french": "Pourquoi étudiez-vous le japonais ?"},
+        {"japanese": "どうして来ませんでしたか。", "romaji": "Dōshite kimasen deshita ka.", "french": "Pourquoi n'êtes-vous pas venu ?"}
+      ]
+    },
+    {
+      "id": 44,
+      "pattern": "どれ/どの",
+      "category": "interrogatifs",
+      "level": "N5",
+      "explanation": "どれ = lequel (seul), どの = quel (+ nom).",
+      "structure": "どれ/どの + [nom]",
+      "examples": [
+        {"japanese": "どれがいいですか。", "romaji": "Dore ga ii desu ka.", "french": "Lequel est bien ?"},
+        {"japanese": "どの本ですか。", "romaji": "Dono hon desu ka.", "french": "Quel livre ?"},
+        {"japanese": "どれを買いますか。", "romaji": "Dore o kaimasu ka.", "french": "Lequel achetez-vous ?"}
+      ]
+    },
+    {
+      "id": 45,
+      "pattern": "いくら",
+      "category": "interrogatifs",
+      "level": "N5",
+      "explanation": "Mot interrogatif 'combien' (prix).",
+      "structure": "いくら + [です/か]",
+      "examples": [
+        {"japanese": "これはいくらですか。", "romaji": "Kore wa ikura desu ka.", "french": "Combien coûte ceci ?"},
+        {"japanese": "全部でいくらですか。", "romaji": "Zenbu de ikura desu ka.", "french": "Combien pour le tout ?"},
+        {"japanese": "チケットはいくらですか。", "romaji": "Chiketto wa ikura desu ka.", "french": "Combien coûte le billet ?"}
+      ]
+    },
+    {
+      "id": 46,
+      "pattern": "いくつ",
+      "category": "interrogatifs",
+      "level": "N5",
+      "explanation": "Mot interrogatif 'combien' (quantité) ou 'quel âge'.",
+      "structure": "いくつ + [です/か]",
+      "examples": [
+        {"japanese": "いくつ買いますか。", "romaji": "Ikutsu kaimasu ka.", "french": "Combien en achetez-vous ?"},
+        {"japanese": "おいくつですか。", "romaji": "Oikutsu desu ka.", "french": "Quel âge avez-vous ? (poli)"},
+        {"japanese": "りんごがいくつありますか。", "romaji": "Ringo ga ikutsu arimasu ka.", "french": "Combien y a-t-il de pommes ?"}
+      ]
+    },
+    {
+      "id": 47,
+      "pattern": "〜より",
+      "category": "comparaison",
+      "level": "N5",
+      "explanation": "Comparaison 'plus... que'.",
+      "structure": "A は B より [adjectif]",
+      "examples": [
+        {"japanese": "東京は大阪より大きいです。", "romaji": "Tōkyō wa Ōsaka yori ōkii desu.", "french": "Tokyo est plus grand qu'Osaka."},
+        {"japanese": "車は自転車より速いです。", "romaji": "Kuruma wa jitensha yori hayai desu.", "french": "La voiture est plus rapide que le vélo."},
+        {"japanese": "夏は冬より暑いです。", "romaji": "Natsu wa fuyu yori atsui desu.", "french": "L'été est plus chaud que l'hiver."}
+      ]
+    },
+    {
+      "id": 48,
+      "pattern": "〜の方が",
+      "category": "comparaison",
+      "level": "N5",
+      "explanation": "Comparaison 'A est plus... que B'.",
+      "structure": "A の方が B より [adjectif]",
+      "examples": [
+        {"japanese": "りんごの方がバナナより好きです。", "romaji": "Ringo no hō ga banana yori suki desu.", "french": "Je préfère les pommes aux bananes."},
+        {"japanese": "夏の方が冬より好きです。", "romaji": "Natsu no hō ga fuyu yori suki desu.", "french": "Je préfère l'été à l'hiver."},
+        {"japanese": "電車の方が車より速いです。", "romaji": "Densha no hō ga kuruma yori hayai desu.", "french": "Le train est plus rapide que la voiture."}
+      ]
+    },
+    {
+      "id": 49,
+      "pattern": "〜で一番",
+      "category": "comparaison",
+      "level": "N5",
+      "explanation": "Superlatif 'le plus... de'.",
+      "structure": "[Groupe] + で一番 + [adjectif]",
+      "examples": [
+        {"japanese": "日本で一番高い山は富士山です。", "romaji": "Nihon de ichiban takai yama wa Fujisan desu.", "french": "La plus haute montagne du Japon est le Mont Fuji."},
+        {"japanese": "クラスで一番頭がいいです。", "romaji": "Kurasu de ichiban atama ga ii desu.", "french": "Il/Elle est le/la plus intelligent(e) de la classe."},
+        {"japanese": "家族で一番若いです。", "romaji": "Kazoku de ichiban wakai desu.", "french": "Je suis le/la plus jeune de la famille."}
+      ]
+    },
+    {
+      "id": 50,
+      "pattern": "〜てから",
+      "category": "temps",
+      "level": "N5",
+      "explanation": "Après avoir fait... (séquence d'actions).",
+      "structure": "[Verbe forme て] + から、[action suivante]",
+      "examples": [
+        {"japanese": "宿題をしてから、遊びます。", "romaji": "Shukudai o shite kara, asobimasu.", "french": "Après avoir fait mes devoirs, je joue."},
+        {"japanese": "ご飯を食べてから、学校に行きます。", "romaji": "Gohan o tabete kara, gakkō ni ikimasu.", "french": "Après avoir mangé, je vais à l'école."},
+        {"japanese": "シャワーを浴びてから、寝ます。", "romaji": "Shawā o abite kara, nemasu.", "french": "Après avoir pris ma douche, je dors."}
+      ]
+    },
+    {
+      "id": 51,
+      "pattern": "〜前に",
+      "category": "temps",
+      "level": "N5",
+      "explanation": "Avant de... (action antérieure).",
+      "structure": "[Verbe dictionnaire] + 前に、[action]",
+      "examples": [
+        {"japanese": "寝る前に歯を磨きます。", "romaji": "Neru mae ni ha o migakimasu.", "french": "Je me brosse les dents avant de dormir."},
+        {"japanese": "出かける前にシャワーを浴びます。", "romaji": "Dekakeru mae ni shawā o abimasu.", "french": "Je prends une douche avant de sortir."},
+        {"japanese": "食べる前に手を洗います。", "romaji": "Taberu mae ni te o araimasu.", "french": "Je me lave les mains avant de manger."}
+      ]
+    },
+    {
+      "id": 52,
+      "pattern": "〜後で",
+      "category": "temps",
+      "level": "N5",
+      "explanation": "Après... (temps postérieur).",
+      "structure": "[Verbe た形/Nom] + 後で、[action]",
+      "examples": [
+        {"japanese": "食べた後で、散歩します。", "romaji": "Tabeta ato de, sanpo shimasu.", "french": "Après avoir mangé, je me promène."},
+        {"japanese": "授業の後で会いましょう。", "romaji": "Jugyō no ato de aimashō.", "french": "Rencontrons-nous après le cours."},
+        {"japanese": "仕事の後で飲みに行きます。", "romaji": "Shigoto no ato de nomi ni ikimasu.", "french": "Après le travail, je vais boire un verre."}
+      ]
+    },
+    {
+      "id": 53,
+      "pattern": "〜時",
+      "category": "temps",
+      "level": "N5",
+      "explanation": "Quand..., au moment de...",
+      "structure": "[Verbe dictionnaire/た形] + 時、[action]",
+      "examples": [
+        {"japanese": "日本に行く時、カメラを持って行きます。", "romaji": "Nihon ni iku toki, kamera o motte ikimasu.", "french": "Quand je vais au Japon, j'emporte mon appareil photo."},
+        {"japanese": "子供の時、ここに住んでいました。", "romaji": "Kodomo no toki, koko ni sunde imashita.", "french": "Quand j'étais enfant, j'habitais ici."},
+        {"japanese": "暇な時、本を読みます。", "romaji": "Hima na toki, hon o yomimasu.", "french": "Quand je suis libre, je lis des livres."}
+      ]
+    },
+    {
+      "id": 54,
+      "pattern": "〜ながら",
+      "category": "temps",
+      "level": "N5",
+      "explanation": "Faire deux actions simultanément (tout en faisant...).",
+      "structure": "[Radical ます] + ながら、[action principale]",
+      "examples": [
+        {"japanese": "音楽を聞きながら勉強します。", "romaji": "Ongaku o kikinagara benkyō shimasu.", "french": "J'étudie tout en écoutant de la musique."},
+        {"japanese": "歩きながら話します。", "romaji": "Arukinagara hanashimasu.", "french": "Je parle tout en marchant."},
+        {"japanese": "テレビを見ながらご飯を食べます。", "romaji": "Terebi o minagara gohan o tabemasu.", "french": "Je mange tout en regardant la télé."}
+      ]
+    },
+    {
+      "id": 55,
+      "pattern": "〜たことがある",
+      "category": "expérience",
+      "level": "N5",
+      "explanation": "Exprime l'expérience passée (avoir déjà fait...).",
+      "structure": "[Verbe た形] + ことがあります",
+      "examples": [
+        {"japanese": "日本に行ったことがあります。", "romaji": "Nihon ni itta koto ga arimasu.", "french": "Je suis déjà allé au Japon."},
+        {"japanese": "寿司を食べたことがあります。", "romaji": "Sushi o tabeta koto ga arimasu.", "french": "J'ai déjà mangé des sushis."},
+        {"japanese": "富士山を見たことがあります。", "romaji": "Fujisan o mita koto ga arimasu.", "french": "J'ai déjà vu le Mont Fuji."}
+      ]
+    },
+    {
+      "id": 56,
+      "pattern": "〜たことがない",
+      "category": "expérience",
+      "level": "N5",
+      "explanation": "N'avoir jamais fait (expérience négative).",
+      "structure": "[Verbe た形] + ことがありません/ない",
+      "examples": [
+        {"japanese": "納豆を食べたことがありません。", "romaji": "Nattō o tabeta koto ga arimasen.", "french": "Je n'ai jamais mangé de natto."},
+        {"japanese": "飛行機に乗ったことがありません。", "romaji": "Hikōki ni notta koto ga arimasen.", "french": "Je n'ai jamais pris l'avion."},
+        {"japanese": "日本に行ったことがありません。", "romaji": "Nihon ni itta koto ga arimasen.", "french": "Je ne suis jamais allé au Japon."}
+      ]
+    },
+    {
+      "id": 57,
+      "pattern": "〜てもいい",
+      "category": "permission",
+      "level": "N5",
+      "explanation": "Permission (tu peux..., c'est permis de...).",
+      "structure": "[Verbe forme て] + もいいです",
+      "examples": [
+        {"japanese": "ここで写真を撮ってもいいですか。", "romaji": "Koko de shashin o totte mo ii desu ka.", "french": "Puis-je prendre des photos ici ?"},
+        {"japanese": "入ってもいいですか。", "romaji": "Haitte mo ii desu ka.", "french": "Puis-je entrer ?"},
+        {"japanese": "座ってもいいです。", "romaji": "Suwatte mo ii desu.", "french": "Vous pouvez vous asseoir."}
+      ]
+    },
+    {
+      "id": 58,
+      "pattern": "〜てはいけない",
+      "category": "interdiction",
+      "level": "N5",
+      "explanation": "Interdiction (ne pas pouvoir..., ne pas avoir le droit de...).",
+      "structure": "[Verbe forme て] + はいけません",
+      "examples": [
+        {"japanese": "ここで食べてはいけません。", "romaji": "Koko de tabete wa ikemasen.", "french": "Il ne faut pas manger ici."},
+        {"japanese": "写真を撮ってはいけません。", "romaji": "Shashin o totte wa ikemasen.", "french": "Il est interdit de prendre des photos."},
+        {"japanese": "入ってはいけません。", "romaji": "Haitte wa ikemasen.", "french": "Il ne faut pas entrer."}
+      ]
+    },
+    {
+      "id": 59,
+      "pattern": "〜なければならない",
+      "category": "obligation",
+      "level": "N5",
+      "explanation": "Obligation forte (devoir absolument...).",
+      "structure": "[Verbe forme ない (sans い)] + なければなりません",
+      "examples": [
+        {"japanese": "宿題をしなければなりません。", "romaji": "Shukudai o shinakereba narimasen.", "french": "Je dois faire mes devoirs."},
+        {"japanese": "明日、早く起きなければなりません。", "romaji": "Ashita, hayaku okinakereba narimasen.", "french": "Je dois me lever tôt demain."},
+        {"japanese": "薬を飲まなければなりません。", "romaji": "Kusuri o nomanakereba narimasen.", "french": "Je dois prendre des médicaments."}
+      ]
+    },
+    {
+      "id": 60,
+      "pattern": "〜なくてもいい",
+      "category": "obligation",
+      "level": "N5",
+      "explanation": "Pas d'obligation (pas besoin de...).",
+      "structure": "[Verbe forme ない (sans い)] + なくてもいいです",
+      "examples": [
+        {"japanese": "明日は来なくてもいいです。", "romaji": "Ashita wa konakute mo ii desu.", "french": "Vous n'avez pas besoin de venir demain."},
+        {"japanese": "急がなくてもいいです。", "romaji": "Isoganakute mo ii desu.", "french": "Vous n'avez pas besoin de vous dépêcher."},
+        {"japanese": "全部食べなくてもいいです。", "romaji": "Zenbu tabenakute mo ii desu.", "french": "Vous n'avez pas besoin de tout manger."}
+      ]
+    },
+    {
+      "id": 61,
+      "pattern": "〜と思う",
+      "category": "opinion",
+      "level": "N5",
+      "explanation": "Exprimer une opinion (je pense que...).",
+      "structure": "[Phrase neutre] + と思います",
+      "examples": [
+        {"japanese": "明日は雨だと思います。", "romaji": "Ashita wa ame da to omoimasu.", "french": "Je pense qu'il pleuvra demain."},
+        {"japanese": "彼は来ないと思います。", "romaji": "Kare wa konai to omoimasu.", "french": "Je pense qu'il ne viendra pas."},
+        {"japanese": "これはいいと思います。", "romaji": "Kore wa ii to omoimasu.", "french": "Je pense que c'est bien."}
+      ]
+    },
+    {
+      "id": 62,
+      "pattern": "〜と言う",
+      "category": "citation",
+      "level": "N5",
+      "explanation": "Citation directe ou indirecte (dire que...).",
+      "structure": "[Citation] + と言います",
+      "examples": [
+        {"japanese": "先生は「頑張りなさい」と言いました。", "romaji": "Sensei wa 'ganbarinasai' to iimashita.", "french": "Le professeur a dit 'fais de ton mieux'."},
+        {"japanese": "彼は明日来ると言いました。", "romaji": "Kare wa ashita kuru to iimashita.", "french": "Il a dit qu'il viendra demain."},
+        {"japanese": "これは日本語で何と言いますか。", "romaji": "Kore wa Nihongo de nan to iimasu ka.", "french": "Comment dit-on ceci en japonais ?"}
+      ]
+    },
+    {
+      "id": 63,
+      "pattern": "〜けど/が",
+      "category": "connexion",
+      "level": "N5",
+      "explanation": "Contraste ou préparation (mais, cependant).",
+      "structure": "[Phrase 1] + けど/が、[Phrase 2]",
+      "examples": [
+        {"japanese": "日本語は難しいですが、面白いです。", "romaji": "Nihongo wa muzukashii desu ga, omoshiroi desu.", "french": "Le japonais est difficile, mais intéressant."},
+        {"japanese": "行きたいですけど、時間がありません。", "romaji": "Ikitai desu kedo, jikan ga arimasen.", "french": "Je veux y aller, mais je n'ai pas le temps."},
+        {"japanese": "高いですが、買います。", "romaji": "Takai desu ga, kaimasu.", "french": "C'est cher, mais je l'achète."}
+      ]
+    },
+    {
+      "id": 64,
+      "pattern": "〜し",
+      "category": "connexion",
+      "level": "N5",
+      "explanation": "Énumération de raisons (et aussi, de plus).",
+      "structure": "[Raison 1] + し、[Raison 2] + し",
+      "examples": [
+        {"japanese": "安いし、おいしいし、いいレストランです。", "romaji": "Yasui shi, oishii shi, ii resutoran desu.", "french": "C'est pas cher, c'est bon, c'est un bon restaurant."},
+        {"japanese": "疲れたし、お腹も空いたし、帰りましょう。", "romaji": "Tsukareta shi, onaka mo suita shi, kaerimashō.", "french": "Je suis fatigué, j'ai faim aussi, rentrons."},
+        {"japanese": "雨だし、寒いし、出かけたくないです。", "romaji": "Ame da shi, samui shi, dekaketakunai desu.", "french": "Il pleut, il fait froid, je ne veux pas sortir."}
+      ]
+    },
+    {
+      "id": 65,
+      "pattern": "〜そうだ (apparence)",
+      "category": "apparence",
+      "level": "N5",
+      "explanation": "Exprime l'apparence (semble, a l'air...).",
+      "structure": "[Radical i-adj/na-adj] + そうです",
+      "examples": [
+        {"japanese": "おいしそうです。", "romaji": "Oishisō desu.", "french": "Ça a l'air délicieux."},
+        {"japanese": "難しそうです。", "romaji": "Muzukashisō desu.", "french": "Ça a l'air difficile."},
+        {"japanese": "元気そうです。", "romaji": "Genkisō desu.", "french": "Il/Elle a l'air en forme."}
+      ]
+    },
+    {
+      "id": 66,
+      "pattern": "〜に行く/来る",
+      "category": "but",
+      "level": "N5",
+      "explanation": "Aller/venir pour faire quelque chose (but du déplacement).",
+      "structure": "[Verbe radical ます] + に + 行きます/来ます",
+      "examples": [
+        {"japanese": "映画を見に行きます。", "romaji": "Eiga o mi ni ikimasu.", "french": "Je vais voir un film."},
+        {"japanese": "日本に勉強しに来ました。", "romaji": "Nihon ni benkyō shi ni kimashita.", "french": "Je suis venu au Japon pour étudier."},
+        {"japanese": "買い物に行きます。", "romaji": "Kaimono ni ikimasu.", "french": "Je vais faire les courses."}
+      ]
+    },
+    {
+      "id": 67,
+      "pattern": "〜くなる/になる",
+      "category": "changement",
+      "level": "N5",
+      "explanation": "Devenir (changement d'état).",
+      "structure": "[Adjectif i] → くなる / [Adjectif na/Nom] → になる",
+      "examples": [
+        {"japanese": "寒くなりました。", "romaji": "Samuku narimashita.", "french": "Il fait froid maintenant (c'est devenu froid)."},
+        {"japanese": "元気になりました。", "romaji": "Genki ni narimashita.", "french": "Je vais bien maintenant (je suis devenu en forme)."},
+        {"japanese": "医者になりたいです。", "romaji": "Isha ni naritai desu.", "french": "Je veux devenir médecin."}
+      ]
+    },
+    {
+      "id": 68,
+      "pattern": "〜くする/にする",
+      "category": "changement",
+      "level": "N5",
+      "explanation": "Rendre (causer un changement).",
+      "structure": "[Adjectif i] → くする / [Adjectif na/Nom] → にする",
+      "examples": [
+        {"japanese": "部屋を明るくしてください。", "romaji": "Heya o akaruku shite kudasai.", "french": "Rendez la pièce plus claire s'il vous plaît."},
+        {"japanese": "静かにしてください。", "romaji": "Shizuka ni shite kudasai.", "french": "Soyez silencieux s'il vous plaît."},
+        {"japanese": "これにします。", "romaji": "Kore ni shimasu.", "french": "Je prends ça (je décide de prendre ça)."}
+      ]
+    },
+    {
+      "id": 69,
+      "pattern": "〜すぎる",
+      "category": "degré",
+      "level": "N5",
+      "explanation": "Trop (excès).",
+      "structure": "[Radical ます/Adjectif radical] + すぎます",
+      "examples": [
+        {"japanese": "食べすぎました。", "romaji": "Tabesugimashita.", "french": "J'ai trop mangé."},
+        {"japanese": "高すぎます。", "romaji": "Takasugimasu.", "french": "C'est trop cher."},
+        {"japanese": "飲みすぎました。", "romaji": "Nomisugimashita.", "french": "J'ai trop bu."}
+      ]
+    },
+    {
+      "id": 70,
+      "pattern": "〜やすい/にくい",
+      "category": "facilité",
+      "level": "N5",
+      "explanation": "Facile/difficile à faire.",
+      "structure": "[Radical ます] + やすい/にくい",
+      "examples": [
+        {"japanese": "この本は読みやすいです。", "romaji": "Kono hon wa yomiyasui desu.", "french": "Ce livre est facile à lire."},
+        {"japanese": "この漢字は覚えにくいです。", "romaji": "Kono kanji wa oboenikui desu.", "french": "Ce kanji est difficile à mémoriser."},
+        {"japanese": "この服は着やすいです。", "romaji": "Kono fuku wa kiyasui desu.", "french": "Ces vêtements sont faciles à porter."}
+      ]
+    },
+    {
+      "id": 71,
+      "pattern": "〜方",
+      "category": "méthode",
+      "level": "N5",
+      "explanation": "Comment faire quelque chose (méthode).",
+      "structure": "[Radical ます] + 方",
+      "examples": [
+        {"japanese": "この漢字の読み方を教えてください。", "romaji": "Kono kanji no yomikata o oshiete kudasai.", "french": "Enseignez-moi comment lire ce kanji."},
+        {"japanese": "作り方が分かりません。", "romaji": "Tsukurikata ga wakarimasen.", "french": "Je ne sais pas comment le faire."},
+        {"japanese": "使い方を知っていますか。", "romaji": "Tsukaikata o shitte imasu ka.", "french": "Savez-vous comment l'utiliser ?"}
+      ]
+    },
+    {
+      "id": 72,
+      "pattern": "〜つもりだ",
+      "category": "intention",
+      "level": "N5",
+      "explanation": "Intention (avoir l'intention de...).",
+      "structure": "[Verbe dictionnaire] + つもりです",
+      "examples": [
+        {"japanese": "来年、日本に行くつもりです。", "romaji": "Rainen, Nihon ni iku tsumori desu.", "french": "J'ai l'intention d'aller au Japon l'année prochaine."},
+        {"japanese": "結婚するつもりはありません。", "romaji": "Kekkon suru tsumori wa arimasen.", "french": "Je n'ai pas l'intention de me marier."},
+        {"japanese": "何を食べるつもりですか。", "romaji": "Nani o taberu tsumori desu ka.", "french": "Qu'avez-vous l'intention de manger ?"}
+      ]
+    },
+    {
+      "id": 73,
+      "pattern": "〜予定だ",
+      "category": "planification",
+      "level": "N5",
+      "explanation": "Plan, programme (être prévu de...).",
+      "structure": "[Verbe dictionnaire] + 予定です",
+      "examples": [
+        {"japanese": "明日、東京に行く予定です。", "romaji": "Ashita, Tōkyō ni iku yotei desu.", "french": "Je prévois d'aller à Tokyo demain."},
+        {"japanese": "来週、試験がある予定です。", "romaji": "Raishū, shiken ga aru yotei desu.", "french": "Il y a un examen prévu la semaine prochaine."},
+        {"japanese": "何時に来る予定ですか。", "romaji": "Nanji ni kuru yotei desu ka.", "french": "À quelle heure prévoyez-vous de venir ?"}
+      ]
+    },
+    {
+      "id": 74,
+      "pattern": "〜ために",
+      "category": "but",
+      "level": "N5",
+      "explanation": "Dans le but de, pour (objectif).",
+      "structure": "[Verbe dictionnaire] + ために",
+      "examples": [
+        {"japanese": "日本語を勉強するために、日本に来ました。", "romaji": "Nihongo o benkyō suru tame ni, Nihon ni kimashita.", "french": "Je suis venu au Japon pour étudier le japonais."},
+        {"japanese": "健康のために運動します。", "romaji": "Kenkō no tame ni undō shimasu.", "french": "Je fais de l'exercice pour ma santé."},
+        {"japanese": "合格するために頑張ります。", "romaji": "Gōkaku suru tame ni ganbarimasu.", "french": "Je fais de mon mieux pour réussir."}
+      ]
+    },
+    {
+      "id": 75,
+      "pattern": "〜でしょう",
+      "category": "probabilité",
+      "level": "N5",
+      "explanation": "Probabilité, supposition (probablement).",
+      "structure": "[Phrase neutre] + でしょう",
+      "examples": [
+        {"japanese": "明日は雨でしょう。", "romaji": "Ashita wa ame deshō.", "french": "Il pleuvra probablement demain."},
+        {"japanese": "彼は来ないでしょう。", "romaji": "Kare wa konai deshō.", "french": "Il ne viendra probablement pas."},
+        {"japanese": "高いでしょう。", "romaji": "Takai deshō.", "french": "C'est probablement cher."}
+      ]
+    },
+    {
+      "id": 76,
+      "pattern": "〜かもしれない",
+      "category": "probabilité",
+      "level": "N5",
+      "explanation": "Possibilité (peut-être, il se peut que...).",
+      "structure": "[Phrase neutre] + かもしれません",
+      "examples": [
+        {"japanese": "雨が降るかもしれません。", "romaji": "Ame ga furu kamoshiremasen.", "french": "Il se peut qu'il pleuve."},
+        {"japanese": "彼は来ないかもしれません。", "romaji": "Kare wa konai kamoshiremasen.", "french": "Il se peut qu'il ne vienne pas."},
+        {"japanese": "間違っているかもしれません。", "romaji": "Machigatte iru kamoshiremasen.", "french": "Je me trompe peut-être."}
+      ]
+    },
+    {
+      "id": 77,
+      "pattern": "〜ほうがいい",
+      "category": "conseil",
+      "level": "N5",
+      "explanation": "Conseil (il vaut mieux...).",
+      "structure": "[Verbe た形] + ほうがいいです",
+      "examples": [
+        {"japanese": "薬を飲んだほうがいいです。", "romaji": "Kusuri o nonda hō ga ii desu.", "french": "Vous feriez mieux de prendre des médicaments."},
+        {"japanese": "休んだほうがいいです。", "romaji": "Yasunda hō ga ii desu.", "french": "Vous feriez mieux de vous reposer."},
+        {"japanese": "行かないほうがいいです。", "romaji": "Ikanai hō ga ii desu.", "french": "Vous feriez mieux de ne pas y aller."}
+      ]
+    },
+    {
+      "id": 78,
+      "pattern": "〜はずだ",
+      "category": "attente",
+      "level": "N5",
+      "explanation": "Attente logique (devrait, censé).",
+      "structure": "[Phrase neutre] + はずです",
+      "examples": [
+        {"japanese": "彼は来るはずです。", "romaji": "Kare wa kuru hazu desu.", "french": "Il devrait venir."},
+        {"japanese": "ここにあるはずです。", "romaji": "Koko ni aru hazu desu.", "french": "Ça devrait être ici."},
+        {"japanese": "知っているはずです。", "romaji": "Shitte iru hazu desu.", "french": "Il/Elle devrait le savoir."}
+      ]
+    },
+    {
+      "id": 79,
+      "pattern": "〜らしい",
+      "category": "ouï-dire",
+      "level": "N5",
+      "explanation": "Information de seconde main (apparemment, il paraît que...).",
+      "structure": "[Phrase neutre] + らしいです",
+      "examples": [
+        {"japanese": "彼は学生らしいです。", "romaji": "Kare wa gakusei rashii desu.", "french": "Il paraît qu'il est étudiant."},
+        {"japanese": "明日は雨らしいです。", "romaji": "Ashita wa ame rashii desu.", "french": "Il paraît qu'il pleuvra demain."},
+        {"japanese": "おいしいらしいです。", "romaji": "Oishii rashii desu.", "french": "Il paraît que c'est délicieux."}
+      ]
+    },
+    {
+      "id": 80,
+      "pattern": "〜みたいだ",
+      "category": "ressemblance",
+      "level": "N5",
+      "explanation": "Ressemblance ou supposition (semble, comme si...).",
+      "structure": "[Nom] + みたいです / [Phrase neutre] + みたいです",
+      "examples": [
+        {"japanese": "学生みたいです。", "romaji": "Gakusei mitai desu.", "french": "On dirait un étudiant."},
+        {"japanese": "雨が降るみたいです。", "romaji": "Ame ga furu mitai desu.", "french": "On dirait qu'il va pleuvoir."},
+        {"japanese": "病気みたいです。", "romaji": "Byōki mitai desu.", "french": "On dirait qu'il/elle est malade."}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1917 @@
+{
+  "i_adjectives": [
+    {
+      "kanji": "大きい",
+      "hiragana": "おおきい",
+      "romaji": "ōkii",
+      "meaning": "grand, gros",
+      "conjugations": {
+        "present_affirmative": { "kanji": "大きい", "romaji": "ōkii" },
+        "present_negative": { "kanji": "大きくない", "romaji": "ōkikunai" },
+        "past_affirmative": { "kanji": "大きかった", "romaji": "ōkikatta" },
+        "past_negative": { "kanji": "大きくなかった", "romaji": "ōkikunakatta" },
+        "te_form": { "kanji": "大きくて", "romaji": "ōkikute" },
+        "adverbial": { "kanji": "大きく", "romaji": "ōkiku" }
+      },
+      "examples": [
+        {
+          "sentence": "この部屋は大きいです。",
+          "reading": "このへやはおおきいです。",
+          "translation": "Cette pièce est grande."
+        }
+      ]
+    },
+    {
+      "kanji": "小さい",
+      "hiragana": "ちいさい",
+      "romaji": "chīsai",
+      "meaning": "petit",
+      "conjugations": {
+        "present_affirmative": { "kanji": "小さい", "romaji": "chīsai" },
+        "present_negative": { "kanji": "小さくない", "romaji": "chīsakunai" },
+        "past_affirmative": { "kanji": "小さかった", "romaji": "chīsakatta" },
+        "past_negative": { "kanji": "小さくなかった", "romaji": "chīsakunakatta" },
+        "te_form": { "kanji": "小さくて", "romaji": "chīsakute" },
+        "adverbial": { "kanji": "小さく", "romaji": "chīsaku" }
+      },
+      "examples": [
+        {
+          "sentence": "この犬は小さいです。",
+          "reading": "このいぬはちいさいです。",
+          "translation": "Ce chien est petit."
+        }
+      ]
+    },
+    {
+      "kanji": "高い",
+      "hiragana": "たかい",
+      "romaji": "takai",
+      "meaning": "cher, haut",
+      "conjugations": {
+        "present_affirmative": { "kanji": "高い", "romaji": "takai" },
+        "present_negative": { "kanji": "高くない", "romaji": "takakunai" },
+        "past_affirmative": { "kanji": "高かった", "romaji": "takakatta" },
+        "past_negative": { "kanji": "高くなかった", "romaji": "takakunakatta" },
+        "te_form": { "kanji": "高くて", "romaji": "takakute" },
+        "adverbial": { "kanji": "高く", "romaji": "takaku" }
+      },
+      "examples": [
+        {
+          "sentence": "この時計は高いです。",
+          "reading": "このとけいはたかいです。",
+          "translation": "Cette montre est chère."
+        }
+      ]
+    },
+    {
+      "kanji": "安い",
+      "hiragana": "やすい",
+      "romaji": "yasui",
+      "meaning": "bon marché",
+      "conjugations": {
+        "present_affirmative": { "kanji": "安い", "romaji": "yasui" },
+        "present_negative": { "kanji": "安くない", "romaji": "yasukunai" },
+        "past_affirmative": { "kanji": "安かった", "romaji": "yasukatta" },
+        "past_negative": { "kanji": "安くなかった", "romaji": "yasukunakatta" },
+        "te_form": { "kanji": "安くて", "romaji": "yasukute" },
+        "adverbial": { "kanji": "安く", "romaji": "yasuku" }
+      },
+      "examples": [
+        {
+          "sentence": "この店は安いです。",
+          "reading": "このみせはやすいです。",
+          "translation": "Ce magasin est bon marché."
+        }
+      ]
+    },
+    {
+      "kanji": "新しい",
+      "hiragana": "あたらしい",
+      "romaji": "atarashii",
+      "meaning": "nouveau",
+      "conjugations": {
+        "present_affirmative": { "kanji": "新しい", "romaji": "atarashii" },
+        "present_negative": { "kanji": "新しくない", "romaji": "atarashikunai" },
+        "past_affirmative": { "kanji": "新しかった", "romaji": "atarashikatta" },
+        "past_negative": { "kanji": "新しくなかった", "romaji": "atarashikunakatta" },
+        "te_form": { "kanji": "新しくて", "romaji": "atarashikute" },
+        "adverbial": { "kanji": "新しく", "romaji": "atarashiku" }
+      },
+      "examples": [
+        {
+          "sentence": "新しい車を買いました。",
+          "reading": "あたらしいくるまをかいました。",
+          "translation": "J'ai acheté une nouvelle voiture."
+        }
+      ]
+    },
+    {
+      "kanji": "古い",
+      "hiragana": "ふるい",
+      "romaji": "furui",
+      "meaning": "vieux, ancien",
+      "conjugations": {
+        "present_affirmative": { "kanji": "古い", "romaji": "furui" },
+        "present_negative": { "kanji": "古くない", "romaji": "furukunai" },
+        "past_affirmative": { "kanji": "古かった", "romaji": "furukatta" },
+        "past_negative": { "kanji": "古くなかった", "romaji": "furukunakatta" },
+        "te_form": { "kanji": "古くて", "romaji": "furukute" },
+        "adverbial": { "kanji": "古く", "romaji": "furuku" }
+      },
+      "examples": [
+        {
+          "sentence": "古い本を読みました。",
+          "reading": "ふるいほんをよみました。",
+          "translation": "J'ai lu un vieux livre."
+        }
+      ]
+    },
+    {
+      "kanji": "良い",
+      "hiragana": "いい / よい",
+      "romaji": "ii / yoi",
+      "meaning": "bon",
+      "conjugations": {
+        "present_affirmative": { "kanji": "良い", "romaji": "ii" },
+        "present_negative": { "kanji": "良くない", "romaji": "yoku nai" },
+        "past_affirmative": { "kanji": "良かった", "romaji": "yokatta" },
+        "past_negative": { "kanji": "良くなかった", "romaji": "yoku nakatta" },
+        "te_form": { "kanji": "良くて", "romaji": "yokute" },
+        "adverbial": { "kanji": "良く", "romaji": "yoku" }
+      },
+      "examples": [
+        {
+          "sentence": "今日はいい天気です。",
+          "reading": "きょうはいいてんきです。",
+          "translation": "Il fait beau aujourd'hui."
+        }
+      ]
+    },
+    {
+      "kanji": "悪い",
+      "hiragana": "わるい",
+      "romaji": "warui",
+      "meaning": "mauvais",
+      "conjugations": {
+        "present_affirmative": { "kanji": "悪い", "romaji": "warui" },
+        "present_negative": { "kanji": "悪くない", "romaji": "warukunai" },
+        "past_affirmative": { "kanji": "悪かった", "romaji": "warukatta" },
+        "past_negative": { "kanji": "悪くなかった", "romaji": "warukunakatta" },
+        "te_form": { "kanji": "悪くて", "romaji": "warukute" },
+        "adverbial": { "kanji": "悪く", "romaji": "waruku" }
+      },
+      "examples": [
+        {
+          "sentence": "天気が悪いです。",
+          "reading": "てんきがわるいです。",
+          "translation": "Le temps est mauvais."
+        }
+      ]
+    },
+    {
+      "kanji": "長い",
+      "hiragana": "ながい",
+      "romaji": "nagai",
+      "meaning": "long",
+      "conjugations": {
+        "present_affirmative": { "kanji": "長い", "romaji": "nagai" },
+        "present_negative": { "kanji": "長くない", "romaji": "nagakunai" },
+        "past_affirmative": { "kanji": "長かった", "romaji": "nagakatta" },
+        "past_negative": { "kanji": "長くなかった", "romaji": "nagakunakatta" },
+        "te_form": { "kanji": "長くて", "romaji": "nagakute" },
+        "adverbial": { "kanji": "長く", "romaji": "nagaku" }
+      },
+      "examples": [
+        {
+          "sentence": "長い髪がきれいです。",
+          "reading": "ながいかみがきれいです。",
+          "translation": "Les cheveux longs sont jolis."
+        }
+      ]
+    },
+    {
+      "kanji": "短い",
+      "hiragana": "みじかい",
+      "romaji": "mijikai",
+      "meaning": "court",
+      "conjugations": {
+        "present_affirmative": { "kanji": "短い", "romaji": "mijikai" },
+        "present_negative": { "kanji": "短くない", "romaji": "mijikakunai" },
+        "past_affirmative": { "kanji": "短かった", "romaji": "mijikakatta" },
+        "past_negative": { "kanji": "短くなかった", "romaji": "mijikakunakatta" },
+        "te_form": { "kanji": "短くて", "romaji": "mijikakute" },
+        "adverbial": { "kanji": "短く", "romaji": "mijikaku" }
+      },
+      "examples": [
+        {
+          "sentence": "この映画は短いです。",
+          "reading": "このえいがはみじかいです。",
+          "translation": "Ce film est court."
+        }
+      ]
+    },
+    {
+      "kanji": "暑い",
+      "hiragana": "あつい",
+      "romaji": "atsui",
+      "meaning": "chaud (température)",
+      "conjugations": {
+        "present_affirmative": { "kanji": "暑い", "romaji": "atsui" },
+        "present_negative": { "kanji": "暑くない", "romaji": "atsukunai" },
+        "past_affirmative": { "kanji": "暑かった", "romaji": "atsukatta" },
+        "past_negative": { "kanji": "暑くなかった", "romaji": "atsukunakatta" },
+        "te_form": { "kanji": "暑くて", "romaji": "atsukute" },
+        "adverbial": { "kanji": "暑く", "romaji": "atsuku" }
+      },
+      "examples": [
+        {
+          "sentence": "今日は暑いです。",
+          "reading": "きょうはあついです。",
+          "translation": "Il fait chaud aujourd'hui."
+        }
+      ]
+    },
+    {
+      "kanji": "寒い",
+      "hiragana": "さむい",
+      "romaji": "samui",
+      "meaning": "froid (température)",
+      "conjugations": {
+        "present_affirmative": { "kanji": "寒い", "romaji": "samui" },
+        "present_negative": { "kanji": "寒くない", "romaji": "samukunai" },
+        "past_affirmative": { "kanji": "寒かった", "romaji": "samukatta" },
+        "past_negative": { "kanji": "寒くなかった", "romaji": "samukunakatta" },
+        "te_form": { "kanji": "寒くて", "romaji": "samukute" },
+        "adverbial": { "kanji": "寒く", "romaji": "samuku" }
+      },
+      "examples": [
+        {
+          "sentence": "冬は寒いです。",
+          "reading": "ふゆはさむいです。",
+          "translation": "L'hiver est froid."
+        }
+      ]
+    },
+    {
+      "kanji": "暖かい",
+      "hiragana": "あたたかい",
+      "romaji": "atatakai",
+      "meaning": "chaud, tiède",
+      "conjugations": {
+        "present_affirmative": { "kanji": "暖かい", "romaji": "atatakai" },
+        "present_negative": { "kanji": "暖かくない", "romaji": "atatakakunai" },
+        "past_affirmative": { "kanji": "暖かかった", "romaji": "atatakakatta" },
+        "past_negative": { "kanji": "暖かくなかった", "romaji": "atatakakunakatta" },
+        "te_form": { "kanji": "暖かくて", "romaji": "atatakakute" },
+        "adverbial": { "kanji": "暖かく", "romaji": "atatakaku" }
+      },
+      "examples": [
+        {
+          "sentence": "春は暖かいです。",
+          "reading": "はるはあたたかいです。",
+          "translation": "Le printemps est doux."
+        }
+      ]
+    },
+    {
+      "kanji": "涼しい",
+      "hiragana": "すずしい",
+      "romaji": "suzushii",
+      "meaning": "frais",
+      "conjugations": {
+        "present_affirmative": { "kanji": "涼しい", "romaji": "suzushii" },
+        "present_negative": { "kanji": "涼しくない", "romaji": "suzushikunai" },
+        "past_affirmative": { "kanji": "涼しかった", "romaji": "suzushikatta" },
+        "past_negative": { "kanji": "涼しくなかった", "romaji": "suzushikunakatta" },
+        "te_form": { "kanji": "涼しくて", "romaji": "suzushikute" },
+        "adverbial": { "kanji": "涼しく", "romaji": "suzushiku" }
+      },
+      "examples": [
+        {
+          "sentence": "秋は涼しいです。",
+          "reading": "あきはすずしいです。",
+          "translation": "L'automne est frais."
+        }
+      ]
+    },
+    {
+      "kanji": "熱い",
+      "hiragana": "あつい",
+      "romaji": "atsui",
+      "meaning": "brûlant (au toucher)",
+      "conjugations": {
+        "present_affirmative": { "kanji": "熱い", "romaji": "atsui" },
+        "present_negative": { "kanji": "熱くない", "romaji": "atsukunai" },
+        "past_affirmative": { "kanji": "熱かった", "romaji": "atsukatta" },
+        "past_negative": { "kanji": "熱くなかった", "romaji": "atsukunakatta" },
+        "te_form": { "kanji": "熱くて", "romaji": "atsukute" },
+        "adverbial": { "kanji": "熱く", "romaji": "atsuku" }
+      },
+      "examples": [
+        {
+          "sentence": "コーヒーが熱いです。",
+          "reading": "こーひーがあついです。",
+          "translation": "Le café est brûlant."
+        }
+      ]
+    },
+    {
+      "kanji": "冷たい",
+      "hiragana": "つめたい",
+      "romaji": "tsumetai",
+      "meaning": "froid (au toucher)",
+      "conjugations": {
+        "present_affirmative": { "kanji": "冷たい", "romaji": "tsumetai" },
+        "present_negative": { "kanji": "冷たくない", "romaji": "tsumetakunai" },
+        "past_affirmative": { "kanji": "冷たかった", "romaji": "tsumetakatta" },
+        "past_negative": { "kanji": "冷たくなかった", "romaji": "tsumetakunakatta" },
+        "te_form": { "kanji": "冷たくて", "romaji": "tsumetakute" },
+        "adverbial": { "kanji": "冷たく", "romaji": "tsumetaku" }
+      },
+      "examples": [
+        {
+          "sentence": "水が冷たいです。",
+          "reading": "みずがつめたいです。",
+          "translation": "L'eau est froide."
+        }
+      ]
+    },
+    {
+      "kanji": "多い",
+      "hiragana": "おおい",
+      "romaji": "ōi",
+      "meaning": "nombreux, beaucoup",
+      "conjugations": {
+        "present_affirmative": { "kanji": "多い", "romaji": "ōi" },
+        "present_negative": { "kanji": "多くない", "romaji": "ōkunai" },
+        "past_affirmative": { "kanji": "多かった", "romaji": "ōkatta" },
+        "past_negative": { "kanji": "多くなかった", "romaji": "ōkunakatta" },
+        "te_form": { "kanji": "多くて", "romaji": "ōkute" },
+        "adverbial": { "kanji": "多く", "romaji": "ōku" }
+      },
+      "examples": [
+        {
+          "sentence": "人が多いです。",
+          "reading": "ひとがおおいです。",
+          "translation": "Il y a beaucoup de monde."
+        }
+      ]
+    },
+    {
+      "kanji": "少ない",
+      "hiragana": "すくない",
+      "romaji": "sukunai",
+      "meaning": "peu nombreux",
+      "conjugations": {
+        "present_affirmative": { "kanji": "少ない", "romaji": "sukunai" },
+        "present_negative": { "kanji": "少なくない", "romaji": "sukunakunai" },
+        "past_affirmative": { "kanji": "少なかった", "romaji": "sukunakatta" },
+        "past_negative": { "kanji": "少なくなかった", "romaji": "sukunakunakatta" },
+        "te_form": { "kanji": "少なくて", "romaji": "sukunakute" },
+        "adverbial": { "kanji": "少なく", "romaji": "sukunaku" }
+      },
+      "examples": [
+        {
+          "sentence": "お金が少ないです。",
+          "reading": "おかねがすくないです。",
+          "translation": "J'ai peu d'argent."
+        }
+      ]
+    },
+    {
+      "kanji": "重い",
+      "hiragana": "おもい",
+      "romaji": "omoi",
+      "meaning": "lourd",
+      "conjugations": {
+        "present_affirmative": { "kanji": "重い", "romaji": "omoi" },
+        "present_negative": { "kanji": "重くない", "romaji": "omokunai" },
+        "past_affirmative": { "kanji": "重かった", "romaji": "omokatta" },
+        "past_negative": { "kanji": "重くなかった", "romaji": "omokunakatta" },
+        "te_form": { "kanji": "重くて", "romaji": "omokute" },
+        "adverbial": { "kanji": "重く", "romaji": "omoku" }
+      },
+      "examples": [
+        {
+          "sentence": "この荷物は重いです。",
+          "reading": "このにもつはおもいです。",
+          "translation": "Ce bagage est lourd."
+        }
+      ]
+    },
+    {
+      "kanji": "軽い",
+      "hiragana": "かるい",
+      "romaji": "karui",
+      "meaning": "léger",
+      "conjugations": {
+        "present_affirmative": { "kanji": "軽い", "romaji": "karui" },
+        "present_negative": { "kanji": "軽くない", "romaji": "karukunai" },
+        "past_affirmative": { "kanji": "軽かった", "romaji": "karukatta" },
+        "past_negative": { "kanji": "軽くなかった", "romaji": "karukunakatta" },
+        "te_form": { "kanji": "軽くて", "romaji": "karukute" },
+        "adverbial": { "kanji": "軽く", "romaji": "karuku" }
+      },
+      "examples": [
+        {
+          "sentence": "この箱は軽いです。",
+          "reading": "このはこはかるいです。",
+          "translation": "Cette boîte est légère."
+        }
+      ]
+    },
+    {
+      "kanji": "強い",
+      "hiragana": "つよい",
+      "romaji": "tsuyoi",
+      "meaning": "fort",
+      "conjugations": {
+        "present_affirmative": { "kanji": "強い", "romaji": "tsuyoi" },
+        "present_negative": { "kanji": "強くない", "romaji": "tsuyokunai" },
+        "past_affirmative": { "kanji": "強かった", "romaji": "tsuyokatta" },
+        "past_negative": { "kanji": "強くなかった", "romaji": "tsuyokunakatta" },
+        "te_form": { "kanji": "強くて", "romaji": "tsuyokute" },
+        "adverbial": { "kanji": "強く", "romaji": "tsuyoku" }
+      },
+      "examples": [
+        {
+          "sentence": "風が強いです。",
+          "reading": "かぜがつよいです。",
+          "translation": "Le vent est fort."
+        }
+      ]
+    },
+    {
+      "kanji": "弱い",
+      "hiragana": "よわい",
+      "romaji": "yowai",
+      "meaning": "faible",
+      "conjugations": {
+        "present_affirmative": { "kanji": "弱い", "romaji": "yowai" },
+        "present_negative": { "kanji": "弱くない", "romaji": "yowakunai" },
+        "past_affirmative": { "kanji": "弱かった", "romaji": "yowakatta" },
+        "past_negative": { "kanji": "弱くなかった", "romaji": "yowakunakatta" },
+        "te_form": { "kanji": "弱くて", "romaji": "yowakute" },
+        "adverbial": { "kanji": "弱く", "romaji": "yowaku" }
+      },
+      "examples": [
+        {
+          "sentence": "体が弱いです。",
+          "reading": "からだがよわいです。",
+          "translation": "J'ai un corps faible."
+        }
+      ]
+    },
+    {
+      "kanji": "明るい",
+      "hiragana": "あかるい",
+      "romaji": "akarui",
+      "meaning": "clair, lumineux",
+      "conjugations": {
+        "present_affirmative": { "kanji": "明るい", "romaji": "akarui" },
+        "present_negative": { "kanji": "明るくない", "romaji": "akarukunai" },
+        "past_affirmative": { "kanji": "明るかった", "romaji": "akarukatta" },
+        "past_negative": { "kanji": "明るくなかった", "romaji": "akarukunakatta" },
+        "te_form": { "kanji": "明るくて", "romaji": "akarukute" },
+        "adverbial": { "kanji": "明るく", "romaji": "akaruku" }
+      },
+      "examples": [
+        {
+          "sentence": "この部屋は明るいです。",
+          "reading": "このへやはあかるいです。",
+          "translation": "Cette pièce est lumineuse."
+        }
+      ]
+    },
+    {
+      "kanji": "暗い",
+      "hiragana": "くらい",
+      "romaji": "kurai",
+      "meaning": "sombre",
+      "conjugations": {
+        "present_affirmative": { "kanji": "暗い", "romaji": "kurai" },
+        "present_negative": { "kanji": "暗くない", "romaji": "kurakunai" },
+        "past_affirmative": { "kanji": "暗かった", "romaji": "kurakatta" },
+        "past_negative": { "kanji": "暗くなかった", "romaji": "kurakunakatta" },
+        "te_form": { "kanji": "暗くて", "romaji": "kurakute" },
+        "adverbial": { "kanji": "暗く", "romaji": "kuraku" }
+      },
+      "examples": [
+        {
+          "sentence": "夜は暗いです。",
+          "reading": "よるはくらいです。",
+          "translation": "La nuit est sombre."
+        }
+      ]
+    },
+    {
+      "kanji": "広い",
+      "hiragana": "ひろい",
+      "romaji": "hiroi",
+      "meaning": "large, spacieux",
+      "conjugations": {
+        "present_affirmative": { "kanji": "広い", "romaji": "hiroi" },
+        "present_negative": { "kanji": "広くない", "romaji": "hirokunai" },
+        "past_affirmative": { "kanji": "広かった", "romaji": "hirokatta" },
+        "past_negative": { "kanji": "広くなかった", "romaji": "hirokunakatta" },
+        "te_form": { "kanji": "広くて", "romaji": "hirokute" },
+        "adverbial": { "kanji": "広く", "romaji": "hiroku" }
+      },
+      "examples": [
+        {
+          "sentence": "公園は広いです。",
+          "reading": "こうえんはひろいです。",
+          "translation": "Le parc est spacieux."
+        }
+      ]
+    },
+    {
+      "kanji": "狭い",
+      "hiragana": "せまい",
+      "romaji": "semai",
+      "meaning": "étroit",
+      "conjugations": {
+        "present_affirmative": { "kanji": "狭い", "romaji": "semai" },
+        "present_negative": { "kanji": "狭くない", "romaji": "semakunai" },
+        "past_affirmative": { "kanji": "狭かった", "romaji": "semakatta" },
+        "past_negative": { "kanji": "狭くなかった", "romaji": "semakunakatta" },
+        "te_form": { "kanji": "狭くて", "romaji": "semakute" },
+        "adverbial": { "kanji": "狭く", "romaji": "semaku" }
+      },
+      "examples": [
+        {
+          "sentence": "この道は狭いです。",
+          "reading": "このみちはせまいです。",
+          "translation": "Cette rue est étroite."
+        }
+      ]
+    },
+    {
+      "kanji": "近い",
+      "hiragana": "ちかい",
+      "romaji": "chikai",
+      "meaning": "proche",
+      "conjugations": {
+        "present_affirmative": { "kanji": "近い", "romaji": "chikai" },
+        "present_negative": { "kanji": "近くない", "romaji": "chikakunai" },
+        "past_affirmative": { "kanji": "近かった", "romaji": "chikakatta" },
+        "past_negative": { "kanji": "近くなかった", "romaji": "chikakunakatta" },
+        "te_form": { "kanji": "近くて", "romaji": "chikakute" },
+        "adverbial": { "kanji": "近く", "romaji": "chikaku" }
+      },
+      "examples": [
+        {
+          "sentence": "駅は近いです。",
+          "reading": "えきはちかいです。",
+          "translation": "La gare est proche."
+        }
+      ]
+    },
+    {
+      "kanji": "遠い",
+      "hiragana": "とおい",
+      "romaji": "tōi",
+      "meaning": "loin",
+      "conjugations": {
+        "present_affirmative": { "kanji": "遠い", "romaji": "tōi" },
+        "present_negative": { "kanji": "遠くない", "romaji": "tōkunai" },
+        "past_affirmative": { "kanji": "遠かった", "romaji": "tōkatta" },
+        "past_negative": { "kanji": "遠くなかった", "romaji": "tōkunakatta" },
+        "te_form": { "kanji": "遠くて", "romaji": "tōkute" },
+        "adverbial": { "kanji": "遠く", "romaji": "tōku" }
+      },
+      "examples": [
+        {
+          "sentence": "学校は遠いです。",
+          "reading": "がっこうはとおいです。",
+          "translation": "L'école est loin."
+        }
+      ]
+    },
+    {
+      "kanji": "速い",
+      "hiragana": "はやい",
+      "romaji": "hayai",
+      "meaning": "rapide",
+      "conjugations": {
+        "present_affirmative": { "kanji": "速い", "romaji": "hayai" },
+        "present_negative": { "kanji": "速くない", "romaji": "hayakunai" },
+        "past_affirmative": { "kanji": "速かった", "romaji": "hayakatta" },
+        "past_negative": { "kanji": "速くなかった", "romaji": "hayakunakatta" },
+        "te_form": { "kanji": "速くて", "romaji": "hayakute" },
+        "adverbial": { "kanji": "速く", "romaji": "hayaku" }
+      },
+      "examples": [
+        {
+          "sentence": "新幹線は速いです。",
+          "reading": "しんかんせんははやいです。",
+          "translation": "Le shinkansen est rapide."
+        }
+      ]
+    },
+    {
+      "kanji": "遅い",
+      "hiragana": "おそい",
+      "romaji": "osoi",
+      "meaning": "lent, tard",
+      "conjugations": {
+        "present_affirmative": { "kanji": "遅い", "romaji": "osoi" },
+        "present_negative": { "kanji": "遅くない", "romaji": "osokunai" },
+        "past_affirmative": { "kanji": "遅かった", "romaji": "osokatta" },
+        "past_negative": { "kanji": "遅くなかった", "romaji": "osokunakatta" },
+        "te_form": { "kanji": "遅くて", "romaji": "osokute" },
+        "adverbial": { "kanji": "遅く", "romaji": "osoku" }
+      },
+      "examples": [
+        {
+          "sentence": "バスが遅いです。",
+          "reading": "ばすがおそいです。",
+          "translation": "Le bus est lent."
+        }
+      ]
+    },
+    {
+      "kanji": "早い",
+      "hiragana": "はやい",
+      "romaji": "hayai",
+      "meaning": "tôt",
+      "conjugations": {
+        "present_affirmative": { "kanji": "早い", "romaji": "hayai" },
+        "present_negative": { "kanji": "早くない", "romaji": "hayakunai" },
+        "past_affirmative": { "kanji": "早かった", "romaji": "hayakatta" },
+        "past_negative": { "kanji": "早くなかった", "romaji": "hayakunakatta" },
+        "te_form": { "kanji": "早くて", "romaji": "hayakute" },
+        "adverbial": { "kanji": "早く", "romaji": "hayaku" }
+      },
+      "examples": [
+        {
+          "sentence": "朝早く起きました。",
+          "reading": "あさはやくおきました。",
+          "translation": "Je me suis levé tôt le matin."
+        }
+      ]
+    },
+    {
+      "kanji": "若い",
+      "hiragana": "わかい",
+      "romaji": "wakai",
+      "meaning": "jeune",
+      "conjugations": {
+        "present_affirmative": { "kanji": "若い", "romaji": "wakai" },
+        "present_negative": { "kanji": "若くない", "romaji": "wakakunai" },
+        "past_affirmative": { "kanji": "若かった", "romaji": "wakakatta" },
+        "past_negative": { "kanji": "若くなかった", "romaji": "wakakunakatta" },
+        "te_form": { "kanji": "若くて", "romaji": "wakakute" },
+        "adverbial": { "kanji": "若く", "romaji": "wakaku" }
+      },
+      "examples": [
+        {
+          "sentence": "彼女は若いです。",
+          "reading": "かのじょはわかいです。",
+          "translation": "Elle est jeune."
+        }
+      ]
+    },
+    {
+      "kanji": "楽しい",
+      "hiragana": "たのしい",
+      "romaji": "tanoshii",
+      "meaning": "amusant, agréable",
+      "conjugations": {
+        "present_affirmative": { "kanji": "楽しい", "romaji": "tanoshii" },
+        "present_negative": { "kanji": "楽しくない", "romaji": "tanoshikunai" },
+        "past_affirmative": { "kanji": "楽しかった", "romaji": "tanoshikatta" },
+        "past_negative": { "kanji": "楽しくなかった", "romaji": "tanoshikunakatta" },
+        "te_form": { "kanji": "楽しくて", "romaji": "tanoshikute" },
+        "adverbial": { "kanji": "楽しく", "romaji": "tanoshiku" }
+      },
+      "examples": [
+        {
+          "sentence": "パーティーは楽しかったです。",
+          "reading": "ぱーてぃーはたのしかったです。",
+          "translation": "La fête était amusante."
+        }
+      ]
+    },
+    {
+      "kanji": "忙しい",
+      "hiragana": "いそがしい",
+      "romaji": "isogashii",
+      "meaning": "occupé",
+      "conjugations": {
+        "present_affirmative": { "kanji": "忙しい", "romaji": "isogashii" },
+        "present_negative": { "kanji": "忙しくない", "romaji": "isogashikunai" },
+        "past_affirmative": { "kanji": "忙しかった", "romaji": "isogashikatta" },
+        "past_negative": { "kanji": "忙しくなかった", "romaji": "isogashikunakatta" },
+        "te_form": { "kanji": "忙しくて", "romaji": "isogashikute" },
+        "adverbial": { "kanji": "忙しく", "romaji": "isogashiku" }
+      },
+      "examples": [
+        {
+          "sentence": "今日は忙しいです。",
+          "reading": "きょうはいそがしいです。",
+          "translation": "Je suis occupé aujourd'hui."
+        }
+      ]
+    },
+    {
+      "kanji": "難しい",
+      "hiragana": "むずかしい",
+      "romaji": "muzukashii",
+      "meaning": "difficile",
+      "conjugations": {
+        "present_affirmative": { "kanji": "難しい", "romaji": "muzukashii" },
+        "present_negative": { "kanji": "難しくない", "romaji": "muzukashikunai" },
+        "past_affirmative": { "kanji": "難しかった", "romaji": "muzukashikatta" },
+        "past_negative": { "kanji": "難しくなかった", "romaji": "muzukashikunakatta" },
+        "te_form": { "kanji": "難しくて", "romaji": "muzukashikute" },
+        "adverbial": { "kanji": "難しく", "romaji": "muzukashiku" }
+      },
+      "examples": [
+        {
+          "sentence": "漢字は難しいです。",
+          "reading": "かんじはむずかしいです。",
+          "translation": "Les kanji sont difficiles."
+        }
+      ]
+    },
+    {
+      "kanji": "易しい",
+      "hiragana": "やさしい",
+      "romaji": "yasashii",
+      "meaning": "facile",
+      "conjugations": {
+        "present_affirmative": { "kanji": "易しい", "romaji": "yasashii" },
+        "present_negative": { "kanji": "易しくない", "romaji": "yasashikunai" },
+        "past_affirmative": { "kanji": "易しかった", "romaji": "yasashikatta" },
+        "past_negative": { "kanji": "易しくなかった", "romaji": "yasashikunakatta" },
+        "te_form": { "kanji": "易しくて", "romaji": "yasashikute" },
+        "adverbial": { "kanji": "易しく", "romaji": "yasashiku" }
+      },
+      "examples": [
+        {
+          "sentence": "この問題は易しいです。",
+          "reading": "このもんだいはやさしいです。",
+          "translation": "Ce problème est facile."
+        }
+      ]
+    },
+    {
+      "kanji": "優しい",
+      "hiragana": "やさしい",
+      "romaji": "yasashii",
+      "meaning": "gentil",
+      "conjugations": {
+        "present_affirmative": { "kanji": "優しい", "romaji": "yasashii" },
+        "present_negative": { "kanji": "優しくない", "romaji": "yasashikunai" },
+        "past_affirmative": { "kanji": "優しかった", "romaji": "yasashikatta" },
+        "past_negative": { "kanji": "優しくなかった", "romaji": "yasashikunakatta" },
+        "te_form": { "kanji": "優しくて", "romaji": "yasashikute" },
+        "adverbial": { "kanji": "優しく", "romaji": "yasashiku" }
+      },
+      "examples": [
+        {
+          "sentence": "先生は優しいです。",
+          "reading": "せんせいはやさしいです。",
+          "translation": "Le professeur est gentil."
+        }
+      ]
+    },
+    {
+      "kanji": "美味しい",
+      "hiragana": "おいしい",
+      "romaji": "oishii",
+      "meaning": "délicieux",
+      "conjugations": {
+        "present_affirmative": { "kanji": "美味しい", "romaji": "oishii" },
+        "present_negative": { "kanji": "美味しくない", "romaji": "oishikunai" },
+        "past_affirmative": { "kanji": "美味しかった", "romaji": "oishikatta" },
+        "past_negative": { "kanji": "美味しくなかった", "romaji": "oishikunakatta" },
+        "te_form": { "kanji": "美味しくて", "romaji": "oishikute" },
+        "adverbial": { "kanji": "美味しく", "romaji": "oishiku" }
+      },
+      "examples": [
+        {
+          "sentence": "このラーメンは美味しいです。",
+          "reading": "このらーめんはおいしいです。",
+          "translation": "Ces ramen sont délicieux."
+        }
+      ]
+    },
+    {
+      "kanji": "不味い",
+      "hiragana": "まずい",
+      "romaji": "mazui",
+      "meaning": "mauvais (goût)",
+      "conjugations": {
+        "present_affirmative": { "kanji": "不味い", "romaji": "mazui" },
+        "present_negative": { "kanji": "不味くない", "romaji": "mazukunai" },
+        "past_affirmative": { "kanji": "不味かった", "romaji": "mazukatta" },
+        "past_negative": { "kanji": "不味くなかった", "romaji": "mazukunakatta" },
+        "te_form": { "kanji": "不味くて", "romaji": "mazukute" },
+        "adverbial": { "kanji": "不味く", "romaji": "mazuku" }
+      },
+      "examples": [
+        {
+          "sentence": "この料理は不味いです。",
+          "reading": "このりょうりはまずいです。",
+          "translation": "Ce plat est mauvais."
+        }
+      ]
+    },
+    {
+      "kanji": "面白い",
+      "hiragana": "おもしろい",
+      "romaji": "omoshiroi",
+      "meaning": "intéressant, amusant",
+      "conjugations": {
+        "present_affirmative": { "kanji": "面白い", "romaji": "omoshiroi" },
+        "present_negative": { "kanji": "面白くない", "romaji": "omoshirokunai" },
+        "past_affirmative": { "kanji": "面白かった", "romaji": "omoshirokatta" },
+        "past_negative": { "kanji": "面白くなかった", "romaji": "omoshirokunakatta" },
+        "te_form": { "kanji": "面白くて", "romaji": "omoshirokute" },
+        "adverbial": { "kanji": "面白く", "romaji": "omoshiroku" }
+      },
+      "examples": [
+        {
+          "sentence": "この本は面白いです。",
+          "reading": "このほんはおもしろいです。",
+          "translation": "Ce livre est intéressant."
+        }
+      ]
+    },
+    {
+      "kanji": "詰まらない",
+      "hiragana": "つまらない",
+      "romaji": "tsumaranai",
+      "meaning": "ennuyeux",
+      "conjugations": {
+        "present_affirmative": { "kanji": "詰まらない", "romaji": "tsumaranai" },
+        "present_negative": { "kanji": "詰まらなくない", "romaji": "tsumaranakunai" },
+        "past_affirmative": { "kanji": "詰まらなかった", "romaji": "tsumaranakatta" },
+        "past_negative": { "kanji": "詰まらなくなかった", "romaji": "tsumaranakunakatta" },
+        "te_form": { "kanji": "詰まらなくて", "romaji": "tsumaranakute" },
+        "adverbial": { "kanji": "詰まらなく", "romaji": "tsumaranaku" }
+      },
+      "examples": [
+        {
+          "sentence": "その映画は詰まらなかったです。",
+          "reading": "そのえいがはつまらなかったです。",
+          "translation": "Ce film était ennuyeux."
+        }
+      ]
+    },
+    {
+      "kanji": "痛い",
+      "hiragana": "いたい",
+      "romaji": "itai",
+      "meaning": "douloureux",
+      "conjugations": {
+        "present_affirmative": { "kanji": "痛い", "romaji": "itai" },
+        "present_negative": { "kanji": "痛くない", "romaji": "itakunai" },
+        "past_affirmative": { "kanji": "痛かった", "romaji": "itakatta" },
+        "past_negative": { "kanji": "痛くなかった", "romaji": "itakunakatta" },
+        "te_form": { "kanji": "痛くて", "romaji": "itakute" },
+        "adverbial": { "kanji": "痛く", "romaji": "itaku" }
+      },
+      "examples": [
+        {
+          "sentence": "頭が痛いです。",
+          "reading": "あたまがいたいです。",
+          "translation": "J'ai mal à la tête."
+        }
+      ]
+    },
+    {
+      "kanji": "甘い",
+      "hiragana": "あまい",
+      "romaji": "amai",
+      "meaning": "sucré",
+      "conjugations": {
+        "present_affirmative": { "kanji": "甘い", "romaji": "amai" },
+        "present_negative": { "kanji": "甘くない", "romaji": "amakunai" },
+        "past_affirmative": { "kanji": "甘かった", "romaji": "amakatta" },
+        "past_negative": { "kanji": "甘くなかった", "romaji": "amakunakatta" },
+        "te_form": { "kanji": "甘くて", "romaji": "amakute" },
+        "adverbial": { "kanji": "甘く", "romaji": "amaku" }
+      },
+      "examples": [
+        {
+          "sentence": "このケーキは甘いです。",
+          "reading": "このけーきはあまいです。",
+          "translation": "Ce gâteau est sucré."
+        }
+      ]
+    },
+    {
+      "kanji": "辛い",
+      "hiragana": "からい",
+      "romaji": "karai",
+      "meaning": "épicé",
+      "conjugations": {
+        "present_affirmative": { "kanji": "辛い", "romaji": "karai" },
+        "present_negative": { "kanji": "辛くない", "romaji": "karakunai" },
+        "past_affirmative": { "kanji": "辛かった", "romaji": "karakatta" },
+        "past_negative": { "kanji": "辛くなかった", "romaji": "karakunakatta" },
+        "te_form": { "kanji": "辛くて", "romaji": "karakute" },
+        "adverbial": { "kanji": "辛く", "romaji": "karaku" }
+      },
+      "examples": [
+        {
+          "sentence": "このカレーは辛いです。",
+          "reading": "このかれーはからいです。",
+          "translation": "Ce curry est épicé."
+        }
+      ]
+    },
+    {
+      "kanji": "丸い",
+      "hiragana": "まるい",
+      "romaji": "marui",
+      "meaning": "rond",
+      "conjugations": {
+        "present_affirmative": { "kanji": "丸い", "romaji": "marui" },
+        "present_negative": { "kanji": "丸くない", "romaji": "marukunai" },
+        "past_affirmative": { "kanji": "丸かった", "romaji": "marukatta" },
+        "past_negative": { "kanji": "丸くなかった", "romaji": "marukunakatta" },
+        "te_form": { "kanji": "丸くて", "romaji": "marukute" },
+        "adverbial": { "kanji": "丸く", "romaji": "maruku" }
+      },
+      "examples": [
+        {
+          "sentence": "月は丸いです。",
+          "reading": "つきはまるいです。",
+          "translation": "La lune est ronde."
+        }
+      ]
+    },
+    {
+      "kanji": "四角い",
+      "hiragana": "しかくい",
+      "romaji": "shikakui",
+      "meaning": "carré",
+      "conjugations": {
+        "present_affirmative": { "kanji": "四角い", "romaji": "shikakui" },
+        "present_negative": { "kanji": "四角くない", "romaji": "shikakunai" },
+        "past_affirmative": { "kanji": "四角かった", "romaji": "shikakukatta" },
+        "past_negative": { "kanji": "四角くなかった", "romaji": "shikakunakatta" },
+        "te_form": { "kanji": "四角くて", "romaji": "shikakukute" },
+        "adverbial": { "kanji": "四角く", "romaji": "shikakuku" }
+      },
+      "examples": [
+        {
+          "sentence": "この箱は四角いです。",
+          "reading": "このはこはしかくいです。",
+          "translation": "Cette boîte est carrée."
+        }
+      ]
+    },
+    {
+      "kanji": "白い",
+      "hiragana": "しろい",
+      "romaji": "shiroi",
+      "meaning": "blanc",
+      "conjugations": {
+        "present_affirmative": { "kanji": "白い", "romaji": "shiroi" },
+        "present_negative": { "kanji": "白くない", "romaji": "shirokunai" },
+        "past_affirmative": { "kanji": "白かった", "romaji": "shirokatta" },
+        "past_negative": { "kanji": "白くなかった", "romaji": "shirokunakatta" },
+        "te_form": { "kanji": "白くて", "romaji": "shirokute" },
+        "adverbial": { "kanji": "白く", "romaji": "shiroku" }
+      },
+      "examples": [
+        {
+          "sentence": "雪は白いです。",
+          "reading": "ゆきはしろいです。",
+          "translation": "La neige est blanche."
+        }
+      ]
+    },
+    {
+      "kanji": "黒い",
+      "hiragana": "くろい",
+      "romaji": "kuroi",
+      "meaning": "noir",
+      "conjugations": {
+        "present_affirmative": { "kanji": "黒い", "romaji": "kuroi" },
+        "present_negative": { "kanji": "黒くない", "romaji": "kurokunai" },
+        "past_affirmative": { "kanji": "黒かった", "romaji": "kurokatta" },
+        "past_negative": { "kanji": "黒くなかった", "romaji": "kurokunakatta" },
+        "te_form": { "kanji": "黒くて", "romaji": "kurokute" },
+        "adverbial": { "kanji": "黒く", "romaji": "kuroku" }
+      },
+      "examples": [
+        {
+          "sentence": "この猫は黒いです。",
+          "reading": "このねこはくろいです。",
+          "translation": "Ce chat est noir."
+        }
+      ]
+    },
+    {
+      "kanji": "赤い",
+      "hiragana": "あかい",
+      "romaji": "akai",
+      "meaning": "rouge",
+      "conjugations": {
+        "present_affirmative": { "kanji": "赤い", "romaji": "akai" },
+        "present_negative": { "kanji": "赤くない", "romaji": "akakunai" },
+        "past_affirmative": { "kanji": "赤かった", "romaji": "akakatta" },
+        "past_negative": { "kanji": "赤くなかった", "romaji": "akakunakatta" },
+        "te_form": { "kanji": "赤くて", "romaji": "akakute" },
+        "adverbial": { "kanji": "赤く", "romaji": "akaku" }
+      },
+      "examples": [
+        {
+          "sentence": "りんごは赤いです。",
+          "reading": "りんごはあかいです。",
+          "translation": "La pomme est rouge."
+        }
+      ]
+    },
+    {
+      "kanji": "青い",
+      "hiragana": "あおい",
+      "romaji": "aoi",
+      "meaning": "bleu",
+      "conjugations": {
+        "present_affirmative": { "kanji": "青い", "romaji": "aoi" },
+        "present_negative": { "kanji": "青くない", "romaji": "aokunai" },
+        "past_affirmative": { "kanji": "青かった", "romaji": "aokatta" },
+        "past_negative": { "kanji": "青くなかった", "romaji": "aokunakatta" },
+        "te_form": { "kanji": "青くて", "romaji": "aokute" },
+        "adverbial": { "kanji": "青く", "romaji": "aoku" }
+      },
+      "examples": [
+        {
+          "sentence": "空は青いです。",
+          "reading": "そらはあおいです。",
+          "translation": "Le ciel est bleu."
+        }
+      ]
+    },
+    {
+      "kanji": "黄色い",
+      "hiragana": "きいろい",
+      "romaji": "kiiroi",
+      "meaning": "jaune",
+      "conjugations": {
+        "present_affirmative": { "kanji": "黄色い", "romaji": "kiiroi" },
+        "present_negative": { "kanji": "黄色くない", "romaji": "kiirokunai" },
+        "past_affirmative": { "kanji": "黄色かった", "romaji": "kiirokatta" },
+        "past_negative": { "kanji": "黄色くなかった", "romaji": "kiirokunakatta" },
+        "te_form": { "kanji": "黄色くて", "romaji": "kiirokute" },
+        "adverbial": { "kanji": "黄色く", "romaji": "kiiroku" }
+      },
+      "examples": [
+        {
+          "sentence": "バナナは黄色いです。",
+          "reading": "ばななはきいろいです。",
+          "translation": "La banane est jaune."
+        }
+      ]
+    },
+    {
+      "kanji": "茶色い",
+      "hiragana": "ちゃいろい",
+      "romaji": "chairoi",
+      "meaning": "marron",
+      "conjugations": {
+        "present_affirmative": { "kanji": "茶色い", "romaji": "chairoi" },
+        "present_negative": { "kanji": "茶色くない", "romaji": "chairokunai" },
+        "past_affirmative": { "kanji": "茶色かった", "romaji": "chairokatta" },
+        "past_negative": { "kanji": "茶色くなかった", "romaji": "chairokunakatta" },
+        "te_form": { "kanji": "茶色くて", "romaji": "chairokute" },
+        "adverbial": { "kanji": "茶色く", "romaji": "chairoku" }
+      },
+      "examples": [
+        {
+          "sentence": "この犬は茶色いです。",
+          "reading": "このいぬはちゃいろいです。",
+          "translation": "Ce chien est marron."
+        }
+      ]
+    },
+    {
+      "kanji": "眠い",
+      "hiragana": "ねむい",
+      "romaji": "nemui",
+      "meaning": "avoir sommeil",
+      "conjugations": {
+        "present_affirmative": { "kanji": "眠い", "romaji": "nemui" },
+        "present_negative": { "kanji": "眠くない", "romaji": "nemukunai" },
+        "past_affirmative": { "kanji": "眠かった", "romaji": "nemukatta" },
+        "past_negative": { "kanji": "眠くなかった", "romaji": "nemukunakatta" },
+        "te_form": { "kanji": "眠くて", "romaji": "nemukute" },
+        "adverbial": { "kanji": "眠く", "romaji": "nemuku" }
+      },
+      "examples": [
+        {
+          "sentence": "今、眠いです。",
+          "reading": "いま、ねむいです。",
+          "translation": "J'ai sommeil maintenant."
+        }
+      ]
+    },
+    {
+      "kanji": "眠たい",
+      "hiragana": "ねむたい",
+      "romaji": "nemutai",
+      "meaning": "somnolent",
+      "conjugations": {
+        "present_affirmative": { "kanji": "眠たい", "romaji": "nemutai" },
+        "present_negative": { "kanji": "眠たくない", "romaji": "nemutakunai" },
+        "past_affirmative": { "kanji": "眠たかった", "romaji": "nemutakatta" },
+        "past_negative": { "kanji": "眠たくなかった", "romaji": "nemutakunakatta" },
+        "te_form": { "kanji": "眠たくて", "romaji": "nemutakute" },
+        "adverbial": { "kanji": "眠たく", "romaji": "nemutaku" }
+      },
+      "examples": [
+        {
+          "sentence": "朝は眠たいです。",
+          "reading": "あさはねむたいです。",
+          "translation": "Je suis somnolent le matin."
+        }
+      ]
+    },
+    {
+      "kanji": "欲しい",
+      "hiragana": "ほしい",
+      "romaji": "hoshii",
+      "meaning": "vouloir (objet)",
+      "conjugations": {
+        "present_affirmative": { "kanji": "欲しい", "romaji": "hoshii" },
+        "present_negative": { "kanji": "欲しくない", "romaji": "hoshikunai" },
+        "past_affirmative": { "kanji": "欲しかった", "romaji": "hoshikatta" },
+        "past_negative": { "kanji": "欲しくなかった", "romaji": "hoshikunakatta" },
+        "te_form": { "kanji": "欲しくて", "romaji": "hoshikute" },
+        "adverbial": { "kanji": "欲しく", "romaji": "hoshiku" }
+      },
+      "examples": [
+        {
+          "sentence": "新しい車が欲しいです。",
+          "reading": "あたらしいくるまがほしいです。",
+          "translation": "Je veux une nouvelle voiture."
+        }
+      ]
+    },
+    {
+      "kanji": "正しい",
+      "hiragana": "ただしい",
+      "romaji": "tadashii",
+      "meaning": "correct",
+      "conjugations": {
+        "present_affirmative": { "kanji": "正しい", "romaji": "tadashii" },
+        "present_negative": { "kanji": "正しくない", "romaji": "tadashikunai" },
+        "past_affirmative": { "kanji": "正しかった", "romaji": "tadashikatta" },
+        "past_negative": { "kanji": "正しくなかった", "romaji": "tadashikunakatta" },
+        "te_form": { "kanji": "正しくて", "romaji": "tadashikute" },
+        "adverbial": { "kanji": "正しく", "romaji": "tadashiku" }
+      },
+      "examples": [
+        {
+          "sentence": "答えは正しいです。",
+          "reading": "こたえはただしいです。",
+          "translation": "La réponse est correcte."
+        }
+      ]
+    },
+    {
+      "kanji": "危ない",
+      "hiragana": "あぶない",
+      "romaji": "abunai",
+      "meaning": "dangereux",
+      "conjugations": {
+        "present_affirmative": { "kanji": "危ない", "romaji": "abunai" },
+        "present_negative": { "kanji": "危なくない", "romaji": "abunakunai" },
+        "past_affirmative": { "kanji": "危なかった", "romaji": "abunakatta" },
+        "past_negative": { "kanji": "危なくなかった", "romaji": "abunakunakatta" },
+        "te_form": { "kanji": "危なくて", "romaji": "abunakute" },
+        "adverbial": { "kanji": "危なく", "romaji": "abunaku" }
+      },
+      "examples": [
+        {
+          "sentence": "ここは危ないです。",
+          "reading": "ここはあぶないです。",
+          "translation": "C'est dangereux ici."
+        }
+      ]
+    },
+    {
+      "kanji": "太い",
+      "hiragana": "ふとい",
+      "romaji": "futoi",
+      "meaning": "épais, gros",
+      "conjugations": {
+        "present_affirmative": { "kanji": "太い", "romaji": "futoi" },
+        "present_negative": { "kanji": "太くない", "romaji": "futokunai" },
+        "past_affirmative": { "kanji": "太かった", "romaji": "futokatta" },
+        "past_negative": { "kanji": "太くなかった", "romaji": "futokunakatta" },
+        "te_form": { "kanji": "太くて", "romaji": "futokute" },
+        "adverbial": { "kanji": "太く", "romaji": "futoku" }
+      },
+      "examples": [
+        {
+          "sentence": "太い木です。",
+          "reading": "ふといきです。",
+          "translation": "C'est un arbre épais."
+        }
+      ]
+    },
+    {
+      "kanji": "細い",
+      "hiragana": "ほそい",
+      "romaji": "hosoi",
+      "meaning": "mince, fin",
+      "conjugations": {
+        "present_affirmative": { "kanji": "細い", "romaji": "hosoi" },
+        "present_negative": { "kanji": "細くない", "romaji": "hosokunai" },
+        "past_affirmative": { "kanji": "細かった", "romaji": "hosokatta" },
+        "past_negative": { "kanji": "細くなかった", "romaji": "hosokunakatta" },
+        "te_form": { "kanji": "細くて", "romaji": "hosokute" },
+        "adverbial": { "kanji": "細く", "romaji": "hosoku" }
+      },
+      "examples": [
+        {
+          "sentence": "細い道です。",
+          "reading": "ほそいみちです。",
+          "translation": "C'est une route étroite."
+        }
+      ]
+    }
+  ],
+  "na_adjectives": [
+    {
+      "kanji": "きれい",
+      "hiragana": "きれい",
+      "romaji": "kirei",
+      "meaning": "joli, propre",
+      "conjugations": {
+        "present_affirmative": { "kanji": "きれいだ", "romaji": "kirei da" },
+        "present_negative": { "kanji": "きれいじゃない", "romaji": "kirei janai" },
+        "past_affirmative": { "kanji": "きれいだった", "romaji": "kirei datta" },
+        "past_negative": { "kanji": "きれいじゃなかった", "romaji": "kirei janakatta" },
+        "te_form": { "kanji": "きれいで", "romaji": "kirei de" },
+        "with_noun": { "kanji": "きれいな", "romaji": "kirei na" }
+      },
+      "examples": [
+        {
+          "sentence": "きれいな花です。",
+          "reading": "きれいなはなです。",
+          "translation": "Ce sont de jolies fleurs."
+        }
+      ]
+    },
+    {
+      "kanji": "静か",
+      "hiragana": "しずか",
+      "romaji": "shizuka",
+      "meaning": "calme, silencieux",
+      "conjugations": {
+        "present_affirmative": { "kanji": "静かだ", "romaji": "shizuka da" },
+        "present_negative": { "kanji": "静かじゃない", "romaji": "shizuka janai" },
+        "past_affirmative": { "kanji": "静かだった", "romaji": "shizuka datta" },
+        "past_negative": { "kanji": "静かじゃなかった", "romaji": "shizuka janakatta" },
+        "te_form": { "kanji": "静かで", "romaji": "shizuka de" },
+        "with_noun": { "kanji": "静かな", "romaji": "shizuka na" }
+      },
+      "examples": [
+        {
+          "sentence": "図書館は静かです。",
+          "reading": "としょかんはしずかです。",
+          "translation": "La bibliothèque est calme."
+        }
+      ]
+    },
+    {
+      "kanji": "賑やか",
+      "hiragana": "にぎやか",
+      "romaji": "nigiyaka",
+      "meaning": "animé",
+      "conjugations": {
+        "present_affirmative": { "kanji": "賑やかだ", "romaji": "nigiyaka da" },
+        "present_negative": { "kanji": "賑やかじゃない", "romaji": "nigiyaka janai" },
+        "past_affirmative": { "kanji": "賑やかだった", "romaji": "nigiyaka datta" },
+        "past_negative": { "kanji": "賑やかじゃなかった", "romaji": "nigiyaka janakatta" },
+        "te_form": { "kanji": "賑やかで", "romaji": "nigiyaka de" },
+        "with_noun": { "kanji": "賑やかな", "romaji": "nigiyaka na" }
+      },
+      "examples": [
+        {
+          "sentence": "賑やかな町です。",
+          "reading": "にぎやかなまちです。",
+          "translation": "C'est une ville animée."
+        }
+      ]
+    },
+    {
+      "kanji": "便利",
+      "hiragana": "べんり",
+      "romaji": "benri",
+      "meaning": "pratique",
+      "conjugations": {
+        "present_affirmative": { "kanji": "便利だ", "romaji": "benri da" },
+        "present_negative": { "kanji": "便利じゃない", "romaji": "benri janai" },
+        "past_affirmative": { "kanji": "便利だった", "romaji": "benri datta" },
+        "past_negative": { "kanji": "便利じゃなかった", "romaji": "benri janakatta" },
+        "te_form": { "kanji": "便利で", "romaji": "benri de" },
+        "with_noun": { "kanji": "便利な", "romaji": "benri na" }
+      },
+      "examples": [
+        {
+          "sentence": "便利な場所です。",
+          "reading": "べんりなばしょです。",
+          "translation": "C'est un endroit pratique."
+        }
+      ]
+    },
+    {
+      "kanji": "不便",
+      "hiragana": "ふべん",
+      "romaji": "fuben",
+      "meaning": "peu pratique",
+      "conjugations": {
+        "present_affirmative": { "kanji": "不便だ", "romaji": "fuben da" },
+        "present_negative": { "kanji": "不便じゃない", "romaji": "fuben janai" },
+        "past_affirmative": { "kanji": "不便だった", "romaji": "fuben datta" },
+        "past_negative": { "kanji": "不便じゃなかった", "romaji": "fuben janakatta" },
+        "te_form": { "kanji": "不便で", "romaji": "fuben de" },
+        "with_noun": { "kanji": "不便な", "romaji": "fuben na" }
+      },
+      "examples": [
+        {
+          "sentence": "不便な所です。",
+          "reading": "ふべんなところです。",
+          "translation": "C'est un endroit peu pratique."
+        }
+      ]
+    },
+    {
+      "kanji": "有名",
+      "hiragana": "ゆうめい",
+      "romaji": "yūmei",
+      "meaning": "célèbre",
+      "conjugations": {
+        "present_affirmative": { "kanji": "有名だ", "romaji": "yūmei da" },
+        "present_negative": { "kanji": "有名じゃない", "romaji": "yūmei janai" },
+        "past_affirmative": { "kanji": "有名だった", "romaji": "yūmei datta" },
+        "past_negative": { "kanji": "有名じゃなかった", "romaji": "yūmei janakatta" },
+        "te_form": { "kanji": "有名で", "romaji": "yūmei de" },
+        "with_noun": { "kanji": "有名な", "romaji": "yūmei na" }
+      },
+      "examples": [
+        {
+          "sentence": "有名な歌手です。",
+          "reading": "ゆうめいなかしゅです。",
+          "translation": "C'est un chanteur célèbre."
+        }
+      ]
+    },
+    {
+      "kanji": "親切",
+      "hiragana": "しんせつ",
+      "romaji": "shinsetsu",
+      "meaning": "gentil, aimable",
+      "conjugations": {
+        "present_affirmative": { "kanji": "親切だ", "romaji": "shinsetsu da" },
+        "present_negative": { "kanji": "親切じゃない", "romaji": "shinsetsu janai" },
+        "past_affirmative": { "kanji": "親切だった", "romaji": "shinsetsu datta" },
+        "past_negative": { "kanji": "親切じゃなかった", "romaji": "shinsetsu janakatta" },
+        "te_form": { "kanji": "親切で", "romaji": "shinsetsu de" },
+        "with_noun": { "kanji": "親切な", "romaji": "shinsetsu na" }
+      },
+      "examples": [
+        {
+          "sentence": "親切な人です。",
+          "reading": "しんせつなひとです。",
+          "translation": "C'est une personne gentille."
+        }
+      ]
+    },
+    {
+      "kanji": "元気",
+      "hiragana": "げんき",
+      "romaji": "genki",
+      "meaning": "en forme, énergique",
+      "conjugations": {
+        "present_affirmative": { "kanji": "元気だ", "romaji": "genki da" },
+        "present_negative": { "kanji": "元気じゃない", "romaji": "genki janai" },
+        "past_affirmative": { "kanji": "元気だった", "romaji": "genki datta" },
+        "past_negative": { "kanji": "元気じゃなかった", "romaji": "genki janakatta" },
+        "te_form": { "kanji": "元気で", "romaji": "genki de" },
+        "with_noun": { "kanji": "元気な", "romaji": "genki na" }
+      },
+      "examples": [
+        {
+          "sentence": "元気な子供です。",
+          "reading": "げんきなこどもです。",
+          "translation": "C'est un enfant énergique."
+        }
+      ]
+    },
+    {
+      "kanji": "簡単",
+      "hiragana": "かんたん",
+      "romaji": "kantan",
+      "meaning": "simple, facile",
+      "conjugations": {
+        "present_affirmative": { "kanji": "簡単だ", "romaji": "kantan da" },
+        "present_negative": { "kanji": "簡単じゃない", "romaji": "kantan janai" },
+        "past_affirmative": { "kanji": "簡単だった", "romaji": "kantan datta" },
+        "past_negative": { "kanji": "簡単じゃなかった", "romaji": "kantan janakatta" },
+        "te_form": { "kanji": "簡単で", "romaji": "kantan de" },
+        "with_noun": { "kanji": "簡単な", "romaji": "kantan na" }
+      },
+      "examples": [
+        {
+          "sentence": "簡単な問題です。",
+          "reading": "かんたんなもんだいです。",
+          "translation": "C'est un problème simple."
+        }
+      ]
+    },
+    {
+      "kanji": "大変",
+      "hiragana": "たいへん",
+      "romaji": "taihen",
+      "meaning": "difficile, dur",
+      "conjugations": {
+        "present_affirmative": { "kanji": "大変だ", "romaji": "taihen da" },
+        "present_negative": { "kanji": "大変じゃない", "romaji": "taihen janai" },
+        "past_affirmative": { "kanji": "大変だった", "romaji": "taihen datta" },
+        "past_negative": { "kanji": "大変じゃなかった", "romaji": "taihen janakatta" },
+        "te_form": { "kanji": "大変で", "romaji": "taihen de" },
+        "with_noun": { "kanji": "大変な", "romaji": "taihen na" }
+      },
+      "examples": [
+        {
+          "sentence": "大変な仕事です。",
+          "reading": "たいへんなしごとです。",
+          "translation": "C'est un travail difficile."
+        }
+      ]
+    },
+    {
+      "kanji": "大丈夫",
+      "hiragana": "だいじょうぶ",
+      "romaji": "daijōbu",
+      "meaning": "ça va, pas de problème",
+      "conjugations": {
+        "present_affirmative": { "kanji": "大丈夫だ", "romaji": "daijōbu da" },
+        "present_negative": { "kanji": "大丈夫じゃない", "romaji": "daijōbu janai" },
+        "past_affirmative": { "kanji": "大丈夫だった", "romaji": "daijōbu datta" },
+        "past_negative": { "kanji": "大丈夫じゃなかった", "romaji": "daijōbu janakatta" },
+        "te_form": { "kanji": "大丈夫で", "romaji": "daijōbu de" },
+        "with_noun": { "kanji": "大丈夫な", "romaji": "daijōbu na" }
+      },
+      "examples": [
+        {
+          "sentence": "大丈夫です。",
+          "reading": "だいじょうぶです。",
+          "translation": "Ça va (pas de problème)."
+        }
+      ]
+    },
+    {
+      "kanji": "好き",
+      "hiragana": "すき",
+      "romaji": "suki",
+      "meaning": "aimer",
+      "conjugations": {
+        "present_affirmative": { "kanji": "好きだ", "romaji": "suki da" },
+        "present_negative": { "kanji": "好きじゃない", "romaji": "suki janai" },
+        "past_affirmative": { "kanji": "好きだった", "romaji": "suki datta" },
+        "past_negative": { "kanji": "好きじゃなかった", "romaji": "suki janakatta" },
+        "te_form": { "kanji": "好きで", "romaji": "suki de" },
+        "with_noun": { "kanji": "好きな", "romaji": "suki na" }
+      },
+      "examples": [
+        {
+          "sentence": "日本語が好きです。",
+          "reading": "にほんごがすきです。",
+          "translation": "J'aime le japonais."
+        }
+      ]
+    },
+    {
+      "kanji": "嫌い",
+      "hiragana": "きらい",
+      "romaji": "kirai",
+      "meaning": "détester",
+      "conjugations": {
+        "present_affirmative": { "kanji": "嫌いだ", "romaji": "kirai da" },
+        "present_negative": { "kanji": "嫌いじゃない", "romaji": "kirai janai" },
+        "past_affirmative": { "kanji": "嫌いだった", "romaji": "kirai datta" },
+        "past_negative": { "kanji": "嫌いじゃなかった", "romaji": "kirai janakatta" },
+        "te_form": { "kanji": "嫌いで", "romaji": "kirai de" },
+        "with_noun": { "kanji": "嫌いな", "romaji": "kirai na" }
+      },
+      "examples": [
+        {
+          "sentence": "野菜が嫌いです。",
+          "reading": "やさいがきらいです。",
+          "translation": "Je déteste les légumes."
+        }
+      ]
+    },
+    {
+      "kanji": "上手",
+      "hiragana": "じょうず",
+      "romaji": "jōzu",
+      "meaning": "habile, doué",
+      "conjugations": {
+        "present_affirmative": { "kanji": "上手だ", "romaji": "jōzu da" },
+        "present_negative": { "kanji": "上手じゃない", "romaji": "jōzu janai" },
+        "past_affirmative": { "kanji": "上手だった", "romaji": "jōzu datta" },
+        "past_negative": { "kanji": "上手じゃなかった", "romaji": "jōzu janakatta" },
+        "te_form": { "kanji": "上手で", "romaji": "jōzu de" },
+        "with_noun": { "kanji": "上手な", "romaji": "jōzu na" }
+      },
+      "examples": [
+        {
+          "sentence": "ピアノが上手です。",
+          "reading": "ぴあのがじょうずです。",
+          "translation": "Il joue bien du piano."
+        }
+      ]
+    },
+    {
+      "kanji": "下手",
+      "hiragana": "へた",
+      "romaji": "heta",
+      "meaning": "maladroit, mauvais",
+      "conjugations": {
+        "present_affirmative": { "kanji": "下手だ", "romaji": "heta da" },
+        "present_negative": { "kanji": "下手じゃない", "romaji": "heta janai" },
+        "past_affirmative": { "kanji": "下手だった", "romaji": "heta datta" },
+        "past_negative": { "kanji": "下手じゃなかった", "romaji": "heta janakatta" },
+        "te_form": { "kanji": "下手で", "romaji": "heta de" },
+        "with_noun": { "kanji": "下手な", "romaji": "heta na" }
+      },
+      "examples": [
+        {
+          "sentence": "料理が下手です。",
+          "reading": "りょうりがへたです。",
+          "translation": "Je cuisine mal."
+        }
+      ]
+    },
+    {
+      "kanji": "暇",
+      "hiragana": "ひま",
+      "romaji": "hima",
+      "meaning": "libre, avoir du temps",
+      "conjugations": {
+        "present_affirmative": { "kanji": "暇だ", "romaji": "hima da" },
+        "present_negative": { "kanji": "暇じゃない", "romaji": "hima janai" },
+        "past_affirmative": { "kanji": "暇だった", "romaji": "hima datta" },
+        "past_negative": { "kanji": "暇じゃなかった", "romaji": "hima janakatta" },
+        "te_form": { "kanji": "暇で", "romaji": "hima de" },
+        "with_noun": { "kanji": "暇な", "romaji": "hima na" }
+      },
+      "examples": [
+        {
+          "sentence": "今日は暇です。",
+          "reading": "きょうはひまです。",
+          "translation": "Je suis libre aujourd'hui."
+        }
+      ]
+    },
+    {
+      "kanji": "立派",
+      "hiragana": "りっぱ",
+      "romaji": "rippa",
+      "meaning": "splendide, magnifique",
+      "conjugations": {
+        "present_affirmative": { "kanji": "立派だ", "romaji": "rippa da" },
+        "present_negative": { "kanji": "立派じゃない", "romaji": "rippa janai" },
+        "past_affirmative": { "kanji": "立派だった", "romaji": "rippa datta" },
+        "past_negative": { "kanji": "立派じゃなかった", "romaji": "rippa janakatta" },
+        "te_form": { "kanji": "立派で", "romaji": "rippa de" },
+        "with_noun": { "kanji": "立派な", "romaji": "rippa na" }
+      },
+      "examples": [
+        {
+          "sentence": "立派な建物です。",
+          "reading": "りっぱなたてものです。",
+          "translation": "C'est un bâtiment magnifique."
+        }
+      ]
+    },
+    {
+      "kanji": "真面目",
+      "hiragana": "まじめ",
+      "romaji": "majime",
+      "meaning": "sérieux, consciencieux",
+      "conjugations": {
+        "present_affirmative": { "kanji": "真面目だ", "romaji": "majime da" },
+        "present_negative": { "kanji": "真面目じゃない", "romaji": "majime janai" },
+        "past_affirmative": { "kanji": "真面目だった", "romaji": "majime datta" },
+        "past_negative": { "kanji": "真面目じゃなかった", "romaji": "majime janakatta" },
+        "te_form": { "kanji": "真面目で", "romaji": "majime de" },
+        "with_noun": { "kanji": "真面目な", "romaji": "majime na" }
+      },
+      "examples": [
+        {
+          "sentence": "真面目な学生です。",
+          "reading": "まじめながくせいです。",
+          "translation": "C'est un étudiant sérieux."
+        }
+      ]
+    },
+    {
+      "kanji": "大切",
+      "hiragana": "たいせつ",
+      "romaji": "taisetsu",
+      "meaning": "important, précieux",
+      "conjugations": {
+        "present_affirmative": { "kanji": "大切だ", "romaji": "taisetsu da" },
+        "present_negative": { "kanji": "大切じゃない", "romaji": "taisetsu janai" },
+        "past_affirmative": { "kanji": "大切だった", "romaji": "taisetsu datta" },
+        "past_negative": { "kanji": "大切じゃなかった", "romaji": "taisetsu janakatta" },
+        "te_form": { "kanji": "大切で", "romaji": "taisetsu de" },
+        "with_noun": { "kanji": "大切な", "romaji": "taisetsu na" }
+      },
+      "examples": [
+        {
+          "sentence": "大切な友達です。",
+          "reading": "たいせつなともだちです。",
+          "translation": "C'est un ami précieux."
+        }
+      ]
+    },
+    {
+      "kanji": "素敵",
+      "hiragana": "すてき",
+      "romaji": "suteki",
+      "meaning": "superbe, formidable",
+      "conjugations": {
+        "present_affirmative": { "kanji": "素敵だ", "romaji": "suteki da" },
+        "present_negative": { "kanji": "素敵じゃない", "romaji": "suteki janai" },
+        "past_affirmative": { "kanji": "素敵だった", "romaji": "suteki datta" },
+        "past_negative": { "kanji": "素敵じゃなかった", "romaji": "suteki janakatta" },
+        "te_form": { "kanji": "素敵で", "romaji": "suteki de" },
+        "with_noun": { "kanji": "素敵な", "romaji": "suteki na" }
+      },
+      "examples": [
+        {
+          "sentence": "素敵なレストランです。",
+          "reading": "すてきなれすとらんです。",
+          "translation": "C'est un restaurant superbe."
+        }
+      ]
+    },
+    {
+      "kanji": "特別",
+      "hiragana": "とくべつ",
+      "romaji": "tokubetsu",
+      "meaning": "spécial",
+      "conjugations": {
+        "present_affirmative": { "kanji": "特別だ", "romaji": "tokubetsu da" },
+        "present_negative": { "kanji": "特別じゃない", "romaji": "tokubetsu janai" },
+        "past_affirmative": { "kanji": "特別だった", "romaji": "tokubetsu datta" },
+        "past_negative": { "kanji": "特別じゃなかった", "romaji": "tokubetsu janakatta" },
+        "te_form": { "kanji": "特別で", "romaji": "tokubetsu de" },
+        "with_noun": { "kanji": "特別な", "romaji": "tokubetsu na" }
+      },
+      "examples": [
+        {
+          "sentence": "特別な日です。",
+          "reading": "とくべつなひです。",
+          "translation": "C'est un jour spécial."
+        }
+      ]
+    },
+    {
+      "kanji": "色々",
+      "hiragana": "いろいろ",
+      "romaji": "iroiro",
+      "meaning": "divers, varié",
+      "conjugations": {
+        "present_affirmative": { "kanji": "色々だ", "romaji": "iroiro da" },
+        "present_negative": { "kanji": "色々じゃない", "romaji": "iroiro janai" },
+        "past_affirmative": { "kanji": "色々だった", "romaji": "iroiro datta" },
+        "past_negative": { "kanji": "色々じゃなかった", "romaji": "iroiro janakatta" },
+        "te_form": { "kanji": "色々で", "romaji": "iroiro de" },
+        "with_noun": { "kanji": "色々な", "romaji": "iroiro na" }
+      },
+      "examples": [
+        {
+          "sentence": "色々な国に行きました。",
+          "reading": "いろいろなくににいきました。",
+          "translation": "Je suis allé dans divers pays."
+        }
+      ]
+    },
+    {
+      "kanji": "いろんな",
+      "hiragana": "いろんな",
+      "romaji": "ironna",
+      "meaning": "toutes sortes de",
+      "conjugations": {
+        "present_affirmative": { "kanji": "いろんなだ", "romaji": "ironna da" },
+        "present_negative": { "kanji": "いろんなじゃない", "romaji": "ironna janai" },
+        "past_affirmative": { "kanji": "いろんなだった", "romaji": "ironna datta" },
+        "past_negative": { "kanji": "いろんなじゃなかった", "romaji": "ironna janakatta" },
+        "te_form": { "kanji": "いろんなで", "romaji": "ironna de" },
+        "with_noun": { "kanji": "いろんな", "romaji": "ironna" }
+      },
+      "examples": [
+        {
+          "sentence": "いろんな人がいます。",
+          "reading": "いろんなひとがいます。",
+          "translation": "Il y a toutes sortes de gens."
+        }
+      ]
+    },
+    {
+      "kanji": "同じ",
+      "hiragana": "おなじ",
+      "romaji": "onaji",
+      "meaning": "même, identique",
+      "conjugations": {
+        "present_affirmative": { "kanji": "同じだ", "romaji": "onaji da" },
+        "present_negative": { "kanji": "同じじゃない", "romaji": "onaji janai" },
+        "past_affirmative": { "kanji": "同じだった", "romaji": "onaji datta" },
+        "past_negative": { "kanji": "同じじゃなかった", "romaji": "onaji janakatta" },
+        "te_form": { "kanji": "同じで", "romaji": "onaji de" },
+        "with_noun": { "kanji": "同じ", "romaji": "onaji" }
+      },
+      "examples": [
+        {
+          "sentence": "同じクラスです。",
+          "reading": "おなじくらすです。",
+          "translation": "Nous sommes dans la même classe."
+        }
+      ]
+    },
+    {
+      "kanji": "綺麗",
+      "hiragana": "きれい",
+      "romaji": "kirei",
+      "meaning": "beau, propre (variante)",
+      "conjugations": {
+        "present_affirmative": { "kanji": "綺麗だ", "romaji": "kirei da" },
+        "present_negative": { "kanji": "綺麗じゃない", "romaji": "kirei janai" },
+        "past_affirmative": { "kanji": "綺麗だった", "romaji": "kirei datta" },
+        "past_negative": { "kanji": "綺麗じゃなかった", "romaji": "kirei janakatta" },
+        "te_form": { "kanji": "綺麗で", "romaji": "kirei de" },
+        "with_noun": { "kanji": "綺麗な", "romaji": "kirei na" }
+      },
+      "examples": [
+        {
+          "sentence": "綺麗な景色です。",
+          "reading": "きれいなけしきです。",
+          "translation": "C'est un beau paysage."
+        }
+      ]
+    },
+    {
+      "kanji": "新鮮",
+      "hiragana": "しんせん",
+      "romaji": "shinsen",
+      "meaning": "frais",
+      "conjugations": {
+        "present_affirmative": { "kanji": "新鮮だ", "romaji": "shinsen da" },
+        "present_negative": { "kanji": "新鮮じゃない", "romaji": "shinsen janai" },
+        "past_affirmative": { "kanji": "新鮮だった", "romaji": "shinsen datta" },
+        "past_negative": { "kanji": "新鮮じゃなかった", "romaji": "shinsen janakatta" },
+        "te_form": { "kanji": "新鮮で", "romaji": "shinsen de" },
+        "with_noun": { "kanji": "新鮮な", "romaji": "shinsen na" }
+      },
+      "examples": [
+        {
+          "sentence": "新鮮な魚です。",
+          "reading": "しんせんなさかなです。",
+          "translation": "C'est du poisson frais."
+        }
+      ]
+    },
+    {
+      "kanji": "安全",
+      "hiragana": "あんぜん",
+      "romaji": "anzen",
+      "meaning": "sûr, en sécurité",
+      "conjugations": {
+        "present_affirmative": { "kanji": "安全だ", "romaji": "anzen da" },
+        "present_negative": { "kanji": "安全じゃない", "romaji": "anzen janai" },
+        "past_affirmative": { "kanji": "安全だった", "romaji": "anzen datta" },
+        "past_negative": { "kanji": "安全じゃなかった", "romaji": "anzen janakatta" },
+        "te_form": { "kanji": "安全で", "romaji": "anzen de" },
+        "with_noun": { "kanji": "安全な", "romaji": "anzen na" }
+      },
+      "examples": [
+        {
+          "sentence": "安全な場所です。",
+          "reading": "あんぜんなばしょです。",
+          "translation": "C'est un endroit sûr."
+        }
+      ]
+    },
+    {
+      "kanji": "危険",
+      "hiragana": "きけん",
+      "romaji": "kiken",
+      "meaning": "dangereux",
+      "conjugations": {
+        "present_affirmative": { "kanji": "危険だ", "romaji": "kiken da" },
+        "present_negative": { "kanji": "危険じゃない", "romaji": "kiken janai" },
+        "past_affirmative": { "kanji": "危険だった", "romaji": "kiken datta" },
+        "past_negative": { "kanji": "危険じゃなかった", "romaji": "kiken janakatta" },
+        "te_form": { "kanji": "危険で", "romaji": "kiken de" },
+        "with_noun": { "kanji": "危険な", "romaji": "kiken na" }
+      },
+      "examples": [
+        {
+          "sentence": "危険な道です。",
+          "reading": "きけんなみちです。",
+          "translation": "C'est une route dangereuse."
+        }
+      ]
+    },
+    {
+      "kanji": "必要",
+      "hiragana": "ひつよう",
+      "romaji": "hitsuyō",
+      "meaning": "nécessaire",
+      "conjugations": {
+        "present_affirmative": { "kanji": "必要だ", "romaji": "hitsuyō da" },
+        "present_negative": { "kanji": "必要じゃない", "romaji": "hitsuyō janai" },
+        "past_affirmative": { "kanji": "必要だった", "romaji": "hitsuyō datta" },
+        "past_negative": { "kanji": "必要じゃなかった", "romaji": "hitsuyō janakatta" },
+        "te_form": { "kanji": "必要で", "romaji": "hitsuyō de" },
+        "with_noun": { "kanji": "必要な", "romaji": "hitsuyō na" }
+      },
+      "examples": [
+        {
+          "sentence": "パスポートが必要です。",
+          "reading": "ぱすぽーとがひつようです。",
+          "translation": "Un passeport est nécessaire."
+        }
+      ]
+    },
+    {
+      "kanji": "ハンサム",
+      "hiragana": "はんさむ",
+      "romaji": "hansamu",
+      "meaning": "beau (personne)",
+      "conjugations": {
+        "present_affirmative": { "kanji": "ハンサムだ", "romaji": "hansamu da" },
+        "present_negative": { "kanji": "ハンサムじゃない", "romaji": "hansamu janai" },
+        "past_affirmative": { "kanji": "ハンサムだった", "romaji": "hansamu datta" },
+        "past_negative": { "kanji": "ハンサムじゃなかった", "romaji": "hansamu janakatta" },
+        "te_form": { "kanji": "ハンサムで", "romaji": "hansamu de" },
+        "with_noun": { "kanji": "ハンサムな", "romaji": "hansamu na" }
+      },
+      "examples": [
+        {
+          "sentence": "ハンサムな男性です。",
+          "reading": "はんさむなだんせいです。",
+          "translation": "C'est un bel homme."
+        }
+      ]
+    },
+    {
+      "kanji": "楽",
+      "hiragana": "らく",
+      "romaji": "raku",
+      "meaning": "facile, confortable",
+      "conjugations": {
+        "present_affirmative": { "kanji": "楽だ", "romaji": "raku da" },
+        "present_negative": { "kanji": "楽じゃない", "romaji": "raku janai" },
+        "past_affirmative": { "kanji": "楽だった", "romaji": "raku datta" },
+        "past_negative": { "kanji": "楽じゃなかった", "romaji": "raku janakatta" },
+        "te_form": { "kanji": "楽で", "romaji": "raku de" },
+        "with_noun": { "kanji": "楽な", "romaji": "raku na" }
+      },
+      "examples": [
+        {
+          "sentence": "楽な仕事です。",
+          "reading": "らくなしごとです。",
+          "translation": "C'est un travail facile."
+        }
+      ]
+    },
+    {
+      "kanji": "複雑",
+      "hiragana": "ふくざつ",
+      "romaji": "fukuzatsu",
+      "meaning": "compliqué",
+      "conjugations": {
+        "present_affirmative": { "kanji": "複雑だ", "romaji": "fukuzatsu da" },
+        "present_negative": { "kanji": "複雑じゃない", "romaji": "fukuzatsu janai" },
+        "past_affirmative": { "kanji": "複雑だった", "romaji": "fukuzatsu datta" },
+        "past_negative": { "kanji": "複雑じゃなかった", "romaji": "fukuzatsu janakatta" },
+        "te_form": { "kanji": "複雑で", "romaji": "fukuzatsu de" },
+        "with_noun": { "kanji": "複雑な", "romaji": "fukuzatsu na" }
+      },
+      "examples": [
+        {
+          "sentence": "複雑な問題です。",
+          "reading": "ふくざつなもんだいです。",
+          "translation": "C'est un problème compliqué."
+        }
+      ]
+    }
+  ]
+}

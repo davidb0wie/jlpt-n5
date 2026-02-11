@@ -1,0 +1,375 @@
+{
+  "categories": [
+    {
+      "name": "Couleurs",
+      "name_japanese": "色",
+      "name_romaji": "iro",
+      "words": [
+        {"kanji": "赤", "hiragana": "あか", "romaji": "aka", "meaning": "rouge"},
+        {"kanji": "青", "hiragana": "あお", "romaji": "ao", "meaning": "bleu"},
+        {"kanji": "黄色", "hiragana": "きいろ", "romaji": "kiiro", "meaning": "jaune"},
+        {"kanji": "緑", "hiragana": "みどり", "romaji": "midori", "meaning": "vert"},
+        {"kanji": "白", "hiragana": "しろ", "romaji": "shiro", "meaning": "blanc"},
+        {"kanji": "黒", "hiragana": "くろ", "romaji": "kuro", "meaning": "noir"},
+        {"kanji": "茶色", "hiragana": "ちゃいろ", "romaji": "chairo", "meaning": "marron"},
+        {"kanji": "ピンク", "hiragana": "ぴんく", "romaji": "pinku", "meaning": "rose"},
+        {"kanji": "オレンジ", "hiragana": "おれんじ", "romaji": "orenji", "meaning": "orange"},
+        {"kanji": "紫", "hiragana": "むらさき", "romaji": "murasaki", "meaning": "violet"},
+        {"kanji": "灰色", "hiragana": "はいいろ", "romaji": "haiiro", "meaning": "gris"}
+      ]
+    },
+    {
+      "name": "Jours de la semaine",
+      "name_japanese": "曜日",
+      "name_romaji": "yōbi",
+      "words": [
+        {"kanji": "月曜日", "hiragana": "げつようび", "romaji": "getsuyōbi", "meaning": "lundi"},
+        {"kanji": "火曜日", "hiragana": "かようび", "romaji": "kayōbi", "meaning": "mardi"},
+        {"kanji": "水曜日", "hiragana": "すいようび", "romaji": "suiyōbi", "meaning": "mercredi"},
+        {"kanji": "木曜日", "hiragana": "もくようび", "romaji": "mokuyōbi", "meaning": "jeudi"},
+        {"kanji": "金曜日", "hiragana": "きんようび", "romaji": "kin'yōbi", "meaning": "vendredi"},
+        {"kanji": "土曜日", "hiragana": "どようび", "romaji": "doyōbi", "meaning": "samedi"},
+        {"kanji": "日曜日", "hiragana": "にちようび", "romaji": "nichiyōbi", "meaning": "dimanche"},
+        {"kanji": "何曜日", "hiragana": "なんようび", "romaji": "nan'yōbi", "meaning": "quel jour de la semaine"}
+      ]
+    },
+    {
+      "name": "Mois",
+      "name_japanese": "月",
+      "name_romaji": "tsuki/gatsu",
+      "words": [
+        {"kanji": "一月", "hiragana": "いちがつ", "romaji": "ichigatsu", "meaning": "janvier"},
+        {"kanji": "二月", "hiragana": "にがつ", "romaji": "nigatsu", "meaning": "février"},
+        {"kanji": "三月", "hiragana": "さんがつ", "romaji": "sangatsu", "meaning": "mars"},
+        {"kanji": "四月", "hiragana": "しがつ", "romaji": "shigatsu", "meaning": "avril"},
+        {"kanji": "五月", "hiragana": "ごがつ", "romaji": "gogatsu", "meaning": "mai"},
+        {"kanji": "六月", "hiragana": "ろくがつ", "romaji": "rokugatsu", "meaning": "juin"},
+        {"kanji": "七月", "hiragana": "しちがつ", "romaji": "shichigatsu", "meaning": "juillet"},
+        {"kanji": "八月", "hiragana": "はちがつ", "romaji": "hachigatsu", "meaning": "août"},
+        {"kanji": "九月", "hiragana": "くがつ", "romaji": "kugatsu", "meaning": "septembre"},
+        {"kanji": "十月", "hiragana": "じゅうがつ", "romaji": "jūgatsu", "meaning": "octobre"},
+        {"kanji": "十一月", "hiragana": "じゅういちがつ", "romaji": "jūichigatsu", "meaning": "novembre"},
+        {"kanji": "十二月", "hiragana": "じゅうにがつ", "romaji": "jūnigatsu", "meaning": "décembre"},
+        {"kanji": "何月", "hiragana": "なんがつ", "romaji": "nangatsu", "meaning": "quel mois"}
+      ]
+    },
+    {
+      "name": "Temps et périodes",
+      "name_japanese": "時間・期間",
+      "name_romaji": "jikan/kikan",
+      "words": [
+        {"kanji": "今日", "hiragana": "きょう", "romaji": "kyō", "meaning": "aujourd'hui"},
+        {"kanji": "昨日", "hiragana": "きのう", "romaji": "kinō", "meaning": "hier"},
+        {"kanji": "明日", "hiragana": "あした", "romaji": "ashita", "meaning": "demain"},
+        {"kanji": "今週", "hiragana": "こんしゅう", "romaji": "konshū", "meaning": "cette semaine"},
+        {"kanji": "先週", "hiragana": "せんしゅう", "romaji": "senshū", "meaning": "la semaine dernière"},
+        {"kanji": "来週", "hiragana": "らいしゅう", "romaji": "raishū", "meaning": "la semaine prochaine"},
+        {"kanji": "今月", "hiragana": "こんげつ", "romaji": "kongetsu", "meaning": "ce mois-ci"},
+        {"kanji": "先月", "hiragana": "せんげつ", "romaji": "sengetsu", "meaning": "le mois dernier"},
+        {"kanji": "来月", "hiragana": "らいげつ", "romaji": "raigetsu", "meaning": "le mois prochain"},
+        {"kanji": "今年", "hiragana": "ことし", "romaji": "kotoshi", "meaning": "cette année"},
+        {"kanji": "去年", "hiragana": "きょねん", "romaji": "kyonen", "meaning": "l'année dernière"},
+        {"kanji": "来年", "hiragana": "らいねん", "romaji": "rainen", "meaning": "l'année prochaine"},
+        {"kanji": "朝", "hiragana": "あさ", "romaji": "asa", "meaning": "matin"},
+        {"kanji": "昼", "hiragana": "ひる", "romaji": "hiru", "meaning": "midi, après-midi"},
+        {"kanji": "夜", "hiragana": "よる", "romaji": "yoru", "meaning": "soir, nuit"},
+        {"kanji": "午前", "hiragana": "ごぜん", "romaji": "gozen", "meaning": "matin (AM)"},
+        {"kanji": "午後", "hiragana": "ごご", "romaji": "gogo", "meaning": "après-midi (PM)"},
+        {"kanji": "毎日", "hiragana": "まいにち", "romaji": "mainichi", "meaning": "chaque jour"},
+        {"kanji": "毎週", "hiragana": "まいしゅう", "romaji": "maishū", "meaning": "chaque semaine"},
+        {"kanji": "毎月", "hiragana": "まいつき", "romaji": "maitsuki", "meaning": "chaque mois"},
+        {"kanji": "毎年", "hiragana": "まいとし", "romaji": "maitoshi", "meaning": "chaque année"}
+      ]
+    },
+    {
+      "name": "Animaux",
+      "name_japanese": "動物",
+      "name_romaji": "dōbutsu",
+      "words": [
+        {"kanji": "犬", "hiragana": "いぬ", "romaji": "inu", "meaning": "chien"},
+        {"kanji": "猫", "hiragana": "ねこ", "romaji": "neko", "meaning": "chat"},
+        {"kanji": "鳥", "hiragana": "とり", "romaji": "tori", "meaning": "oiseau"},
+        {"kanji": "魚", "hiragana": "さかな", "romaji": "sakana", "meaning": "poisson"},
+        {"kanji": "馬", "hiragana": "うま", "romaji": "uma", "meaning": "cheval"},
+        {"kanji": "牛", "hiragana": "うし", "romaji": "ushi", "meaning": "vache, bœuf"},
+        {"kanji": "豚", "hiragana": "ぶた", "romaji": "buta", "meaning": "cochon"},
+        {"kanji": "羊", "hiragana": "ひつじ", "romaji": "hitsuji", "meaning": "mouton"},
+        {"kanji": "象", "hiragana": "ぞう", "romaji": "zō", "meaning": "éléphant"},
+        {"kanji": "虎", "hiragana": "とら", "romaji": "tora", "meaning": "tigre"},
+        {"kanji": "熊", "hiragana": "くま", "romaji": "kuma", "meaning": "ours"},
+        {"kanji": "猿", "hiragana": "さる", "romaji": "saru", "meaning": "singe"}
+      ]
+    },
+    {
+      "name": "Professions",
+      "name_japanese": "職業",
+      "name_romaji": "shokugyō",
+      "words": [
+        {"kanji": "医者", "hiragana": "いしゃ", "romaji": "isha", "meaning": "médecin"},
+        {"kanji": "看護師", "hiragana": "かんごし", "romaji": "kangoshi", "meaning": "infirmier/infirmière"},
+        {"kanji": "先生", "hiragana": "せんせい", "romaji": "sensei", "meaning": "professeur"},
+        {"kanji": "学生", "hiragana": "がくせい", "romaji": "gakusei", "meaning": "étudiant"},
+        {"kanji": "会社員", "hiragana": "かいしゃいん", "romaji": "kaishain", "meaning": "employé de bureau"},
+        {"kanji": "店員", "hiragana": "てんいん", "romaji": "ten'in", "meaning": "vendeur/vendeuse"},
+        {"kanji": "歌手", "hiragana": "かしゅ", "romaji": "kashu", "meaning": "chanteur/chanteuse"},
+        {"kanji": "料理人", "hiragana": "りょうりにん", "romaji": "ryōrinin", "meaning": "cuisinier"},
+        {"kanji": "運転手", "hiragana": "うんてんしゅ", "romaji": "untenshu", "meaning": "chauffeur"},
+        {"kanji": "警察官", "hiragana": "けいさつかん", "romaji": "keisatsukan", "meaning": "policier"},
+        {"kanji": "弁護士", "hiragana": "べんごし", "romaji": "bengoshi", "meaning": "avocat"}
+      ]
+    },
+    {
+      "name": "Nourriture",
+      "name_japanese": "食べ物",
+      "name_romaji": "tabemono",
+      "words": [
+        {"kanji": "ご飯", "hiragana": "ごはん", "romaji": "gohan", "meaning": "riz, repas"},
+        {"kanji": "パン", "hiragana": "ぱん", "romaji": "pan", "meaning": "pain"},
+        {"kanji": "肉", "hiragana": "にく", "romaji": "niku", "meaning": "viande"},
+        {"kanji": "魚", "hiragana": "さかな", "romaji": "sakana", "meaning": "poisson"},
+        {"kanji": "野菜", "hiragana": "やさい", "romaji": "yasai", "meaning": "légumes"},
+        {"kanji": "果物", "hiragana": "くだもの", "romaji": "kudamono", "meaning": "fruits"},
+        {"kanji": "卵", "hiragana": "たまご", "romaji": "tamago", "meaning": "œuf"},
+        {"kanji": "牛乳", "hiragana": "ぎゅうにゅう", "romaji": "gyūnyū", "meaning": "lait"},
+        {"kanji": "チーズ", "hiragana": "ちーず", "romaji": "chīzu", "meaning": "fromage"},
+        {"kanji": "バター", "hiragana": "ばたー", "romaji": "batā", "meaning": "beurre"},
+        {"kanji": "砂糖", "hiragana": "さとう", "romaji": "satō", "meaning": "sucre"},
+        {"kanji": "塩", "hiragana": "しお", "romaji": "shio", "meaning": "sel"},
+        {"kanji": "寿司", "hiragana": "すし", "romaji": "sushi", "meaning": "sushi"},
+        {"kanji": "天ぷら", "hiragana": "てんぷら", "romaji": "tenpura", "meaning": "tempura"},
+        {"kanji": "ラーメン", "hiragana": "らーめん", "romaji": "rāmen", "meaning": "ramen"},
+        {"kanji": "カレー", "hiragana": "かれー", "romaji": "karē", "meaning": "curry"},
+        {"kanji": "ケーキ", "hiragana": "けーき", "romaji": "kēki", "meaning": "gâteau"},
+        {"kanji": "アイスクリーム", "hiragana": "あいすくりーむ", "romaji": "aisukurīmu", "meaning": "glace"}
+      ]
+    },
+    {
+      "name": "Boissons",
+      "name_japanese": "飲み物",
+      "name_romaji": "nomimono",
+      "words": [
+        {"kanji": "水", "hiragana": "みず", "romaji": "mizu", "meaning": "eau"},
+        {"kanji": "お茶", "hiragana": "おちゃ", "romaji": "ocha", "meaning": "thé"},
+        {"kanji": "コーヒー", "hiragana": "こーひー", "romaji": "kōhī", "meaning": "café"},
+        {"kanji": "紅茶", "hiragana": "こうちゃ", "romaji": "kōcha", "meaning": "thé noir"},
+        {"kanji": "ジュース", "hiragana": "じゅーす", "romaji": "jūsu", "meaning": "jus"},
+        {"kanji": "ビール", "hiragana": "びーる", "romaji": "bīru", "meaning": "bière"},
+        {"kanji": "ワイン", "hiragana": "わいん", "romaji": "wain", "meaning": "vin"},
+        {"kanji": "お酒", "hiragana": "おさけ", "romaji": "osake", "meaning": "alcool, saké"},
+        {"kanji": "牛乳", "hiragana": "ぎゅうにゅう", "romaji": "gyūnyū", "meaning": "lait"}
+      ]
+    },
+    {
+      "name": "Vêtements",
+      "name_japanese": "服",
+      "name_romaji": "fuku",
+      "words": [
+        {"kanji": "服", "hiragana": "ふく", "romaji": "fuku", "meaning": "vêtements"},
+        {"kanji": "シャツ", "hiragana": "しゃつ", "romaji": "shatsu", "meaning": "chemise"},
+        {"kanji": "ズボン", "hiragana": "ずぼん", "romaji": "zubon", "meaning": "pantalon"},
+        {"kanji": "スカート", "hiragana": "すかーと", "romaji": "sukāto", "meaning": "jupe"},
+        {"kanji": "靴", "hiragana": "くつ", "romaji": "kutsu", "meaning": "chaussures"},
+        {"kanji": "靴下", "hiragana": "くつした", "romaji": "kutsushita", "meaning": "chaussettes"},
+        {"kanji": "帽子", "hiragana": "ぼうし", "romaji": "bōshi", "meaning": "chapeau"},
+        {"kanji": "メガネ", "hiragana": "めがね", "romaji": "megane", "meaning": "lunettes"},
+        {"kanji": "時計", "hiragana": "とけい", "romaji": "tokei", "meaning": "montre, horloge"},
+        {"kanji": "カバン", "hiragana": "かばん", "romaji": "kaban", "meaning": "sac"},
+        {"kanji": "傘", "hiragana": "かさ", "romaji": "kasa", "meaning": "parapluie"},
+        {"kanji": "コート", "hiragana": "こーと", "romaji": "kōto", "meaning": "manteau"}
+      ]
+    },
+    {
+      "name": "Corps",
+      "name_japanese": "体",
+      "name_romaji": "karada",
+      "words": [
+        {"kanji": "頭", "hiragana": "あたま", "romaji": "atama", "meaning": "tête"},
+        {"kanji": "顔", "hiragana": "かお", "romaji": "kao", "meaning": "visage"},
+        {"kanji": "目", "hiragana": "め", "romaji": "me", "meaning": "œil"},
+        {"kanji": "鼻", "hiragana": "はな", "romaji": "hana", "meaning": "nez"},
+        {"kanji": "口", "hiragana": "くち", "romaji": "kuchi", "meaning": "bouche"},
+        {"kanji": "耳", "hiragana": "みみ", "romaji": "mimi", "meaning": "oreille"},
+        {"kanji": "歯", "hiragana": "は", "romaji": "ha", "meaning": "dent"},
+        {"kanji": "首", "hiragana": "くび", "romaji": "kubi", "meaning": "cou"},
+        {"kanji": "肩", "hiragana": "かた", "romaji": "kata", "meaning": "épaule"},
+        {"kanji": "手", "hiragana": "て", "romaji": "te", "meaning": "main"},
+        {"kanji": "指", "hiragana": "ゆび", "romaji": "yubi", "meaning": "doigt"},
+        {"kanji": "足", "hiragana": "あし", "romaji": "ashi", "meaning": "jambe, pied"},
+        {"kanji": "背", "hiragana": "せ", "romaji": "se", "meaning": "dos"},
+        {"kanji": "お腹", "hiragana": "おなか", "romaji": "onaka", "meaning": "ventre"},
+        {"kanji": "心", "hiragana": "こころ", "romaji": "kokoro", "meaning": "cœur (émotionnel)"}
+      ]
+    },
+    {
+      "name": "Famille",
+      "name_japanese": "家族",
+      "name_romaji": "kazoku",
+      "words": [
+        {"kanji": "家族", "hiragana": "かぞく", "romaji": "kazoku", "meaning": "famille"},
+        {"kanji": "父", "hiragana": "ちち", "romaji": "chichi", "meaning": "père (le mien)"},
+        {"kanji": "お父さん", "hiragana": "おとうさん", "romaji": "otōsan", "meaning": "père (d'autrui)"},
+        {"kanji": "母", "hiragana": "はは", "romaji": "haha", "meaning": "mère (la mienne)"},
+        {"kanji": "お母さん", "hiragana": "おかあさん", "romaji": "okāsan", "meaning": "mère (d'autrui)"},
+        {"kanji": "兄", "hiragana": "あに", "romaji": "ani", "meaning": "grand frère (le mien)"},
+        {"kanji": "お兄さん", "hiragana": "おにいさん", "romaji": "onīsan", "meaning": "grand frère (d'autrui)"},
+        {"kanji": "姉", "hiragana": "あね", "romaji": "ane", "meaning": "grande sœur (la mienne)"},
+        {"kanji": "お姉さん", "hiragana": "おねえさん", "romaji": "onēsan", "meaning": "grande sœur (d'autrui)"},
+        {"kanji": "弟", "hiragana": "おとうと", "romaji": "otōto", "meaning": "petit frère"},
+        {"kanji": "妹", "hiragana": "いもうと", "romaji": "imōto", "meaning": "petite sœur"},
+        {"kanji": "祖父", "hiragana": "そふ", "romaji": "sofu", "meaning": "grand-père (le mien)"},
+        {"kanji": "祖母", "hiragana": "そぼ", "romaji": "sobo", "meaning": "grand-mère (la mienne)"},
+        {"kanji": "子供", "hiragana": "こども", "romaji": "kodomo", "meaning": "enfant"}
+      ]
+    },
+    {
+      "name": "Lieux",
+      "name_japanese": "場所",
+      "name_romaji": "basho",
+      "words": [
+        {"kanji": "学校", "hiragana": "がっこう", "romaji": "gakkō", "meaning": "école"},
+        {"kanji": "大学", "hiragana": "だいがく", "romaji": "daigaku", "meaning": "université"},
+        {"kanji": "病院", "hiragana": "びょういん", "romaji": "byōin", "meaning": "hôpital"},
+        {"kanji": "銀行", "hiragana": "ぎんこう", "romaji": "ginkō", "meaning": "banque"},
+        {"kanji": "郵便局", "hiragana": "ゆうびんきょく", "romaji": "yūbinkyoku", "meaning": "bureau de poste"},
+        {"kanji": "駅", "hiragana": "えき", "romaji": "eki", "meaning": "gare"},
+        {"kanji": "空港", "hiragana": "くうこう", "romaji": "kūkō", "meaning": "aéroport"},
+        {"kanji": "レストラン", "hiragana": "れすとらん", "romaji": "resutoran", "meaning": "restaurant"},
+        {"kanji": "喫茶店", "hiragana": "きっさてん", "romaji": "kissaten", "meaning": "café"},
+        {"kanji": "スーパー", "hiragana": "すーぱー", "romaji": "sūpā", "meaning": "supermarché"},
+        {"kanji": "デパート", "hiragana": "でぱーと", "romaji": "depāto", "meaning": "grand magasin"},
+        {"kanji": "コンビニ", "hiragana": "こんびに", "romaji": "konbini", "meaning": "dépanneur"},
+        {"kanji": "本屋", "hiragana": "ほんや", "romaji": "hon'ya", "meaning": "librairie"},
+        {"kanji": "図書館", "hiragana": "としょかん", "romaji": "toshokan", "meaning": "bibliothèque"},
+        {"kanji": "公園", "hiragana": "こうえん", "romaji": "kōen", "meaning": "parc"},
+        {"kanji": "映画館", "hiragana": "えいがかん", "romaji": "eigakan", "meaning": "cinéma"},
+        {"kanji": "ホテル", "hiragana": "ほてる", "romaji": "hoteru", "meaning": "hôtel"},
+        {"kanji": "会社", "hiragana": "かいしゃ", "romaji": "kaisha", "meaning": "entreprise"},
+        {"kanji": "交番", "hiragana": "こうばん", "romaji": "kōban", "meaning": "poste de police"}
+      ]
+    },
+    {
+      "name": "Maison",
+      "name_japanese": "家",
+      "name_romaji": "ie/uchi",
+      "words": [
+        {"kanji": "家", "hiragana": "いえ", "romaji": "ie", "meaning": "maison"},
+        {"kanji": "部屋", "hiragana": "へや", "romaji": "heya", "meaning": "chambre"},
+        {"kanji": "台所", "hiragana": "だいどころ", "romaji": "daidokoro", "meaning": "cuisine"},
+        {"kanji": "トイレ", "hiragana": "といれ", "romaji": "toire", "meaning": "toilettes"},
+        {"kanji": "風呂", "hiragana": "ふろ", "romaji": "furo", "meaning": "bain"},
+        {"kanji": "玄関", "hiragana": "げんかん", "romaji": "genkan", "meaning": "entrée"},
+        {"kanji": "庭", "hiragana": "にわ", "romaji": "niwa", "meaning": "jardin"},
+        {"kanji": "窓", "hiragana": "まど", "romaji": "mado", "meaning": "fenêtre"},
+        {"kanji": "ドア", "hiragana": "どあ", "romaji": "doa", "meaning": "porte"},
+        {"kanji": "机", "hiragana": "つくえ", "romaji": "tsukue", "meaning": "bureau"},
+        {"kanji": "椅子", "hiragana": "いす", "romaji": "isu", "meaning": "chaise"},
+        {"kanji": "ベッド", "hiragana": "べっど", "romaji": "beddo", "meaning": "lit"},
+        {"kanji": "テーブル", "hiragana": "てーぶる", "romaji": "tēburu", "meaning": "table"},
+        {"kanji": "冷蔵庫", "hiragana": "れいぞうこ", "romaji": "reizōko", "meaning": "réfrigérateur"},
+        {"kanji": "テレビ", "hiragana": "てれび", "romaji": "terebi", "meaning": "télévision"},
+        {"kanji": "電話", "hiragana": "でんわ", "romaji": "denwa", "meaning": "téléphone"}
+      ]
+    },
+    {
+      "name": "Nature et météo",
+      "name_japanese": "自然・天気",
+      "name_romaji": "shizen/tenki",
+      "words": [
+        {"kanji": "天気", "hiragana": "てんき", "romaji": "tenki", "meaning": "météo"},
+        {"kanji": "雨", "hiragana": "あめ", "romaji": "ame", "meaning": "pluie"},
+        {"kanji": "雪", "hiragana": "ゆき", "romaji": "yuki", "meaning": "neige"},
+        {"kanji": "風", "hiragana": "かぜ", "romaji": "kaze", "meaning": "vent"},
+        {"kanji": "曇り", "hiragana": "くもり", "romaji": "kumori", "meaning": "nuageux"},
+        {"kanji": "晴れ", "hiragana": "はれ", "romaji": "hare", "meaning": "beau temps"},
+        {"kanji": "空", "hiragana": "そら", "romaji": "sora", "meaning": "ciel"},
+        {"kanji": "雲", "hiragana": "くも", "romaji": "kumo", "meaning": "nuage"},
+        {"kanji": "太陽", "hiragana": "たいよう", "romaji": "taiyō", "meaning": "soleil"},
+        {"kanji": "月", "hiragana": "つき", "romaji": "tsuki", "meaning": "lune"},
+        {"kanji": "星", "hiragana": "ほし", "romaji": "hoshi", "meaning": "étoile"},
+        {"kanji": "山", "hiragana": "やま", "romaji": "yama", "meaning": "montagne"},
+        {"kanji": "川", "hiragana": "かわ", "romaji": "kawa", "meaning": "rivière"},
+        {"kanji": "海", "hiragana": "うみ", "romaji": "umi", "meaning": "mer"},
+        {"kanji": "木", "hiragana": "き", "romaji": "ki", "meaning": "arbre"},
+        {"kanji": "花", "hiragana": "はな", "romaji": "hana", "meaning": "fleur"}
+      ]
+    },
+    {
+      "name": "Transport",
+      "name_japanese": "交通",
+      "name_romaji": "kōtsū",
+      "words": [
+        {"kanji": "車", "hiragana": "くるま", "romaji": "kuruma", "meaning": "voiture"},
+        {"kanji": "電車", "hiragana": "でんしゃ", "romaji": "densha", "meaning": "train"},
+        {"kanji": "バス", "hiragana": "ばす", "romaji": "basu", "meaning": "bus"},
+        {"kanji": "タクシー", "hiragana": "たくしー", "romaji": "takushī", "meaning": "taxi"},
+        {"kanji": "自転車", "hiragana": "じてんしゃ", "romaji": "jitensha", "meaning": "vélo"},
+        {"kanji": "飛行機", "hiragana": "ひこうき", "romaji": "hikōki", "meaning": "avion"},
+        {"kanji": "船", "hiragana": "ふね", "romaji": "fune", "meaning": "bateau"},
+        {"kanji": "地下鉄", "hiragana": "ちかてつ", "romaji": "chikatetsu", "meaning": "métro"},
+        {"kanji": "新幹線", "hiragana": "しんかんせん", "romaji": "shinkansen", "meaning": "train à grande vitesse"}
+      ]
+    },
+    {
+      "name": "École",
+      "name_japanese": "学校",
+      "name_romaji": "gakkō",
+      "words": [
+        {"kanji": "勉強", "hiragana": "べんきょう", "romaji": "benkyō", "meaning": "étude"},
+        {"kanji": "宿題", "hiragana": "しゅくだい", "romaji": "shukudai", "meaning": "devoirs"},
+        {"kanji": "試験", "hiragana": "しけん", "romaji": "shiken", "meaning": "examen"},
+        {"kanji": "授業", "hiragana": "じゅぎょう", "romaji": "jugyō", "meaning": "cours"},
+        {"kanji": "教室", "hiragana": "きょうしつ", "romaji": "kyōshitsu", "meaning": "salle de classe"},
+        {"kanji": "本", "hiragana": "ほん", "romaji": "hon", "meaning": "livre"},
+        {"kanji": "ノート", "hiragana": "のーと", "romaji": "nōto", "meaning": "cahier"},
+        {"kanji": "鉛筆", "hiragana": "えんぴつ", "romaji": "enpitsu", "meaning": "crayon"},
+        {"kanji": "ペン", "hiragana": "ぺん", "romaji": "pen", "meaning": "stylo"},
+        {"kanji": "消しゴム", "hiragana": "けしごむ", "romaji": "keshigomu", "meaning": "gomme"},
+        {"kanji": "辞書", "hiragana": "じしょ", "romaji": "jisho", "meaning": "dictionnaire"},
+        {"kanji": "紙", "hiragana": "かみ", "romaji": "kami", "meaning": "papier"}
+      ]
+    },
+    {
+      "name": "Nombres",
+      "name_japanese": "数字",
+      "name_romaji": "sūji",
+      "words": [
+        {"kanji": "一", "hiragana": "いち", "romaji": "ichi", "meaning": "un"},
+        {"kanji": "二", "hiragana": "に", "romaji": "ni", "meaning": "deux"},
+        {"kanji": "三", "hiragana": "さん", "romaji": "san", "meaning": "trois"},
+        {"kanji": "四", "hiragana": "し/よん", "romaji": "shi/yon", "meaning": "quatre"},
+        {"kanji": "五", "hiragana": "ご", "romaji": "go", "meaning": "cinq"},
+        {"kanji": "六", "hiragana": "ろく", "romaji": "roku", "meaning": "six"},
+        {"kanji": "七", "hiragana": "しち/なな", "romaji": "shichi/nana", "meaning": "sept"},
+        {"kanji": "八", "hiragana": "はち", "romaji": "hachi", "meaning": "huit"},
+        {"kanji": "九", "hiragana": "く/きゅう", "romaji": "ku/kyū", "meaning": "neuf"},
+        {"kanji": "十", "hiragana": "じゅう", "romaji": "jū", "meaning": "dix"},
+        {"kanji": "百", "hiragana": "ひゃく", "romaji": "hyaku", "meaning": "cent"},
+        {"kanji": "千", "hiragana": "せん", "romaji": "sen", "meaning": "mille"},
+        {"kanji": "万", "hiragana": "まん", "romaji": "man", "meaning": "dix mille"}
+      ]
+    },
+    {
+      "name": "Directions",
+      "name_japanese": "方向",
+      "name_romaji": "hōkō",
+      "words": [
+        {"kanji": "右", "hiragana": "みぎ", "romaji": "migi", "meaning": "droite"},
+        {"kanji": "左", "hiragana": "ひだり", "romaji": "hidari", "meaning": "gauche"},
+        {"kanji": "前", "hiragana": "まえ", "romaji": "mae", "meaning": "devant"},
+        {"kanji": "後ろ", "hiragana": "うしろ", "romaji": "ushiro", "meaning": "derrière"},
+        {"kanji": "上", "hiragana": "うえ", "romaji": "ue", "meaning": "dessus"},
+        {"kanji": "下", "hiragana": "した", "romaji": "shita", "meaning": "dessous"},
+        {"kanji": "中", "hiragana": "なか", "romaji": "naka", "meaning": "intérieur, dedans"},
+        {"kanji": "外", "hiragana": "そと", "romaji": "soto", "meaning": "extérieur, dehors"},
+        {"kanji": "隣", "hiragana": "となり", "romaji": "tonari", "meaning": "à côté"},
+        {"kanji": "間", "hiragana": "あいだ", "romaji": "aida", "meaning": "entre"},
+        {"kanji": "近く", "hiragana": "ちかく", "romaji": "chikaku", "meaning": "près"},
+        {"kanji": "遠く", "hiragana": "とおく", "romaji": "tōku", "meaning": "loin"},
+        {"kanji": "東", "hiragana": "ひがし", "romaji": "higashi", "meaning": "est"},
+        {"kanji": "西", "hiragana": "にし", "romaji": "nishi", "meaning": "ouest"},
+        {"kanji": "南", "hiragana": "みなみ", "romaji": "minami", "meaning": "sud"},
+        {"kanji": "北", "hiragana": "きた", "romaji": "kita", "meaning": "nord"}
+      ]
+    }
+  ]
+}
