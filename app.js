@@ -7,7 +7,10 @@ const app = {
         verbsPlus: null,
         adverbs: null,
         particles: null,
-        sentences: null
+        sentences: null,
+        adjectives: null,
+        grammar: null,
+        vocabulary: null
     },
     state: {
         currentKanjiIndex: 0,
@@ -19,6 +22,9 @@ const app = {
         adverbMode: 'list',
         particleMode: 'list',
         sentenceMode: 'quiz',
+        adjectiveMode: 'list',
+        grammarMode: 'list',
+        vocabularyMode: 'list',
         quizScore: 0,
         quizTotal: 0,
         counterQuizScore: 0,
@@ -35,6 +41,12 @@ const app = {
         particleQuiz2Total: 0,
         sentenceQuizScore: 0,
         sentenceQuizTotal: 0,
+        adjectiveQuizScore: 0,
+        adjectiveQuizTotal: 0,
+        grammarQuizScore: 0,
+        grammarQuizTotal: 0,
+        vocabularyQuizScore: 0,
+        vocabularyQuizTotal: 0,
         currentQuizQuestion: null,
         currentCounterQuestion: null,
         currentVerbQuestion: null,
@@ -42,8 +54,14 @@ const app = {
         currentAdverbQuestion: null,
         currentParticleQuestion: null,
         currentSentenceQuestion: null,
+        currentAdjectiveQuestion: null,
+        currentGrammarQuestion: null,
+        currentVocabularyQuestion: null,
         selectedDifficulty: 'all',
         selectedCategory: 'all',
+        selectedAdjectiveType: 'all',
+        selectedGrammarCategory: 'all',
+        selectedVocabularyCategory: 'all',
         showRomaji: false,
         allKanji: []
     },
@@ -55,6 +73,9 @@ const app = {
         studiedAdverbs: new Set(),
         studiedParticles: new Set(),
         studiedSentences: new Set(),
+        studiedAdjectives: new Set(),
+        studiedGrammar: new Set(),
+        studiedVocabulary: new Set(),
         correctAnswers: 0,
         totalAttempts: 0
     },
@@ -71,14 +92,17 @@ const app = {
     // Chargement des données
     async loadData() {
         try {
-            const [kanjiResponse, countersResponse, verbsResponse, verbsPlusResponse, adverbsResponse, particlesResponse, sentencesResponse] = await Promise.all([
+            const [kanjiResponse, countersResponse, verbsResponse, verbsPlusResponse, adverbsResponse, particlesResponse, sentencesResponse, adjectivesResponse, grammarResponse, vocabularyResponse] = await Promise.all([
                 fetch('data/kanji.json'),
                 fetch('data/counters.json'),
                 fetch('data/verbs.json'),
                 fetch('data/verbs-plus.json'),
                 fetch('data/adverbs.json'),
                 fetch('data/particles.json'),
-                fetch('data/sentences.json')
+                fetch('data/sentences.json'),
+                fetch('data/adjectives.json'),
+                fetch('data/grammar.json'),
+                fetch('data/vocabulary.json')
             ]);
 
             this.data.kanji = await kanjiResponse.json();
@@ -88,6 +112,9 @@ const app = {
             this.data.adverbs = await adverbsResponse.json();
             this.data.particles = await particlesResponse.json();
             this.data.sentences = await sentencesResponse.json();
+            this.data.adjectives = await adjectivesResponse.json();
+            this.data.grammar = await grammarResponse.json();
+            this.data.vocabulary = await vocabularyResponse.json();
 
             // Créer une liste plate de tous les kanji
             this.state.allKanji = [];
@@ -117,6 +144,9 @@ const app = {
             studiedAdverbs: Array.from(this.progress.studiedAdverbs),
             studiedParticles: Array.from(this.progress.studiedParticles),
             studiedSentences: Array.from(this.progress.studiedSentences),
+            studiedAdjectives: Array.from(this.progress.studiedAdjectives),
+            studiedGrammar: Array.from(this.progress.studiedGrammar),
+            studiedVocabulary: Array.from(this.progress.studiedVocabulary),
             correctAnswers: this.progress.correctAnswers,
             totalAttempts: this.progress.totalAttempts
         }));
@@ -133,6 +163,9 @@ const app = {
             this.progress.studiedAdverbs = new Set(data.studiedAdverbs || []);
             this.progress.studiedParticles = new Set(data.studiedParticles || []);
             this.progress.studiedSentences = new Set(data.studiedSentences || []);
+            this.progress.studiedAdjectives = new Set(data.studiedAdjectives || []);
+            this.progress.studiedGrammar = new Set(data.studiedGrammar || []);
+            this.progress.studiedVocabulary = new Set(data.studiedVocabulary || []);
             this.progress.correctAnswers = data.correctAnswers || 0;
             this.progress.totalAttempts = data.totalAttempts || 0;
         }
@@ -148,6 +181,9 @@ const app = {
                 studiedAdverbs: new Set(),
                 studiedParticles: new Set(),
                 studiedSentences: new Set(),
+                studiedAdjectives: new Set(),
+                studiedGrammar: new Set(),
+                studiedVocabulary: new Set(),
                 correctAnswers: 0,
                 totalAttempts: 0
             };
@@ -183,6 +219,12 @@ const app = {
         } else if (mode === 'sentences') {
             this.initSentenceQuiz();
             this.populateCategoryFilter();
+        } else if (mode === 'adjectives') {
+            this.setAdjectiveMode('list');
+        } else if (mode === 'grammar') {
+            this.setGrammarMode('list');
+        } else if (mode === 'vocabulary') {
+            this.setVocabularyMode('list');
         }
     },
 
@@ -194,7 +236,10 @@ const app = {
                             this.progress.studiedVerbsPlus.size +
                             this.progress.studiedAdverbs.size +
                             this.progress.studiedParticles.size +
-                            this.progress.studiedSentences.size;
+                            this.progress.studiedSentences.size +
+                            this.progress.studiedAdjectives.size +
+                            this.progress.studiedGrammar.size +
+                            this.progress.studiedVocabulary.size;
 
         const successRate = this.progress.totalAttempts > 0
             ? Math.round((this.progress.correctAnswers / this.progress.totalAttempts) * 100)
@@ -221,8 +266,17 @@ const app = {
         const totalParticles = this.data.particles?.particles.length || 14;
         this.updateProgress('particles', this.progress.studiedParticles.size, totalParticles);
 
-        const totalSentences = this.data.sentences?.sentences.length || 100;
+        const totalSentences = this.data.sentences?.sentences.length || 500;
         this.updateProgress('sentences', this.progress.studiedSentences.size, totalSentences);
+
+        const totalAdjectives = (this.data.adjectives?.i_adjectives.length || 0) + (this.data.adjectives?.na_adjectives.length || 0);
+        this.updateProgress('adjectives', this.progress.studiedAdjectives.size, totalAdjectives);
+
+        const totalGrammar = this.data.grammar?.grammar_points.length || 80;
+        this.updateProgress('grammar', this.progress.studiedGrammar.size, totalGrammar);
+
+        const totalVocabulary = this.data.vocabulary?.categories.reduce((sum, cat) => sum + cat.words.length, 0) || 250;
+        this.updateProgress('vocabulary', this.progress.studiedVocabulary.size, totalVocabulary);
     },
 
     updateProgress(type, current, total) {
@@ -1152,7 +1206,10 @@ const app = {
 
             item.innerHTML = `
                 <div class="adverb-main">
-                    <div class="adverb-kanji">${adverb.kanji}</div>
+                    <div class="adverb-kanji">
+                        ${adverb.kanji}
+                        <button class="audio-btn-small" data-text="${adverb.hiragana}">🔊</button>
+                    </div>
                     <div class="adverb-hiragana">${adverb.hiragana}</div>
                     <div class="adverb-meaning">${adverb.meaning}</div>
                 </div>
@@ -1162,6 +1219,13 @@ const app = {
                     <div class="example-translation">${adverb.example.translation}</div>
                 </div>
             `;
+
+            // Bouton audio
+            const audioBtn = item.querySelector('.audio-btn-small');
+            audioBtn.onclick = (e) => {
+                e.stopPropagation();
+                this.speakJapanese(audioBtn.dataset.text);
+            };
 
             // Toggle détails au clic
             item.onclick = () => {
@@ -1816,6 +1880,27 @@ const app = {
         this.speakJapanese(text);
     },
 
+    playAdjectiveAudio() {
+        const hiragana = this.state.currentAdjectiveQuestion?.adjective.hiragana;
+        if (hiragana) {
+            this.speakJapanese(hiragana);
+        }
+    },
+
+    playVocabularyAudio() {
+        const hiragana = this.state.currentVocabularyQuestion?.word.hiragana;
+        if (hiragana) {
+            this.speakJapanese(hiragana);
+        }
+    },
+
+    playAdverbAudio() {
+        const hiragana = this.state.currentAdverbQuestion?.adverb.hiragana;
+        if (hiragana) {
+            this.speakJapanese(hiragana);
+        }
+    },
+
     speakJapanese(text) {
         if (!('speechSynthesis' in window)) {
             alert('Votre navigateur ne supporte pas la synthèse vocale.');
@@ -1893,6 +1978,612 @@ const app = {
                 }
             }
         }
+    },
+
+    // Fonctions utilitaires pour les quiz
+    shuffle(array) {
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+    },
+
+    getRandomElements(array, count) {
+        const shuffled = this.shuffle(array);
+        return shuffled.slice(0, count);
+    },
+
+    // ==================== ADJECTIFS ====================
+    setAdjectiveMode(mode) {
+        this.state.adjectiveMode = mode;
+        document.querySelectorAll('#adjectives-page .mode-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        document.getElementById('adjective-list').style.display = mode === 'list' ? 'block' : 'none';
+        document.getElementById('adjective-quiz').style.display = mode === 'quiz' ? 'block' : 'none';
+
+        if (mode === 'list') {
+            this.displayAdjectives();
+            this.populateAdjectiveTypeFilter();
+        } else if (mode === 'quiz') {
+            this.initAdjectiveQuiz();
+        }
+    },
+
+    populateAdjectiveTypeFilter() {
+        // Filtres déjà définis dans le HTML
+    },
+
+    displayAdjectives() {
+        const container = document.getElementById('adjectives-list');
+        if (!this.data.adjectives) return;
+        container.innerHTML = '';
+
+        const selectedType = this.state.selectedAdjectiveType;
+        let adjectives = [];
+
+        if (selectedType === 'all' || selectedType === 'i') {
+            adjectives = adjectives.concat(this.data.adjectives.i_adjectives.map(adj => ({...adj, type: 'i'})));
+        }
+        if (selectedType === 'all' || selectedType === 'na') {
+            adjectives = adjectives.concat(this.data.adjectives.na_adjectives.map(adj => ({...adj, type: 'na'})));
+        }
+
+        // Créer la grille
+        const grid = document.createElement('div');
+        grid.className = 'adverbs-grid';
+
+        adjectives.forEach(adj => {
+            const item = document.createElement('div');
+            item.className = 'adverb-item';
+
+            item.innerHTML = `
+                <div class="adverb-main">
+                    <div class="adverb-kanji">
+                        ${adj.kanji} <span class="type-badge">${adj.type === 'i' ? 'い' : 'な'}</span>
+                        <button class="audio-btn-small" data-text="${adj.hiragana}">🔊</button>
+                    </div>
+                    <div class="adverb-hiragana">${adj.hiragana}</div>
+                    <div class="adverb-meaning">${adj.meaning}</div>
+                </div>
+                <div class="adverb-details" style="display: none;">
+                    ${adj.examples && adj.examples.length > 0 ? `
+                        <div class="example-sentence">${adj.examples[0].sentence}</div>
+                        <div class="example-translation">${adj.examples[0].translation}</div>
+                    ` : ''}
+                </div>
+            `;
+
+            // Bouton audio
+            const audioBtn = item.querySelector('.audio-btn-small');
+            audioBtn.onclick = (e) => {
+                e.stopPropagation();
+                this.speakJapanese(audioBtn.dataset.text);
+            };
+
+            // Toggle détails
+            item.onclick = () => {
+                const details = item.querySelector('.adverb-details');
+                const isVisible = details.style.display !== 'none';
+                details.style.display = isVisible ? 'none' : 'block';
+                item.classList.toggle('expanded');
+            };
+
+            grid.appendChild(item);
+            this.progress.studiedAdjectives.add(adj.kanji);
+        });
+
+        container.appendChild(grid);
+        this.saveProgress();
+        this.updateHomeStats();
+    },
+
+    getConjugationLabel(form) {
+        const labels = {
+            'present_affirmative': 'Présent affirmatif',
+            'present_negative': 'Présent négatif',
+            'past_affirmative': 'Passé affirmatif',
+            'past_negative': 'Passé négatif',
+            'te_form': 'Forme て',
+            'adverbial': 'Forme adverbiale',
+            'with_noun': 'Avec nom'
+        };
+        return labels[form] || form;
+    },
+
+    filterAdjectivesByType() {
+        this.state.selectedAdjectiveType = document.getElementById('adjective-type-filter').value;
+        this.displayAdjectives();
+    },
+
+    initAdjectiveQuiz() {
+        this.state.adjectiveQuizScore = 0;
+        this.state.adjectiveQuizTotal = 0;
+        this.generateAdjectiveQuestion();
+    },
+
+    generateAdjectiveQuestion() {
+        if (!this.data.adjectives) return;
+
+        const allAdjectives = [
+            ...this.data.adjectives.i_adjectives,
+            ...this.data.adjectives.na_adjectives
+        ];
+
+        const correct = allAdjectives[Math.floor(Math.random() * allAdjectives.length)];
+        const wrongAnswers = this.getRandomElements(
+            allAdjectives.filter(adj => adj.meaning !== correct.meaning),
+            3
+        ).map(adj => adj.meaning);
+
+        const options = this.shuffle([correct.meaning, ...wrongAnswers]);
+
+        this.state.currentAdjectiveQuestion = {
+            adjective: correct,
+            correctAnswer: correct.meaning,
+            options: options
+        };
+
+        this.displayAdjectiveQuestion();
+    },
+
+    displayAdjectiveQuestion() {
+        const question = this.state.currentAdjectiveQuestion;
+        document.getElementById('quiz-adjective-kanji').textContent = question.adjective.kanji;
+        document.getElementById('quiz-adjective-hiragana').textContent = question.adjective.hiragana;
+
+        const optionsContainer = document.getElementById('adjective-quiz-options');
+        optionsContainer.innerHTML = question.options.map((option, index) => `
+            <button class="quiz-option" onclick="app.checkAdjectiveAnswer(${index})">
+                ${option}
+            </button>
+        `).join('');
+
+        document.getElementById('adjective-quiz-feedback').style.display = 'none';
+        document.getElementById('adjective-next-question-btn').style.display = 'none';
+    },
+
+    checkAdjectiveAnswer(selectedIndex) {
+        const question = this.state.currentAdjectiveQuestion;
+        const selected = question.options[selectedIndex];
+        this.state.adjectiveQuizTotal++;
+
+        const isCorrect = selected === question.correctAnswer;
+        if (isCorrect) {
+            this.state.adjectiveQuizScore++;
+            this.progress.correctAnswers++;
+            this.progress.studiedAdjectives.add(question.adjective.kanji);
+        }
+        this.progress.totalAttempts++;
+
+        const feedback = document.getElementById('adjective-quiz-feedback');
+        feedback.className = 'quiz-feedback ' + (isCorrect ? 'correct' : 'incorrect');
+        feedback.innerHTML = `
+            <div><strong>${isCorrect ? '✓ Correct !' : '✗ Incorrect'}</strong></div>
+            <div class="feedback-details">
+                <div><strong>${question.adjective.kanji}</strong> (${question.adjective.hiragana})</div>
+                <div>Signifie: <strong>${question.correctAnswer}</strong></div>
+                ${question.adjective.examples && question.adjective.examples[0] ? `
+                    <div class="feedback-example">
+                        Exemple: ${question.adjective.examples[0].japanese}<br>
+                        ${question.adjective.examples[0].french}
+                    </div>
+                ` : ''}
+            </div>
+        `;
+        feedback.style.display = 'block';
+        feedback.onclick = () => this.nextAdjectiveQuestion();
+
+        document.querySelectorAll('#adjective-quiz-options .quiz-option').forEach(btn => {
+            btn.disabled = true;
+            if (btn.textContent.trim() === question.correctAnswer) {
+                btn.classList.add('correct');
+            }
+        });
+
+        document.getElementById('adjective-next-question-btn').style.display = 'block';
+        document.getElementById('adjective-quiz-score').textContent =
+            `Score: ${this.state.adjectiveQuizScore}/${this.state.adjectiveQuizTotal}`;
+
+        this.saveProgress();
+    },
+
+    nextAdjectiveQuestion() {
+        this.generateAdjectiveQuestion();
+    },
+
+    // ==================== GRAMMAIRE ====================
+    setGrammarMode(mode) {
+        this.state.grammarMode = mode;
+        document.querySelectorAll('#grammar-page .mode-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        document.getElementById('grammar-list').style.display = mode === 'list' ? 'block' : 'none';
+        document.getElementById('grammar-quiz').style.display = mode === 'quiz' ? 'block' : 'none';
+
+        if (mode === 'list') {
+            this.displayGrammar();
+            this.populateGrammarCategoryFilter();
+        } else if (mode === 'quiz') {
+            this.initGrammarQuiz();
+        }
+    },
+
+    populateGrammarCategoryFilter() {
+        const filter = document.getElementById('grammar-category-filter');
+        if (!this.data.grammar) return;
+
+        const categories = [...new Set(this.data.grammar.grammar_points.map(g => g.category))];
+        filter.innerHTML = '<option value="all">Toutes les catégories</option>' +
+            categories.map(cat => `<option value="${cat}">${this.getCategoryLabel(cat)}</option>`).join('');
+    },
+
+    getCategoryLabel(category) {
+        const labels = {
+            'particules': 'Particules',
+            'verbes': 'Verbes',
+            'capacité': 'Capacité',
+            'désir': 'Désir',
+            'préférences': 'Préférences',
+            'existence': 'Existence',
+            'interrogatifs': 'Interrogatifs',
+            'comparaison': 'Comparaison',
+            'temps': 'Temps',
+            'expérience': 'Expérience',
+            'permission': 'Permission',
+            'interdiction': 'Interdiction',
+            'obligation': 'Obligation',
+            'opinion': 'Opinion',
+            'citation': 'Citation',
+            'connexion': 'Connexion',
+            'apparence': 'Apparence',
+            'but': 'But',
+            'changement': 'Changement',
+            'degré': 'Degré',
+            'facilité': 'Facilité',
+            'méthode': 'Méthode',
+            'intention': 'Intention',
+            'planification': 'Planification',
+            'probabilité': 'Probabilité',
+            'conseil': 'Conseil',
+            'attente': 'Attente',
+            'ouï-dire': 'Ouï-dire',
+            'ressemblance': 'Ressemblance'
+        };
+        return labels[category] || category;
+    },
+
+    displayGrammar() {
+        const container = document.getElementById('grammar-list-content');
+        if (!this.data.grammar) return;
+        container.innerHTML = '';
+
+        const selectedCategory = this.state.selectedGrammarCategory;
+        let grammarPoints = this.data.grammar.grammar_points;
+
+        if (selectedCategory !== 'all') {
+            grammarPoints = grammarPoints.filter(g => g.category === selectedCategory);
+        }
+
+        // Créer la grille
+        const grid = document.createElement('div');
+        grid.className = 'adverbs-grid';
+
+        grammarPoints.forEach(point => {
+            const item = document.createElement('div');
+            item.className = 'adverb-item';
+
+            item.innerHTML = `
+                <div class="adverb-main">
+                    <div class="adverb-kanji">${point.pattern}</div>
+                    <div class="adverb-hiragana">${this.getCategoryLabel(point.category)}</div>
+                    <div class="adverb-meaning">${point.explanation}</div>
+                </div>
+                <div class="adverb-details" style="display: none;">
+                    <div class="example-sentence">${point.structure}</div>
+                    ${point.examples && point.examples.length > 0 ? `
+                        <div class="example-sentence">${point.examples[0].japanese}</div>
+                        <div class="example-reading">${point.examples[0].romaji}</div>
+                        <div class="example-translation">${point.examples[0].french}</div>
+                    ` : ''}
+                </div>
+            `;
+
+            item.onclick = () => {
+                const details = item.querySelector('.adverb-details');
+                const isVisible = details.style.display !== 'none';
+                details.style.display = isVisible ? 'none' : 'block';
+                item.classList.toggle('expanded');
+            };
+
+            grid.appendChild(item);
+            this.progress.studiedGrammar.add(point.id);
+        });
+
+        container.appendChild(grid);
+        this.saveProgress();
+        this.updateHomeStats();
+    },
+
+    filterGrammarByCategory() {
+        this.state.selectedGrammarCategory = document.getElementById('grammar-category-filter').value;
+        this.displayGrammar();
+    },
+
+    initGrammarQuiz() {
+        this.state.grammarQuizScore = 0;
+        this.state.grammarQuizTotal = 0;
+        this.generateGrammarQuestion();
+    },
+
+    generateGrammarQuestion() {
+        if (!this.data.grammar) return;
+
+        const grammarPoints = this.data.grammar.grammar_points;
+        const correct = grammarPoints[Math.floor(Math.random() * grammarPoints.length)];
+
+        const wrongAnswers = this.getRandomElements(
+            grammarPoints.filter(g => g.explanation !== correct.explanation),
+            3
+        ).map(g => g.explanation);
+
+        const options = this.shuffle([correct.explanation, ...wrongAnswers]);
+
+        this.state.currentGrammarQuestion = {
+            grammar: correct,
+            correctAnswer: correct.explanation,
+            options: options
+        };
+
+        this.displayGrammarQuestion();
+    },
+
+    displayGrammarQuestion() {
+        const question = this.state.currentGrammarQuestion;
+        document.getElementById('quiz-grammar-pattern').textContent = question.grammar.pattern;
+        document.getElementById('quiz-grammar-text').textContent = 'Quelle est la fonction de cette structure ?';
+
+        const optionsContainer = document.getElementById('grammar-quiz-options');
+        optionsContainer.innerHTML = question.options.map((option, index) => `
+            <button class="quiz-option" onclick="app.checkGrammarAnswer(${index})">
+                ${option}
+            </button>
+        `).join('');
+
+        document.getElementById('grammar-quiz-feedback').style.display = 'none';
+        document.getElementById('grammar-next-question-btn').style.display = 'none';
+    },
+
+    checkGrammarAnswer(selectedIndex) {
+        const question = this.state.currentGrammarQuestion;
+        const selected = question.options[selectedIndex];
+        this.state.grammarQuizTotal++;
+
+        const isCorrect = selected === question.correctAnswer;
+        if (isCorrect) {
+            this.state.grammarQuizScore++;
+            this.progress.correctAnswers++;
+            this.progress.studiedGrammar.add(question.grammar.id);
+        }
+        this.progress.totalAttempts++;
+
+        const feedback = document.getElementById('grammar-quiz-feedback');
+        feedback.className = 'quiz-feedback ' + (isCorrect ? 'correct' : 'incorrect');
+        feedback.innerHTML = `
+            <div><strong>${isCorrect ? '✓ Correct !' : '✗ Incorrect'}</strong></div>
+            <div class="feedback-details">
+                <div><strong>${question.grammar.pattern}</strong></div>
+                <div>${question.correctAnswer}</div>
+                <div class="feedback-structure">Structure: ${question.grammar.structure}</div>
+                ${question.grammar.examples && question.grammar.examples[0] ? `
+                    <div class="feedback-example">
+                        ${question.grammar.examples[0].japanese}<br>
+                        ${question.grammar.examples[0].romaji}<br>
+                        ${question.grammar.examples[0].french}
+                    </div>
+                ` : ''}
+            </div>
+        `;
+        feedback.style.display = 'block';
+        feedback.onclick = () => this.nextGrammarQuestion();
+
+        document.querySelectorAll('#grammar-quiz-options .quiz-option').forEach(btn => {
+            btn.disabled = true;
+            if (btn.textContent.trim() === question.correctAnswer) {
+                btn.classList.add('correct');
+            }
+        });
+
+        document.getElementById('grammar-next-question-btn').style.display = 'block';
+        document.getElementById('grammar-quiz-score').textContent =
+            `Score: ${this.state.grammarQuizScore}/${this.state.grammarQuizTotal}`;
+
+        this.saveProgress();
+    },
+
+    nextGrammarQuestion() {
+        this.generateGrammarQuestion();
+    },
+
+    // ==================== VOCABULAIRE ====================
+    setVocabularyMode(mode) {
+        this.state.vocabularyMode = mode;
+        document.querySelectorAll('#vocabulary-page .mode-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        document.getElementById('vocabulary-list').style.display = mode === 'list' ? 'block' : 'none';
+        document.getElementById('vocabulary-quiz').style.display = mode === 'quiz' ? 'block' : 'none';
+
+        if (mode === 'list') {
+            this.displayVocabulary();
+            this.populateVocabularyCategoryFilter();
+        } else if (mode === 'quiz') {
+            this.initVocabularyQuiz();
+        }
+    },
+
+    populateVocabularyCategoryFilter() {
+        const filter = document.getElementById('vocabulary-category-filter');
+        if (!this.data.vocabulary) return;
+
+        filter.innerHTML = '<option value="all">Toutes les catégories</option>' +
+            this.data.vocabulary.categories.map(cat => `
+                <option value="${cat.name}">${cat.name} (${cat.name_japanese})</option>
+            `).join('');
+    },
+
+    displayVocabulary() {
+        const container = document.getElementById('vocabulary-categories');
+        if (!this.data.vocabulary) return;
+        container.innerHTML = '';
+
+        const selectedCategory = this.state.selectedVocabularyCategory;
+        let categories = this.data.vocabulary.categories;
+
+        if (selectedCategory !== 'all') {
+            categories = categories.filter(cat => cat.name === selectedCategory);
+        }
+
+        categories.forEach(category => {
+            // Titre de catégorie
+            const title = document.createElement('h3');
+            title.className = 'category-title';
+            title.textContent = `${category.name} - ${category.name_japanese}`;
+            container.appendChild(title);
+
+            // Créer la grille pour cette catégorie
+            const grid = document.createElement('div');
+            grid.className = 'adverbs-grid';
+
+            category.words.forEach(word => {
+                const item = document.createElement('div');
+                item.className = 'adverb-item';
+
+                item.innerHTML = `
+                    <div class="adverb-main">
+                        <div class="adverb-kanji">
+                            ${word.kanji}
+                            <button class="audio-btn-small" data-text="${word.hiragana}">🔊</button>
+                        </div>
+                        <div class="adverb-hiragana">${word.hiragana}</div>
+                        <div class="adverb-meaning">${word.meaning}</div>
+                    </div>
+                `;
+
+                // Bouton audio
+                const audioBtn = item.querySelector('.audio-btn-small');
+                audioBtn.onclick = (e) => {
+                    e.stopPropagation();
+                    this.speakJapanese(audioBtn.dataset.text);
+                };
+
+                grid.appendChild(item);
+                this.progress.studiedVocabulary.add(word.kanji);
+            });
+
+            container.appendChild(grid);
+        });
+
+        this.saveProgress();
+        this.updateHomeStats();
+    },
+
+    filterVocabularyByCategory() {
+        this.state.selectedVocabularyCategory = document.getElementById('vocabulary-category-filter').value;
+        this.displayVocabulary();
+    },
+
+    initVocabularyQuiz() {
+        this.state.vocabularyQuizScore = 0;
+        this.state.vocabularyQuizTotal = 0;
+        this.generateVocabularyQuestion();
+    },
+
+    generateVocabularyQuestion() {
+        if (!this.data.vocabulary) return;
+
+        const allWords = [];
+        this.data.vocabulary.categories.forEach(cat => {
+            cat.words.forEach(word => allWords.push(word));
+        });
+
+        const correct = allWords[Math.floor(Math.random() * allWords.length)];
+        const wrongAnswers = this.getRandomElements(
+            allWords.filter(w => w.meaning !== correct.meaning),
+            3
+        ).map(w => w.meaning);
+
+        const options = this.shuffle([correct.meaning, ...wrongAnswers]);
+
+        this.state.currentVocabularyQuestion = {
+            word: correct,
+            correctAnswer: correct.meaning,
+            options: options
+        };
+
+        this.displayVocabularyQuestion();
+    },
+
+    displayVocabularyQuestion() {
+        const question = this.state.currentVocabularyQuestion;
+        document.getElementById('quiz-vocabulary-kanji').textContent = question.word.kanji;
+        document.getElementById('quiz-vocabulary-hiragana').textContent = question.word.hiragana;
+
+        const optionsContainer = document.getElementById('vocabulary-quiz-options');
+        optionsContainer.innerHTML = question.options.map((option, index) => `
+            <button class="quiz-option" onclick="app.checkVocabularyAnswer(${index})">
+                ${option}
+            </button>
+        `).join('');
+
+        document.getElementById('vocabulary-quiz-feedback').style.display = 'none';
+        document.getElementById('vocabulary-next-question-btn').style.display = 'none';
+    },
+
+    checkVocabularyAnswer(selectedIndex) {
+        const question = this.state.currentVocabularyQuestion;
+        const selected = question.options[selectedIndex];
+        this.state.vocabularyQuizTotal++;
+
+        const isCorrect = selected === question.correctAnswer;
+        if (isCorrect) {
+            this.state.vocabularyQuizScore++;
+            this.progress.correctAnswers++;
+            this.progress.studiedVocabulary.add(question.word.kanji);
+        }
+        this.progress.totalAttempts++;
+
+        const feedback = document.getElementById('vocabulary-quiz-feedback');
+        feedback.className = 'quiz-feedback ' + (isCorrect ? 'correct' : 'incorrect');
+        feedback.innerHTML = `
+            <div><strong>${isCorrect ? '✓ Correct !' : '✗ Incorrect'}</strong></div>
+            <div class="feedback-details">
+                <div><strong>${question.word.kanji}</strong> (${question.word.hiragana})</div>
+                <div>Romaji: ${question.word.romaji}</div>
+                <div>Signifie: <strong>${question.correctAnswer}</strong></div>
+            </div>
+        `;
+        feedback.style.display = 'block';
+        feedback.onclick = () => this.nextVocabularyQuestion();
+
+        document.querySelectorAll('#vocabulary-quiz-options .quiz-option').forEach(btn => {
+            btn.disabled = true;
+            if (btn.textContent.trim() === question.correctAnswer) {
+                btn.classList.add('correct');
+            }
+        });
+
+        document.getElementById('vocabulary-next-question-btn').style.display = 'block';
+        document.getElementById('vocabulary-quiz-score').textContent =
+            `Score: ${this.state.vocabularyQuizScore}/${this.state.vocabularyQuizTotal}`;
+
+        this.saveProgress();
+    },
+
+    nextVocabularyQuestion() {
+        this.generateVocabularyQuestion();
     }
 };
 

@@ -1173,6 +1173,136 @@ header h1 {
     font-style: italic;
 }
 
+/* Sentence Quiz Display */
+.sentence-quiz-display {
+    text-align: center;
+    margin: 30px 0;
+    background: var(--secondary);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.sentence-japanese-large {
+    font-size: 3em;
+    font-weight: bold;
+    color: #000;
+    margin: 20px 0;
+    line-height: 1.4;
+}
+
+/* Quiz Adjectifs */
+.adjective-kanji-large {
+    font-size: 4em;
+    font-weight: bold;
+    color: #000;
+    margin: 20px 0;
+}
+
+.adjective-hiragana-hint {
+    font-size: 1.5em;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+/* Quiz Grammaire */
+.grammar-pattern {
+    font-size: 4em;
+    font-weight: bold;
+    color: #000;
+    margin: 20px 0;
+}
+
+.grammar-question-text {
+    font-size: 1.3em;
+    color: var(--dark);
+    margin: 15px 0;
+}
+
+/* Quiz Vocabulaire */
+.vocabulary-kanji-large {
+    font-size: 4em;
+    font-weight: bold;
+    color: #000;
+    margin: 20px 0;
+}
+
+.vocabulary-hiragana-hint {
+    font-size: 1.5em;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.audio-btn {
+    background: var(--light);
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 2em;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 15px 0;
+    display: inline-block;
+}
+
+.audio-btn:hover {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+
+.audio-btn:active {
+    transform: scale(0.95);
+}
+
+.sentence-romaji {
+    font-size: 1.5em;
+    color: var(--dark);
+    margin: 15px 0;
+    font-style: italic;
+}
+
+.toggle-romaji-btn {
+    background: var(--accent);
+    color: var(--dark);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.toggle-romaji-btn:hover {
+    background: var(--primary);
+    color: var(--light);
+}
+
+/* Audio buttons for sentence list */
+.audio-btn-small {
+    background: var(--light);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio-btn-small:hover {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+
+.audio-btn-small:active {
+    transform: scale(0.95);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     body {
