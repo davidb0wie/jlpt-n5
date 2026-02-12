@@ -1832,12 +1832,21 @@ const app = {
         const feedback = document.getElementById('sentence-quiz-feedback');
         const sentence = this.state.currentSentenceQuestion.sentence;
 
+        // Créer le HTML de décomposition si disponible
+        let breakdownHtml = '';
+        if (sentence.breakdown && sentence.breakdown.length > 0) {
+            breakdownHtml = `<div style="margin-top: 10px; padding: 10px; background: rgba(0,0,0,0.1); border-radius: 5px; text-align: left;">
+                <strong>Décomposition :</strong><br>
+                ${sentence.breakdown.map(item => `• ${item}`).join('<br>')}
+            </div>`;
+        }
+
         if (correct) {
             feedback.className = 'quiz-feedback correct';
-            feedback.innerHTML = `✓ Correct !<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${sentence.romaji}</span>`;
+            feedback.innerHTML = `✓ Correct !<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${sentence.romaji}</span>${breakdownHtml}`;
         } else {
             feedback.className = 'quiz-feedback incorrect';
-            feedback.innerHTML = `✗ Incorrect. La bonne réponse était : ${sentence.french}<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${sentence.romaji}</span>`;
+            feedback.innerHTML = `✗ Incorrect. La bonne réponse était : ${sentence.french}<br><span style="font-size: 0.9em; margin-top: 5px; display: block;">${sentence.romaji}</span>${breakdownHtml}`;
         }
 
         // Rendre cliquable pour passer à la question suivante
