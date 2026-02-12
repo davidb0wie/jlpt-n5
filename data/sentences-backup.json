@@ -1,0 +1,4071 @@
+{
+  "categories": [
+    {
+      "id": "daily",
+      "name": "Vie quotidienne",
+      "icon": "🏠"
+    },
+    {
+      "id": "family",
+      "name": "Famille & Relations",
+      "icon": "👨‍👩‍👧‍👦"
+    },
+    {
+      "id": "school",
+      "name": "École & Études",
+      "icon": "🏫"
+    },
+    {
+      "id": "food",
+      "name": "Restaurant & Nourriture",
+      "icon": "🍜"
+    },
+    {
+      "id": "shopping",
+      "name": "Achats & Shopping",
+      "icon": "🛒"
+    },
+    {
+      "id": "transport",
+      "name": "Transports",
+      "icon": "🚇"
+    },
+    {
+      "id": "work",
+      "name": "Travail",
+      "icon": "💼"
+    },
+    {
+      "id": "time",
+      "name": "Temps & Dates",
+      "icon": "⏰"
+    },
+    {
+      "id": "weather",
+      "name": "Météo",
+      "icon": "☀️"
+    },
+    {
+      "id": "hobby",
+      "name": "Loisirs",
+      "icon": "🎮"
+    },
+    {
+      "id": "health",
+      "name": "Santé",
+      "icon": "🏥"
+    },
+    {
+      "id": "places",
+      "name": "Lieux & Directions",
+      "icon": "🗺️"
+    },
+    {
+      "id": "conversation",
+      "name": "Conversations courantes",
+      "icon": "💬"
+    }
+  ],
+  "sentences": [
+    {
+      "japanese": "私は学生です。",
+      "romaji": "Watashi wa gakusei desu.",
+      "french": "Je suis étudiant.",
+      "category": "conversation",
+      "difficulty": 1,
+      "wrong_answers": ["Je suis professeur.", "Je suis médecin.", "Je vais à l'école."]
+    },
+    {
+      "japanese": "これは本です。",
+      "romaji": "Kore wa hon desu.",
+      "french": "Ceci est un livre.",
+      "category": "conversation",
+      "difficulty": 1,
+      "wrong_answers": ["Ceci est un cahier.", "C'est mon livre.", "J'ai un livre."]
+    },
+    {
+      "japanese": "今、何時ですか。",
+      "romaji": "Ima, nanji desu ka.",
+      "french": "Quelle heure est-il maintenant ?",
+      "category": "time",
+      "difficulty": 1,
+      "wrong_answers": ["Quel jour sommes-nous ?", "Quelle date sommes-nous ?", "Il est quelle heure ?"]
+    },
+    {
+      "japanese": "毎日学校に行きます。",
+      "romaji": "Mainichi gakkō ni ikimasu.",
+      "french": "Je vais à l'école tous les jours.",
+      "category": "school",
+      "difficulty": 1,
+      "wrong_answers": ["Je vais à l'école demain.", "J'aime l'école.", "L'école est grande."]
+    },
+    {
+      "japanese": "朝ごはんを食べます。",
+      "romaji": "Asa gohan o tabemasu.",
+      "french": "Je prends le petit déjeuner.",
+      "category": "daily",
+      "difficulty": 1,
+      "wrong_answers": ["Je prends le déjeuner.", "Je mange du pain.", "Je fais le petit déjeuner."]
+    },
+    {
+      "japanese": "今日は暑いです。",
+      "romaji": "Kyō wa atsui desu.",
+      "french": "Il fait chaud aujourd'hui.",
+      "category": "weather",
+      "difficulty": 1,
+      "wrong_answers": ["Il fait froid aujourd'hui.", "Il pleut aujourd'hui.", "Il fait beau aujourd'hui."]
+    },
+    {
+      "japanese": "私の母は先生です。",
+      "romaji": "Watashi no haha wa sensei desu.",
+      "french": "Ma mère est professeur.",
+      "category": "family",
+      "difficulty": 1,
+      "wrong_answers": ["Mon père est professeur.", "Ma mère est médecin.", "Ma sœur est professeur."]
+    },
+    {
+      "japanese": "駅はどこですか。",
+      "romaji": "Eki wa doko desu ka.",
+      "french": "Où est la gare ?",
+      "category": "places",
+      "difficulty": 1,
+      "wrong_answers": ["Où est la station ?", "Comment aller à la gare ?", "La gare est loin ?"]
+    },
+    {
+      "japanese": "水をください。",
+      "romaji": "Mizu o kudasai.",
+      "french": "De l'eau s'il vous plaît.",
+      "category": "food",
+      "difficulty": 1,
+      "wrong_answers": ["Du thé s'il vous plaît.", "Je veux de l'eau.", "Donnez-moi à boire."]
+    },
+    {
+      "japanese": "日本語を勉強します。",
+      "romaji": "Nihongo o benkyō shimasu.",
+      "french": "J'étudie le japonais.",
+      "category": "school",
+      "difficulty": 1,
+      "wrong_answers": ["J'aime le japonais.", "Je parle japonais.", "Le japonais est difficile."]
+    },
+    {
+      "japanese": "昨日、映画を見ました。",
+      "romaji": "Kinō, eiga o mimashita.",
+      "french": "Hier, j'ai vu un film.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Hier, j'ai regardé la télé.", "Demain, je verrai un film.", "J'aime les films."]
+    },
+    {
+      "japanese": "友達と公園に行きました。",
+      "romaji": "Tomodachi to kōen ni ikimashita.",
+      "french": "Je suis allé au parc avec un ami.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'irai au parc avec un ami.", "Mon ami est au parc.", "Je vais souvent au parc."]
+    },
+    {
+      "japanese": "この本は面白いです。",
+      "romaji": "Kono hon wa omoshiroi desu.",
+      "french": "Ce livre est intéressant.",
+      "category": "conversation",
+      "difficulty": 1,
+      "wrong_answers": ["Ce livre est cher.", "J'aime ce livre.", "Ce livre est nouveau."]
+    },
+    {
+      "japanese": "部屋を掃除しました。",
+      "romaji": "Heya o sōji shimashita.",
+      "french": "J'ai nettoyé ma chambre.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je nettoie ma chambre.", "Ma chambre est propre.", "Je vais nettoyer ma chambre."]
+    },
+    {
+      "japanese": "いくらですか。",
+      "romaji": "Ikura desu ka.",
+      "french": "Combien ça coûte ?",
+      "category": "shopping",
+      "difficulty": 1,
+      "wrong_answers": ["C'est cher ?", "Je veux acheter.", "Combien en voulez-vous ?"]
+    },
+    {
+      "japanese": "電車で会社に行きます。",
+      "romaji": "Densha de kaisha ni ikimasu.",
+      "french": "Je vais au bureau en train.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je prends le train.", "Le train va au bureau.", "Je travaille dans le train."]
+    },
+    {
+      "japanese": "明日は休みです。",
+      "romaji": "Ashita wa yasumi desu.",
+      "french": "Demain c'est un jour de congé.",
+      "category": "work",
+      "difficulty": 1,
+      "wrong_answers": ["Aujourd'hui c'est un jour de congé.", "Je me repose demain.", "Demain je travaille."]
+    },
+    {
+      "japanese": "頭が痛いです。",
+      "romaji": "Atama ga itai desu.",
+      "french": "J'ai mal à la tête.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai mal au ventre.", "Ma tête est grande.", "Je suis fatigué."]
+    },
+    {
+      "japanese": "雨が降っています。",
+      "romaji": "Ame ga futte imasu.",
+      "french": "Il pleut.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["Il va pleuvoir.", "Il a plu.", "La pluie tombe."]
+    },
+    {
+      "japanese": "兄は医者です。",
+      "romaji": "Ani wa isha desu.",
+      "french": "Mon grand frère est médecin.",
+      "category": "family",
+      "difficulty": 1,
+      "wrong_answers": ["Mon père est médecin.", "Mon frère veut être médecin.", "J'ai un frère médecin."]
+    },
+    {
+      "japanese": "週末に買い物をします。",
+      "romaji": "Shūmatsu ni kaimono o shimasu.",
+      "french": "Je fais du shopping le week-end.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai fait du shopping ce week-end.", "J'aime faire du shopping.", "Le week-end, je me repose."]
+    },
+    {
+      "japanese": "図書館で本を読みます。",
+      "romaji": "Toshokan de hon o yomimasu.",
+      "french": "Je lis des livres à la bibliothèque.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais à la bibliothèque.", "J'emprunte des livres.", "La bibliothèque a des livres."]
+    },
+    {
+      "japanese": "毎朝コーヒーを飲みます。",
+      "romaji": "Maiasa kōhī o nomimasu.",
+      "french": "Je bois du café tous les matins.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime le café.", "Je veux du café.", "Le matin, je me lève."]
+    },
+    {
+      "japanese": "この店は安いです。",
+      "romaji": "Kono mise wa yasui desu.",
+      "french": "Ce magasin est bon marché.",
+      "category": "shopping",
+      "difficulty": 1,
+      "wrong_answers": ["Ce magasin est cher.", "J'aime ce magasin.", "Ce magasin est grand."]
+    },
+    {
+      "japanese": "七時に起きます。",
+      "romaji": "Shichiji ni okimasu.",
+      "french": "Je me lève à 7 heures.",
+      "category": "daily",
+      "difficulty": 1,
+      "wrong_answers": ["Je me couche à 7 heures.", "Il est 7 heures.", "Je travaille à 7 heures."]
+    },
+    {
+      "japanese": "来週、テストがあります。",
+      "romaji": "Raishū, tesuto ga arimasu.",
+      "french": "La semaine prochaine, il y a un examen.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["Cette semaine, il y a un examen.", "J'ai passé un examen.", "Je prépare un examen."]
+    },
+    {
+      "japanese": "スーパーで野菜を買いました。",
+      "romaji": "Sūpā de yasai o kaimashita.",
+      "french": "J'ai acheté des légumes au supermarché.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais acheter des légumes.", "Le supermarché vend des légumes.", "J'aime les légumes."]
+    },
+    {
+      "japanese": "妹は高校生です。",
+      "romaji": "Imōto wa kōkōsei desu.",
+      "french": "Ma petite sœur est lycéenne.",
+      "category": "family",
+      "difficulty": 1,
+      "wrong_answers": ["Ma sœur est étudiante.", "J'ai une petite sœur.", "Ma petite sœur va au lycée."]
+    },
+    {
+      "japanese": "バスで帰ります。",
+      "romaji": "Basu de kaerimasu.",
+      "french": "Je rentre en bus.",
+      "category": "transport",
+      "difficulty": 1,
+      "wrong_answers": ["Je prends le bus.", "Le bus arrive.", "Je vais en bus."]
+    },
+    {
+      "japanese": "日曜日は暇です。",
+      "romaji": "Nichiyōbi wa hima desu.",
+      "french": "Le dimanche, je suis libre.",
+      "category": "time",
+      "difficulty": 1,
+      "wrong_answers": ["Le dimanche, je travaille.", "Aujourd'hui c'est dimanche.", "Je suis occupé le dimanche."]
+    },
+    {
+      "japanese": "レストランで晩ごはんを食べました。",
+      "romaji": "Resutoran de ban gohan o tabemashita.",
+      "french": "J'ai dîné au restaurant.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais dîner au restaurant.", "J'aime les restaurants.", "Le restaurant est bon."]
+    },
+    {
+      "japanese": "友達に手紙を書きました。",
+      "romaji": "Tomodachi ni tegami o kakimashita.",
+      "french": "J'ai écrit une lettre à un ami.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais écrire une lettre.", "J'ai reçu une lettre.", "Mon ami écrit une lettre."]
+    },
+    {
+      "japanese": "音楽を聞きます。",
+      "romaji": "Ongaku o kikimasu.",
+      "french": "J'écoute de la musique.",
+      "category": "hobby",
+      "difficulty": 1,
+      "wrong_answers": ["J'aime la musique.", "Je joue de la musique.", "La musique est belle."]
+    },
+    {
+      "japanese": "寒いですから、窓を閉めました。",
+      "romaji": "Samui desu kara, mado o shimemashita.",
+      "french": "Comme il fait froid, j'ai fermé la fenêtre.",
+      "category": "daily",
+      "difficulty": 3,
+      "wrong_answers": ["Il fait froid, je ferme la fenêtre.", "La fenêtre est fermée car il fait froid.", "J'ai fermé la fenêtre."]
+    },
+    {
+      "japanese": "銀行はどこにありますか。",
+      "romaji": "Ginkō wa doko ni arimasu ka.",
+      "french": "Où se trouve la banque ?",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Où est la banque ?", "Comment aller à la banque ?", "La banque est loin ?"]
+    },
+    {
+      "japanese": "夏休みに旅行します。",
+      "romaji": "Natsu yasumi ni ryokō shimasu.",
+      "french": "Je voyage pendant les vacances d'été.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai voyagé cet été.", "J'aime voyager en été.", "Les vacances d'été sont longues."]
+    },
+    {
+      "japanese": "日本語の勉強は難しいです。",
+      "romaji": "Nihongo no benkyō wa muzukashii desu.",
+      "french": "L'étude du japonais est difficile.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["Le japonais est difficile.", "Étudier est difficile.", "Le japonais n'est pas difficile."]
+    },
+    {
+      "japanese": "父は会社員です。",
+      "romaji": "Chichi wa kaishain desu.",
+      "french": "Mon père est employé de bureau.",
+      "category": "family",
+      "difficulty": 1,
+      "wrong_answers": ["Mon père travaille.", "J'ai un père.", "Mon père est gentil."]
+    },
+    {
+      "japanese": "駅の近くに住んでいます。",
+      "romaji": "Eki no chikaku ni sunde imasu.",
+      "french": "J'habite près de la gare.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["La gare est près.", "Je vais à la gare.", "J'habite à côté."]
+    },
+    {
+      "japanese": "今晩、友達に会います。",
+      "romaji": "Konban, tomodachi ni aimasu.",
+      "french": "Ce soir, je rencontre un ami.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Hier soir, j'ai vu un ami.", "Je vais voir un ami.", "Mon ami vient ce soir."]
+    },
+    {
+      "japanese": "この道をまっすぐ行ってください。",
+      "romaji": "Kono michi o massugu itte kudasai.",
+      "french": "Allez tout droit sur cette route s'il vous plaît.",
+      "category": "places",
+      "difficulty": 3,
+      "wrong_answers": ["Tournez à droite ici.", "Cette route est droite.", "Continuez tout droit."]
+    },
+    {
+      "japanese": "お茶とケーキをください。",
+      "romaji": "Ocha to kēki o kudasai.",
+      "french": "Du thé et du gâteau s'il vous plaît.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Je veux du thé et du gâteau.", "J'aime le thé et les gâteaux.", "Donnez-moi du thé."]
+    },
+    {
+      "japanese": "大学で英語を教えています。",
+      "romaji": "Daigaku de eigo o oshiete imasu.",
+      "french": "J'enseigne l'anglais à l'université.",
+      "category": "work",
+      "difficulty": 3,
+      "wrong_answers": ["J'étudie l'anglais à l'université.", "J'apprends l'anglais.", "L'université enseigne l'anglais."]
+    },
+    {
+      "japanese": "昨日は雨でしたが、今日は晴れです。",
+      "romaji": "Kinō wa ame deshita ga, kyō wa hare desu.",
+      "french": "Hier il pleuvait, mais aujourd'hui il fait beau.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["Hier il faisait beau mais aujourd'hui il pleut.", "Il pleut souvent.", "La météo change."]
+    },
+    {
+      "japanese": "疲れましたから、休みます。",
+      "romaji": "Tsukaremashita kara, yasumimasu.",
+      "french": "Je suis fatigué, donc je me repose.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Je suis fatigué et je me repose.", "Je me repose car je suis malade.", "Je vais me reposer."]
+    },
+    {
+      "japanese": "この映画はとても面白かったです。",
+      "romaji": "Kono eiga wa totemo omoshirokatta desu.",
+      "french": "Ce film était très intéressant.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Ce film est très intéressant.", "J'aime beaucoup ce film.", "Le film était bon."]
+    },
+    {
+      "japanese": "毎晩、十一時に寝ます。",
+      "romaji": "Maiban, jūichiji ni nemasu.",
+      "french": "Je me couche à 11 heures tous les soirs.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je me lève à 11 heures.", "Il est 11 heures du soir.", "Je dors 11 heures."]
+    },
+    {
+      "japanese": "このかばんは高すぎます。",
+      "romaji": "Kono kaban wa takasugimasu.",
+      "french": "Ce sac est trop cher.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Ce sac est cher.", "Ce sac est très cher.", "J'achète ce sac."]
+    },
+    {
+      "japanese": "子供の時、よくここで遊びました。",
+      "romaji": "Kodomo no toki, yoku koko de asobimashita.",
+      "french": "Quand j'étais enfant, je jouais souvent ici.",
+      "category": "conversation",
+      "difficulty": 3,
+      "wrong_answers": ["Enfant, j'aimais jouer ici.", "Les enfants jouent ici.", "Je jouais ici hier."]
+    },
+    {
+      "japanese": "新しい靴を買いたいです。",
+      "romaji": "Atarashii kutsu o kaitai desu.",
+      "french": "Je veux acheter de nouvelles chaussures.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai acheté de nouvelles chaussures.", "Mes chaussures sont nouvelles.", "J'aime les nouvelles chaussures."]
+    },
+    {
+      "japanese": "タクシーで空港に行きました。",
+      "romaji": "Takushī de kūkō ni ikimashita.",
+      "french": "Je suis allé à l'aéroport en taxi.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais à l'aéroport en taxi.", "Le taxi va à l'aéroport.", "J'ai pris un taxi."]
+    },
+    {
+      "japanese": "祖母はとても元気です。",
+      "romaji": "Sobo wa totemo genki desu.",
+      "french": "Ma grand-mère est en très bonne santé.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Ma grand-mère est gentille.", "Ma grand-mère va bien.", "J'aime ma grand-mère."]
+    },
+    {
+      "japanese": "夜、星がきれいです。",
+      "romaji": "Yoru, hoshi ga kirei desu.",
+      "french": "Le soir, les étoiles sont belles.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["La nuit est belle.", "J'aime les étoiles.", "Les étoiles brillent la nuit."]
+    },
+    {
+      "japanese": "授業は九時に始まります。",
+      "romaji": "Jugyō wa kuji ni hajimarimasu.",
+      "french": "Le cours commence à 9 heures.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["Le cours finit à 9 heures.", "Il est 9 heures.", "J'ai cours à 9 heures."]
+    },
+    {
+      "japanese": "りんごが三つあります。",
+      "romaji": "Ringo ga mittsu arimasu.",
+      "french": "Il y a trois pommes.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Je veux trois pommes.", "J'ai mangé trois pommes.", "Les pommes sont trois."]
+    },
+    {
+      "japanese": "来月、日本に行きます。",
+      "romaji": "Raigetsu, Nihon ni ikimasu.",
+      "french": "Le mois prochain, je vais au Japon.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Le mois dernier, je suis allé au Japon.", "Ce mois-ci, je vais au Japon.", "Je veux aller au Japon."]
+    },
+    {
+      "japanese": "彼は私より背が高いです。",
+      "romaji": "Kare wa watashi yori se ga takai desu.",
+      "french": "Il est plus grand que moi.",
+      "category": "conversation",
+      "difficulty": 3,
+      "wrong_answers": ["Il est grand.", "Je suis plus grand que lui.", "Nous sommes grands."]
+    },
+    {
+      "japanese": "病院で働いています。",
+      "romaji": "Byōin de hataraite imasu.",
+      "french": "Je travaille à l'hôpital.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais à l'hôpital.", "L'hôpital est grand.", "Je suis à l'hôpital."]
+    },
+    {
+      "japanese": "春になると、桜が咲きます。",
+      "romaji": "Haru ni naru to, sakura ga sakimasu.",
+      "french": "Au printemps, les cerisiers fleurissent.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["J'aime le printemps.", "Les cerisiers sont beaux.", "Au printemps il fait beau."]
+    },
+    {
+      "japanese": "もっとゆっくり話してください。",
+      "romaji": "Motto yukkuri hanashite kudasai.",
+      "french": "Parlez plus lentement s'il vous plaît.",
+      "category": "conversation",
+      "difficulty": 3,
+      "wrong_answers": ["Parlez plus fort s'il vous plaît.", "Parlez lentement.", "Je ne comprends pas."]
+    },
+    {
+      "japanese": "コンビニで雑誌を買います。",
+      "romaji": "Konbini de zasshi o kaimasu.",
+      "french": "J'achète des magazines au konbini.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais au konbini.", "Le konbini vend des magazines.", "J'aime les magazines."]
+    },
+    {
+      "japanese": "今年の夏は暑かったです。",
+      "romaji": "Kotoshi no natsu wa atsukatta desu.",
+      "french": "Cet été il a fait chaud.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["Cet été il fait chaud.", "L'été il fait chaud.", "Il fera chaud cet été."]
+    },
+    {
+      "japanese": "私の部屋は二階にあります。",
+      "romaji": "Watashi no heya wa nikai ni arimasu.",
+      "french": "Ma chambre est au deuxième étage.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Ma chambre est grande.", "J'ai une chambre.", "Ma chambre est au premier étage."]
+    },
+    {
+      "japanese": "テレビを見ながら、ごはんを食べます。",
+      "romaji": "Terebi o minagara, gohan o tabemasu.",
+      "french": "Je mange en regardant la télé.",
+      "category": "daily",
+      "difficulty": 3,
+      "wrong_answers": ["Je regarde la télé après manger.", "J'aime regarder la télé.", "Je mange devant la télé."]
+    },
+    {
+      "japanese": "昨日、風邪を引きました。",
+      "romaji": "Kinō, kaze o hikimashita.",
+      "french": "Hier, j'ai attrapé un rhume.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai un rhume.", "Je suis enrhumé.", "J'étais malade hier."]
+    },
+    {
+      "japanese": "この靴はあの靴より安いです。",
+      "romaji": "Kono kutsu wa ano kutsu yori yasui desu.",
+      "french": "Ces chaussures sont moins chères que celles-là.",
+      "category": "shopping",
+      "difficulty": 3,
+      "wrong_answers": ["Ces chaussures sont chères.", "J'achète ces chaussures.", "Ces chaussures sont bon marché."]
+    },
+    {
+      "japanese": "カメラで写真を撮ります。",
+      "romaji": "Kamera de shashin o torimasu.",
+      "french": "Je prends des photos avec un appareil photo.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai un appareil photo.", "J'aime la photographie.", "Je regarde des photos."]
+    },
+    {
+      "japanese": "彼女は歌が上手です。",
+      "romaji": "Kanojo wa uta ga jōzu desu.",
+      "french": "Elle chante bien.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Elle aime chanter.", "Sa chanson est belle.", "Elle est chanteuse."]
+    },
+    {
+      "japanese": "次の駅で降ります。",
+      "romaji": "Tsugi no eki de orimasu.",
+      "french": "Je descends à la prochaine station.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je monte à la prochaine station.", "La prochaine station est proche.", "Je vais à la prochaine station."]
+    },
+    {
+      "japanese": "この辞書を使ってもいいですか。",
+      "romaji": "Kono jisho o tsukatte mo ii desu ka.",
+      "french": "Puis-je utiliser ce dictionnaire ?",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["Je veux utiliser ce dictionnaire.", "Ce dictionnaire est utile.", "J'utilise ce dictionnaire."]
+    },
+    {
+      "japanese": "明日、雨が降るでしょう。",
+      "romaji": "Ashita, ame ga furu deshō.",
+      "french": "Il pleuvra probablement demain.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["Il pleut demain.", "Il va pleuvoir demain.", "Demain la pluie tombe."]
+    },
+    {
+      "japanese": "姉は結婚しています。",
+      "romaji": "Ane wa kekkon shite imasu.",
+      "french": "Ma grande sœur est mariée.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Ma sœur se marie.", "Ma sœur va se marier.", "J'ai une grande sœur."]
+    },
+    {
+      "japanese": "毎週土曜日にテニスをします。",
+      "romaji": "Maishū doyōbi ni tenisu o shimasu.",
+      "french": "Je joue au tennis tous les samedis.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je joue au tennis le samedi.", "J'aime le tennis.", "Je jouais au tennis samedi."]
+    },
+    {
+      "japanese": "この問題は簡単です。",
+      "romaji": "Kono mondai wa kantan desu.",
+      "french": "Ce problème est facile.",
+      "category": "school",
+      "difficulty": 1,
+      "wrong_answers": ["Ce problème est difficile.", "J'aime ce problème.", "Ce problème est important."]
+    },
+    {
+      "japanese": "公園で犬を散歩させます。",
+      "romaji": "Kōen de inu o sanpo sasemasu.",
+      "french": "Je promène mon chien dans le parc.",
+      "category": "daily",
+      "difficulty": 3,
+      "wrong_answers": ["Mon chien est au parc.", "Je vais au parc avec mon chien.", "J'ai un chien."]
+    },
+    {
+      "japanese": "今、忙しいですから、後で電話します。",
+      "romaji": "Ima, isogashii desu kara, ato de denwa shimasu.",
+      "french": "Je suis occupé maintenant, donc j'appellerai plus tard.",
+      "category": "work",
+      "difficulty": 3,
+      "wrong_answers": ["Je suis occupé, appelle plus tard.", "Je téléphonerai plus tard.", "Je suis toujours occupé."]
+    },
+    {
+      "japanese": "これはとても大切な物です。",
+      "romaji": "Kore wa totemo taisetsu na mono desu.",
+      "french": "Ceci est une chose très importante.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["C'est très important.", "J'aime cet objet.", "C'est un objet précieux."]
+    },
+    {
+      "japanese": "駅前に新しいレストランができました。",
+      "romaji": "Ekimae ni atarashii resutoran ga dekimashita.",
+      "french": "Un nouveau restaurant a ouvert devant la gare.",
+      "category": "places",
+      "difficulty": 3,
+      "wrong_answers": ["Il y a un nouveau restaurant devant la gare.", "Le restaurant est devant la gare.", "J'ai mangé au nouveau restaurant."]
+    },
+    {
+      "japanese": "昼ごはんの後で、昼寝をします。",
+      "romaji": "Hiru gohan no ato de, hirune o shimasu.",
+      "french": "Après le déjeuner, je fais une sieste.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je déjeune puis je dors.", "J'aime faire la sieste.", "Je fais toujours une sieste."]
+    },
+    {
+      "japanese": "漢字の書き方を教えてください。",
+      "romaji": "Kanji no kakikata o oshiete kudasai.",
+      "french": "Enseignez-moi comment écrire les kanji s'il vous plaît.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["Montrez-moi les kanji.", "Je veux apprendre les kanji.", "Les kanji sont difficiles."]
+    },
+    {
+      "japanese": "この店のラーメンは美味しいです。",
+      "romaji": "Kono mise no rāmen wa oishii desu.",
+      "french": "Les ramen de ce restaurant sont délicieux.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime les ramen.", "Ce restaurant est bon.", "Les ramen sont délicieux."]
+    },
+    {
+      "japanese": "去年、車を買いました。",
+      "romaji": "Kyonen, kuruma o kaimashita.",
+      "french": "L'année dernière, j'ai acheté une voiture.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Cette année, j'achète une voiture.", "J'ai une voiture.", "Je veux acheter une voiture."]
+    },
+    {
+      "japanese": "今日は友達の誕生日です。",
+      "romaji": "Kyō wa tomodachi no tanjōbi desu.",
+      "french": "Aujourd'hui c'est l'anniversaire de mon ami.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["C'est mon anniversaire aujourd'hui.", "Mon ami fête son anniversaire.", "J'aime les anniversaires."]
+    },
+    {
+      "japanese": "薬を飲んでください。",
+      "romaji": "Kusuri o nonde kudasai.",
+      "french": "Prenez vos médicaments s'il vous plaît.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai pris mes médicaments.", "Je veux des médicaments.", "Les médicaments sont importants."]
+    },
+    {
+      "japanese": "バスが来るまで待ちます。",
+      "romaji": "Basu ga kuru made machimasu.",
+      "french": "J'attends jusqu'à ce que le bus arrive.",
+      "category": "transport",
+      "difficulty": 3,
+      "wrong_answers": ["J'attends le bus.", "Le bus arrive.", "Le bus va venir."]
+    },
+    {
+      "japanese": "子供は公園で遊んでいます。",
+      "romaji": "Kodomo wa kōen de asonde imasu.",
+      "french": "Les enfants jouent dans le parc.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Les enfants sont au parc.", "Les enfants aiment jouer.", "Les enfants vont au parc."]
+    },
+    {
+      "japanese": "日本の料理が好きです。",
+      "romaji": "Nihon no ryōri ga suki desu.",
+      "french": "J'aime la cuisine japonaise.",
+      "category": "food",
+      "difficulty": 1,
+      "wrong_answers": ["La cuisine japonaise est bonne.", "Je mange japonais.", "Je cuisine japonais."]
+    },
+    {
+      "japanese": "図書館は静かです。",
+      "romaji": "Toshokan wa shizuka desu.",
+      "french": "La bibliothèque est calme.",
+      "category": "places",
+      "difficulty": 1,
+      "wrong_answers": ["La bibliothèque est grande.", "J'aime la bibliothèque.", "Je suis à la bibliothèque."]
+    },
+    {
+      "japanese": "パソコンでメールを送りました。",
+      "romaji": "Pasokon de mēru o okurimashita.",
+      "french": "J'ai envoyé un email avec l'ordinateur.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais envoyer un email.", "J'utilise l'ordinateur.", "J'ai reçu un email."]
+    },
+    {
+      "japanese": "冬は寒いですから、コートを着ます。",
+      "romaji": "Fuyu wa samui desu kara, kōto o kimasu.",
+      "french": "En hiver il fait froid, donc je porte un manteau.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["Je porte un manteau en hiver.", "L'hiver est froid.", "J'ai un manteau."]
+    },
+    {
+      "japanese": "この映画は三時間ぐらいです。",
+      "romaji": "Kono eiga wa sanjikan gurai desu.",
+      "french": "Ce film dure environ 3 heures.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Ce film commence à 3 heures.", "Le film est long.", "J'ai vu ce film pendant 3 heures."]
+    },
+    {
+      "japanese": "来年、大学を卒業します。",
+      "romaji": "Rainen, daigaku o sotsugyō shimasu.",
+      "french": "L'année prochaine, je serai diplômé de l'université.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["Cette année je suis diplômé.", "Je vais à l'université.", "J'ai fini l'université."]
+    },
+    {
+      "japanese": "甘い物が好きです。",
+      "romaji": "Amai mono ga suki desu.",
+      "french": "J'aime les sucreries.",
+      "category": "food",
+      "difficulty": 1,
+      "wrong_answers": ["Les sucreries sont bonnes.", "Je mange des sucreries.", "C'est sucré."]
+    },
+    {
+      "japanese": "もう一度言ってください。",
+      "romaji": "Mō ichido itte kudasai.",
+      "french": "Répétez s'il vous plaît.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Dites-moi encore.", "Je ne comprends pas.", "Parlez plus fort."]
+    },
+    {
+      "japanese": "彼女は料理が上手です。",
+      "romaji": "Kanojo wa ryōri ga jōzu desu.",
+      "french": "Elle cuisine bien.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Elle aime cuisiner.", "Sa cuisine est bonne.", "Elle est cuisinière."]
+    },
+    {
+      "japanese": "今月は忙しいです。",
+      "romaji": "Kongetsu wa isogashii desu.",
+      "french": "Ce mois-ci je suis occupé.",
+      "category": "work",
+      "difficulty": 1,
+      "wrong_answers": ["Aujourd'hui je suis occupé.", "Je suis toujours occupé.", "Le mois est long."]
+    },
+    {
+      "japanese": "あそこに銀行があります。",
+      "romaji": "Asoko ni ginkō ga arimasu.",
+      "french": "Il y a une banque là-bas.",
+      "category": "places",
+      "difficulty": 1,
+      "wrong_answers": ["La banque est là-bas.", "Je vais là-bas.", "C'est une banque."]
+    },
+    {
+      "japanese": "週末、何をしますか。",
+      "romaji": "Shūmatsu, nani o shimasu ka.",
+      "french": "Que faites-vous le week-end ?",
+      "category": "conversation",
+      "difficulty": 1,
+      "wrong_answers": ["Quel est le week-end ?", "Le week-end arrive.", "Vous travaillez le week-end ?"]
+    },
+    {
+      "japanese": "電車は時間通りに来ました。",
+      "romaji": "Densha wa jikan dōri ni kimashita.",
+      "french": "Le train est arrivé à l'heure.",
+      "category": "transport",
+      "difficulty": 3,
+      "wrong_answers": ["Le train arrive à l'heure.", "Le train est ponctuel.", "Je prends le train à l'heure."]
+    },
+    {
+      "japanese": "宿題が終わってから、遊びます。",
+      "romaji": "Shukudai ga owatte kara, asobimasu.",
+      "french": "Je joue après avoir fini mes devoirs.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["Je fais mes devoirs puis je joue.", "Mes devoirs sont finis.", "Je joue avant les devoirs."]
+    },
+    {
+      "japanese": "弟はまだ小学生です。",
+      "romaji": "Otōto wa mada shōgakusei desu.",
+      "french": "Mon petit frère est encore écolier.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Mon frère va à l'école.", "J'ai un petit frère.", "Mon frère est jeune."]
+    },
+    {
+      "japanese": "コンサートのチケットを二枚買いました。",
+      "romaji": "Konsāto no chiketto o nimai kaimashita.",
+      "french": "J'ai acheté deux billets pour le concert.",
+      "category": "hobby",
+      "difficulty": 3,
+      "wrong_answers": ["Je vais au concert.", "J'ai deux billets.", "Le concert a deux billets."]
+    },
+    {
+      "japanese": "このペンは書きやすいです。",
+      "romaji": "Kono pen wa kakiyasui desu.",
+      "french": "Ce stylo est facile à écrire.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["Ce stylo écrit bien.", "J'aime ce stylo.", "Ce stylo est bon."]
+    },
+    {
+      "japanese": "お風呂に入ってから、寝ます。",
+      "romaji": "Ofuro ni haitte kara, nemasu.",
+      "french": "Je dors après avoir pris un bain.",
+      "category": "daily",
+      "difficulty": 3,
+      "wrong_answers": ["Je prends un bain puis je dors.", "Je me baigne le soir.", "J'aime prendre un bain."]
+    },
+    {
+      "japanese": "彼はいつも元気です。",
+      "romaji": "Kare wa itsumo genki desu.",
+      "french": "Il est toujours en forme.",
+      "category": "conversation",
+      "difficulty": 1,
+      "wrong_answers": ["Il va bien.", "Il est gentil.", "Il est heureux."]
+    },
+    {
+      "japanese": "夏は海に行きます。",
+      "romaji": "Natsu wa umi ni ikimasu.",
+      "french": "En été, je vais à la mer.",
+      "category": "hobby",
+      "difficulty": 1,
+      "wrong_answers": ["J'aime la mer.", "Je suis allé à la mer.", "La mer est belle en été."]
+    },
+    {
+      "japanese": "このリンゴは美味しそうです。",
+      "romaji": "Kono ringo wa oishisō desu.",
+      "french": "Cette pomme a l'air délicieuse.",
+      "category": "food",
+      "difficulty": 3,
+      "wrong_answers": ["Cette pomme est délicieuse.", "J'aime cette pomme.", "Cette pomme est bonne."]
+    },
+    {
+      "japanese": "東京タワーを見に行きました。",
+      "romaji": "Tōkyō tawā o mi ni ikimashita.",
+      "french": "Je suis allé voir la Tokyo Tower.",
+      "category": "places",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai vu la Tokyo Tower.", "Je vais à la Tokyo Tower.", "La Tokyo Tower est haute."]
+    },
+    {
+      "japanese": "朝食の前にシャワーを浴びます。",
+      "romaji": "Chōshoku no mae ni shawā o abimasu.",
+      "french": "Je prends une douche avant le petit déjeuner.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je prends le petit déjeuner après la douche.", "J'aime prendre une douche.", "Je me douche le matin."]
+    },
+    {
+      "japanese": "週に三回ジムに行きます。",
+      "romaji": "Shū ni sankai jimu ni ikimasu.",
+      "french": "Je vais à la salle de sport trois fois par semaine.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais souvent à la salle de sport.", "La salle de sport est grande.", "J'aime la salle de sport."]
+    },
+    {
+      "japanese": "祖父は八十歳です。",
+      "romaji": "Sofu wa hachijussai desu.",
+      "french": "Mon grand-père a 80 ans.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Mon grand-père est vieux.", "J'ai un grand-père.", "Mon grand-père est âgé."]
+    },
+    {
+      "japanese": "教室で先生に質問しました。",
+      "romaji": "Kyōshitsu de sensei ni shitsumon shimashita.",
+      "french": "J'ai posé une question au professeur en classe.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais poser une question.", "Le professeur pose des questions.", "J'ai répondu en classe."]
+    },
+    {
+      "japanese": "このレストランは予約が必要です。",
+      "romaji": "Kono resutoran wa yoyaku ga hitsuyō desu.",
+      "french": "Ce restaurant nécessite une réservation.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai réservé ce restaurant.", "Je veux réserver.", "Ce restaurant est complet."]
+    },
+    {
+      "japanese": "セールで服を三着買いました。",
+      "romaji": "Sēru de fuku o sanchaku kaimashita.",
+      "french": "J'ai acheté trois vêtements en solde.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Les vêtements sont en solde.", "Je vais acheter des vêtements.", "J'aime les soldes."]
+    },
+    {
+      "japanese": "自転車で学校まで十分かかります。",
+      "romaji": "Jitensha de gakkō made juppun kakarimasu.",
+      "french": "Il faut 10 minutes pour aller à l'école en vélo.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais à l'école en vélo.", "L'école est à 10 minutes.", "Mon vélo est rapide."]
+    },
+    {
+      "japanese": "会議は三時から始まります。",
+      "romaji": "Kaigi wa sanji kara hajimarimasu.",
+      "french": "La réunion commence à partir de 3 heures.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["La réunion finit à 3 heures.", "J'ai une réunion à 3 heures.", "Il est 3 heures."]
+    },
+    {
+      "japanese": "先週の金曜日に映画を見ました。",
+      "romaji": "Senshū no kinyōbi ni eiga o mimashita.",
+      "french": "J'ai vu un film vendredi dernier.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais voir un film vendredi.", "Vendredi prochain je vois un film.", "J'aime le vendredi."]
+    },
+    {
+      "japanese": "曇っていますが、雨は降りません。",
+      "romaji": "Kumotte imasu ga, ame wa furimasen.",
+      "french": "C'est nuageux mais il ne pleut pas.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["Il fait nuageux et il pleut.", "Il va pleuvoir.", "Le ciel est nuageux."]
+    },
+    {
+      "japanese": "ギターを弾くことができます。",
+      "romaji": "Gitā o hiku koto ga dekimasu.",
+      "french": "Je peux jouer de la guitare.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime la guitare.", "Je joue de la guitare.", "J'ai une guitare."]
+    },
+    {
+      "japanese": "熱がありますから、学校を休みます。",
+      "romaji": "Netsu ga arimasu kara, gakkō o yasumimasu.",
+      "french": "J'ai de la fièvre, donc je ne vais pas à l'école.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai de la fièvre et je vais à l'école.", "Je suis malade à l'école.", "Je reste à la maison."]
+    },
+    {
+      "japanese": "郵便局はコンビニの隣です。",
+      "romaji": "Yūbinkyoku wa konbini no tonari desu.",
+      "french": "La poste est à côté du konbini.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["La poste est dans le konbini.", "Le konbini est loin.", "Je vais à la poste."]
+    },
+    {
+      "japanese": "彼女とは五年前に会いました。",
+      "romaji": "Kanojo to wa gonen mae ni aimashita.",
+      "french": "J'ai rencontré avec elle il y a 5 ans.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais la rencontrer dans 5 ans.", "Je la connais depuis 5 ans.", "Elle a 5 ans."]
+    },
+    {
+      "japanese": "歯を磨いてから朝ごはんを食べます。",
+      "romaji": "Ha o migaite kara asa gohan o tabemasu.",
+      "french": "Je prends le petit déjeuner après m'être brossé les dents.",
+      "category": "daily",
+      "difficulty": 3,
+      "wrong_answers": ["Je me brosse les dents après manger.", "Je me lave les dents le matin.", "J'aime me brosser les dents."]
+    },
+    {
+      "japanese": "漫画を読むのが好きです。",
+      "romaji": "Manga o yomu no ga suki desu.",
+      "french": "J'aime lire des mangas.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je lis des mangas.", "Les mangas sont intéressants.", "J'ai beaucoup de mangas."]
+    },
+    {
+      "japanese": "両親は北海道に住んでいます。",
+      "romaji": "Ryōshin wa Hokkaidō ni sunde imasu.",
+      "french": "Mes parents habitent à Hokkaido.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais à Hokkaido.", "Mes parents aiment Hokkaido.", "J'habite à Hokkaido."]
+    },
+    {
+      "japanese": "試験の勉強をしなければなりません。",
+      "romaji": "Shiken no benkyō o shinakereba narimasen.",
+      "french": "Je dois étudier pour l'examen.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["J'étudie pour l'examen.", "L'examen est difficile.", "Je veux étudier."]
+    },
+    {
+      "japanese": "天ぷらとご飯を注文しました。",
+      "romaji": "Tenpura to gohan o chūmon shimashita.",
+      "french": "J'ai commandé des tempura et du riz.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais commander des tempura.", "J'aime les tempura.", "Les tempura sont délicieux."]
+    },
+    {
+      "japanese": "クレジットカードで払います。",
+      "romaji": "Kurejitto kādo de haraimasu.",
+      "french": "Je paie par carte de crédit.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai une carte de crédit.", "Je veux payer.", "La carte de crédit est pratique."]
+    },
+    {
+      "japanese": "地下鉄の方が早いです。",
+      "romaji": "Chikatetsu no hō ga hayai desu.",
+      "french": "Le métro est plus rapide.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Le métro est rapide.", "Je prends le métro.", "J'aime le métro."]
+    },
+    {
+      "japanese": "残業で遅くなりました。",
+      "romaji": "Zangyō de osoku narimashita.",
+      "french": "Je suis rentré tard à cause des heures supplémentaires.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je fais des heures supplémentaires.", "Je suis toujours en retard.", "Je travaille tard."]
+    },
+    {
+      "japanese": "月曜日から金曜日まで働きます。",
+      "romaji": "Getsuyōbi kara kinyōbi made hatarakimasu.",
+      "french": "Je travaille du lundi au vendredi.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Je travaille le lundi.", "Je ne travaille pas le samedi.", "J'aime le vendredi."]
+    },
+    {
+      "japanese": "台風が来るそうです。",
+      "romaji": "Taifū ga kuru sō desu.",
+      "french": "Il paraît qu'un typhon arrive.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["Un typhon arrive.", "Le typhon est dangereux.", "J'ai peur du typhon."]
+    },
+    {
+      "japanese": "サッカーの試合を見に行きます。",
+      "romaji": "Sakkā no shiai o mi ni ikimasu.",
+      "french": "Je vais voir un match de football.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime le football.", "Je joue au football.", "Le match est intéressant."]
+    },
+    {
+      "japanese": "めまいがしますから、座ります。",
+      "romaji": "Memai ga shimasu kara, suwarimasu.",
+      "french": "J'ai des vertiges, donc je m'assois.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai des vertiges et je marche.", "Je suis assis.", "Je vais m'asseoir."]
+    },
+    {
+      "japanese": "角を左に曲がってください。",
+      "romaji": "Kado o hidari ni magatte kudasai.",
+      "french": "Tournez à gauche au coin s'il vous plaît.",
+      "category": "places",
+      "difficulty": 3,
+      "wrong_answers": ["Tournez à droite.", "Allez tout droit.", "Le coin est à gauche."]
+    },
+    {
+      "japanese": "お誕生日おめでとうございます。",
+      "romaji": "Otanjōbi omedetō gozaimasu.",
+      "french": "Joyeux anniversaire.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Bon anniversaire à moi.", "C'est mon anniversaire.", "Merci pour l'anniversaire."]
+    },
+    {
+      "japanese": "洗濯物を干しました。",
+      "romaji": "Sentakumono o hoshimashita.",
+      "french": "J'ai étendu le linge.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais faire la lessive.", "Le linge est sec.", "J'aime faire la lessive."]
+    },
+    {
+      "japanese": "スケートをしたことがありますか。",
+      "romaji": "Sukēto o shita koto ga arimasu ka.",
+      "french": "Avez-vous déjà fait du patin à glace ?",
+      "category": "hobby",
+      "difficulty": 3,
+      "wrong_answers": ["Vous faites du patin ?", "J'aime le patin à glace.", "Le patin est difficile."]
+    },
+    {
+      "japanese": "いとこは大阪に住んでいます。",
+      "romaji": "Itoko wa Ōsaka ni sunde imasu.",
+      "french": "Mon cousin habite à Osaka.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais à Osaka.", "Mon cousin est d'Osaka.", "J'habite à Osaka."]
+    },
+    {
+      "japanese": "宿題を忘れてしまいました。",
+      "romaji": "Shukudai o wasurete shimaimashita.",
+      "french": "J'ai complètement oublié mes devoirs.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai oublié mes devoirs.", "Je fais mes devoirs.", "Mes devoirs sont finis."]
+    },
+    {
+      "japanese": "冷たい飲み物が欲しいです。",
+      "romaji": "Tsumetai nomimono ga hoshii desu.",
+      "french": "Je veux une boisson froide.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime les boissons froides.", "La boisson est froide.", "Je bois quelque chose de froid."]
+    },
+    {
+      "japanese": "レシートをもらいました。",
+      "romaji": "Reshīto o moraimashita.",
+      "french": "J'ai reçu le reçu.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Je veux un reçu.", "Le reçu est important.", "J'ai donné le reçu."]
+    },
+    {
+      "japanese": "タクシー乗り場はどこですか。",
+      "romaji": "Takushī noriba wa doko desu ka.",
+      "french": "Où est la station de taxi ?",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je cherche un taxi.", "Le taxi est là-bas.", "Je prends un taxi."]
+    },
+    {
+      "japanese": "来週から新しいプロジェクトが始まります。",
+      "romaji": "Raishū kara atarashii purojekuto ga hajimarimasu.",
+      "french": "Un nouveau projet commence à partir de la semaine prochaine.",
+      "category": "work",
+      "difficulty": 3,
+      "wrong_answers": ["Le projet a commencé.", "Je commence un projet.", "Le projet est nouveau."]
+    },
+    {
+      "japanese": "二月は二十八日までです。",
+      "romaji": "Nigatsu wa nijūhachinichi made desu.",
+      "french": "Février va jusqu'au 28.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Février a 30 jours.", "C'est le 28 février.", "Février est court."]
+    },
+    {
+      "japanese": "雪が積もっています。",
+      "romaji": "Yuki ga tsumotte imasu.",
+      "french": "La neige s'accumule.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["Il neige.", "Il va neiger.", "La neige est belle."]
+    },
+    {
+      "japanese": "ピアノを習っています。",
+      "romaji": "Piano o naratte imasu.",
+      "french": "J'apprends le piano.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je joue du piano.", "J'aime le piano.", "Le piano est difficile."]
+    },
+    {
+      "japanese": "喉が痛いですから、話せません。",
+      "romaji": "Nodo ga itai desu kara, hanasemasen.",
+      "french": "J'ai mal à la gorge, donc je ne peux pas parler.",
+      "category": "health",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai mal à la gorge.", "Je ne veux pas parler.", "Ma gorge fait mal."]
+    },
+    {
+      "japanese": "美術館は月曜日が休みです。",
+      "romaji": "Bijutsukan wa getsuyōbi ga yasumi desu.",
+      "french": "Le musée d'art est fermé le lundi.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Le musée est ouvert le lundi.", "Je vais au musée lundi.", "Le lundi est mon jour de congé."]
+    },
+    {
+      "japanese": "お元気ですか。",
+      "romaji": "Ogenki desu ka.",
+      "french": "Comment allez-vous ?",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais bien.", "Vous êtes en forme.", "Ça va bien."]
+    },
+    {
+      "japanese": "ゴミを出してきます。",
+      "romaji": "Gomi o dashite kimasu.",
+      "french": "Je vais sortir les poubelles.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai sorti les poubelles.", "Les poubelles sont pleines.", "Je déteste sortir les poubelles."]
+    },
+    {
+      "japanese": "水泳部に入っています。",
+      "romaji": "Suieibu ni haitte imasu.",
+      "french": "Je suis dans le club de natation.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime la natation.", "Je vais nager.", "La natation est difficile."]
+    },
+    {
+      "japanese": "叔父は警察官です。",
+      "romaji": "Oji wa keisatsukan desu.",
+      "french": "Mon oncle est policier.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai un oncle.", "Mon oncle travaille.", "Mon père est policier."]
+    },
+    {
+      "japanese": "数学のテストは難しかったです。",
+      "romaji": "Sūgaku no tesuto wa muzukashikatta desu.",
+      "french": "L'examen de mathématiques était difficile.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["L'examen est difficile.", "J'aime les mathématiques.", "Les mathématiques sont faciles."]
+    },
+    {
+      "japanese": "お寿司を食べたことがありますか。",
+      "romaji": "Osushi o tabeta koto ga arimasu ka.",
+      "french": "Avez-vous déjà mangé des sushis ?",
+      "category": "food",
+      "difficulty": 3,
+      "wrong_answers": ["Vous mangez des sushis ?", "J'aime les sushis.", "Les sushis sont bons."]
+    },
+    {
+      "japanese": "試着してもいいですか。",
+      "romaji": "Shichaku shite mo ii desu ka.",
+      "french": "Puis-je essayer ?",
+      "category": "shopping",
+      "difficulty": 3,
+      "wrong_answers": ["Je veux essayer.", "J'essaie les vêtements.", "C'est possible d'essayer."]
+    },
+    {
+      "japanese": "乗り換えが必要です。",
+      "romaji": "Norikae ga hitsuyō desu.",
+      "french": "Un changement est nécessaire.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je dois changer.", "Le train change.", "Je change de ligne."]
+    },
+    {
+      "japanese": "上司に報告しました。",
+      "romaji": "Jōshi ni hōkoku shimashita.",
+      "french": "J'ai fait un rapport à mon supérieur.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais faire un rapport.", "Mon supérieur travaille.", "Le rapport est fini."]
+    },
+    {
+      "japanese": "誕生日は何月何日ですか。",
+      "romaji": "Tanjōbi wa nangatsu nannichi desu ka.",
+      "french": "Votre anniversaire est quel jour de quel mois ?",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Quel âge avez-vous ?", "C'est quand ?", "Mon anniversaire est demain."]
+    },
+    {
+      "japanese": "明日は晴れるでしょう。",
+      "romaji": "Ashita wa hareru deshō.",
+      "french": "Il fera probablement beau demain.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["Il fait beau demain.", "Demain il pleuvra.", "Le temps est beau."]
+    },
+    {
+      "japanese": "釣りに行きたいです。",
+      "romaji": "Tsuri ni ikitai desu.",
+      "french": "Je veux aller à la pêche.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais pêcher.", "J'aime la pêche.", "La pêche est amusante."]
+    },
+    {
+      "japanese": "注射が怖いです。",
+      "romaji": "Chūsha ga kowai desu.",
+      "french": "J'ai peur des piqûres.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Les piqûres font mal.", "Je déteste les piqûres.", "Les piqûres sont douloureuses."]
+    },
+    {
+      "japanese": "交番は交差点の向こうです。",
+      "romaji": "Kōban wa kōsaten no mukō desu.",
+      "french": "Le poste de police est de l'autre côté du carrefour.",
+      "category": "places",
+      "difficulty": 3,
+      "wrong_answers": ["Le poste de police est au carrefour.", "Je vais au carrefour.", "Le carrefour est loin."]
+    },
+    {
+      "japanese": "お久しぶりです。",
+      "romaji": "Ohisashiburi desu.",
+      "french": "Ça faisait longtemps.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["À bientôt.", "Au revoir.", "Enchanté."]
+    },
+    {
+      "japanese": "アラームをセットしました。",
+      "romaji": "Arāmu o setto shimashita.",
+      "french": "J'ai réglé l'alarme.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["L'alarme sonne.", "Je vais régler l'alarme.", "L'alarme est forte."]
+    },
+    {
+      "japanese": "バドミントンをするのが好きです。",
+      "romaji": "Badominton o suru no ga suki desu.",
+      "french": "J'aime jouer au badminton.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je joue au badminton.", "Le badminton est amusant.", "J'ai joué au badminton."]
+    },
+    {
+      "japanese": "姪は三歳です。",
+      "romaji": "Mei wa sansai desu.",
+      "french": "Ma nièce a 3 ans.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai une nièce.", "Ma nièce est petite.", "Ma fille a 3 ans."]
+    },
+    {
+      "japanese": "卒業式はいつですか。",
+      "romaji": "Sotsugyōshiki wa itsu desu ka.",
+      "french": "Quand est la cérémonie de remise des diplômes ?",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["La cérémonie est belle.", "Je suis diplômé.", "C'est la cérémonie."]
+    },
+    {
+      "japanese": "デザートは別腹です。",
+      "romaji": "Dezāto wa betsubara desu.",
+      "french": "Il y a toujours de la place pour le dessert.",
+      "category": "food",
+      "difficulty": 3,
+      "wrong_answers": ["Le dessert est délicieux.", "Je veux un dessert.", "J'aime les desserts."]
+    },
+    {
+      "japanese": "ポイントカードはありますか。",
+      "romaji": "Pointo kādo wa arimasu ka.",
+      "french": "Avez-vous une carte de fidélité ?",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai une carte.", "Je veux une carte.", "La carte est utile."]
+    },
+    {
+      "japanese": "終電に間に合いました。",
+      "romaji": "Shūden ni maniaimashita.",
+      "french": "J'ai eu le dernier train.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais prendre le dernier train.", "Le dernier train est parti.", "Je rate le train."]
+    },
+    {
+      "japanese": "休憩時間は十五分です。",
+      "romaji": "Kyūkei jikan wa jūgofun desu.",
+      "french": "La pause est de 15 minutes.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je prends une pause.", "La pause est courte.", "Je me repose 15 minutes."]
+    },
+    {
+      "japanese": "三日後に帰ります。",
+      "romaji": "Mikkago ni kaerimasu.",
+      "french": "Je rentre dans 3 jours.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Je suis rentré il y a 3 jours.", "Je rentre tous les 3 jours.", "3 jours sont passés."]
+    },
+    {
+      "japanese": "風が強いですから、傘が飛びそうです。",
+      "romaji": "Kaze ga tsuyoi desu kara, kasa ga tobisō desu.",
+      "french": "Le vent est fort, donc mon parapluie va s'envoler.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["Le vent est fort.", "Mon parapluie s'est envolé.", "J'ai perdu mon parapluie."]
+    },
+    {
+      "japanese": "キャンプに行く予定です。",
+      "romaji": "Kyanpu ni iku yotei desu.",
+      "french": "Je prévois d'aller camper.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais camper.", "J'aime le camping.", "Le camping est amusant."]
+    },
+    {
+      "japanese": "お腹が痛くなりました。",
+      "romaji": "Onaka ga itaku narimashita.",
+      "french": "J'ai eu mal au ventre.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai mal au ventre.", "Mon ventre fait mal.", "Je suis malade."]
+    },
+    {
+      "japanese": "エレベーターは故障中です。",
+      "romaji": "Erebētā wa koshōchū desu.",
+      "french": "L'ascenseur est en panne.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["L'ascenseur ne marche pas.", "Je prends l'ascenseur.", "L'ascenseur est cassé."]
+    },
+    {
+      "japanese": "お邪魔します。",
+      "romaji": "Ojama shimasu.",
+      "french": "Excusez-moi de vous déranger.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Je vous remercie.", "Au revoir.", "Bienvenue."]
+    },
+    {
+      "japanese": "電気を消してください。",
+      "romaji": "Denki o keshite kudasai.",
+      "french": "Éteignez la lumière s'il vous plaît.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["La lumière est éteinte.", "J'éteins la lumière.", "Allumez la lumière."]
+    },
+    {
+      "japanese": "登山が趣味です。",
+      "romaji": "Tozan ga shumi desu.",
+      "french": "L'alpinisme est mon hobby.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime la montagne.", "Je fais de l'alpinisme.", "L'alpinisme est difficile."]
+    },
+    {
+      "japanese": "甥は来年小学校に入ります。",
+      "romaji": "Oi wa rainen shōgakkō ni hairimasu.",
+      "french": "Mon neveu entre à l'école primaire l'année prochaine.",
+      "category": "family",
+      "difficulty": 3,
+      "wrong_answers": ["Mon neveu est à l'école.", "J'ai un neveu.", "Mon fils entre à l'école."]
+    },
+    {
+      "japanese": "奨学金をもらっています。",
+      "romaji": "Shōgakukin o moratte imasu.",
+      "french": "Je reçois une bourse.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["Je veux une bourse.", "La bourse est importante.", "J'ai demandé une bourse."]
+    },
+    {
+      "japanese": "料理が冷めてしまいました。",
+      "romaji": "Ryōri ga samete shimaimashita.",
+      "french": "Le plat a complètement refroidi.",
+      "category": "food",
+      "difficulty": 3,
+      "wrong_answers": ["Le plat est froid.", "Le plat refroidit.", "Je vais réchauffer le plat."]
+    },
+    {
+      "japanese": "袋は要りません。",
+      "romaji": "Fukuro wa irimasen.",
+      "french": "Je n'ai pas besoin de sac.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Je veux un sac.", "Le sac est gratuit.", "J'ai un sac."]
+    },
+    {
+      "japanese": "定期券を買いました。",
+      "romaji": "Teikiken o kaimashita.",
+      "french": "J'ai acheté un abonnement de transport.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais acheter un abonnement.", "L'abonnement est cher.", "J'utilise un abonnement."]
+    },
+    {
+      "japanese": "昇進しました。",
+      "romaji": "Shōshin shimashita.",
+      "french": "J'ai été promu.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais être promu.", "Je veux une promotion.", "La promotion est bien."]
+    },
+    {
+      "japanese": "半年間日本にいました。",
+      "romaji": "Hantoshikan Nihon ni imashita.",
+      "french": "J'étais au Japon pendant six mois.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais au Japon pendant 6 mois.", "Je suis au Japon.", "6 mois au Japon."]
+    },
+    {
+      "japanese": "虹が出ています。",
+      "romaji": "Niji ga dete imasu.",
+      "french": "Un arc-en-ciel est apparu.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["Je vois un arc-en-ciel.", "L'arc-en-ciel est beau.", "Il y a un arc-en-ciel."]
+    },
+    {
+      "japanese": "ボードゲームをするのが好きです。",
+      "romaji": "Bōdogēmu o suru no ga suki desu.",
+      "french": "J'aime jouer aux jeux de société.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je joue aux jeux de société.", "Les jeux sont amusants.", "J'ai beaucoup de jeux."]
+    },
+    {
+      "japanese": "アレルギーがあります。",
+      "romaji": "Arerugī ga arimasu.",
+      "french": "J'ai une allergie.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Je suis allergique.", "L'allergie est grave.", "Je déteste les allergies."]
+    },
+    {
+      "japanese": "ホテルは駅から遠いです。",
+      "romaji": "Hoteru wa eki kara tōi desu.",
+      "french": "L'hôtel est loin de la gare.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["L'hôtel est près de la gare.", "Je vais à l'hôtel.", "L'hôtel est grand."]
+    },
+    {
+      "japanese": "お先に失礼します。",
+      "romaji": "Osaki ni shitsurei shimasu.",
+      "french": "Je m'en vais avant vous.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Excusez-moi.", "Au revoir.", "À bientôt."]
+    },
+    {
+      "japanese": "布団を畳みました。",
+      "romaji": "Futon o tatamimashita.",
+      "french": "J'ai plié le futon.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais plier le futon.", "Le futon est plié.", "J'aime le futon."]
+    },
+    {
+      "japanese": "ダンスを習いたいです。",
+      "romaji": "Dansu o naraitai desu.",
+      "french": "Je veux apprendre la danse.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'apprends la danse.", "J'aime danser.", "La danse est difficile."]
+    },
+    {
+      "japanese": "義理の兄は弁護士です。",
+      "romaji": "Giri no ani wa bengoshi desu.",
+      "french": "Mon beau-frère est avocat.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Mon frère est avocat.", "J'ai un beau-frère.", "Mon beau-frère travaille."]
+    },
+    {
+      "japanese": "遅刻しないように早く家を出ます。",
+      "romaji": "Chikoku shinai yō ni hayaku ie o demasu.",
+      "french": "Je pars tôt de la maison pour ne pas être en retard.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["Je suis en retard.", "Je pars tôt.", "Je ne veux pas être en retard."]
+    },
+    {
+      "japanese": "メニューを見せてください。",
+      "romaji": "Menyū o misete kudasai.",
+      "french": "Montrez-moi le menu s'il vous plaît.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Je veux voir le menu.", "Le menu est ici.", "J'ai le menu."]
+    },
+    {
+      "japanese": "返品したいのですが。",
+      "romaji": "Henpin shitai no desu ga.",
+      "french": "Je voudrais faire un retour.",
+      "category": "shopping",
+      "difficulty": 3,
+      "wrong_answers": ["Je retourne l'article.", "Je veux rendre ça.", "Le retour est possible."]
+    },
+    {
+      "japanese": "座席を予約しました。",
+      "romaji": "Zaseki o yoyaku shimashita.",
+      "french": "J'ai réservé un siège.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais réserver un siège.", "Le siège est réservé.", "J'ai un siège."]
+    },
+    {
+      "japanese": "契約書にサインをしました。",
+      "romaji": "Keiyakusho ni sain o shimashita.",
+      "french": "J'ai signé le contrat.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais signer le contrat.", "Le contrat est important.", "J'ai lu le contrat."]
+    },
+    {
+      "japanese": "一週間後に引っ越します。",
+      "romaji": "Isshūkango ni hikkoshimasu.",
+      "french": "Je déménage dans une semaine.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai déménagé la semaine dernière.", "Je déménage souvent.", "Le déménagement est dans une semaine."]
+    },
+    {
+      "japanese": "霧が濃いですから、運転に気をつけてください。",
+      "romaji": "Kiri ga koi desu kara, unten ni ki o tsukete kudasai.",
+      "french": "Le brouillard est épais, donc faites attention en conduisant.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["Le brouillard est épais.", "Je conduis dans le brouillard.", "Attention au brouillard."]
+    },
+    {
+      "japanese": "映画館で映画を見るのが好きです。",
+      "romaji": "Eigakan de eiga o miru no ga suki desu.",
+      "french": "J'aime regarder des films au cinéma.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais au cinéma.", "Le cinéma est grand.", "J'aime les films."]
+    },
+    {
+      "japanese": "健康診断を受けました。",
+      "romaji": "Kenkō shindan o ukemashita.",
+      "french": "J'ai passé un examen médical.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais passer un examen.", "L'examen est important.", "Je suis en bonne santé."]
+    },
+    {
+      "japanese": "観光案内所はどこですか。",
+      "romaji": "Kankō annaijo wa doko desu ka.",
+      "french": "Où est l'office de tourisme ?",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Je cherche l'office de tourisme.", "L'office de tourisme est fermé.", "Je vais à l'office de tourisme."]
+    },
+    {
+      "japanese": "お疲れ様でした。",
+      "romaji": "Otsukaresama deshita.",
+      "french": "Bon travail (merci pour votre travail).",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Je suis fatigué.", "Vous êtes fatigué.", "Reposez-vous bien."]
+    },
+    {
+      "japanese": "エアコンをつけました。",
+      "romaji": "Eakon o tsukemashita.",
+      "french": "J'ai allumé la climatisation.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais allumer la climatisation.", "La climatisation est froide.", "J'éteins la climatisation."]
+    },
+    {
+      "japanese": "ヨガ教室に通っています。",
+      "romaji": "Yoga kyōshitsu ni kayotte imasu.",
+      "french": "Je vais régulièrement au cours de yoga.",
+      "category": "hobby",
+      "difficulty": 3,
+      "wrong_answers": ["Je fais du yoga.", "J'aime le yoga.", "Le yoga est relaxant."]
+    },
+    {
+      "japanese": "義理の母は優しいです。",
+      "romaji": "Giri no haha wa yasashii desu.",
+      "french": "Ma belle-mère est gentille.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Ma mère est gentille.", "J'aime ma belle-mère.", "Ma belle-mère est là."]
+    },
+    {
+      "japanese": "クラブ活動に参加しています。",
+      "romaji": "Kurabu katsudō ni sanka shite imasu.",
+      "french": "Je participe aux activités du club.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais au club.", "J'aime le club.", "Le club est amusant."]
+    },
+    {
+      "japanese": "お会計をお願いします。",
+      "romaji": "Okaikei o onegai shimasu.",
+      "french": "L'addition s'il vous plaît.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Je veux payer.", "Combien ça coûte ?", "L'addition est chère."]
+    },
+    {
+      "japanese": "値段が書いていません。",
+      "romaji": "Nedan ga kaite imasen.",
+      "french": "Le prix n'est pas indiqué.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Le prix est cher.", "Je ne connais pas le prix.", "Quel est le prix ?"]
+    },
+    {
+      "japanese": "飛行機が遅れています。",
+      "romaji": "Hikōki ga okurete imasu.",
+      "french": "L'avion est en retard.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["L'avion va partir.", "Je suis en retard.", "L'avion est parti."]
+    },
+    {
+      "japanese": "会議室を予約しました。",
+      "romaji": "Kaigishitsu o yoyaku shimashita.",
+      "french": "J'ai réservé la salle de réunion.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais réserver la salle.", "La salle est réservée.", "Je suis dans la salle de réunion."]
+    },
+    {
+      "japanese": "十分間休憩しましょう。",
+      "romaji": "Juppunkan kyūkei shimashō.",
+      "french": "Faisons une pause de 10 minutes.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Je fais une pause.", "La pause dure 10 minutes.", "Je me repose 10 minutes."]
+    },
+    {
+      "japanese": "雷が鳴っています。",
+      "romaji": "Kaminari ga natte imasu.",
+      "french": "Il y a du tonnerre.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["Il va tonner.", "Le tonnerre est fort.", "J'ai peur du tonnerre."]
+    },
+    {
+      "japanese": "ボランティア活動をしています。",
+      "romaji": "Borantia katsudō o shite imasu.",
+      "french": "Je fais du bénévolat.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime le bénévolat.", "Je vais faire du bénévolat.", "Le bénévolat est important."]
+    },
+    {
+      "japanese": "予防接種を受けなければなりません。",
+      "romaji": "Yobō sesshu o ukenakereba narimasen.",
+      "french": "Je dois me faire vacciner.",
+      "category": "health",
+      "difficulty": 3,
+      "wrong_answers": ["Je me fais vacciner.", "Le vaccin est important.", "J'ai été vacciné."]
+    },
+    {
+      "japanese": "入場料はいくらですか。",
+      "romaji": "Nyūjōryō wa ikura desu ka.",
+      "french": "Combien coûte l'entrée ?",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["L'entrée est gratuite.", "Je veux entrer.", "L'entrée est chère."]
+    },
+    {
+      "japanese": "お待たせしました。",
+      "romaji": "Omatase shimashita.",
+      "french": "Désolé de vous avoir fait attendre.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Attendez s'il vous plaît.", "Merci d'avoir attendu.", "Je n'ai pas attendu longtemps."]
+    },
+    {
+      "japanese": "ベッドを整えました。",
+      "romaji": "Beddo o totonaemashita.",
+      "french": "J'ai fait le lit.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais faire le lit.", "Le lit est fait.", "J'aime faire le lit."]
+    },
+    {
+      "japanese": "水彩画を描くのが好きです。",
+      "romaji": "Suisaiga o kaku no ga suki desu.",
+      "french": "J'aime peindre à l'aquarelle.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je peins à l'aquarelle.", "La peinture est belle.", "J'ai peint un tableau."]
+    },
+    {
+      "japanese": "従兄弟は東京に住んでいます。",
+      "romaji": "Itoko wa Tōkyō ni sunde imasu.",
+      "french": "Mon cousin habite à Tokyo.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais à Tokyo.", "Mon cousin aime Tokyo.", "J'habite à Tokyo."]
+    },
+    {
+      "japanese": "クラスメートと仲良くなりました。",
+      "romaji": "Kurasumēto to nakayoku narimashita.",
+      "french": "Je me suis fait ami avec mes camarades de classe.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["J'aime mes camarades.", "J'ai des amis.", "Mes camarades sont gentils."]
+    },
+    {
+      "japanese": "味噌汁が飲みたいです。",
+      "romaji": "Misoshiru ga nomitai desu.",
+      "french": "Je veux boire de la soupe miso.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime la soupe miso.", "Je bois de la soupe.", "La soupe est chaude."]
+    },
+    {
+      "japanese": "店員さんを呼びました。",
+      "romaji": "Ten'in-san o yobimashita.",
+      "french": "J'ai appelé le vendeur.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Le vendeur arrive.", "Je veux parler au vendeur.", "Le vendeur est occupé."]
+    },
+    {
+      "japanese": "新幹線で大阪に行きます。",
+      "romaji": "Shinkansen de Ōsaka ni ikimasu.",
+      "french": "Je vais à Osaka en Shinkansen.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime le Shinkansen.", "Le Shinkansen est rapide.", "Je prends le train."]
+    },
+    {
+      "japanese": "有給休暇を取りました。",
+      "romaji": "Yūkyū kyūka o torimashita.",
+      "french": "J'ai pris un congé payé.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais prendre un congé.", "J'ai des congés.", "Les congés sont importants."]
+    },
+    {
+      "japanese": "一時間半待ちました。",
+      "romaji": "Ichijikan han machimashita.",
+      "french": "J'ai attendu une heure et demie.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["J'attends une heure.", "L'attente est longue.", "J'ai attendu longtemps."]
+    },
+    {
+      "japanese": "湿度が高いです。",
+      "romaji": "Shitsudo ga takai desu.",
+      "french": "L'humidité est élevée.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["Il fait humide.", "L'air est lourd.", "Il pleut."]
+    },
+    {
+      "japanese": "料理教室に参加しました。",
+      "romaji": "Ryōri kyōshitsu ni sanka shimashita.",
+      "french": "J'ai participé à un cours de cuisine.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais au cours de cuisine.", "J'aime cuisiner.", "Le cours est intéressant."]
+    },
+    {
+      "japanese": "ビタミン剤を飲んでいます。",
+      "romaji": "Bitaminzai o nonde imasu.",
+      "french": "Je prends des vitamines.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Les vitamines sont importantes.", "Je veux des vitamines.", "J'ai acheté des vitamines."]
+    },
+    {
+      "japanese": "記念碑が立っています。",
+      "romaji": "Kinenhi ga tatte imasu.",
+      "french": "Il y a un monument commémoratif.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Le monument est grand.", "J'ai vu le monument.", "Je vais au monument."]
+    },
+    {
+      "japanese": "お気をつけて。",
+      "romaji": "Oki o tsukete.",
+      "french": "Faites attention.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Au revoir.", "Bonne chance.", "À bientôt."]
+    },
+    {
+      "japanese": "換気をしました。",
+      "romaji": "Kanki o shimashita.",
+      "french": "J'ai aéré.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais aérer.", "L'air est frais.", "J'ouvre la fenêtre."]
+    },
+    {
+      "japanese": "陶芸に興味があります。",
+      "romaji": "Tōgei ni kyōmi ga arimasu.",
+      "french": "Je suis intéressé par la poterie.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je fais de la poterie.", "La poterie est difficile.", "J'aime la poterie."]
+    },
+    {
+      "japanese": "双子の妹がいます。",
+      "romaji": "Futago no imōto ga imasu.",
+      "french": "J'ai une sœur jumelle.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai deux sœurs.", "Ma sœur est née.", "Mes sœurs sont jumelles."]
+    },
+    {
+      "japanese": "レポートの締め切りは明後日です。",
+      "romaji": "Repōto no shimekiri wa asatte desu.",
+      "french": "La date limite du rapport est après-demain.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["Le rapport est fini.", "Je fais le rapport demain.", "La date limite est passée."]
+    },
+    {
+      "japanese": "食後にコーヒーを飲みます。",
+      "romaji": "Shokugo ni kōhī o nomimasu.",
+      "french": "Je bois du café après le repas.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Je bois du café avant le repas.", "J'aime le café.", "Le café est bon."]
+    },
+    {
+      "japanese": "サイズを交換してもらえますか。",
+      "romaji": "Saizu o kōkan shite moraemasuka.",
+      "french": "Pouvez-vous échanger la taille ?",
+      "category": "shopping",
+      "difficulty": 3,
+      "wrong_answers": ["Je veux échanger.", "La taille est petite.", "J'ai une autre taille."]
+    },
+    {
+      "japanese": "道に迷ってしまいました。",
+      "romaji": "Michi ni mayotte shimaimashita.",
+      "french": "Je me suis complètement perdu.",
+      "category": "transport",
+      "difficulty": 3,
+      "wrong_answers": ["Je suis perdu.", "Je ne connais pas le chemin.", "Où suis-je ?"]
+    },
+    {
+      "japanese": "ボーナスをもらいました。",
+      "romaji": "Bōnasu o moraimashita.",
+      "french": "J'ai reçu une prime.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais recevoir une prime.", "La prime est importante.", "J'attends la prime."]
+    },
+    {
+      "japanese": "毎週水曜日に会議があります。",
+      "romaji": "Maishū suiyōbi ni kaigi ga arimasu.",
+      "french": "Il y a une réunion tous les mercredis.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["La réunion est mercredi.", "J'ai une réunion.", "Mercredi est occupé."]
+    },
+    {
+      "japanese": "気温が下がってきました。",
+      "romaji": "Kion ga sagatte kimashita.",
+      "french": "La température a baissé.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["La température baisse.", "Il fait froid.", "Il va faire froid."]
+    },
+    {
+      "japanese": "切手を集めています。",
+      "romaji": "Kitte o atsumete imasu.",
+      "french": "Je collectionne les timbres.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai acheté un timbre.", "Les timbres sont jolis.", "J'aime les timbres."]
+    },
+    {
+      "japanese": "花粉症で辛いです。",
+      "romaji": "Kafunshō de tsurai desu.",
+      "french": "Je souffre du rhume des foins.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai une allergie.", "Le pollen est partout.", "Je suis malade."]
+    },
+    {
+      "japanese": "橋を渡ってください。",
+      "romaji": "Hashi o watatte kudasai.",
+      "french": "Traversez le pont s'il vous plaît.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Le pont est loin.", "Je vais traverser.", "Le pont est grand."]
+    },
+    {
+      "japanese": "よろしくお伝えください。",
+      "romaji": "Yoroshiku otsutae kudasai.",
+      "french": "Transmettez mes salutations.",
+      "category": "conversation",
+      "difficulty": 3,
+      "wrong_answers": ["Bonjour.", "Au revoir.", "Merci beaucoup."]
+    },
+    {
+      "japanese": "皿を洗いました。",
+      "romaji": "Sara o araimashita.",
+      "french": "J'ai fait la vaisselle.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais faire la vaisselle.", "La vaisselle est sale.", "J'aime faire la vaisselle."]
+    },
+    {
+      "japanese": "ハイキングに行く計画です。",
+      "romaji": "Haikingu ni iku keikaku desu.",
+      "french": "Je prévois d'aller faire de la randonnée.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais en randonnée.", "J'aime la randonnée.", "La randonnée est amusante."]
+    },
+    {
+      "japanese": "配偶者は医療関係の仕事をしています。",
+      "romaji": "Haigūsha wa iryō kankei no shigoto o shite imasu.",
+      "french": "Mon conjoint travaille dans le domaine médical.",
+      "category": "family",
+      "difficulty": 3,
+      "wrong_answers": ["Mon conjoint est médecin.", "Je travaille dans la médecine.", "Mon conjoint travaille."]
+    },
+    {
+      "japanese": "欠席する場合は連絡してください。",
+      "romaji": "Kesseki suru baai wa renraku shite kudasai.",
+      "french": "Si vous êtes absent, veuillez nous contacter.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["Je suis absent.", "Contactez-moi.", "Je vais être absent."]
+    },
+    {
+      "japanese": "お箸の使い方を教えてください。",
+      "romaji": "Ohashi no tsukaikata o oshiete kudasai.",
+      "french": "Enseignez-moi comment utiliser les baguettes s'il vous plaît.",
+      "category": "food",
+      "difficulty": 3,
+      "wrong_answers": ["Je sais utiliser les baguettes.", "Les baguettes sont difficiles.", "J'utilise des baguettes."]
+    },
+    {
+      "japanese": "在庫を確認してください。",
+      "romaji": "Zaiko o kakunin shite kudasai.",
+      "french": "Vérifiez le stock s'il vous plaît.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Le stock est vide.", "Il n'y a pas de stock.", "Je vérifie le stock."]
+    },
+    {
+      "japanese": "切符を買い忘れました。",
+      "romaji": "Kippu o kaiwasuremashita.",
+      "french": "J'ai oublié d'acheter un billet.",
+      "category": "transport",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai oublié mon billet.", "Je dois acheter un billet.", "Le billet est cher."]
+    },
+    {
+      "japanese": "出張から戻りました。",
+      "romaji": "Shucchō kara modorimashita.",
+      "french": "Je suis revenu de voyage d'affaires.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais en voyage d'affaires.", "Je suis en déplacement.", "Le voyage était long."]
+    },
+    {
+      "japanese": "午後二時半に約束があります。",
+      "romaji": "Gogo nijihan ni yakusoku ga arimasu.",
+      "french": "J'ai un rendez-vous à 14h30.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Il est 14h30.", "Je suis en retard.", "Le rendez-vous est fini."]
+    },
+    {
+      "japanese": "紅葉がきれいです。",
+      "romaji": "Kōyō ga kirei desu.",
+      "french": "Les feuilles d'automne sont belles.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["L'automne arrive.", "J'aime l'automne.", "Les arbres sont rouges."]
+    },
+    {
+      "japanese": "編み物を習っています。",
+      "romaji": "Amimono o naratte imasu.",
+      "french": "J'apprends le tricot.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je fais du tricot.", "Le tricot est difficile.", "J'aime tricoter."]
+    },
+    {
+      "japanese": "体重が増えました。",
+      "romaji": "Taijū ga fuemashita.",
+      "french": "J'ai pris du poids.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Je perds du poids.", "Mon poids est stable.", "Je fais un régime."]
+    },
+    {
+      "japanese": "最寄りの駅はどこですか。",
+      "romaji": "Moyori no eki wa doko desu ka.",
+      "french": "Où est la gare la plus proche ?",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["La gare est loin.", "Je vais à la gare.", "La gare est ici."]
+    },
+    {
+      "japanese": "またお会いしましょう。",
+      "romaji": "Mata oai shimashō.",
+      "french": "Revoyons-nous.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Au revoir.", "À bientôt.", "Enchanté."]
+    },
+    {
+      "japanese": "寝坊してしまいました。",
+      "romaji": "Nebō shite shimaimashita.",
+      "french": "J'ai dormi trop longtemps.",
+      "category": "daily",
+      "difficulty": 3,
+      "wrong_answers": ["Je me suis levé tard.", "Je dors trop.", "Je suis fatigué."]
+    },
+    {
+      "japanese": "折り紙を折るのが得意です。",
+      "romaji": "Origami o oru no ga tokui desu.",
+      "french": "Je suis doué en origami.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime l'origami.", "Je fais de l'origami.", "L'origami est difficile."]
+    },
+    {
+      "japanese": "親戚が遊びに来ます。",
+      "romaji": "Shinseki ga asobi ni kimasu.",
+      "french": "Ma famille va nous rendre visite.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Ma famille est venue.", "J'ai de la famille.", "Je rends visite à ma famille."]
+    },
+    {
+      "japanese": "講義のノートを見せてもらえますか。",
+      "romaji": "Kōgi no nōto o misete moraemasuka.",
+      "french": "Pouvez-vous me montrer vos notes de cours ?",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai pris des notes.", "Je veux des notes.", "Les notes sont importantes."]
+    },
+    {
+      "japanese": "焼き魚が好きです。",
+      "romaji": "Yakizakana ga suki desu.",
+      "french": "J'aime le poisson grillé.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Le poisson est délicieux.", "Je mange du poisson.", "Je cuisine du poisson."]
+    },
+    {
+      "japanese": "免税で買えますか。",
+      "romaji": "Menzei de kaemasuka.",
+      "french": "Puis-je acheter hors taxe ?",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["C'est hors taxe.", "Je veux acheter.", "Le prix est bon."]
+    },
+    {
+      "japanese": "運賃はいくらですか。",
+      "romaji": "Unchin wa ikura desu ka.",
+      "french": "Combien coûte le tarif ?",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Le tarif est cher.", "Je paie le tarif.", "C'est combien ?"]
+    },
+    {
+      "japanese": "在宅勤務をしています。",
+      "romaji": "Zaitaku kinmu o shite imasu.",
+      "french": "Je travaille à domicile.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais travailler chez moi.", "Le télétravail est pratique.", "Je travaille au bureau."]
+    },
+    {
+      "japanese": "年末年始は実家に帰ります。",
+      "romaji": "Nenmatsu nenshi wa jikka ni kaerimasu.",
+      "french": "Je rentre chez mes parents pour le Nouvel An.",
+      "category": "time",
+      "difficulty": 3,
+      "wrong_answers": ["Je suis chez mes parents.", "Le Nouvel An arrive.", "J'aime le Nouvel An."]
+    },
+    {
+      "japanese": "空が曇ってきました。",
+      "romaji": "Sora ga kumotte kimashita.",
+      "french": "Le ciel s'est couvert.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["Le ciel est nuageux.", "Il va pleuvoir.", "Le ciel est gris."]
+    },
+    {
+      "japanese": "園芸が趣味です。",
+      "romaji": "Engei ga shumi desu.",
+      "french": "Le jardinage est mon hobby.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime jardiner.", "Je fais du jardinage.", "Mon jardin est beau."]
+    },
+    {
+      "japanese": "血圧を測りました。",
+      "romaji": "Ketsuatsu o hakarimashita.",
+      "french": "J'ai pris ma tension.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais prendre ma tension.", "Ma tension est haute.", "J'ai de l'hypertension."]
+    },
+    {
+      "japanese": "神社にお参りしました。",
+      "romaji": "Jinja ni omairi shimashita.",
+      "french": "J'ai visité un sanctuaire shinto.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais au sanctuaire.", "Le sanctuaire est beau.", "J'aime les sanctuaires."]
+    },
+    {
+      "japanese": "承知しました。",
+      "romaji": "Shōchi shimashita.",
+      "french": "J'ai compris (formel).",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["D'accord.", "Oui.", "Merci."]
+    },
+    {
+      "japanese": "部屋の模様替えをしました。",
+      "romaji": "Heya no moyōgae o shimashita.",
+      "french": "J'ai réaménagé ma chambre.",
+      "category": "daily",
+      "difficulty": 3,
+      "wrong_answers": ["Je vais réaménager.", "Ma chambre est jolie.", "J'aime ma chambre."]
+    },
+    {
+      "japanese": "美術展に行きたいです。",
+      "romaji": "Bijutsuten ni ikitai desu.",
+      "french": "Je veux aller à une exposition d'art.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais à l'exposition.", "L'exposition est intéressante.", "J'aime l'art."]
+    },
+    {
+      "japanese": "継母は優しい人です。",
+      "romaji": "Mamahaha wa yasashii hito desu.",
+      "french": "Ma belle-mère est une personne gentille.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Ma mère est gentille.", "J'aime ma belle-mère.", "Ma belle-mère vit avec nous."]
+    },
+    {
+      "japanese": "単位を落としてしまいました。",
+      "romaji": "Tan'i o otoshite shimaimashita.",
+      "french": "J'ai raté le crédit universitaire.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai obtenu le crédit.", "Je vais rater.", "Le crédit est important."]
+    },
+    {
+      "japanese": "刺身が食べられません。",
+      "romaji": "Sashimi ga taberaremasen.",
+      "french": "Je ne peux pas manger de sashimi.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Je n'aime pas le sashimi.", "Le sashimi est cru.", "Je mange du sashimi."]
+    },
+    {
+      "japanese": "何色がありますか。",
+      "romaji": "Naniiro ga arimasuka.",
+      "french": "Quelles couleurs sont disponibles ?",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Cette couleur est jolie.", "J'aime cette couleur.", "Il y a beaucoup de couleurs."]
+    },
+    {
+      "japanese": "渋滞に巻き込まれました。",
+      "romaji": "Jūtai ni makikomaremashita.",
+      "french": "Je me suis retrouvé dans un embouteillage.",
+      "category": "transport",
+      "difficulty": 3,
+      "wrong_answers": ["Il y a un embouteillage.", "La route est bloquée.", "Je suis en retard."]
+    },
+    {
+      "japanese": "同僚と飲みに行きました。",
+      "romaji": "Dōryō to nomi ni ikimashita.",
+      "french": "Je suis allé boire un verre avec mes collègues.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais boire avec mes collègues.", "Mes collègues sont sympas.", "J'aime boire."]
+    },
+    {
+      "japanese": "しばらくお待ちください。",
+      "romaji": "Shibaraku omachi kudasai.",
+      "french": "Veuillez patienter un moment.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["J'attends.", "Merci d'attendre.", "Un moment s'il vous plaît."]
+    },
+    {
+      "japanese": "寒暖差が激しいです。",
+      "romaji": "Kandansa ga hageshii desu.",
+      "french": "L'écart de température est important.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["La température change.", "Il fait chaud et froid.", "Le temps est instable."]
+    },
+    {
+      "japanese": "ランニングを始めました。",
+      "romaji": "Ranningu o hajimemashita.",
+      "french": "J'ai commencé à courir.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je cours souvent.", "J'aime courir.", "La course est difficile."]
+    },
+    {
+      "japanese": "背中が痛いです。",
+      "romaji": "Senaka ga itai desu.",
+      "french": "J'ai mal au dos.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Mon dos fait mal.", "Je suis fatigué.", "Je dois me reposer."]
+    },
+    {
+      "japanese": "温泉に入りに行きました。",
+      "romaji": "Onsen ni hairi ni ikimashita.",
+      "french": "Je suis allé aux sources chaudes.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime les sources chaudes.", "Les sources sont chaudes.", "Je vais aux bains."]
+    },
+    {
+      "japanese": "構いませんよ。",
+      "romaji": "Kamaimasen yo.",
+      "french": "Ça ne me dérange pas.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Pas de problème.", "D'accord.", "Merci."]
+    },
+    {
+      "japanese": "植木に水をやりました。",
+      "romaji": "Ueki ni mizu o yarimashita.",
+      "french": "J'ai arrosé les plantes.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais arroser.", "Les plantes sont belles.", "J'aime les plantes."]
+    },
+    {
+      "japanese": "書道を習いたいです。",
+      "romaji": "Shodō o naraitai desu.",
+      "french": "Je veux apprendre la calligraphie.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'apprends la calligraphie.", "La calligraphie est belle.", "Je fais de la calligraphie."]
+    },
+    {
+      "japanese": "養父は厳しい人です。",
+      "romaji": "Yōfu wa kibishii hito desu.",
+      "french": "Mon beau-père est une personne stricte.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Mon père est strict.", "J'ai un beau-père.", "Mon beau-père travaille."]
+    },
+    {
+      "japanese": "奨学金の申請をしました。",
+      "romaji": "Shōgakukin no shinsei o shimashita.",
+      "french": "J'ai fait une demande de bourse.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai reçu une bourse.", "Je veux une bourse.", "La bourse est importante."]
+    },
+    {
+      "japanese": "お代わりをいただけますか。",
+      "romaji": "Okawari o itadakemasuka.",
+      "french": "Puis-je avoir un deuxième service ?",
+      "category": "food",
+      "difficulty": 3,
+      "wrong_answers": ["Je veux encore.", "C'était délicieux.", "J'ai encore faim."]
+    },
+    {
+      "japanese": "包装してください。",
+      "romaji": "Hōsō shite kudasai.",
+      "french": "Emballez-le s'il vous plaît.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["C'est emballé.", "Je veux un emballage.", "L'emballage est joli."]
+    },
+    {
+      "japanese": "乗り遅れそうです。",
+      "romaji": "Noriokuresō desu.",
+      "french": "Je vais rater le train.",
+      "category": "transport",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai raté le train.", "Le train part.", "Je suis en retard."]
+    },
+    {
+      "japanese": "書類にハンコを押しました。",
+      "romaji": "Shorui ni hanko o oshimashita.",
+      "french": "J'ai tamponné le document.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais tamponner.", "Le document est prêt.", "J'ai signé."]
+    },
+    {
+      "japanese": "夕方になると涼しくなります。",
+      "romaji": "Yūgata ni naru to suzushiku narimasu.",
+      "french": "Le soir, il fait plus frais.",
+      "category": "time",
+      "difficulty": 3,
+      "wrong_answers": ["Le soir il fait frais.", "Il fait frais.", "J'aime le soir."]
+    },
+    {
+      "japanese": "梅雨に入りました。",
+      "romaji": "Tsuyu ni hairimashita.",
+      "french": "La saison des pluies a commencé.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["C'est la saison des pluies.", "Il pleut beaucoup.", "J'aime la pluie."]
+    },
+    {
+      "japanese": "ビリヤードをするのが好きです。",
+      "romaji": "Biriyādo o suru no ga suki desu.",
+      "french": "J'aime jouer au billard.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je joue au billard.", "Le billard est amusant.", "J'ai joué au billard."]
+    },
+    {
+      "japanese": "診察券を忘れました。",
+      "romaji": "Shinsatsuken o wasuremashita.",
+      "french": "J'ai oublié ma carte de consultation médicale.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai ma carte.", "La carte est importante.", "Je vais chez le médecin."]
+    },
+    {
+      "japanese": "高速道路で行きます。",
+      "romaji": "Kōsoku dōro de ikimasu.",
+      "french": "Je prends l'autoroute.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["L'autoroute est rapide.", "Je conduis sur l'autoroute.", "J'aime conduire."]
+    },
+    {
+      "japanese": "それは困りましたね。",
+      "romaji": "Sore wa komarimashita ne.",
+      "french": "C'est embêtant ça.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Quel dommage.", "C'est ennuyeux.", "Je suis désolé."]
+    },
+    {
+      "japanese": "新聞を取りに行きます。",
+      "romaji": "Shinbun o tori ni ikimasu.",
+      "french": "Je vais chercher le journal.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je lis le journal.", "Le journal est arrivé.", "J'aime lire."]
+    },
+    {
+      "japanese": "俳句を詠むのが好きです。",
+      "romaji": "Haiku o yomu no ga suki desu.",
+      "french": "J'aime composer des haïkus.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je lis des haïkus.", "Les haïkus sont courts.", "J'écris des poèmes."]
+    },
+    {
+      "japanese": "義母と仲が良いです。",
+      "romaji": "Gibo to naka ga yoi desu.",
+      "french": "Je m'entends bien avec ma belle-mère.",
+      "category": "family",
+      "difficulty": 3,
+      "wrong_answers": ["Ma belle-mère est gentille.", "J'aime ma belle-mère.", "Ma belle-mère habite ici."]
+    },
+    {
+      "japanese": "参考書を探しています。",
+      "romaji": "Sankōsho o sagashite imasu.",
+      "french": "Je cherche un manuel de référence.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai un manuel.", "Le manuel est cher.", "Je veux acheter un livre."]
+    },
+    {
+      "japanese": "アレルギーがあるのですが。",
+      "romaji": "Arerugī ga aru no desu ga.",
+      "french": "J'ai des allergies.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Je suis allergique.", "L'allergie est grave.", "Je ne peux pas manger ça."]
+    },
+    {
+      "japanese": "消費税込みですか。",
+      "romaji": "Shōhizei komi desu ka.",
+      "french": "Est-ce que la taxe est incluse ?",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["La taxe n'est pas incluse.", "C'est cher.", "Combien ça coûte ?"]
+    },
+    {
+      "japanese": "目的地まであと何分ですか。",
+      "romaji": "Mokutekichi made ato nanpun desu ka.",
+      "french": "Combien de minutes reste-t-il jusqu'à la destination ?",
+      "category": "transport",
+      "difficulty": 3,
+      "wrong_answers": ["Nous sommes arrivés.", "C'est loin.", "Je suis fatigué."]
+    },
+    {
+      "japanese": "資料をコピーしました。",
+      "romaji": "Shiryō o kopī shimashita.",
+      "french": "J'ai photocopié les documents.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais photocopier.", "Les documents sont prêts.", "J'ai besoin de documents."]
+    },
+    {
+      "japanese": "平日は忙しいです。",
+      "romaji": "Heijitsu wa isogashii desu.",
+      "french": "Les jours de semaine je suis occupé.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Aujourd'hui je suis occupé.", "Le week-end je suis libre.", "Je travaille beaucoup."]
+    },
+    {
+      "japanese": "日差しが強いです。",
+      "romaji": "Hizashi ga tsuyoi desu.",
+      "french": "Le soleil est fort.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["Il fait chaud.", "Le soleil brille.", "Il fait beau."]
+    },
+    {
+      "japanese": "ドライブが好きです。",
+      "romaji": "Doraibu ga suki desu.",
+      "french": "J'aime conduire.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je conduis souvent.", "Je vais en voiture.", "J'ai une voiture."]
+    },
+    {
+      "japanese": "骨折してしまいました。",
+      "romaji": "Kossetsu shite shimaimashita.",
+      "french": "Je me suis cassé un os.",
+      "category": "health",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai mal.", "Je suis blessé.", "Je vais à l'hôpital."]
+    },
+    {
+      "japanese": "史跡を訪ねました。",
+      "romaji": "Shiseki o tazunemashita.",
+      "french": "J'ai visité un site historique.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Le site est ancien.", "J'aime l'histoire.", "Je vais au musée."]
+    },
+    {
+      "japanese": "お手数ですが。",
+      "romaji": "Otesū desu ga.",
+      "french": "Je suis désolé de vous déranger.",
+      "category": "conversation",
+      "difficulty": 3,
+      "wrong_answers": ["Excusez-moi.", "S'il vous plaît.", "Merci beaucoup."]
+    },
+    {
+      "japanese": "カーテンを閉めました。",
+      "romaji": "Kāten o shimemashita.",
+      "french": "J'ai fermé les rideaux.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais fermer les rideaux.", "Les rideaux sont fermés.", "Il fait sombre."]
+    },
+    {
+      "japanese": "マジックを見るのが好きです。",
+      "romaji": "Majikku o miru no ga suki desu.",
+      "french": "J'aime regarder des tours de magie.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je fais de la magie.", "La magie est incroyable.", "J'ai vu un magicien."]
+    },
+    {
+      "japanese": "連れ子がいます。",
+      "romaji": "Tsureko ga imasu.",
+      "french": "J'ai un beau-fils/une belle-fille.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai un enfant.", "Mon enfant est grand.", "Ma famille est grande."]
+    },
+    {
+      "japanese": "聴講生として授業に出ています。",
+      "romaji": "Chōkōsei to shite jugyō ni dete imasu.",
+      "french": "J'assiste au cours en tant qu'auditeur libre.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["Je suis étudiant.", "Je vais en cours.", "Le cours est intéressant."]
+    },
+    {
+      "japanese": "お通しは何ですか。",
+      "romaji": "Otōshi wa nan desu ka.",
+      "french": "Qu'est-ce que l'apéritif ?",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["L'apéritif est bon.", "Je veux un apéritif.", "C'est délicieux."]
+    },
+    {
+      "japanese": "現金で払います。",
+      "romaji": "Genkin de haraimasu.",
+      "french": "Je paie en espèces.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai de l'argent.", "Je veux payer.", "C'est combien ?"]
+    },
+    {
+      "japanese": "見晴らしがいいです。",
+      "romaji": "Miharashi ga ii desu.",
+      "french": "La vue est magnifique.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime la vue.", "C'est beau.", "La vue est jolie."]
+    },
+    {
+      "japanese": "お名前を伺ってもよろしいですか。",
+      "romaji": "Onamae o ukagatte mo yoroshii desu ka.",
+      "french": "Puis-je vous demander votre nom ?",
+      "category": "conversation",
+      "difficulty": 3,
+      "wrong_answers": ["Comment vous appelez-vous ?", "Quel est votre nom ?", "Je m'appelle..."]
+    },
+    {
+      "japanese": "食器を片付けました。",
+      "romaji": "Shokki o katazukemashita.",
+      "french": "J'ai rangé la vaisselle.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais ranger.", "La vaisselle est propre.", "J'aime ranger."]
+    },
+    {
+      "japanese": "星座に興味があります。",
+      "romaji": "Seiza ni kyōmi ga arimasu.",
+      "french": "Je suis intéressé par les constellations.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime les étoiles.", "Les constellations sont belles.", "Je regarde le ciel."]
+    },
+    {
+      "japanese": "遠縁の親戚です。",
+      "romaji": "Tōen no shinseki desu.",
+      "french": "C'est un parent éloigné.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["C'est ma famille.", "J'ai de la famille.", "Mon parent habite loin."]
+    },
+    {
+      "japanese": "出席を取ります。",
+      "romaji": "Shusseki o torimasu.",
+      "french": "Je fais l'appel.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["Je suis présent.", "L'appel est fait.", "Je réponds à l'appel."]
+    },
+    {
+      "japanese": "お勧めの料理は何ですか。",
+      "romaji": "Osusume no ryōri wa nan desu ka.",
+      "french": "Quel plat recommandez-vous ?",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Ce plat est recommandé.", "J'aime ce plat.", "Le plat est bon."]
+    },
+    {
+      "japanese": "割引券を使いました。",
+      "romaji": "Waribikiken o tsukaimashita.",
+      "french": "J'ai utilisé un coupon de réduction.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai un coupon.", "Le coupon est valide.", "C'est moins cher."]
+    },
+    {
+      "japanese": "ルートを確認しました。",
+      "romaji": "Rūto o kakunin shimashita.",
+      "french": "J'ai vérifié l'itinéraire.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je vérifie le chemin.", "L'itinéraire est bon.", "Je connais le chemin."]
+    },
+    {
+      "japanese": "名刺を交換しました。",
+      "romaji": "Meishi o kōkan shimashita.",
+      "french": "J'ai échangé des cartes de visite.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai une carte de visite.", "Je donne ma carte.", "La carte est importante."]
+    },
+    {
+      "japanese": "夏至が近づいています。",
+      "romaji": "Geshi ga chikazuite imasu.",
+      "french": "Le solstice d'été approche.",
+      "category": "time",
+      "difficulty": 3,
+      "wrong_answers": ["C'est le solstice d'été.", "L'été arrive.", "Les jours sont longs."]
+    },
+    {
+      "japanese": "霜が降りました。",
+      "romaji": "Shimo ga orimashita.",
+      "french": "Il y a eu du givre.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["Il gèle.", "Il fait très froid.", "Il neige."]
+    },
+    {
+      "japanese": "クロスワードパズルをするのが好きです。",
+      "romaji": "Kurosuwādo pazuru o suru no ga suki desu.",
+      "french": "J'aime faire des mots croisés.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je fais des puzzles.", "Les mots croisés sont difficiles.", "J'ai fini le puzzle."]
+    },
+    {
+      "japanese": "手術を受けることになりました。",
+      "romaji": "Shujutsu o ukeru koto ni narimashita.",
+      "french": "Je vais subir une opération.",
+      "category": "health",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai eu une opération.", "L'opération est finie.", "Je suis à l'hôpital."]
+    },
+    {
+      "japanese": "展望台から景色を見ました。",
+      "romaji": "Tenbōdai kara keshiki o mimashita.",
+      "french": "J'ai vu le paysage depuis l'observatoire.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Le paysage est beau.", "Je vais à l'observatoire.", "J'aime la vue."]
+    },
+    {
+      "japanese": "それはいい考えですね。",
+      "romaji": "Sore wa ii kangae desu ne.",
+      "french": "C'est une bonne idée.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["D'accord.", "Je suis d'accord.", "C'est parfait."]
+    },
+    {
+      "japanese": "郵便物を取りに行きました。",
+      "romaji": "Yūbinbutsu o tori ni ikimashita.",
+      "french": "Je suis allé chercher le courrier.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai reçu du courrier.", "Le courrier est arrivé.", "J'envoie une lettre."]
+    },
+    {
+      "japanese": "茶道を習っています。",
+      "romaji": "Sadō o naratte imasu.",
+      "french": "J'apprends la cérémonie du thé.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime le thé.", "La cérémonie est belle.", "Je bois du thé."]
+    },
+    {
+      "japanese": "同居している家族がいます。",
+      "romaji": "Dōkyo shite iru kazoku ga imasu.",
+      "french": "J'ai de la famille qui vit avec moi.",
+      "category": "family",
+      "difficulty": 3,
+      "wrong_answers": ["Ma famille habite ici.", "J'ai une grande famille.", "Ma famille est proche."]
+    },
+    {
+      "japanese": "補習を受けています。",
+      "romaji": "Hoshū o ukete imasu.",
+      "french": "Je prends des cours de rattrapage.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai raté.", "Je vais au cours.", "Les cours sont difficiles."]
+    },
+    {
+      "japanese": "賞味期限を確認してください。",
+      "romaji": "Shōmi kigen o kakunin shite kudasai.",
+      "french": "Vérifiez la date de péremption s'il vous plaît.",
+      "category": "food",
+      "difficulty": 3,
+      "wrong_answers": ["La date est passée.", "C'est périmé.", "Je vérifie la date."]
+    },
+    {
+      "japanese": "分割払いはできますか。",
+      "romaji": "Bunkatsu barai wa dekimasu ka.",
+      "french": "Puis-je payer en plusieurs fois ?",
+      "category": "shopping",
+      "difficulty": 3,
+      "wrong_answers": ["Je paie en plusieurs fois.", "C'est possible.", "Le paiement est fait."]
+    },
+    {
+      "japanese": "通勤時間は一時間です。",
+      "romaji": "Tsūkin jikan wa ichijikan desu.",
+      "french": "Mon temps de trajet est d'une heure.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais au travail.", "Le trajet est long.", "Je prends le train."]
+    },
+    {
+      "japanese": "会社を辞めることにしました。",
+      "romaji": "Kaisha o yameru koto ni shimashita.",
+      "french": "J'ai décidé de quitter l'entreprise.",
+      "category": "work",
+      "difficulty": 3,
+      "wrong_answers": ["Je vais quitter.", "J'ai quitté l'entreprise.", "Je travaille encore."]
+    },
+    {
+      "japanese": "朝晩冷え込みます。",
+      "romaji": "Asaban hiekomimasu.",
+      "french": "Il fait froid le matin et le soir.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["Il fait froid.", "Le matin il fait frais.", "Il gèle."]
+    },
+    {
+      "japanese": "パン作りを始めました。",
+      "romaji": "Pan dzukuri o hajimemashita.",
+      "french": "J'ai commencé à faire du pain.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je fais du pain.", "J'aime faire du pain.", "Le pain est bon."]
+    },
+    {
+      "japanese": "持病があります。",
+      "romaji": "Jibyō ga arimasu.",
+      "french": "J'ai une maladie chronique.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Je suis malade.", "J'ai mal.", "Je vais chez le médecin."]
+    },
+    {
+      "japanese": "待ち合わせ場所を決めました。",
+      "romaji": "Machiawase basho o kimemashita.",
+      "french": "J'ai décidé du lieu de rendez-vous.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["On se retrouve où ?", "Le rendez-vous est fixé.", "Je vais au rendez-vous."]
+    },
+    {
+      "japanese": "お大事になさってください。",
+      "romaji": "Odaiji ni nasatte kudasai.",
+      "french": "Prenez soin de vous.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Reposez-vous bien.", "Bon rétablissement.", "À bientôt."]
+    },
+    {
+      "japanese": "玄関の鍵を閉めました。",
+      "romaji": "Genkan no kagi o shimemashita.",
+      "french": "J'ai fermé la porte d'entrée à clé.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais fermer à clé.", "La porte est fermée.", "J'ai oublié de fermer."]
+    },
+    {
+      "japanese": "競馬に興味があります。",
+      "romaji": "Keiba ni kyōmi ga arimasu.",
+      "french": "Je suis intéressé par les courses de chevaux.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime les chevaux.", "Je vais aux courses.", "Les courses sont excitantes."]
+    },
+    {
+      "japanese": "姻戚関係があります。",
+      "romaji": "Inseki kankei ga arimasu.",
+      "french": "Nous sommes liés par alliance.",
+      "category": "family",
+      "difficulty": 3,
+      "wrong_answers": ["Nous sommes parents.", "C'est ma famille.", "Nous sommes proches."]
+    },
+    {
+      "japanese": "中間試験が近づいています。",
+      "romaji": "Chūkan shiken ga chikazuite imasu.",
+      "french": "L'examen de mi-parcours approche.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["L'examen est demain.", "J'ai passé l'examen.", "Je prépare l'examen."]
+    },
+    {
+      "japanese": "食べ放題のお店に行きました。",
+      "romaji": "Tabehōdai no omise ni ikimashita.",
+      "french": "Je suis allé dans un restaurant à volonté.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Le restaurant est bon.", "Je mange beaucoup.", "J'aime ce restaurant."]
+    },
+    {
+      "japanese": "領収書をください。",
+      "romaji": "Ryōshūsho o kudasai.",
+      "french": "Donnez-moi un reçu s'il vous plaît.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai besoin d'un reçu.", "Le reçu est important.", "Merci pour le reçu."]
+    },
+    {
+      "japanese": "終点まで行きます。",
+      "romaji": "Shūten made ikimasu.",
+      "french": "Je vais jusqu'au terminus.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Le terminus est loin.", "Je descends ici.", "C'est le dernier arrêt."]
+    },
+    {
+      "japanese": "転勤が決まりました。",
+      "romaji": "Tenkin ga kimarimashita.",
+      "french": "Ma mutation a été décidée.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais être muté.", "Je change de poste.", "Je travaille ailleurs."]
+    },
+    {
+      "japanese": "日の出を見に行きました。",
+      "romaji": "Hinode o mi ni ikimashita.",
+      "french": "Je suis allé voir le lever du soleil.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Le soleil se lève.", "J'ai vu le soleil.", "C'était beau."]
+    },
+    {
+      "japanese": "霧雨が降っています。",
+      "romaji": "Kiriame ga futte imasu.",
+      "french": "Il pleut légèrement.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["Il pleut.", "Il y a du brouillard.", "Il fait humide."]
+    },
+    {
+      "japanese": "将棋を指すのが好きです。",
+      "romaji": "Shōgi o sasu no ga suki desu.",
+      "french": "J'aime jouer au shogi.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je joue au shogi.", "Le shogi est difficile.", "J'ai gagné."]
+    },
+    {
+      "japanese": "副作用が出ました。",
+      "romaji": "Fukusayō ga demashita.",
+      "french": "J'ai eu des effets secondaires.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Les effets sont forts.", "Je suis malade.", "Les médicaments sont forts."]
+    },
+    {
+      "japanese": "名所を巡りました。",
+      "romaji": "Meisho o megurimashita.",
+      "french": "J'ai visité des sites célèbres.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais visiter.", "Les sites sont beaux.", "J'aime voyager."]
+    },
+    {
+      "japanese": "その節はお世話になりました。",
+      "romaji": "Sono setsu wa osewa ni narimashita.",
+      "french": "Merci pour votre aide à cette époque.",
+      "category": "conversation",
+      "difficulty": 3,
+      "wrong_answers": ["Merci beaucoup.", "Je vous remercie.", "C'était bien."]
+    },
+    {
+      "japanese": "ペットに餌をやりました。",
+      "romaji": "Petto ni esa o yarimashita.",
+      "french": "J'ai nourri l'animal de compagnie.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais nourrir.", "Mon animal a faim.", "J'ai un animal."]
+    },
+    {
+      "japanese": "囲碁を打つのが好きです。",
+      "romaji": "Igo o utsu no ga suki desu.",
+      "french": "J'aime jouer au go.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je joue au go.", "Le go est difficile.", "J'ai gagné."]
+    },
+    {
+      "japanese": "継父と暮らしています。",
+      "romaji": "Keifu to kurashite imasu.",
+      "french": "Je vis avec mon beau-père.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Mon beau-père est gentil.", "J'ai un beau-père.", "Mon père habite ici."]
+    },
+    {
+      "japanese": "夏期講習に申し込みました。",
+      "romaji": "Kaki kōshū ni mōshikomimashita.",
+      "french": "Je me suis inscrit aux cours d'été.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["Les cours commencent.", "J'aime les cours d'été.", "Les cours sont intéressants."]
+    },
+    {
+      "japanese": "辛さを調節してください。",
+      "romaji": "Karasa o chōsetsu shite kudasai.",
+      "french": "Ajustez le piquant s'il vous plaît.",
+      "category": "food",
+      "difficulty": 3,
+      "wrong_answers": ["C'est trop piquant.", "Je n'aime pas le piquant.", "C'est délicieux."]
+    },
+    {
+      "japanese": "ギフト券を買いました。",
+      "romaji": "Gifutoken o kaimashita.",
+      "french": "J'ai acheté un bon-cadeau.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Je veux un bon-cadeau.", "Le bon-cadeau est pratique.", "C'est un cadeau."]
+    },
+    {
+      "japanese": "乗車券を見せてください。",
+      "romaji": "Jōshaken o misete kudasai.",
+      "french": "Montrez votre billet de train s'il vous plaît.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai mon billet.", "Je vais acheter un billet.", "Le billet est cher."]
+    },
+    {
+      "japanese": "職場の雰囲気が良いです。",
+      "romaji": "Shokuba no fun'iki ga yoi desu.",
+      "french": "L'ambiance au travail est bonne.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime mon travail.", "Le travail est agréable.", "Mes collègues sont sympas."]
+    },
+    {
+      "japanese": "連休が楽しみです。",
+      "romaji": "Renkyū ga tanoshimi desu.",
+      "french": "J'ai hâte d'avoir le long week-end.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Le week-end arrive.", "J'aime les vacances.", "Je me repose."]
+    },
+    {
+      "japanese": "強風注意報が出ています。",
+      "romaji": "Kyōfū chūihō ga dete imasu.",
+      "french": "Un avis de vent fort a été émis.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["Le vent est fort.", "Il y a une alerte.", "Faites attention."]
+    },
+    {
+      "japanese": "クイズ番組を見るのが好きです。",
+      "romaji": "Kuizu bangumi o miru no ga suki desu.",
+      "french": "J'aime regarder les jeux télévisés.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je regarde la télé.", "Les jeux sont amusants.", "J'ai gagné le jeu."]
+    },
+    {
+      "japanese": "定期健診を受けました。",
+      "romaji": "Teiki kenshin o ukemashita.",
+      "french": "J'ai passé un bilan de santé régulier.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais passer un bilan.", "Le bilan est bon.", "Je suis en bonne santé."]
+    },
+    {
+      "japanese": "城跡を見学しました。",
+      "romaji": "Jōseki o kengaku shimashita.",
+      "french": "J'ai visité les ruines d'un château.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Le château est ancien.", "J'aime l'histoire.", "Le château est grand."]
+    },
+    {
+      "japanese": "お時間よろしいですか。",
+      "romaji": "Ojikan yoroshii desu ka.",
+      "french": "Avez-vous un moment ?",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["Je n'ai pas le temps.", "Quelle heure est-il ?", "Je suis occupé."]
+    },
+    {
+      "japanese": "ベランダで洗濯物を干しました。",
+      "romaji": "Beranda de sentakumono o hoshimashita.",
+      "french": "J'ai étendu le linge sur le balcon.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais étendre le linge.", "Le linge sèche.", "Le balcon est grand."]
+    },
+    {
+      "japanese": "ドラマを見るのが好きです。",
+      "romaji": "Dorama o miru no ga suki desu.",
+      "french": "J'aime regarder des séries télé.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je regarde une série.", "La série est intéressante.", "J'ai fini la série."]
+    },
+    {
+      "japanese": "実の兄弟ではありません。",
+      "romaji": "Jitsu no kyōdai dewa arimasen.",
+      "french": "Nous ne sommes pas frères de sang.",
+      "category": "family",
+      "difficulty": 3,
+      "wrong_answers": ["Nous sommes frères.", "J'ai un frère.", "Mon frère est là."]
+    },
+    {
+      "japanese": "通知表をもらいました。",
+      "romaji": "Tsūchihyō o moraimashita.",
+      "french": "J'ai reçu mon bulletin scolaire.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["Le bulletin est bon.", "J'ai de bonnes notes.", "Je vais avoir mon bulletin."]
+    },
+    {
+      "japanese": "のどが渇きました。",
+      "romaji": "Nodo ga kawakimashita.",
+      "french": "J'ai soif.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Je veux boire.", "J'ai bu de l'eau.", "Ma gorge est sèche."]
+    },
+    {
+      "japanese": "送料は無料ですか。",
+      "romaji": "Sōryō wa muryō desu ka.",
+      "french": "Les frais de port sont-ils gratuits ?",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["C'est gratuit.", "Je veux commander.", "L'envoi est rapide."]
+    },
+    {
+      "japanese": "片道切符を買いました。",
+      "romaji": "Katamichi kippu o kaimashita.",
+      "french": "J'ai acheté un aller simple.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais acheter un billet.", "Le billet est cher.", "Je rentre comment ?"]
+    },
+    {
+      "japanese": "研修を受けています。",
+      "romaji": "Kenshū o ukete imasu.",
+      "french": "Je suis en formation.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["La formation est finie.", "J'aime la formation.", "Je vais en formation."]
+    },
+    {
+      "japanese": "週明けに会議があります。",
+      "romaji": "Shūake ni kaigi ga arimasu.",
+      "french": "Il y a une réunion en début de semaine.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["La réunion est aujourd'hui.", "Je vais à la réunion.", "La semaine commence."]
+    },
+    {
+      "japanese": "気圧が低いです。",
+      "romaji": "Kiatsu ga hikui desu.",
+      "french": "La pression atmosphérique est basse.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["Il va pleuvoir.", "La météo est mauvaise.", "J'ai mal à la tête."]
+    },
+    {
+      "japanese": "ジョギングを日課にしています。",
+      "romaji": "Jogingu o nikka ni shite imasu.",
+      "french": "Je fais du jogging quotidiennement.",
+      "category": "hobby",
+      "difficulty": 3,
+      "wrong_answers": ["Je cours tous les jours.", "J'aime courir.", "Le jogging est bon pour la santé."]
+    },
+    {
+      "japanese": "処方箋をもらいました。",
+      "romaji": "Shohōsen o moraimashita.",
+      "french": "J'ai reçu une ordonnance.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais à la pharmacie.", "J'ai des médicaments.", "Le médecin m'a examiné."]
+    },
+    {
+      "japanese": "道が混雑しています。",
+      "romaji": "Michi ga konzatsu shite imasu.",
+      "french": "La route est encombrée.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Il y a beaucoup de voitures.", "Je suis coincé.", "La circulation est fluide."]
+    },
+    {
+      "japanese": "了解しました。",
+      "romaji": "Ryōkai shimashita.",
+      "french": "Compris.",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["D'accord.", "Oui.", "Merci."]
+    },
+    {
+      "japanese": "宅配便が届きました。",
+      "romaji": "Takuhaibin ga todokimashita.",
+      "french": "Le colis a été livré.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["J'attends un colis.", "Je vais envoyer un colis.", "Le colis arrive demain."]
+    },
+    {
+      "japanese": "アニメを見るのが好きです。",
+      "romaji": "Anime o miru no ga suki desu.",
+      "french": "J'aime regarder des dessins animés.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je regarde un anime.", "L'anime est bien.", "J'ai fini l'anime."]
+    },
+    {
+      "japanese": "血縁関係はありません。",
+      "romaji": "Ketsuen kankei wa arimasen.",
+      "french": "Nous n'avons pas de lien de sang.",
+      "category": "family",
+      "difficulty": 3,
+      "wrong_answers": ["Nous sommes parents.", "C'est ma famille.", "Nous sommes liés."]
+    },
+    {
+      "japanese": "期末試験が終わりました。",
+      "romaji": "Kimatsu shiken ga owarimashita.",
+      "french": "L'examen de fin de semestre est terminé.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["L'examen commence.", "Je prépare l'examen.", "L'examen était difficile."]
+    },
+    {
+      "japanese": "持ち帰りできますか。",
+      "romaji": "Mochikaeri dekimasu ka.",
+      "french": "Puis-je emporter ?",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais emporter.", "C'est à emporter.", "Je mange ici."]
+    },
+    {
+      "japanese": "在庫切れです。",
+      "romaji": "Zaikogire desu.",
+      "french": "C'est en rupture de stock.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Il n'y en a plus.", "Je veux acheter.", "Quand sera-ce disponible ?"]
+    },
+    {
+      "japanese": "往復切符の方が安いです。",
+      "romaji": "Ōfuku kippu no hō ga yasui desu.",
+      "french": "Un aller-retour est moins cher.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["L'aller-retour est cher.", "Je prends un aller-retour.", "C'est moins cher."]
+    },
+    {
+      "japanese": "退職金をもらいました。",
+      "romaji": "Taishokukin o moraimashita.",
+      "french": "J'ai reçu une prime de départ.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais partir.", "J'ai quitté mon travail.", "La prime est importante."]
+    },
+    {
+      "japanese": "年度末は忙しいです。",
+      "romaji": "Nendomatsu wa isogashii desu.",
+      "french": "La fin d'année fiscale est occupée.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Je suis occupé.", "L'année se termine.", "Je travaille beaucoup."]
+    },
+    {
+      "japanese": "黄砂が飛んでいます。",
+      "romaji": "Kōsa ga tonde imasu.",
+      "french": "Il y a du sable jaune dans l'air.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["L'air est sale.", "Il y a du vent.", "Il fait mauvais."]
+    },
+    {
+      "japanese": "コレクションをしています。",
+      "romaji": "Korekushon o shite imasu.",
+      "french": "Je fais une collection.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai une collection.", "Je collectionne des timbres.", "Ma collection est grande."]
+    },
+    {
+      "japanese": "人間ドックを受けました。",
+      "romaji": "Ningen dokku o ukemashita.",
+      "french": "J'ai passé un bilan de santé complet.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais passer un bilan.", "Le bilan est important.", "Je suis en bonne santé."]
+    },
+    {
+      "japanese": "迷子になってしまいました。",
+      "romaji": "Maigo ni natte shimaimashita.",
+      "french": "Je me suis perdu.",
+      "category": "places",
+      "difficulty": 3,
+      "wrong_answers": ["Je suis perdu.", "Où suis-je ?", "Je ne trouve pas le chemin."]
+    },
+    {
+      "japanese": "おっしゃる通りです。",
+      "romaji": "Ossharu tōri desu.",
+      "french": "C'est exactement ce que vous dites.",
+      "category": "conversation",
+      "difficulty": 3,
+      "wrong_answers": ["Vous avez raison.", "Je suis d'accord.", "C'est vrai."]
+    },
+    {
+      "japanese": "ごみの分別をしました。",
+      "romaji": "Gomi no bunbetsu o shimashita.",
+      "french": "J'ai trié les déchets.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais trier.", "Les déchets sont triés.", "Le tri est important."]
+    },
+    {
+      "japanese": "コンサートに行くのが好きです。",
+      "romaji": "Konsāto ni iku no ga suki desu.",
+      "french": "J'aime aller aux concerts.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais au concert.", "Le concert était bien.", "J'aime la musique."]
+    },
+    {
+      "japanese": "親族一同が集まりました。",
+      "romaji": "Shinzoku ichidō ga atsumarimashita.",
+      "french": "Toute la famille s'est réunie.",
+      "category": "family",
+      "difficulty": 3,
+      "wrong_answers": ["Ma famille est grande.", "Nous nous réunissons.", "J'ai beaucoup de famille."]
+    },
+    {
+      "japanese": "遅刻届を出しました。",
+      "romaji": "Chikoku todoke o dashimashita.",
+      "french": "J'ai soumis un avis de retard.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["Je suis en retard.", "Je vais être en retard.", "J'ai une excuse."]
+    },
+    {
+      "japanese": "予約制ですか。",
+      "romaji": "Yoyakusei desu ka.",
+      "french": "Est-ce sur réservation ?",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Je veux réserver.", "J'ai réservé.", "La réservation est obligatoire."]
+    },
+    {
+      "japanese": "品切れになりました。",
+      "romaji": "Shinagire ni narimashita.",
+      "french": "C'est épuisé.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Il n'y en a plus.", "Je veux acheter.", "C'est en rupture."]
+    },
+    {
+      "japanese": "満席です。",
+      "romaji": "Manseki desu.",
+      "french": "C'est complet.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Il n'y a plus de place.", "Je vais attendre.", "Je suis debout."]
+    },
+    {
+      "japanese": "昇給しました。",
+      "romaji": "Shōkyū shimashita.",
+      "french": "J'ai eu une augmentation.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais avoir une augmentation.", "Mon salaire a augmenté.", "Je veux une augmentation."]
+    },
+    {
+      "japanese": "日没後は冷えます。",
+      "romaji": "Nichibotsugo wa hiemasu.",
+      "french": "Il fait froid après le coucher du soleil.",
+      "category": "time",
+      "difficulty": 3,
+      "wrong_answers": ["Le soleil se couche.", "Il fait froid le soir.", "La nuit tombe."]
+    },
+    {
+      "japanese": "花粉が飛んでいます。",
+      "romaji": "Kafun ga tonde imasu.",
+      "french": "Le pollen vole dans l'air.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai une allergie.", "Le printemps arrive.", "Il fait beau."]
+    },
+    {
+      "japanese": "プラモデルを作るのが好きです。",
+      "romaji": "Puramoteru o tsukuru no ga suki desu.",
+      "french": "J'aime construire des maquettes.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je fais des maquettes.", "Les maquettes sont difficiles.", "J'ai fini la maquette."]
+    },
+    {
+      "japanese": "保険証を持ってきてください。",
+      "romaji": "Hokenshō o motte kite kudasai.",
+      "french": "Apportez votre carte d'assurance s'il vous plaît.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai ma carte.", "J'ai oublié ma carte.", "La carte est importante."]
+    },
+    {
+      "japanese": "立ち入り禁止です。",
+      "romaji": "Tachiiri kinshi desu.",
+      "french": "L'accès est interdit.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["On ne peut pas entrer.", "C'est fermé.", "C'est dangereux."]
+    },
+    {
+      "japanese": "承りました。",
+      "romaji": "Uketamawarimashita.",
+      "french": "J'ai bien noté (très formel).",
+      "category": "conversation",
+      "difficulty": 3,
+      "wrong_answers": ["D'accord.", "J'ai compris.", "Merci."]
+    },
+    {
+      "japanese": "電球を交換しました。",
+      "romaji": "Denkyū o kōkan shimashita.",
+      "french": "J'ai changé l'ampoule.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais changer l'ampoule.", "L'ampoule est cassée.", "Il fait sombre."]
+    },
+    {
+      "japanese": "ミュージカルを見に行きたいです。",
+      "romaji": "Myūjikaru o mi ni ikitai desu.",
+      "french": "Je veux aller voir une comédie musicale.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais voir un musical.", "Le musical était bien.", "J'aime les comédies musicales."]
+    },
+    {
+      "japanese": "一人っ子です。",
+      "romaji": "Hitorikko desu.",
+      "french": "Je suis enfant unique.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai un frère.", "Je suis seul.", "Ma famille est petite."]
+    },
+    {
+      "japanese": "履修登録をしました。",
+      "romaji": "Rishū tōroku o shimashita.",
+      "french": "Je me suis inscrit aux cours.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["Je vais m'inscrire.", "Les cours commencent.", "J'ai choisi mes cours."]
+    },
+    {
+      "japanese": "アレルギー表示を確認してください。",
+      "romaji": "Arerugī hyōji o kakunin shite kudasai.",
+      "french": "Vérifiez l'étiquetage des allergènes s'il vous plaît.",
+      "category": "food",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai une allergie.", "C'est important.", "Je vérifie toujours."]
+    },
+    {
+      "japanese": "クーポンは使えますか。",
+      "romaji": "Kūpon wa tsukaemasu ka.",
+      "french": "Puis-je utiliser un coupon ?",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai un coupon.", "Le coupon est valide.", "J'utilise un coupon."]
+    },
+    {
+      "japanese": "下車駅を教えてください。",
+      "romaji": "Gesha eki o oshiete kudasai.",
+      "french": "Dites-moi à quelle station descendre s'il vous plaît.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je descends ici.", "Quelle est la prochaine station ?", "Je suis perdu."]
+    },
+    {
+      "japanese": "部署異動がありました。",
+      "romaji": "Busho idō ga arimashita.",
+      "french": "Il y a eu un changement de département.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je change de département.", "Je travaille ailleurs.", "Mon poste a changé."]
+    },
+    {
+      "japanese": "日帰り旅行に行きました。",
+      "romaji": "Higaeri ryokō ni ikimashita.",
+      "french": "Je suis allé en excursion d'une journée.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais voyager.", "Le voyage était court.", "J'aime voyager."]
+    },
+    {
+      "japanese": "気象警報が発令されました。",
+      "romaji": "Kishō keihō ga hatsurei saremashita.",
+      "french": "Une alerte météorologique a été émise.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["Il y a une alerte.", "La météo est mauvaise.", "C'est dangereux."]
+    },
+    {
+      "japanese": "パズルをするのが好きです。",
+      "romaji": "Pazuru o suru no ga suki desu.",
+      "french": "J'aime faire des puzzles.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je fais un puzzle.", "Les puzzles sont difficiles.", "J'ai fini le puzzle."]
+    },
+    {
+      "japanese": "かかりつけの医者がいます。",
+      "romaji": "Kakaritsuke no isha ga imasu.",
+      "french": "J'ai un médecin traitant.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais chez le médecin.", "Mon médecin est bon.", "J'ai besoin d'un médecin."]
+    },
+    {
+      "japanese": "案内図を見ました。",
+      "romaji": "Annaizu o mimashita.",
+      "french": "J'ai regardé le plan.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Où est le plan ?", "Je cherche le plan.", "Le plan est utile."]
+    },
+    {
+      "japanese": "かしこまりました。",
+      "romaji": "Kashikomarimashita.",
+      "french": "Très bien (très formel).",
+      "category": "conversation",
+      "difficulty": 2,
+      "wrong_answers": ["D'accord.", "Oui.", "Compris."]
+    },
+    {
+      "japanese": "冷蔵庫を掃除しました。",
+      "romaji": "Reizōko o sōji shimashita.",
+      "french": "J'ai nettoyé le réfrigérateur.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais nettoyer le frigo.", "Le frigo est propre.", "J'aime nettoyer."]
+    },
+    {
+      "japanese": "演劇を見に行きました。",
+      "romaji": "Engeki o mi ni ikimashita.",
+      "french": "Je suis allé voir une pièce de théâtre.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime le théâtre.", "La pièce était bien.", "Je vais au théâtre."]
+    },
+    {
+      "japanese": "跡取りがいません。",
+      "romaji": "Atotori ga imasen.",
+      "french": "Il n'y a pas d'héritier.",
+      "category": "family",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai un héritier.", "Mon fils hérite.", "La succession est importante."]
+    },
+    {
+      "japanese": "教科書を忘れてしまいました。",
+      "romaji": "Kyōkasho o wasurete shimaimashita.",
+      "french": "J'ai complètement oublié mon manuel.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai oublié mon livre.", "Je n'ai pas de manuel.", "Mon manuel est à la maison."]
+    },
+    {
+      "japanese": "温め直してもらえますか。",
+      "romaji": "Atatame naoshite moraemasuka.",
+      "french": "Pouvez-vous réchauffer à nouveau ?",
+      "category": "food",
+      "difficulty": 3,
+      "wrong_answers": ["Je veux réchauffer.", "C'est froid.", "Réchauffez s'il vous plaît."]
+    },
+    {
+      "japanese": "会員登録をしました。",
+      "romaji": "Kaiin tōroku o shimashita.",
+      "french": "Je me suis inscrit comme membre.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Je suis membre.", "Je veux m'inscrire.", "L'inscription est gratuite."]
+    },
+    {
+      "japanese": "立っていても大丈夫です。",
+      "romaji": "Tatte ite mo daijōbu desu.",
+      "french": "Ça va même si je reste debout.",
+      "category": "transport",
+      "difficulty": 3,
+      "wrong_answers": ["Je suis debout.", "Je vais m'asseoir.", "Il n'y a pas de place."]
+    },
+    {
+      "japanese": "社員食堂で昼食を取ります。",
+      "romaji": "Shain shokudō de chūshoku o torimasu.",
+      "french": "Je déjeune à la cantine d'entreprise.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais à la cantine.", "La cantine est bonne.", "Je mange au travail."]
+    },
+    {
+      "japanese": "四季がはっきりしています。",
+      "romaji": "Shiki ga hakkiri shite imasu.",
+      "french": "Les quatre saisons sont bien marquées.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["J'aime les saisons.", "Il y a quatre saisons.", "Le climat change."]
+    },
+    {
+      "japanese": "時刻表を確認しました。",
+      "romaji": "Jikokuhyō o kakunin shimashita.",
+      "french": "J'ai vérifié l'horaire.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je cherche l'horaire.", "L'horaire a changé.", "Le train part à quelle heure ?"]
+    },
+    {
+      "japanese": "散歩するのが日課です。",
+      "romaji": "Sanpo suru no ga nikka desu.",
+      "french": "Me promener est ma routine quotidienne.",
+      "category": "hobby",
+      "difficulty": 3,
+      "wrong_answers": ["Je me promène tous les jours.", "J'aime marcher.", "La promenade est agréable."]
+    },
+    {
+      "japanese": "通院が必要です。",
+      "romaji": "Tsūin ga hitsuyō desu.",
+      "french": "Je dois aller régulièrement à l'hôpital.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais à l'hôpital.", "L'hôpital est loin.", "Je suis malade."]
+    },
+    {
+      "japanese": "防災訓練に参加しました。",
+      "romaji": "Bōsai kunren ni sanka shimashita.",
+      "french": "J'ai participé à un exercice de prévention des catastrophes.",
+      "category": "places",
+      "difficulty": 3,
+      "wrong_answers": ["L'exercice est important.", "Je vais participer.", "C'était intéressant."]
+    },
+    {
+      "japanese": "恐れ入りますが。",
+      "romaji": "Osore irimasu ga.",
+      "french": "Excusez-moi de vous déranger (très poli).",
+      "category": "conversation",
+      "difficulty": 3,
+      "wrong_answers": ["Excusez-moi.", "S'il vous plaît.", "Pardon."]
+    },
+    {
+      "japanese": "家事を分担しています。",
+      "romaji": "Kaji o buntan shite imasu.",
+      "french": "Nous partageons les tâches ménagères.",
+      "category": "daily",
+      "difficulty": 3,
+      "wrong_answers": ["Je fais le ménage.", "Les tâches sont importantes.", "Je partage avec ma famille."]
+    },
+    {
+      "japanese": "フリーマーケットに出店しました。",
+      "romaji": "Furī māketto ni shutten shimashita.",
+      "french": "J'ai participé à une brocante.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais à la brocante.", "J'aime les brocantes.", "J'ai acheté quelque chose."]
+    },
+    {
+      "japanese": "家系図を作りました。",
+      "romaji": "Kakeizu o tsukurimashita.",
+      "french": "J'ai créé un arbre généalogique.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Je veux faire un arbre.", "Ma famille est grande.", "L'arbre est complexe."]
+    },
+    {
+      "japanese": "進学先が決まりました。",
+      "romaji": "Shingakusaki ga kimarimashita.",
+      "french": "Mon école future a été décidée.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["Je vais continuer mes études.", "J'ai choisi mon école.", "Je vais à l'université."]
+    },
+    {
+      "japanese": "箸が上手に使えますね。",
+      "romaji": "Hashi ga jōzu ni tsukaemasune.",
+      "french": "Vous utilisez bien les baguettes.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["J'utilise des baguettes.", "Les baguettes sont difficiles.", "Merci."]
+    },
+    {
+      "japanese": "配達日を指定できますか。",
+      "romaji": "Haitatsuhi o shitei dekimasu ka.",
+      "french": "Puis-je spécifier la date de livraison ?",
+      "category": "shopping",
+      "difficulty": 3,
+      "wrong_answers": ["Quand livrez-vous ?", "Je veux être livré demain.", "La livraison est rapide."]
+    },
+    {
+      "japanese": "三十分遅れています。",
+      "romaji": "Sanjuppun okurete imasu.",
+      "french": "Il y a 30 minutes de retard.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je suis en retard.", "Le train est en retard.", "J'attends depuis 30 minutes."]
+    },
+    {
+      "japanese": "福利厚生が充実しています。",
+      "romaji": "Fukuri kōsei ga jūjitsu shite imasu.",
+      "french": "Les avantages sociaux sont complets.",
+      "category": "work",
+      "difficulty": 3,
+      "wrong_answers": ["L'entreprise est bonne.", "J'aime mon travail.", "Les avantages sont importants."]
+    },
+    {
+      "japanese": "月の満ち欠けを観察しました。",
+      "romaji": "Tsuki no michikake o kansatsu shimashita.",
+      "french": "J'ai observé les phases de la lune.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["La lune est belle.", "Je regarde la lune.", "C'est la pleine lune."]
+    },
+    {
+      "japanese": "ウィンドウショッピングをしました。",
+      "romaji": "Uindou shoppingu o shimashita.",
+      "french": "J'ai fait du lèche-vitrine.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je fais du shopping.", "J'ai acheté quelque chose.", "J'aime regarder les vitrines."]
+    },
+    {
+      "japanese": "再診の予約を取りました。",
+      "romaji": "Saishin no yoyaku o torimashita.",
+      "french": "J'ai pris rendez-vous pour une consultation de suivi.",
+      "category": "health",
+      "difficulty": 3,
+      "wrong_answers": ["Je vais chez le médecin.", "J'ai un rendez-vous.", "La consultation est demain."]
+    },
+    {
+      "japanese": "景勝地を訪れました。",
+      "romaji": "Keishōchi o otozuremashita.",
+      "french": "J'ai visité un site pittoresque.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Le site est beau.", "J'aime voyager.", "Le paysage est magnifique."]
+    },
+    {
+      "japanese": "お陰様で元気です。",
+      "romaji": "Okagesama de genki desu.",
+      "french": "Grâce à vous, je vais bien.",
+      "category": "conversation",
+      "difficulty": 3,
+      "wrong_answers": ["Je vais bien merci.", "Ça va bien.", "Merci de demander."]
+    },
+    {
+      "japanese": "防災グッズを準備しました。",
+      "romaji": "Bōsai guzzu o junbi shimashita.",
+      "french": "J'ai préparé un kit d'urgence.",
+      "category": "daily",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais préparer.", "C'est important.", "J'ai tout ce qu'il faut."]
+    },
+    {
+      "japanese": "フリーマーケットで掘り出し物を見つけました。",
+      "romaji": "Furī māketto de horidasimono o mitsukemashita.",
+      "french": "J'ai trouvé une bonne affaire à la brocante.",
+      "category": "shopping",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai acheté quelque chose.", "C'était bon marché.", "J'aime les brocantes."]
+    },
+    {
+      "japanese": "天気予報を見ました。",
+      "romaji": "Tenki yohō o mimashita.",
+      "french": "J'ai regardé la météo.",
+      "category": "weather",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais regarder la météo.", "La météo est bonne.", "Il va pleuvoir."]
+    },
+    {
+      "japanese": "盆栽を育てています。",
+      "romaji": "Bonsai o sodatete imasu.",
+      "french": "Je cultive des bonsaïs.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime les bonsaïs.", "Le bonsaï est petit.", "J'ai un bonsaï."]
+    },
+    {
+      "japanese": "遺産相続の話し合いをしました。",
+      "romaji": "Isan sōzoku no hanashiai o shimashita.",
+      "french": "Nous avons discuté de l'héritage.",
+      "category": "family",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai hérité.", "L'héritage est important.", "Ma famille discute."]
+    },
+    {
+      "japanese": "夏期休暇が始まります。",
+      "romaji": "Kaki kyūka ga hajimarimasu.",
+      "french": "Les vacances d'été commencent.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["Les vacances sont finies.", "J'aime les vacances.", "Je pars en vacances."]
+    },
+    {
+      "japanese": "食材を買い出しに行きました。",
+      "romaji": "Shokuzai o kaidashi ni ikimashita.",
+      "french": "Je suis allé faire les courses pour les ingrédients.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais faire les courses.", "J'ai acheté de la nourriture.", "Je cuisine ce soir."]
+    },
+    {
+      "japanese": "試着室はどこですか。",
+      "romaji": "Shichakushitsu wa doko desu ka.",
+      "french": "Où est la cabine d'essayage ?",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Je veux essayer.", "La cabine est occupée.", "Je cherche la cabine."]
+    },
+    {
+      "japanese": "始発に乗りました。",
+      "romaji": "Shihatsu ni norimashita.",
+      "french": "J'ai pris le premier train.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Le premier train part.", "Je vais prendre le premier train.", "C'est tôt."]
+    },
+    {
+      "japanese": "育児休暇を取得しました。",
+      "romaji": "Ikuji kyūka o shutoku shimashita.",
+      "french": "J'ai pris un congé parental.",
+      "category": "work",
+      "difficulty": 3,
+      "wrong_answers": ["Je vais prendre un congé.", "Le congé est important.", "J'ai un bébé."]
+    },
+    {
+      "japanese": "季節の変わり目です。",
+      "romaji": "Kisetsu no kawarime desu.",
+      "french": "C'est un changement de saison.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Les saisons changent.", "C'est le printemps.", "Le temps change."]
+    },
+    {
+      "japanese": "熱中症に気をつけてください。",
+      "romaji": "Necchūshō ni ki o tsukete kudasai.",
+      "french": "Faites attention au coup de chaleur.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai un coup de chaleur.", "Il fait très chaud.", "Je bois de l'eau."]
+    },
+    {
+      "japanese": "秋晴れの日が続いています。",
+      "romaji": "Akibare no hi ga tsuzuite imasu.",
+      "french": "Les belles journées d'automne continuent.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["Il fait beau en automne.", "J'aime l'automne.", "Le temps est stable."]
+    },
+    {
+      "japanese": "フラワーアレンジメントを習っています。",
+      "romaji": "Furawā arenjimento o naratte imasu.",
+      "french": "J'apprends l'arrangement floral.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["J'aime les fleurs.", "Je fais des arrangements.", "Les fleurs sont belles."]
+    },
+    {
+      "japanese": "世帯主は父です。",
+      "romaji": "Setainushi wa chichi desu.",
+      "french": "Le chef de famille est mon père.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Mon père travaille.", "J'habite avec mon père.", "Ma famille est grande."]
+    },
+    {
+      "japanese": "専攻を変更しました。",
+      "romaji": "Senkō o henkō shimashita.",
+      "french": "J'ai changé de spécialité.",
+      "category": "school",
+      "difficulty": 3,
+      "wrong_answers": ["J'ai une spécialité.", "Je vais changer.", "Ma spécialité est difficile."]
+    },
+    {
+      "japanese": "食べ残しを持ち帰りました。",
+      "romaji": "Tabenokoshi o mochikaeri mashita.",
+      "french": "J'ai emporté les restes.",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Je n'ai pas fini.", "C'était trop.", "Je vais emporter."]
+    },
+    {
+      "japanese": "定価販売です。",
+      "romaji": "Teika hanbai desu.",
+      "french": "C'est vendu au prix fort.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["Il n'y a pas de réduction.", "C'est cher.", "Je veux acheter."]
+    },
+    {
+      "japanese": "乗り場が変わりました。",
+      "romaji": "Noriba ga kawarimashita.",
+      "french": "Le quai a changé.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je cherche le quai.", "Où est le quai ?", "Le quai est loin."]
+    },
+    {
+      "japanese": "業務内容が変わりました。",
+      "romaji": "Gyōmu naiyō ga kawarimashita.",
+      "french": "Le contenu du travail a changé.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Mon travail est différent.", "Je fais autre chose.", "Le travail change."]
+    },
+    {
+      "japanese": "夜更かしをしてしまいました。",
+      "romaji": "Yofukashi o shite shimaimashita.",
+      "french": "Je me suis couché tard.",
+      "category": "daily",
+      "difficulty": 3,
+      "wrong_answers": ["Je me couche tard.", "J'ai mal dormi.", "Je suis fatigué."]
+    },
+    {
+      "japanese": "お盆休みに帰省します。",
+      "romaji": "Obon yasumi ni kisei shimasu.",
+      "french": "Je rentre chez moi pendant les vacances d'Obon.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["Je suis rentré.", "Les vacances arrivent.", "Je vais voir ma famille."]
+    },
+    {
+      "japanese": "降水確率が高いです。",
+      "romaji": "Kōsui kakuritsu ga takai desu.",
+      "french": "La probabilité de pluie est élevée.",
+      "category": "weather",
+      "difficulty": 3,
+      "wrong_answers": ["Il va pleuvoir.", "Il pleut beaucoup.", "La pluie est probable."]
+    },
+    {
+      "japanese": "天体観測をするのが好きです。",
+      "romaji": "Tentai kansoku o suru no ga suki desu.",
+      "french": "J'aime observer les astres.",
+      "category": "hobby",
+      "difficulty": 2,
+      "wrong_answers": ["Je regarde les étoiles.", "L'astronomie est intéressante.", "J'ai un télescope."]
+    },
+    {
+      "japanese": "症状を説明してください。",
+      "romaji": "Shōjō o setsumei shite kudasai.",
+      "french": "Expliquez vos symptômes s'il vous plaît.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["J'ai mal.", "Je suis malade.", "Quels sont vos symptômes ?"]
+    },
+    {
+      "japanese": "史料館を見学しました。",
+      "romaji": "Shiryōkan o kengaku shimashita.",
+      "french": "J'ai visité le musée d'archives historiques.",
+      "category": "places",
+      "difficulty": 2,
+      "wrong_answers": ["Le musée est intéressant.", "J'aime l'histoire.", "Je vais au musée."]
+    },
+    {
+      "japanese": "失礼ですが、お名前は。",
+      "romaji": "Shitsurei desu ga, onamae wa.",
+      "french": "Excusez-moi, mais quel est votre nom ?",
+      "category": "conversation",
+      "difficulty": 3,
+      "wrong_answers": ["Comment vous appelez-vous ?", "Je m'appelle...", "Quel est ton nom ?"]
+    },
+    {
+      "japanese": "戸締まりを確認しました。",
+      "romaji": "Tojimari o kakunin shimashita.",
+      "french": "J'ai vérifié que tout était bien fermé.",
+      "category": "daily",
+      "difficulty": 3,
+      "wrong_answers": ["Je vais fermer.", "Tout est fermé.", "J'ai fermé la porte."]
+    },
+    {
+      "japanese": "家族連れが多いです。",
+      "romaji": "Kazoku zure ga ōi desu.",
+      "french": "Il y a beaucoup de familles.",
+      "category": "family",
+      "difficulty": 2,
+      "wrong_answers": ["Ma famille est nombreuse.", "Les familles sont là.", "J'aime les familles."]
+    },
+    {
+      "japanese": "文化祭の準備をしています。",
+      "romaji": "Bunkasai no junbi o shite imasu.",
+      "french": "Je prépare le festival culturel.",
+      "category": "school",
+      "difficulty": 2,
+      "wrong_answers": ["Le festival est demain.", "J'aime le festival.", "Le festival est amusant."]
+    },
+    {
+      "japanese": "ご馳走様でした。",
+      "romaji": "Gochisōsama deshita.",
+      "french": "C'était délicieux (merci pour le repas).",
+      "category": "food",
+      "difficulty": 2,
+      "wrong_answers": ["Merci.", "C'était bon.", "J'ai bien mangé."]
+    },
+    {
+      "japanese": "キャンセル待ちです。",
+      "romaji": "Kyanseru machi desu.",
+      "french": "Je suis sur liste d'attente.",
+      "category": "shopping",
+      "difficulty": 2,
+      "wrong_answers": ["J'attends.", "C'est annulé.", "Je vais annuler."]
+    },
+    {
+      "japanese": "迂回路を通りました。",
+      "romaji": "Ukairo o tōrimashita.",
+      "french": "J'ai pris le détour.",
+      "category": "transport",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais faire un détour.", "Le chemin est bloqué.", "Je cherche un autre chemin."]
+    },
+    {
+      "japanese": "産休に入りました。",
+      "romaji": "Sankyū ni hairimashita.",
+      "french": "Je suis en congé maternité.",
+      "category": "work",
+      "difficulty": 2,
+      "wrong_answers": ["Je vais prendre un congé.", "Je suis enceinte.", "Le congé commence."]
+    },
+    {
+      "japanese": "二十四時間営業です。",
+      "romaji": "Nijūyojikan eigyō desu.",
+      "french": "C'est ouvert 24 heures sur 24.",
+      "category": "time",
+      "difficulty": 2,
+      "wrong_answers": ["C'est toujours ouvert.", "Je peux aller à tout moment.", "C'est pratique."]
+    },
+    {
+      "japanese": "息抜きが必要です。",
+      "romaji": "Ikinuki ga hitsuyō desu.",
+      "french": "J'ai besoin d'une pause.",
+      "category": "health",
+      "difficulty": 2,
+      "wrong_answers": ["Je me repose.", "Je suis fatigué.", "J'ai besoin de me détendre."]
+    }
+  ]
+}
