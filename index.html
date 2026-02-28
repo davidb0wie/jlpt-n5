@@ -514,9 +514,11 @@
                 <h1>Adjectifs</h1>
             </header>
 
-            <div class="mode-selector">
+            <div class="mode-selector mode-selector-adj">
                 <button class="mode-btn active" onclick="app.setAdjectiveMode('list')">Liste</button>
                 <button class="mode-btn" onclick="app.setAdjectiveMode('quiz')">Quiz</button>
+                <button class="mode-btn" onclick="app.setAdjectiveMode('theory')">Théorie</button>
+                <button class="mode-btn" onclick="app.setAdjectiveMode('theory-quiz')">Quiz Théorie</button>
             </div>
 
             <div id="adjective-list" class="content-area">
@@ -546,6 +548,275 @@
                 </div>
                 <div class="quiz-score">
                     <span id="adjective-quiz-score">Score: 0/0</span>
+                </div>
+            </div>
+
+            <!-- Page Théorie Adjectifs -->
+            <div id="adjective-theory" class="content-area" style="display: none;">
+
+                <!-- Section 1 : adjectifs en -i -->
+                <div class="theory-section">
+                    <h2 class="theory-title theory-title-i">い形容詞 — Adjectifs en -i</h2>
+                    <p class="theory-intro">La racine s'obtient en <strong>retirant le い final</strong>. Exemple avec <strong class="jp">大きい</strong> (ōkii — grand).</p>
+                    <table class="theory-table">
+                        <thead>
+                            <tr><th>Forme</th><th>Transformation</th><th>Exemple</th><th>Traduction</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Présent aff.</td>
+                                <td>tel quel</td>
+                                <td class="jp">大きい</td>
+                                <td>C'est grand</td>
+                            </tr>
+                            <tr>
+                                <td>Présent nég.</td>
+                                <td>い → <strong>くない</strong></td>
+                                <td class="jp">大きくない</td>
+                                <td>Ce n'est pas grand</td>
+                            </tr>
+                            <tr>
+                                <td>Passé aff.</td>
+                                <td>い → <strong>かった</strong></td>
+                                <td class="jp">大きかった</td>
+                                <td>C'était grand</td>
+                            </tr>
+                            <tr>
+                                <td>Passé nég.</td>
+                                <td>い → <strong>くなかった</strong></td>
+                                <td class="jp">大きくなかった</td>
+                                <td>Ce n'était pas grand</td>
+                            </tr>
+                            <tr>
+                                <td>Forme て</td>
+                                <td>い → <strong>くて</strong></td>
+                                <td class="jp">大きくて</td>
+                                <td>(liaison entre phrases)</td>
+                            </tr>
+                            <tr class="theory-row-highlight">
+                                <td><strong>Devant un nom</strong></td>
+                                <td>tel quel — <em>rien à ajouter</em></td>
+                                <td class="jp">大きい<span class="noun-example">部屋</span></td>
+                                <td>grande pièce</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="theory-example">
+                        <span class="jp">大きい犬がいます。</span>
+                        <span class="jp-reading">（おおきいいぬがいます）</span>
+                        <span class="fr-translation">Il y a un grand chien.</span>
+                    </div>
+                    <div class="theory-alert theory-alert-warning">
+                        <strong>⚠️ Exception : いい → se conjugue comme よい</strong>
+                        <div class="theory-exception-grid">
+                            <div><span class="jp">よくない</span> <span>pas bien ✓</span></div>
+                            <div><span class="jp theory-wrong">いくない</span> <span>✗ incorrect</span></div>
+                            <div><span class="jp">よかった</span> <span>c'était bien ✓</span></div>
+                            <div><span class="jp theory-wrong">いかった</span> <span>✗ incorrect</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="theory-divider">
+
+                <!-- Section 2 : adjectifs en -na -->
+                <div class="theory-section">
+                    <h2 class="theory-title theory-title-na">な形容詞 — Adjectifs en -na</h2>
+                    <p class="theory-intro">Exemple avec <strong class="jp">きれい</strong> (kirei — beau, propre).</p>
+                    <table class="theory-table">
+                        <thead>
+                            <tr><th>Forme</th><th>Transformation</th><th>Exemple</th><th>Traduction</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Présent aff.</td>
+                                <td>+ <strong>だ / です</strong></td>
+                                <td class="jp">きれいです</td>
+                                <td>C'est beau</td>
+                            </tr>
+                            <tr>
+                                <td>Présent nég.</td>
+                                <td>+ <strong>じゃない</strong></td>
+                                <td class="jp">きれいじゃない</td>
+                                <td>Ce n'est pas beau</td>
+                            </tr>
+                            <tr>
+                                <td>Passé aff.</td>
+                                <td>+ <strong>だった</strong></td>
+                                <td class="jp">きれいだった</td>
+                                <td>C'était beau</td>
+                            </tr>
+                            <tr>
+                                <td>Passé nég.</td>
+                                <td>+ <strong>じゃなかった</strong></td>
+                                <td class="jp">きれいじゃなかった</td>
+                                <td>Ce n'était pas beau</td>
+                            </tr>
+                            <tr>
+                                <td>Forme て</td>
+                                <td>+ <strong>で</strong></td>
+                                <td class="jp">きれいで</td>
+                                <td>(liaison entre phrases)</td>
+                            </tr>
+                            <tr class="theory-row-highlight theory-row-na">
+                                <td><strong>Devant un nom</strong></td>
+                                <td>+ <strong class="na-marker">な</strong> — OBLIGATOIRE !</td>
+                                <td class="jp">きれい<strong class="na-marker">な</strong><span class="noun-example">部屋</span></td>
+                                <td>belle pièce</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="theory-example">
+                        <span class="jp">きれい<strong class="na-marker">な</strong>花があります。</span>
+                        <span class="jp-reading">（きれいなはながあります）</span>
+                        <span class="fr-translation">Il y a de jolies fleurs. <em>← な avant le nom</em></span>
+                    </div>
+                    <div class="theory-example">
+                        <span class="jp">この花はきれいです。</span>
+                        <span class="jp-reading">（このはなはきれいです）</span>
+                        <span class="fr-translation">Cette fleur est belle. <em>← prédicat : pas de な</em></span>
+                    </div>
+                </div>
+
+                <hr class="theory-divider">
+
+                <!-- Section 3 : adjectifs pièges -->
+                <div class="theory-section">
+                    <h2 class="theory-title theory-title-trap">⚠️ Les adjectifs pièges</h2>
+                    <p class="theory-intro">Ces adjectifs finissent par un son <strong>-i ou -ki</strong> mais sont des <strong>な形容詞</strong> — on doit quand même ajouter な devant un nom !</p>
+                    <div class="tricky-adj-grid">
+                        <div class="tricky-adj-card">
+                            <div class="tricky-header">
+                                <span class="jp tricky-word">きれい</span>
+                                <span class="tricky-badge">な</span>
+                            </div>
+                            <div class="tricky-meaning">綺麗 — beau, propre</div>
+                            <div class="tricky-rule">
+                                <span class="correct-form">✓ きれい<strong>な</strong>部屋</span>
+                                <span class="wrong-form">✗ きれい部屋</span>
+                            </div>
+                            <div class="theory-example-small">
+                                <div class="jp">きれいな部屋ですね。</div>
+                                <div>C'est une belle chambre.</div>
+                            </div>
+                        </div>
+                        <div class="tricky-adj-card">
+                            <div class="tricky-header">
+                                <span class="jp tricky-word">きらい</span>
+                                <span class="tricky-badge">な</span>
+                            </div>
+                            <div class="tricky-meaning">嫌い — détester</div>
+                            <div class="tricky-rule">
+                                <span class="correct-form">✓ きらい<strong>な</strong>食べ物</span>
+                                <span class="wrong-form">✗ きらい食べ物</span>
+                            </div>
+                            <div class="theory-example-small">
+                                <div class="jp">きらいな食べ物は何ですか？</div>
+                                <div>Qu'est-ce que tu n'aimes pas manger ?</div>
+                            </div>
+                        </div>
+                        <div class="tricky-adj-card">
+                            <div class="tricky-header">
+                                <span class="jp tricky-word">ゆうめい</span>
+                                <span class="tricky-badge">な</span>
+                            </div>
+                            <div class="tricky-meaning">有名 — célèbre</div>
+                            <div class="tricky-rule">
+                                <span class="correct-form">✓ ゆうめい<strong>な</strong>人</span>
+                                <span class="wrong-form">✗ ゆうめい人</span>
+                            </div>
+                            <div class="theory-example-small">
+                                <div class="jp">有名な歌手が来ます。</div>
+                                <div>Un chanteur célèbre vient.</div>
+                            </div>
+                        </div>
+                        <div class="tricky-adj-card">
+                            <div class="tricky-header">
+                                <span class="jp tricky-word">すき</span>
+                                <span class="tricky-badge">な</span>
+                            </div>
+                            <div class="tricky-meaning">好き — aimer</div>
+                            <div class="tricky-rule">
+                                <span class="correct-form">✓ すき<strong>な</strong>食べ物</span>
+                                <span class="wrong-form">✗ すき食べ物</span>
+                            </div>
+                            <div class="theory-example-small">
+                                <div class="jp">好きな音楽は何ですか？</div>
+                                <div>Quelle musique tu aimes ?</div>
+                            </div>
+                        </div>
+                        <div class="tricky-adj-card">
+                            <div class="tricky-header">
+                                <span class="jp tricky-word">すてき</span>
+                                <span class="tricky-badge">な</span>
+                            </div>
+                            <div class="tricky-meaning">素敵 — superbe</div>
+                            <div class="tricky-rule">
+                                <span class="correct-form">✓ すてき<strong>な</strong>服</span>
+                                <span class="wrong-form">✗ すてき服</span>
+                            </div>
+                            <div class="theory-example-small">
+                                <div class="jp">素敵な服ですね。</div>
+                                <div>Ce sont de beaux habits.</div>
+                            </div>
+                        </div>
+                        <div class="tricky-adj-card">
+                            <div class="tricky-header">
+                                <span class="jp tricky-word">げんき</span>
+                                <span class="tricky-badge">な</span>
+                            </div>
+                            <div class="tricky-meaning">元気 — en forme</div>
+                            <div class="tricky-rule">
+                                <span class="correct-form">✓ げんき<strong>な</strong>子供</span>
+                                <span class="wrong-form">✗ げんき子供</span>
+                            </div>
+                            <div class="theory-example-small">
+                                <div class="jp">元気な子供ですね。</div>
+                                <div>C'est un enfant plein d'énergie.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="theory-divider">
+
+                <!-- Section 4 : mémo rapide -->
+                <div class="theory-section">
+                    <h2 class="theory-title">📋 Mémo rapide</h2>
+                    <div class="theory-memo">
+                        <div class="memo-block memo-i">
+                            <div class="memo-label">い形容詞</div>
+                            <div class="memo-line"><span class="jp">大きい</span> + 部屋 = <span class="jp">大きい部屋</span> ✓ <em>(rien à ajouter)</em></div>
+                            <div class="memo-line"><span class="jp">大きい</span> négatif → <span class="jp">大き<strong>くない</strong></span></div>
+                            <div class="memo-line"><span class="jp">大きい</span> passé → <span class="jp">大き<strong>かった</strong></span></div>
+                        </div>
+                        <div class="memo-block memo-na">
+                            <div class="memo-label">な形容詞</div>
+                            <div class="memo-line"><span class="jp">きれい</span> + 部屋 = <span class="jp">きれい<strong class="na-marker">な</strong>部屋</span> ✓ <em>(な obligatoire !)</em></div>
+                            <div class="memo-line"><span class="jp">きれい</span> négatif → <span class="jp">きれい<strong>じゃない</strong></span></div>
+                            <div class="memo-line"><span class="jp">きれい</span> passé → <span class="jp">きれい<strong>だった</strong></span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="theory-quiz-cta">
+                    <button class="next-question-btn" onclick="app.setAdjectiveMode('theory-quiz')">Tester mes connaissances →</button>
+                </div>
+            </div>
+
+            <!-- Page Quiz Théorie Adjectifs -->
+            <div id="adjective-theory-quiz" class="content-area" style="display: none;">
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <div class="theory-quiz-type-badge" id="theory-quiz-type-badge">Type</div>
+                        <h2 id="theory-quiz-title" class="theory-quiz-question-text"></h2>
+                    </div>
+                    <div class="quiz-options" id="theory-quiz-options"></div>
+                    <div class="quiz-feedback" id="theory-quiz-feedback"></div>
+                    <button class="next-question-btn" id="theory-quiz-next-btn" onclick="app.nextAdjectiveTheoryQuestion()" style="display: none;">Question suivante</button>
+                </div>
+                <div class="quiz-score">
+                    <span id="theory-quiz-score">Score: 0/0</span>
                 </div>
             </div>
         </div>

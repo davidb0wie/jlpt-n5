@@ -49,6 +49,9 @@ const app = {
         sentenceQuizTotal: 0,
         adjectiveQuizScore: 0,
         adjectiveQuizTotal: 0,
+        adjectiveTheoryQuizScore: 0,
+        adjectiveTheoryQuizTotal: 0,
+        currentAdjectiveTheoryQuestion: null,
         grammarQuizScore: 0,
         grammarQuizTotal: 0,
         vocabularyQuizScore: 0,
@@ -2062,17 +2065,23 @@ const app = {
     // ==================== ADJECTIFS ====================
     setAdjectiveMode(mode) {
         this.state.adjectiveMode = mode;
-        document.querySelectorAll('#adjectives-page .mode-btn').forEach(btn => btn.classList.remove('active'));
-        event.target.classList.add('active');
+        document.querySelectorAll('#adjectives-page .mode-btn').forEach(btn => {
+            const isMatch = btn.getAttribute('onclick')?.includes(`'${mode}'`);
+            btn.classList.toggle('active', isMatch);
+        });
 
         document.getElementById('adjective-list').style.display = mode === 'list' ? 'block' : 'none';
         document.getElementById('adjective-quiz').style.display = mode === 'quiz' ? 'block' : 'none';
+        document.getElementById('adjective-theory').style.display = mode === 'theory' ? 'block' : 'none';
+        document.getElementById('adjective-theory-quiz').style.display = mode === 'theory-quiz' ? 'block' : 'none';
 
         if (mode === 'list') {
             this.displayAdjectives();
             this.populateAdjectiveTypeFilter();
         } else if (mode === 'quiz') {
             this.initAdjectiveQuiz();
+        } else if (mode === 'theory-quiz') {
+            this.initAdjectiveTheoryQuiz();
         }
     },
 
@@ -2231,8 +2240,8 @@ const app = {
                 <div>Signifie: <strong>${question.correctAnswer}</strong></div>
                 ${question.adjective.examples && question.adjective.examples[0] ? `
                     <div class="feedback-example">
-                        Exemple: ${question.adjective.examples[0].japanese}<br>
-                        ${question.adjective.examples[0].french}
+                        Exemple: ${question.adjective.examples[0].sentence}<br>
+                        ${question.adjective.examples[0].translation}
                     </div>
                 ` : ''}
             </div>
@@ -2256,6 +2265,208 @@ const app = {
 
     nextAdjectiveQuestion() {
         this.generateAdjectiveQuestion();
+    },
+
+    // ==================== THÉORIE ADJECTIFS ====================
+    initAdjectiveTheoryQuiz() {
+        this.state.adjectiveTheoryQuizScore = 0;
+        this.state.adjectiveTheoryQuizTotal = 0;
+        document.getElementById('theory-quiz-score').textContent = 'Score: 0/0';
+        document.getElementById('theory-quiz-feedback').style.display = 'none';
+        document.getElementById('theory-quiz-next-btn').style.display = 'none';
+        this.generateAdjectiveTheoryQuestion();
+    },
+
+    generateAdjectiveTheoryQuestion() {
+        if (!this.data.adjectives) return;
+        const allI = this.data.adjectives.i_adjectives.map(a => ({...a, adjType: 'i'}));
+        const allNa = this.data.adjectives.na_adjectives.map(a => ({...a, adjType: 'na'}));
+        const allAdj = [...allI, ...allNa];
+        const trickyNa = allNa.filter(a => a.hiragana.endsWith('い') || a.hiragana.endsWith('き'));
+
+        const rand = Math.random();
+        let q;
+
+        if (rand < 0.25) {
+            // Type A — identifier le type
+            const adj = (Math.random() < 0.55 && trickyNa.length > 0)
+                ? trickyNa[Math.floor(Math.random() * trickyNa.length)]
+                : allAdj[Math.floor(Math.random() * allAdj.length)];
+            const correct = adj.adjType === 'i' ? 'い形容詞 (adjectif -i)' : 'な形容詞 (adjectif -na)';
+            const wrong  = adj.adjType === 'i' ? 'な形容詞 (adjectif -na)' : 'い形容詞 (adjectif -i)';
+            const isTricky = adj.adjType === 'na' && (adj.hiragana.endsWith('い') || adj.hiragana.endsWith('き'));
+            q = {
+                typeBadge: 'Identifier le type',
+                question: `Quel type d\'adjectif est <span class="jp theory-q-word">${adj.kanji}</span> (${adj.hiragana}) ?`,
+                options: this.shuffle([correct, wrong, 'Les deux types', 'Ni -i ni -na']),
+                correctAnswer: correct,
+                feedbackRule: adj.adjType === 'i'
+                    ? `<strong>${adj.kanji}</strong> est un adjectif <strong>-i</strong>. Négatif : ${adj.conjugations.present_negative.kanji}`
+                    : `<strong>${adj.kanji}</strong> (${adj.hiragana}) est un adjectif <strong>-na</strong>.${isTricky ? ' Attention : il finit en "' + adj.hiragana.slice(-1) + '" mais n\'est PAS un adjectif -i !' : ''} Devant un nom : ${adj.conjugations.with_noun?.kanji ?? adj.kanji + 'な'}`,
+                feedbackExample: adj.examples?.[0] ?? null
+            };
+
+        } else if (rand < 0.60) {
+            // Type B — conjugaison
+            const adj = allAdj[Math.floor(Math.random() * allAdj.length)];
+            const forms = ['present_negative', 'past_affirmative', 'past_negative', 'te_form'];
+            const form = forms[Math.floor(Math.random() * forms.length)];
+            const label = this.getConjugationLabel(form);
+            const correct = adj.conjugations[form].kanji;
+            const stem = adj.adjType === 'i' ? adj.kanji.slice(0, -1) : adj.kanji;
+            const wrongMap = {
+                i: {
+                    present_negative:  [`${stem}じゃない`,       `${adj.kanji}ない`,      `${stem}なかった`],
+                    past_affirmative:  [`${stem}でした`,          `${adj.kanji}だった`,    `${stem}たかった`],
+                    past_negative:     [`${stem}じゃなかった`,    `${adj.kanji}なかった`,  `${stem}くない`],
+                    te_form:           [`${stem}で`,              `${adj.kanji}て`,        `${stem}かった`]
+                },
+                na: {
+                    present_negative:  [`${stem}くない`,          `${stem}ない`,           `${stem}くなかった`],
+                    past_affirmative:  [`${stem}かった`,          `${stem}いた`,           `${stem}なかった`],
+                    past_negative:     [`${stem}くなかった`,      `${stem}なかった`,       `${stem}じゃない`],
+                    te_form:           [`${stem}くて`,            `${stem}て`,             `${stem}いて`]
+                }
+            };
+            const wrongs = wrongMap[adj.adjType][form] || [`${stem}ない`, `${stem}だ`, `${stem}て`];
+            q = {
+                typeBadge: 'Conjugaison',
+                question: `Quelle est la forme <strong>${label}</strong> de <span class="jp theory-q-word">${adj.kanji}</span> ?`,
+                options: this.shuffle([correct, ...wrongs.slice(0, 3)]),
+                correctAnswer: correct,
+                feedbackRule: adj.adjType === 'i'
+                    ? `Adjectif -i : racine = <strong>${stem}</strong>, ${label} → <strong>${correct}</strong> (い → ${this.getISuffix(form)})`
+                    : `Adjectif -na : ${label} → <strong>${adj.kanji}</strong> + <strong>${this.getNaSuffix(form)}</strong>`,
+                feedbackExample: adj.examples?.[0] ?? null
+            };
+
+        } else if (rand < 0.85) {
+            // Type C — devant un nom
+            const adj = allAdj[Math.floor(Math.random() * allAdj.length)];
+            let noun = '';
+            if (adj.examples?.[0]) {
+                const s = adj.examples[0].sentence;
+                if (adj.adjType === 'na' && adj.conjugations.with_noun) {
+                    noun = s.replace(adj.conjugations.with_noun.kanji, '').match(/^[\u4E00-\u9FFF\u3040-\u309F\u30A0-\u30FF]+/)?.[0] ?? '人';
+                } else {
+                    noun = s.replace(/^この/, '').match(/^[\u4E00-\u9FFF\u3040-\u309F\u30A0-\u30FF]+/)?.[0] ?? '部屋';
+                }
+            }
+            if (!noun) noun = adj.adjType === 'i' ? '部屋' : '人';
+            let correct, wrongs;
+            if (adj.adjType === 'i') {
+                const stem = adj.kanji.slice(0, -1);
+                correct = `${adj.kanji}${noun}`;
+                wrongs = [`${stem}な${noun}`, `${stem}く${noun}`, `${stem}かった${noun}`];
+            } else {
+                const withNoun = adj.conjugations.with_noun?.kanji ?? `${adj.kanji}な`;
+                correct = `${withNoun}${noun}`;
+                wrongs = [`${adj.kanji}${noun}`, `${adj.kanji}の${noun}`, `${adj.kanji}く${noun}`];
+            }
+            q = {
+                typeBadge: 'Devant un nom',
+                question: `Comment dit-on "<strong>${adj.meaning}</strong>" devant <span class="jp">${noun}</span> ?`,
+                options: this.shuffle([correct, ...wrongs]),
+                correctAnswer: correct,
+                feedbackRule: adj.adjType === 'i'
+                    ? `Adjectif -i : s'utilise <strong>tel quel</strong> devant un nom → <strong>${correct}</strong>`
+                    : `Adjectif -na : on ajoute <strong class="na-marker">な</strong> obligatoirement → <strong>${correct}</strong>`,
+                feedbackExample: adj.examples?.[0] ?? null
+            };
+
+        } else {
+            // Type D — corriger la phrase (na-adj uniquement)
+            const naAdj = allNa[Math.floor(Math.random() * allNa.length)];
+            const sentence = naAdj.examples?.[0]?.sentence ?? '';
+            const withNoun = naAdj.conjugations.with_noun?.kanji;
+            if (!withNoun || !sentence.includes(withNoun)) return this.generateAdjectiveTheoryQuestion();
+            const noun = sentence.replace(withNoun, '').match(/^[\u4E00-\u9FFF\u3040-\u309F\u30A0-\u30FF]+/)?.[0];
+            if (!noun) return this.generateAdjectiveTheoryQuestion();
+            const rest = sentence.slice(sentence.indexOf(withNoun) + withNoun.length + noun.length);
+            q = {
+                typeBadge: 'Corriger la phrase',
+                question: `Quelle phrase est <strong>grammaticalement correcte</strong> ?`,
+                options: this.shuffle([
+                    sentence,
+                    `${naAdj.kanji}${noun}${rest}`,
+                    `${naAdj.kanji}の${noun}${rest}`,
+                    `${naAdj.kanji}く${noun}${rest}`
+                ]),
+                correctAnswer: sentence,
+                feedbackRule: `<strong>${naAdj.kanji}</strong> est un adjectif -na. Devant <strong>${noun}</strong>, on écrit obligatoirement <strong>${withNoun}${noun}</strong>`,
+                feedbackExample: naAdj.examples?.[0] ?? null
+            };
+        }
+
+        this.state.currentAdjectiveTheoryQuestion = q;
+        this.displayAdjectiveTheoryQuestion();
+    },
+
+    displayAdjectiveTheoryQuestion() {
+        const q = this.state.currentAdjectiveTheoryQuestion;
+        if (!q) return;
+        document.getElementById('theory-quiz-type-badge').textContent = q.typeBadge;
+        document.getElementById('theory-quiz-title').innerHTML = q.question;
+        document.getElementById('theory-quiz-feedback').style.display = 'none';
+        document.getElementById('theory-quiz-next-btn').style.display = 'none';
+
+        const container = document.getElementById('theory-quiz-options');
+        container.innerHTML = q.options.map((opt, i) => `
+            <button class="quiz-option" onclick="app.checkAdjectiveTheoryAnswer(${i})">
+                <span class="jp">${opt}</span>
+            </button>
+        `).join('');
+    },
+
+    checkAdjectiveTheoryAnswer(selectedIndex) {
+        const q = this.state.currentAdjectiveTheoryQuestion;
+        const selected = q.options[selectedIndex];
+        this.state.adjectiveTheoryQuizTotal++;
+        const isCorrect = selected === q.correctAnswer;
+        if (isCorrect) {
+            this.state.adjectiveTheoryQuizScore++;
+            this.progress.correctAnswers++;
+        }
+        this.progress.totalAttempts++;
+
+        document.querySelectorAll('#theory-quiz-options .quiz-option').forEach((btn, i) => {
+            btn.disabled = true;
+            if (q.options[i] === q.correctAnswer) btn.classList.add('correct');
+        });
+
+        const feedback = document.getElementById('theory-quiz-feedback');
+        feedback.className = 'quiz-feedback ' + (isCorrect ? 'correct' : 'incorrect');
+        feedback.innerHTML = `
+            <div><strong>${isCorrect ? '✓ Correct !' : '✗ Incorrect'}</strong></div>
+            <div class="feedback-details">
+                <div>${q.feedbackRule}</div>
+                ${q.feedbackExample ? `
+                    <div class="feedback-example">
+                        <span class="jp">${q.feedbackExample.sentence}</span><br>
+                        ${q.feedbackExample.translation}
+                    </div>
+                ` : ''}
+            </div>
+        `;
+        feedback.style.display = 'block';
+        feedback.onclick = () => this.nextAdjectiveTheoryQuestion();
+
+        document.getElementById('theory-quiz-next-btn').style.display = 'block';
+        document.getElementById('theory-quiz-score').textContent =
+            `Score: ${this.state.adjectiveTheoryQuizScore}/${this.state.adjectiveTheoryQuizTotal}`;
+        this.saveProgress();
+    },
+
+    nextAdjectiveTheoryQuestion() {
+        this.generateAdjectiveTheoryQuestion();
+    },
+
+    getISuffix(form) {
+        return { present_negative: 'くない', past_affirmative: 'かった', past_negative: 'くなかった', te_form: 'くて' }[form] ?? '';
+    },
+
+    getNaSuffix(form) {
+        return { present_negative: 'じゃない', past_affirmative: 'だった', past_negative: 'じゃなかった', te_form: 'で' }[form] ?? '';
     },
 
     // ==================== GRAMMAIRE ====================
