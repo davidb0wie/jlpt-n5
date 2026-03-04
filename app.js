@@ -2189,13 +2189,13 @@ const app = {
         const wrongAnswers = this.getRandomElements(
             allAdjectives.filter(adj => adj.meaning !== correct.meaning),
             3
-        ).map(adj => adj.meaning);
+        );
 
-        const options = this.shuffle([correct.meaning, ...wrongAnswers]);
+        const options = this.shuffle([correct, ...wrongAnswers]);
 
         this.state.currentAdjectiveQuestion = {
             adjective: correct,
-            correctAnswer: correct.meaning,
+            correctAnswer: correct.kanji,
             options: options
         };
 
@@ -2204,13 +2204,13 @@ const app = {
 
     displayAdjectiveQuestion() {
         const question = this.state.currentAdjectiveQuestion;
-        document.getElementById('quiz-adjective-kanji').textContent = question.adjective.kanji;
-        document.getElementById('quiz-adjective-hiragana').textContent = question.adjective.hiragana;
+        document.getElementById('quiz-adjective-kanji').textContent = question.adjective.meaning;
+        document.getElementById('quiz-adjective-hiragana').textContent = '';
 
         const optionsContainer = document.getElementById('adjective-quiz-options');
         optionsContainer.innerHTML = question.options.map((option, index) => `
-            <button class="quiz-option" onclick="app.checkAdjectiveAnswer(${index})">
-                ${option}
+            <button class="quiz-option" onclick="app.checkAdjectiveAnswer(${index})" data-kanji="${option.kanji}">
+                <span class="jp">${option.kanji}</span><br><small class="option-hiragana">${option.hiragana}</small>
             </button>
         `).join('');
 
@@ -2220,7 +2220,7 @@ const app = {
 
     checkAdjectiveAnswer(selectedIndex) {
         const question = this.state.currentAdjectiveQuestion;
-        const selected = question.options[selectedIndex];
+        const selected = question.options[selectedIndex].kanji;
         this.state.adjectiveQuizTotal++;
 
         const isCorrect = selected === question.correctAnswer;
@@ -2237,7 +2237,7 @@ const app = {
             <div><strong>${isCorrect ? '✓ Correct !' : '✗ Incorrect'}</strong></div>
             <div class="feedback-details">
                 <div><strong>${question.adjective.kanji}</strong> (${question.adjective.hiragana})</div>
-                <div>Signifie: <strong>${question.correctAnswer}</strong></div>
+                <div>Signifie: <strong>${question.adjective.meaning}</strong></div>
                 ${question.adjective.examples && question.adjective.examples[0] ? `
                     <div class="feedback-example">
                         Exemple: ${question.adjective.examples[0].sentence}<br>
@@ -2251,7 +2251,7 @@ const app = {
 
         document.querySelectorAll('#adjective-quiz-options .quiz-option').forEach(btn => {
             btn.disabled = true;
-            if (btn.textContent.trim() === question.correctAnswer) {
+            if (btn.dataset.kanji === question.correctAnswer) {
                 btn.classList.add('correct');
             }
         });
@@ -2331,7 +2331,7 @@ const app = {
             const wrongs = wrongMap[adj.adjType][form] || [`${stem}ない`, `${stem}だ`, `${stem}て`];
             q = {
                 typeBadge: 'Conjugaison',
-                question: `Quelle est la forme <strong>${label}</strong> de <span class="jp theory-q-word">${adj.kanji}</span> ?`,
+                question: `Quelle est la forme <strong>${label}</strong> de <span class="jp theory-q-word">${adj.kanji}</span> <small class="jp theory-q-reading">(${adj.hiragana})</small> ?`,
                 options: this.shuffle([correct, ...wrongs.slice(0, 3)]),
                 correctAnswer: correct,
                 feedbackRule: adj.adjType === 'i'
@@ -2347,9 +2347,9 @@ const app = {
             if (adj.examples?.[0]) {
                 const s = adj.examples[0].sentence;
                 if (adj.adjType === 'na' && adj.conjugations.with_noun) {
-                    noun = s.replace(adj.conjugations.with_noun.kanji, '').match(/^[\u4E00-\u9FFF\u3040-\u309F\u30A0-\u30FF]+/)?.[0] ?? '人';
+                    noun = s.replace(adj.conjugations.with_noun.kanji, '').match(/^[\u4E00-\u9FFF\u30A0-\u30FF]+/)?.[0] ?? '人';
                 } else {
-                    noun = s.replace(/^この/, '').match(/^[\u4E00-\u9FFF\u3040-\u309F\u30A0-\u30FF]+/)?.[0] ?? '部屋';
+                    noun = s.replace(/^この/, '').match(/^[\u4E00-\u9FFF\u30A0-\u30FF]+/)?.[0] ?? '部屋';
                 }
             }
             if (!noun) noun = adj.adjType === 'i' ? '部屋' : '人';
@@ -2365,7 +2365,7 @@ const app = {
             }
             q = {
                 typeBadge: 'Devant un nom',
-                question: `Comment dit-on "<strong>${adj.meaning}</strong>" devant <span class="jp">${noun}</span> ?`,
+                question: `Comment dit-on "<strong>${adj.meaning}</strong>" devant <span class="jp">${noun}</span> ?<br><small>Adjectif : <span class="jp theory-q-reading">${adj.kanji}（${adj.hiragana}）</span></small>`,
                 options: this.shuffle([correct, ...wrongs]),
                 correctAnswer: correct,
                 feedbackRule: adj.adjType === 'i'

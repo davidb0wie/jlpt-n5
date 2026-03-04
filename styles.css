@@ -1204,6 +1204,14 @@ header h1 {
     margin-bottom: 20px;
 }
 
+.option-hiragana {
+    display: block;
+    font-size: 0.75em;
+    color: var(--dark);
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
 /* Quiz Grammaire */
 .grammar-pattern {
     font-size: 4em;
@@ -1859,6 +1867,12 @@ header h1 {
     font-size: 1.4em;
     font-weight: 700;
     color: var(--primary);
+}
+
+.theory-q-reading {
+    font-size: 0.9em;
+    color: var(--text-secondary, #666);
+    opacity: 0.85;
 }
 
 /* Responsive */
