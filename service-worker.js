@@ -1,26 +1,26 @@
-const CACHE_NAME = 'jlpt-n5-v5';
+const CACHE_NAME = 'jlpt-n5-v6';
+const BASE = '/jlpt-n5';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/app.js',
-  '/manifest.json',
-  '/japon.jpg',
-  '/Kyoto.jpg',
-  '/data/kanji.json',
-  '/data/counters.json',
-  '/data/verbs.json',
-  '/data/verbs-plus.json',
-  '/data/adverbs.json',
-  '/data/particles.json',
-  '/data/sentences.json',
-  '/data/adjectives.json',
-  '/data/grammar.json',
-  '/data/vocabulary.json',
-  '/data/kana.json',
-  '/data/reading.json'
+  BASE + '/',
+  BASE + '/index.html',
+  BASE + '/styles.css',
+  BASE + '/app.js',
+  BASE + '/manifest.json',
+  BASE + '/japon.jpg',
+  BASE + '/Kyoto.jpg',
+  BASE + '/data/kanji.json',
+  BASE + '/data/counters.json',
+  BASE + '/data/verbs.json',
+  BASE + '/data/verbs-plus.json',
+  BASE + '/data/adverbs.json',
+  BASE + '/data/particles.json',
+  BASE + '/data/sentences.json',
+  BASE + '/data/adjectives.json',
+  BASE + '/data/grammar.json',
+  BASE + '/data/vocabulary.json',
+  BASE + '/data/kana.json',
+  BASE + '/data/reading.json'
 ];
-
 // Installation du service worker
 self.addEventListener('install', event => {
   event.waitUntil(
