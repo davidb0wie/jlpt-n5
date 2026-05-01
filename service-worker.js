@@ -1,6 +1,6 @@
-const CACHE_NAME = 'jlpt-n5-v6';
+const CACHE_NAME = 'jlpt-n5-v7';
 const BASE = '/jlpt-n5';
-const urlsToCache = [
+const CORE_ASSETS = [
   BASE + '/',
   BASE + '/index.html',
   BASE + '/styles.css',
@@ -21,62 +21,52 @@ const urlsToCache = [
   BASE + '/data/kana.json',
   BASE + '/data/reading.json'
 ];
-// Installation du service worker
+
+// Installation : cache chaque fichier indépendamment (un échec ne bloque pas les autres)
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('Cache ouvert');
-        return cache.addAll(urlsToCache);
-      })
+    caches.open(CACHE_NAME).then(cache => {
+      const promises = CORE_ASSETS.map(url =>
+        cache.add(url).catch(err => console.warn('Cache miss:', url, err))
+      );
+      return Promise.all(promises);
+    }).then(() => self.skipWaiting())
   );
 });
 
-// Activation et nettoyage des anciens caches
+// Activation : nettoyage anciens caches + prise de contrôle immédiate
 self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.map(cacheName => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('Suppression ancien cache:', cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
+    caches.keys().then(cacheNames =>
+      Promise.all(
+        cacheNames
+          .filter(name => name !== CACHE_NAME)
+          .map(name => caches.delete(name))
+      )
+    ).then(() => self.clients.claim())
   );
 });
 
-// Interception des requêtes
+// Fetch : cache en priorité, réseau en fallback
 self.addEventListener('fetch', event => {
+  if (event.request.method !== 'GET') return;
+
   event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        // Cache hit - retourner la réponse du cache
-        if (response) {
-          return response;
+    caches.match(event.request).then(cached => {
+      if (cached) return cached;
+
+      return fetch(event.request.clone()).then(response => {
+        if (response && response.status === 200 && response.type === 'basic') {
+          const toCache = response.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, toCache));
         }
-
-        // Cloner la requête
-        const fetchRequest = event.request.clone();
-
-        return fetch(fetchRequest).then(response => {
-          // Vérifier si la réponse est valide
-          if (!response || response.status !== 200 || response.type !== 'basic') {
-            return response;
-          }
-
-          // Cloner la réponse
-          const responseToCache = response.clone();
-
-          caches.open(CACHE_NAME)
-            .then(cache => {
-              cache.put(event.request, responseToCache);
-            });
-
-          return response;
-        });
-      })
+        return response;
+      }).catch(() => {
+        // Hors ligne et pas en cache : retourner index.html pour la navigation
+        if (event.request.mode === 'navigate') {
+          return caches.match(BASE + '/index.html');
+        }
+      });
+    })
   );
 });
