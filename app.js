@@ -117,18 +117,18 @@ const app = {
     async loadData() {
         try {
             const [kanjiResponse, countersResponse, verbsResponse, verbsPlusResponse, adverbsResponse, particlesResponse, sentencesResponse, adjectivesResponse, grammarResponse, vocabularyResponse, kanaResponse, readingResponse] = await Promise.all([
-                fetch('${BASE}/data/kanji.json'),
-                fetch('${BASE}/data/counters.json'),
-                fetch('${BASE}/data/verbs.json'),
-                fetch('${BASE}/data/verbs-plus.json'),
-                fetch('${BASE}/data/adverbs.json'),
-                fetch('${BASE}/data/particles.json'),
-                fetch('${BASE}/data/sentences.json'),
-                fetch('${BASE}/data/adjectives.json'),
-                fetch('${BASE}/data/grammar.json'),
-                fetch('${BASE}/data/vocabulary.json'),
-                fetch('${BASE}/data/kana.json'),
-                fetch('${BASE}/data/reading.json')
+                fetch(BASE + '/data/kanji.json'),
+                fetch(BASE + '/data/counters.json'),
+                fetch(BASE + '/data/verbs.json'),
+                fetch(BASE + '/data/verbs-plus.json'),
+                fetch(BASE + '/data/adverbs.json'),
+                fetch(BASE + '/data/particles.json'),
+                fetch(BASE + '/data/sentences.json'),
+                fetch(BASE + '/data/adjectives.json'),
+                fetch(BASE + '/data/grammar.json'),
+                fetch(BASE + '/data/vocabulary.json'),
+                fetch(BASE + '/data/kana.json'),
+                fetch(BASE + '/data/reading.json')
             ]);
 
             this.data.kanji = await kanjiResponse.json();
